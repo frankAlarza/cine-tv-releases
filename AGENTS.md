@@ -50,6 +50,7 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- **Commit after every logical change** (hito/feature/bugfix) so the `post-commit` hook rebuilds the graph on the changed code; uncommitted work leaves the graph stale.
 - A committed graphify-out/graph.json is rewritten whole on every build, so a large diff to it in a pull request is expected. Do not flag it as churn or suggest skipping the graph rebuild or its hooks.
 
 ## 1. Rutas y herramientas
@@ -136,6 +137,11 @@ build falla**): [`docs/guias/build-firma-instalacion.md`](docs/guias/build-firma
     el fallo en BlueStacks (Android 9).
 12. **Clases propias en `smali_classes16`** (no en `smali_classes7`, que está al límite de
     65536 referencias de método).
+13. **Commit por hito/feature/bugfix (grafo actualizado).** Tras completar cada hito,
+    feature o bugfix (y verificar build + captura), hacer `git commit` con mensaje claro.
+    El hook `post-commit` de graphify rehace `graph.json`/`GRAPH_REPORT.md` sobre el código
+    cambiado; sin commits frecuentes el grafo queda desactualizado y pierde utilidad.
+    No acumular cambios grandes sin commitear; un commit = un cambio lógico verificable.
 
 ---
 
