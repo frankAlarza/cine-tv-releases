@@ -754,21 +754,13 @@
     .line 60
     invoke-virtual {p0}, Lcom/mgs/carparking/app/BaseActivity;->m()V
 
-    .line 61
     .line 62
     .line 63
-    const-string v1, "TvLookNav"
-    const-string v0, "BaseActivity onCreate initData"
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Lcom/mgs/carparking/app/BaseActivity;->initData()V
 
     iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
     if-eqz v0, :cond_tvskip2
-    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
-    move-result-object v0
-    invoke-static {v0}, Lcom/movievn/tv/TvLookNav;->install(Landroid/view/View;)V
-    :cond_tvskip2
 
     .line 64
     .line 65
@@ -777,6 +769,7 @@
 
     .line 67
     .line 68
+    :cond_tvskip2
     iget-object p1, p0, Lcom/mgs/carparking/app/BaseActivity;->l:Lme/goldze/mvvmhabit/base/BaseViewModel;
 
     .line 69

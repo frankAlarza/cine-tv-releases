@@ -1,0 +1,174 @@
+# Prompt de Diseño y Rediseño UI/UX para Aplicación LiveTV
+
+## 🎯 Objeto
+Aprovechar todas las skills disponibles en Hermes para darle un rediseño integral a la aplicación **LiveTV**, mejorando usabilidad, accesibilidad y apariencia visual manteniendo la funcionalidad de streams.
+
+## 📋 Instrucciones Previas
+
+### 1. Cargar Skills Relevantes (en este orden)
+```bash
+# 1. UI/UX principal (prioridad alta)
+skill_view(name='ui-ux-pro-max')
+
+# 2. Rediseño visual CSS
+skill_view(name='css-visual-redesign')
+
+# 3. Skills del proyecto actual (LiveTV)
+skill_view(name='hermes-agent')  # Para orquestación
+skill_view(name='hermes-provider-setup')  # Si se necesitan configuraciones
+```
+
+### 2. Flujo de Trabajo Recomendado
+
+#### PASO 1: Análisis del Sistema Actual
+Ejecutar:
+```
+skill_manage(action='skill_view', name='ui-ux-pro-max')
+```
+Revisar las 119 UX guidelines y los 192 product palettes.
+
+#### PASO 2: Design System (Required for new pages)
+```bash
+# Generar design system completo
+python "${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/scripts/search.py" \
+  "LiveTV streaming application sports events" --design-system -p "livetv-app" \
+  --variance 7 --motion 6 --density 6
+```
+
+#### PASO 3: Búsqueda por Dominios Específicos
+Para cada área crítica:
+
+| Área | Comando | Propósito |
+|------|---------|-----------|
+| Accesibilidad | `--domain ux` + `"contrast 4.5:1"` | WCAG AA compliance |
+| Tipografía/Color | `--domain typography` + `"font pairings"` | Sistema de tokens |
+| Layout Responsivo | `--domain ux` + `"mobile-first breakpoints"` | Adaptación móvil |
+| Navegación | `--domain ux` + `"bottom nav ≤5"` | Menú LiveTV |
+| Animaciones | `--domain gsap` + `"scroll reveal stagger"` | Transiciones player |
+| Formularios | `--domain ux` + `"error summary validation"` | Validación de eventos |
+
+#### PASO 4: Guidelines Específicas (Priority Order)
+
+**Priority 1 - CRITICAL:**
+- [ ] Contraste 4.5:1 en todos los textos
+- [ ] Etiquetas alt en imágenes/íconos
+- [ ] Navegación por teclado completa
+- [ ] Aria-labels en botones críticos
+
+**Priority 2 - HIGH:**
+- [ ] Tamaño mínimo 44×44px en elementos táctiles
+- [ ] Espaciado 8px+ entre elementos interactivos
+- [ ] Loading feedback visible (no estados instantáneos 0ms)
+- [ ] WebP/AVIF para imágenes
+- [ ] Lazy loading de streams
+
+**Priority 3 - MEDIUM:**
+- [ ] Tipografía base 16px, line-height 1.5
+- [ ] Tokens de color semánticos (no raw hex)
+- [ ] Animaciones context-aware con GSAP
+- [ ] Errores cerca del campo, no solo arriba
+- [ ] Navegación predecible: back behavior
+
+**Priority 4 - LOW:**
+- [ ] Leyendas de charts con colores accesibles
+- [ ] Evitar depender solo del color para Convey meaning
+
+## 🛠️ Comandos Prácticos para tu Proyecto
+
+### Rediseño del Player LiveTV
+```bash
+# 1. Análisis de accesibilidad
+skill_view(name='ui-ux-pro-max') --domain ux -- "focus not obscured"
+
+# 2. Estilo del player
+skill_view(name='ui-ux-pro-max') --domain style -- "dark mode contrast"
+
+# 3. Layout del player
+skill_view(name='ui-ux-pro-max') --domain ux -- "responsive layout"
+```
+
+### Mejoras en la Agenda
+```bash
+# Menú de categorías
+skill_view(name='ui-ux-pro-max') --domain navigation -- "bottom nav ≤5"
+
+# Categoría por defecto Fútbol
+# Verificar que sea la primera opción en el selector
+
+# Stream selector (nueva feature)
+# Asegurar que muestra opciones y no auto-play
+```
+
+### CSS/Visual Redesign
+```bash
+skill_view(name='css-visual-redesign')
+```
+Aplicar palette tokens a:
+- `tokens.css` - Variables CSS raíz
+- `vpn-banner.css` - Banner VPN
+- `event-image.css` - Imágenes de eventos
+- `pages-events.css` - Página de agenda
+- `pages-light.css` - Tema claro
+
+## 📦 Estructura de Archivos a Actualizar
+
+1. **Diseño Visual:**
+   - `src/styles/tokens.css` - Variable tokens actualizados
+   - `src/styles/pages-[name].css` - Cada página rediseñada
+   - Componente `PlayerOverlay` - Sin auto-play, con selector
+
+2. **Diseño de Interacción:**
+   - `AgendaShell.tsx` - Player que muestra opciones, no auto-play
+   - `AgendaLiveTv.tsx` - Selector de streams en lugar de iframe automático
+   - `AgendaLiveTv.tsx` - Categoría default = "Fútbol"
+
+3. **Accesibilidad:**
+   - Contraste en todos los estados (hover, focus, active)
+   - Focus rings visibles
+   - Aria-labels en botones del player
+   - Estados de loading visibles
+
+## 📊 Checklist de Entrega
+
+### ✅ Hecho
+- [ ] Skill `ui-ux-pro-max` cargada y revisada
+- [ ] Design system generado y persistido
+- [ ] Contraste WCAG AA verificado
+- [ ] Navegación por teclado funcional
+- [ ] Player sin auto-play (elige el usuario)
+- [ ] Categoría default = Fútbol
+- [ ] Tokems CSS actualizados
+- [ ] Mobile-first breakpoints aplicados
+
+### ⚠️ Pending
+- [ ] Test con lectores de pantalla
+- [ ] Test en mobile real device
+- [ ] Test dark mode toggle
+- [ ] Test con reduced-motion preference
+- [ ] Performance benchmark de loads
+
+### ❌ Evitar
+- [ ] Raw hex en components (usar tokens)
+- [ ] Hover-only interactions
+- [ ] Horizontal scroll en ninguna página
+- [ ] Emoji como icons
+- [ ] Animation duration 0ms
+
+## 💡 Tips Finales
+
+1. **Usar `--design-system`** para nuevas páginas/sections
+2. **Pasar `--persist`** para guardar el diseño entre sesiones
+3. **Usar `--stack nextjs`** para guidelines específicas del framework
+4. **Retry una vez** con query más estrecha si resultados están vacíos
+5. **Siempre verificar** con `--domain` explícito para evitar auto-detection errors
+
+## 🚀 Próximos Pasos Inmediatos
+
+1. Ejecutar `skill_view(name='ui-ux-pro-max')` para cargar las guidelines
+2. Revisar `references/quick-reference.md` §1-10 para priorities
+3. Generar design system con `--design-system -p "livetv-app"`
+4. Aplicar `css-visual-redesign` skills a los tokens CSS actuales
+5. Modificar `AgendaShell.tsx` player overlay para selector en lugar de auto-play
+
+---
+*Generated for LiveTV application redesign. Priority order: Accessibility → Performance → Style Selection → Layout → Typography/Color → Animation → Forms & Feedback → Navigation → Charts & Data.*

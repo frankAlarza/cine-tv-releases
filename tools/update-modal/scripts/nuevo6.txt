@@ -1,0 +1,81 @@
+Actúa como un Arquitecto de Software Principal y Desarrollador Full-Stack Sénior especializado en aplicaciones de bienestar, diseño de UI/UX interactivo y rendimiento en tiempo real.
+
+Tu objetivo es diseñar y generar el código fuente completo, mantenible, modular y listo para producción de una aplicación web interactiva basada en el manual de respiración del libro "Respira" de James Nestor.
+
+---
+
+### 1. ESPECIFICACIONES TÉCNICAS Y ARQUITECTURA
+
+- **Stack Técnico:**
+  - Framework: Next.js 14+ (App Router) con TypeScript (Strict Mode).
+  - Estilos & UI: Tailwind CSS + Shadcn/ui componentes.
+  - Animaciones: Framer Motion (para animaciones respiratorias fluidas a 60fps).
+  - Audio: Web Audio API nativa (generación sintética de tonos/campanas sin assets externos).
+  - Estado Global: Zustand con persistencia en localStorage/IndexedDB.
+  - Gráficos: Recharts / Chart.js para estadísticas de respiración y score BOLT.
+  - PWA: Soporte para instalación móvil y funcionamiento offline.
+  - (Opcional Backend): Si defines servicios API, estructura un diseño modular en .NET 8 (Clean Architecture) con controladores REST bien documentados.
+
+- **Principios de Arquitectura:**
+  - Código limpio (Clean Code), principios SOLID, arquitectura basada en componentes atómicos (`/components/ui`, `/components/breathing`, `/components/analytics`, `/components/knowledge`).
+  - Separación de responsabilidades: Lógica del temporizador de respiración aislada en custom hooks (`useBreathEngine`, `useAudioFeedback`, `useBoltTracker`).
+  - Altamente responsive, diseño Mobile-First con modo Oscuro/OLED por defecto para sesiones nocturnas.
+
+---
+
+### 2. MÓDULOS Y FUNCIONALIDADES DE LA APLICACIÓN
+
+#### Módulo 1: Estación de Respiración Guiada (Interactive Breath Engine)
+Crea un componente central de temporizador de respiración interactivo que soporte:
+1. **Modos Preconfigurados del Manual:**
+   - **Respiración Resonante:** 5.5s Inhala / 5.5s Exhala (Bucle continuo).
+   - **Box Breathing:** 4s Inhala / 4s Aguanta / 4s Exhala / 4s Aguanta.
+   - **Técnica 4-7-8:** 4s Inhala / 7s Aguanta / 8s Exhala.
+   - **Método Tummo / Wim Hof:** 30 respiraciones rápidas + Cronómetro de retención en vacío + 15s de retención lleno (Con contador de rondas).
+   - **Desbloqueo Nasal Buteyko:** Guía paso a paso con cronómetro de retención y medición de recuperación.
+2. **Visualizador Animado:** Un círculo/orbe fluido usando Framer Motion que se expanda en Inhalación, se mantenga estático en Retención y se contraiga en Exhalación. Muestra el texto de instrucción ("Inhala", "Aguanta", "Exhala") y el tiempo restante de forma prominente.
+3. **Audio y Háptica:** Campana suave al cambiar de fase mediante Web Audio API y vibración (`navigator.vibrate`) para uso con ojos cerrados.
+
+#### Módulo 2: Creador de Rutinas Personalizadas (Custom Builder)
+- Permite al usuario definir:
+  - Tiempo de Inhalación (s)
+  - Tiempo de Retención con pulmones llenos (s)
+  - Tiempo de Exhalación (s)
+  - Tiempo de Retención con pulmones vacíos (s)
+  - Número total de ciclos / Duración total.
+- Posibilidad de guardar la rutina personalizada en Zustand para acceso rápido.
+
+#### Módulo 3: Test y Tracker de Tolerancia al CO2 (BOLT Score)
+- Herramienta para medir la Pausa de Control (Medición Buteyko).
+- Botón grande "Iniciar Test": El usuario inhala, exhala, presiona el botón y aguanta hasta el primer impulso natural de respirar. Al presionar "Detener", guarda el registro.
+- Gráfico histórico (diario/semanal) con indicadores de salud respiratoria (ej. <20s: A mejorar, 20-40s: Bueno, >40s: Óptimo).
+
+#### Módulo 4: Dashboard y Hábitos Diarios
+- Checklist diario de hábitos:
+  - Registro de Encintado Bucal Nocturno (Mouth Taping) [Sí/No + Calidad de sueño 1-5].
+  - Minutos totales respirados en la app hoy.
+  - Contador de Racha de días consecutivos (Streak).
+
+#### Módulo 5: Base de Conocimiento Interactiva
+- El texto completo del manual categorizado (Fundamentos, Relajación, Avanzadas).
+- Barra de búsqueda en tiempo real.
+- Filtros por objetivo (Estrés, Ensueño, Rendimiento Deportivo, Descongestión).
+- Botón "Practicar esta técnica ahora" en cada tarjeta del manual que redirija al temporizador configurado automáticamente.
+
+---
+
+### 3. ESTRUCTURA DE ARCHIVOS Y CÓDIGO REQUERIDO
+
+Por favor, proporciona:
+1. La **estructura de carpetas completa** del proyecto Next.js.
+2. El código fuente completo para:
+   - `types/breathing.ts` (Tipos TypeScript para técnicas, sesiones y métricas).
+   - `hooks/useBreathEngine.ts` (El hook que maneja la lógica de temporizadores, estados de fase y ticks de precisión).
+   - `lib/audio.ts` (Generador de sonidos sintéticos con Web Audio API).
+   - `components/breathing/Visualizer.tsx` (Componente de la animación con Framer Motion).
+   - `components/breathing/BreathSession.tsx` (Pantalla principal de práctica).
+   - `components/analytics/BoltTracker.tsx` (Componente del test de CO2 y gráficos).
+   - `data/manual.ts` (Estructura de datos con todas las técnicas descritas en el manual).
+   - `app/page.tsx` (Página principal con Dashboard e integración modular).
+
+Asegúrate de que todo el código sea totalmente funcional, libre de errores sintácticos o componentes ficticios incompletos, e incluya comentarios explicativos.

@@ -1,0 +1,11 @@
+AQ.Ab8RN6KqTtOUW44fydQXVkd72L9r13bY-53Sz6Ai9RJI_iV5UQ
+
+rea analyze-android-apk "C:\Users\UsuarioLocal\Documents\app-android-eventos\App_Eventos_Ver2.apk" --json > rea-apk-salida.json
+
+jadx -d "C:\Users\UsuarioLocal\Documents\app-android-eventos\jadx-salida" "C:\Users\UsuarioLocal\Documents\app-android-eventos\App_Eventos_Ver2.apk"
+apktool d "C:\Users\UsuarioLocal\Documents\app-android-eventos\App_Eventos_Ver2.apk" -o "C:\Users\UsuarioLocal\Documents\app-android-eventos\apktool-salida"
+
+& "C:\herramientas\jadx\bin\jadx.bat" -d jadx-salida "App_Eventos_Ver2.apk" > jadx-error.txt 2>&1
+
+5bf1ad8483b14e5db90aa5e63649ba41.TibI76s7y-7nlcNYVMOerw0H
+9948ad871a134feaa7de0ff900a7651e.lIVe4oDKgo6E2RN6_IcD8Olb

@@ -1,0 +1,8 @@
+── Hermes error details ──
+time: 2026-10-05T17:08:20.248Z
+layer: gateway
+code: loop_error
+retryable: true
+provider: nous
+model: inclusionai/ling-3.1-flash:free
+error: loop_error

@@ -1,0 +1,9 @@
+hermes config set model.default "custom/openai/gpt-oss-120b"
+hermes config set model.default "custom/openai/gpt-oss-120b"
+hermes config set model.aliases.groq.key_env "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"
+
+
+hermes config set model.default "custom/openai/gpt-oss-120b"   # más capaz
+hermes config set model.default "custom/openai/gpt-oss-20b"     # rápido
+hermes config set model.default "custom/qwen/qwen3.8-27b"       # balance
+hermes config set model.default "custom/allam-2-7b"             # liviano

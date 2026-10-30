@@ -4944,15 +4944,13 @@
 
     move-result-object v5
 
-    const-class v8, Lcom/mgs/carparking/ui/channelcontent/CategoryFragment;
-
     const v4, 0x7f080505
 
     const v6, 0x7f080507
 
     const/4 v7, -0x1
 
-    const/4 v9, 0x2
+    const/4 v9, 0x3
 
     move-object v3, v2
 
@@ -4970,7 +4968,7 @@
 
     const v11, 0x7f08050b
 
-    const/16 v16, 0x3
+    const/16 v16, 0x4
 
     move-object v10, v2
 

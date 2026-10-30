@@ -4501,8 +4501,6 @@
     <public type="id" name="chain" id="0x7f0a0123" />
     <public type="id" name="chain2" id="0x7f0a0124" />
     <public type="id" name="chains" id="0x7f0a0125" />
-    <public type="id" name="channel_rv" id="0x7f0a0126" />
-    <public type="id" name="channel_sort" id="0x7f0a0127" />
     <public type="id" name="checkbox" id="0x7f0a0128" />
     <public type="id" name="checked" id="0x7f0a0129" />
     <public type="id" name="chip" id="0x7f0a012a" />
@@ -5916,8 +5914,6 @@
     <public type="id" name="snackbar_text" id="0x7f0a06aa" />
     <public type="id" name="snap" id="0x7f0a06ab" />
     <public type="id" name="snapMargins" id="0x7f0a06ac" />
-    <public type="id" name="sortToolbar" id="0x7f0a06ad" />
-    <public type="id" name="sortToolbar_title" id="0x7f0a06ae" />
     <public type="id" name="south" id="0x7f0a06af" />
     <public type="id" name="spacer" id="0x7f0a06b0" />
     <public type="id" name="special_effects_controller_view_tag" id="0x7f0a06b1" />
@@ -6449,9 +6445,6 @@
     <public type="layout" name="exo_track_selection_dialog" id="0x7f0d0137" />
     <public type="layout" name="expand_button" id="0x7f0d0138" />
     <public type="layout" name="extension_share_tv" id="0x7f0d0139" />
-    <public type="layout" name="fragment_category" id="0x7f0d013a" />
-    <public type="layout" name="fragment_channel" id="0x7f0d013b" />
-    <public type="layout" name="fragment_channel_look" id="0x7f0d013c" />
     <public type="layout" name="fragment_download_complete" id="0x7f0d013d" />
     <public type="layout" name="fragment_home" id="0x7f0d013e" />
     <public type="layout" name="fragment_home_content_list" id="0x7f0d013f" />
@@ -6499,12 +6492,8 @@
     <public type="layout" name="item_guss_video" id="0x7f0d0169" />
     <public type="layout" name="item_history_search" id="0x7f0d016a" />
     <public type="layout" name="item_home_content_list" id="0x7f0d016b" />
-    <public type="layout" name="item_home_content_multiple_category" id="0x7f0d016c" />
-    <public type="layout" name="item_home_content_multiple_category_list" id="0x7f0d016d" />
     <public type="layout" name="item_home_content_multiple_gallery" id="0x7f0d016e" />
     <public type="layout" name="item_home_content_multiple_hot" id="0x7f0d016f" />
-    <public type="layout" name="item_home_content_multiple_list_item_category" id="0x7f0d0170" />
-    <public type="layout" name="item_home_content_multiple_list_item_category_list" id="0x7f0d0171" />
     <public type="layout" name="item_home_content_multiple_list_item_hot" id="0x7f0d0172" />
     <public type="layout" name="item_home_content_multiple_list_item_new" id="0x7f0d0173" />
     <public type="layout" name="item_home_content_multiple_list_item_special_list" id="0x7f0d0174" />
@@ -6519,12 +6508,10 @@
     <public type="layout" name="item_home_content_search_variety" id="0x7f0d017d" />
     <public type="layout" name="item_home_multiple_gallery_item_content" id="0x7f0d017e" />
     <public type="layout" name="item_home_recommend_multiple_ads" id="0x7f0d017f" />
-    <public type="layout" name="item_home_recommend_multiple_category" id="0x7f0d0180" />
     <public type="layout" name="item_home_recommend_multiple_gusslike" id="0x7f0d0181" />
     <public type="layout" name="item_home_recommend_multiple_gusslike_horization" id="0x7f0d0182" />
     <public type="layout" name="item_home_recommend_multiple_gusslike_title" id="0x7f0d0183" />
     <public type="layout" name="item_home_recommend_multiple_hot" id="0x7f0d0184" />
-    <public type="layout" name="item_home_recommend_multiple_list_item_category" id="0x7f0d0185" />
     <public type="layout" name="item_home_recommend_multiple_list_item_gusslike_horization" id="0x7f0d0186" />
     <public type="layout" name="item_home_recommend_multiple_list_item_hot" id="0x7f0d0187" />
     <public type="layout" name="item_home_recommend_multiple_list_item_multiple" id="0x7f0d0188" />
@@ -6685,14 +6672,10 @@
     <public type="layout" name="pop_layout_video_download_set_more" id="0x7f0d0287" />
     <public type="layout" name="pop_layout_video_season_item" id="0x7f0d0288" />
     <public type="layout" name="preference" id="0x7f0d0289" />
-    <public type="layout" name="preference_category" id="0x7f0d028a" />
-    <public type="layout" name="preference_category_material" id="0x7f0d028b" />
     <public type="layout" name="preference_dialog_edittext" id="0x7f0d028c" />
     <public type="layout" name="preference_dropdown" id="0x7f0d028d" />
     <public type="layout" name="preference_dropdown_material" id="0x7f0d028e" />
     <public type="layout" name="preference_information" id="0x7f0d028f" />
-    <public type="layout" name="preference_information_material" id="0x7f0d0290" />
-    <public type="layout" name="preference_list_fragment" id="0x7f0d0291" />
     <public type="layout" name="preference_material" id="0x7f0d0292" />
     <public type="layout" name="preference_recyclerview" id="0x7f0d0293" />
     <public type="layout" name="preference_widget_checkbox" id="0x7f0d0294" />

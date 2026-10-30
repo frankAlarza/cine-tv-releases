@@ -1,0 +1,2 @@
+pm2 start "C:\Users\UsuarioLocal\AppData\Roaming\npm\opencode.cmd" --name "opencode-server" --interpreter cmd --serve C:\Users\UsuarioLocal\AppData\Roaming\npm\opencode.cmd
+http://127.0.0.1:4096/

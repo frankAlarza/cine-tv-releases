@@ -1,0 +1,33 @@
+¿Vas a una entrevista para desarrollador .NET? Estas son algunas preguntas frecuentes 🎯
+Si te preparas para una prueba técnica en .NET y C#, aquí tienes algunas preguntas clave que suelen hacer en entrevistas. 👇
+🔹 C# y Programación Orientada a Objetos (POO)
+✅ ¿Cuál es la diferencia entre una clase y un struct en C#?
+✅ Explica polimorfismo, herencia, encapsulamiento y abstracción con ejemplos.
+✅ ¿Cómo funciona la inyección de dependencias en .NET?
+✅ Diferencia entre método virtual, abstracto y override.
+✅ ¿Qué son los modificadores de acceso (public, private, protected, internal)?
+🔹 Principios SOLID
+✅ Explica los principios SOLID y su importancia en el desarrollo de software.
+✅ ¿Cómo aplicar el Principio de Responsabilidad Única (SRP) en una aplicación real?
+✅ ¿Qué es el Principio de Abierto/Cerrado (OCP) y cómo implementarlo en C#?
+✅ Diferencia entre inyección de dependencias y principio de inversión de dependencias (DIP).
+🔹 .NET y Arquitectura
+✅ ¿Qué es el garbage collector y cómo funciona en .NET?
+✅ Diferencia entre Task y Thread en programación asíncrona.
+✅ ¿Cómo manejar excepciones de forma eficiente en C#?
+✅ Explica el ciclo de vida de una aplicación ASP.NET Core.
+✅ ¿Cómo funciona Entity Framework y cuál es la diferencia entre Code First y Database First?
+🔹 Tipos de Arquitectura
+✅ ¿Qué es una arquitectura monolítica y cuándo usarla?
+✅ Diferencias entre arquitectura por capas (Layered) y arquitectura hexagonal.
+✅ Explica el patrón CQRS y en qué casos se recomienda.
+✅ ¿Qué es el patrón Repository y cómo aplicarlo en .NET?
+✅ Diferencias entre Microservicios y Arquitectura Orientada a Servicios (SOA).
+🔹 Desarrollo en la nube y Azure ☁️
+✅ ¿Qué es Azure Functions y cuándo usarlas?
+✅ Explica la diferencia entre PaaS, IaaS y SaaS.
+✅ ¿Cómo funciona OAuth y JWT en autenticación en la nube?
+✅ ¿Qué es serverless computing y qué ventajas tiene?
+✅ Explica cómo desplegar una aplicación .NET en Azure App Services.
+📌 Consejo: Más allá de memorizar respuestas, trata de practicar con código y entender los conceptos en profundidad.
+Si ya pasaste entrevistas, ¿qué preguntas te hicieron? ¡Compártelas en los comentarios! 🚀

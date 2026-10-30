@@ -1,0 +1,23 @@
+Harvard					Massachusetts, U.S.A.
+Cambridge				Cambridge, United Kingdom
+University of Toronto	Toronto, Canada
+Yale					Connecticut, U.S.A.
+McGill					Montreal, Canada
+
+Juan would rather go to school in Canada.
+Ana would rather not go to school in the S.A.
+Sheila would prefer to study in Canada.
+Louise would prefer to not study in Connecticut.
+Juan would rather not study in Montreal.
+
+Louise:	Harvard, Cambridge, University of Toronto, McGill
+Ana:	Cambridge or University of Toronto or McGill *
+Juan:	University of Toronto
+Lamar:	
+Sheila:	McGill or University of Toronto
+
+Louise:	Harvard
+Ana:	Cambridge
+Juan:	University of Toronto
+Lamar:	Yale
+Sheila:	McGill

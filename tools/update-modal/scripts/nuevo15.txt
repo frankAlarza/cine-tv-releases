@@ -1,0 +1,7 @@
+adb -s emulator-5554 install cine-tv-v161-signed.apk.apk
+emulator -avd AndroidTV1080p -netspeed full
+& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd AndroidTV1080p -netspeed full
+& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd <Nombre_De_Tu_AVD> -netspeed 0:0
+
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell settings put global network_recommendations_enabled 1
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" shell settings put global captive_portal_mode 1

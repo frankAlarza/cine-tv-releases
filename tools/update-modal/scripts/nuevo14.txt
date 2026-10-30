@@ -1,0 +1,93 @@
+Informe: datos para la PoC de reproducción de MovieVN
+Todo es lectura sobre apktool-salida/, sin modificar nada. Las rutas son relativas a smali_classes*/.
+Resumen: hay datos firmes para el cuerpo y las cabeceras de las peticiones, pero no hay un vod_id real ni ninguna respuesta JSON de ejemplo en el repo. Dos premisas del encargo no se sostienen (ver §0).
+0. Correcciones a las premisas
+- start_time/end_time no pertenecen a info_new. Pertenecen a /api/barrage/get_list (qb/a.I, usado por VIDEOPLAYDETAILVIEWMODEL.K0).
+- El puerto no es fijo 7000. Se obtiene en runtime de com/pp/hls.load(...) (librería nativa) en AppApplication.loadP2pSdk.
+- error1 no aparece en ningún fichero del repo. No puedo confirmarlo.
+1. Petición de home (showHomePageVideosForPage)
+- Endpoint: POST https://movievn.z3azky.com/sunshine/video/showHomePageVideosForPage. Base URL en smali_classes12/ob/b.smali (método b()).
+- Interfaz Retrofit: smali_classes3/qb/a.smali:536, método U(RequestBody), con @Body.
+- Serialización: smali_classes2/qb/b.smali:783-826. qb/b.U(Map) hace Gson.toJson(map) y crea el body con MediaType "application/json; charset=utf-8" (qb/b.smali:25).
+- Cadena de llamadas: ViewModel → ob/a.U(Map) (smali_classes2/ob/a.smali:763) → pb/a.U(Map) (interfaz, smali_classes2/pb/a.smali:392) → qb/b.U(Map).
+- Clase que construye el Map: smali_classes11/com/mgs/carparking/ui/homecontent/HomeContentListViewModel.smali, método w(Z)V (líneas 545-660).
+- Claves del Map:
+Clave	Tipo	Origen	Default (constructor, :145-160)
+videoType	Integer	campo f	0
+curPage	Integer	campo g	1 (si refresh, se pone a 1)
+pageSize	Integer	campo h	20 (0x14)
+- Valor videoType en la home inicial: 0, pero sin uso real verificado. El subagente indica que HomeContentListFragment (que asigna videoType desde el Bundle "resourceType") no tiene llamadores. La home real usa otros ViewModels (HomeRecommendMultipleListViewModel y HomeContentMultipleListViewModel) con clave channel_id. No verifiqué qué endpoint llaman esos ViewModels.
+- Headers de dp/a: el Map que recibe el constructor Ldp/a es null. tc/b0.smali:68 llama a <init>(String, null) y dp/a.intercept solo añade headers si el Map no es nulo (dp/a.smali:80). dp/a no añade ningún header.
+- Ejemplo de body con datos reales: no existe en el repo. Solo es posible obtenerlo capturando tráfico en runtime. El body esperado es {"videoType":0,"curPage":1,"pageSize":20}, pero es una inferencia.
+2. Petición de detalle (api/vod/info_new)
+- Endpoint: POST /api/vod/info_new. Interfaz: qb/a.smali:820, método i(Map) (@FormUrlEncoded, @FieldMap). Es form-encoded, no JSON.
+- Construcción del Map: smali_classes8/com/mgs/carparking/model/VIDEOPLAYDETAILVIEWMODEL.smali, método S0(I, String, String, I)V (líneas 4823-4940).
+- Claves exactas:
+Clave	Tipo	Origen
+vod_id	int	parámetro 1
+cur_time	String	ts = System.currentTimeMillis() (ver §4)
+sign	String	respuesta de /control?msg=verify (ver §3)
+audio_type	int	parámetro 4 (VideoPlayDetailActivity.m0)
+vi	String	solo si tc/e.j() == 12: tc/e.l() = SHA1 de la firma del APK
+- Llamador: smali_classes7/.../VideoPlayDetailActivity$s.smali:171 pasa vod_id = l0(activity), cur_time = ts, sign = body, audio_type = m0(activity).
+- vod_id de ejemplo: no encontrado. Solo aparece el campo en netbean/VideoBean.smali:46. Para obtenerlo: buscar un ID en la respuesta de showHomePageVideosForPage de la home en runtime.
+- Respuesta con vod_url: campo vod_url en netbean/TKBean (@SerializedName("vod_url")), RecommandVideosEntity y VideoBean. Ejemplo JSON real: no existe en el repo.
+3. Proxy P2P (tc/e.B y HttpProxyCacheServer)
+- ¿Siempre pasa por el proxy? No. Solo hay un call-site de tc/e.B (VideoPlayDetailActivity.m1, :15578), protegido por VideoBean.is_p2p() == 1. Si is_p2p != 1, vod_url se reproduce directamente en ExoPlayer.
+- Formato del proxy (si is_p2p == 1): tc/e.smali:25-60:
+- http://127.0.0.1:<port>/resource.mp4?src=<Base64(vod_url)> si termina en .mp4.
+- http://127.0.0.1:<port>/resource.m3u8?src=<Base64(vod_url)> en otro caso.
+- Base64: tc/f.a (smali_classes7/tc/f.smali:223) = Base64 estándar con alfabeto A-Za-z0-9+/=. Es codificación pura, sin transformación del payload.
+- Puerto: AppApplication.port = retorno de com/pp/hls.load(...) (smali_classes6/com/mgs/carparking/app/AppApplication.smali:315). Es dinámico, lo decide la librería nativa, y no está fijado a 7000.
+- Parámetros de hls.load: "87c2cb7ff568d602d5f806c473345600", "com.movievn.cinevi", "63", storageDir, externalFilesDir, tc/l0.L() (KEY_PREF_PUBLICSYSCONF_STRING), "1".
+- Verificación de la sesión: VideoPlayDetailActivity.getSignInfo() (:7357) hace GET http://127.0.0.1:<port>/control?msg=verify&device_id=<ub/a.a>&ts=<ts>. La respuesta es el sign del Map de S0.
+- Lo que no pude confirmar: que el proxy solo haga fetch+stream. Es código nativo (libpp_hls), no hay smali que lo demuestre.
+4. Autenticación y headers
+Interceptor: smali_classes3/tc/b0$a.smali:43-561. Añade estos headers a cada petición de la API:
+Header	Valor
+app_id	movievn
+package_name	com.movievn.cinevi
+version	40000
+sys_platform	2
+mob_mfr	Build.MANUFACTURER.toLowerCase()
+mobmodel	Build.MODEL
+sysrelease	Build.VERSION.RELEASE
+device_id	ub/a.a(ctx) (ver abajo)
+gaid	prefs key_gaid, default ""
+channel_code	tc/e.f(ctx) = metaData["UMENG_CHANNEL"], default null
+androidid	Settings.System.getString(resolver, "android_id")
+cur_time	System.currentTimeMillis() como String
+token	tc/l0.T() = prefs KEY_PREF_USER_TOKEN, default ""
+sign	ver abajo
+is_vvv	"1" si hay interfaz tun0/ppp0, si no "0" (fp/r.f)
+is_language	LocaleList.getDefault().get(0).getLanguage() (fp/r.d)
+is_display	TimeZone.getDefault().getDisplayName(false,0) (fp/r.c)
+app_language	tc/l0.m() = prefs KEY_PREF_APP_LANGUAGE, default ""
+en_al	tc/l0.H() + "" = prefs KEY_OPEN_18, default 0
+Algoritmo de sign (tc/e.y + tc/e.x, tc/b0$a.smali:358-374):
+sign = MD5_hex( DES3_decrypt(Base64_decode("MxASAkl/yHTGg+/Tw1R7u96nGqkWsOZ2")) + device_id + cur_time ).uppercase()
+- DES3: DESede/CBC/PKCS5Padding. Clave "dsawdf634eebGFHITR5UT9kS0" (24 bytes, fp/f.smali:17). IV "32456738" (fp/f.smali:70). Base64 con flag 2 (NO_WRAP).
+- device_id: SharedPreferences "deviceId" / clave "key". Si no existe, se genera aleatoriamente de 22 caracteres [0-9a-f] (ub/a.smali:526-657) y se persiste. Es aleatorio por instalación, no derivado de hardware.
+- Lo que falta para ejecutar sign offline: no he calculado el texto desencriptado de la sal. Hay que hacerlo en la PoC con javax.crypto, no con este informe.
+Autenticación: el único token es KEY_PREF_USER_TOKEN. Sin sesión iniciada está vacío. Si hay HTTP 401 (0x191), la app muestra "登录失效" (sesión caducada).
+5. Código mínimo para reproducir
+Lo que está verificado: los headers (§4), el cuerpo de la home (§1) y el algoritmo de sign.
+Lo que falta: un vod_id real, que hay que sacar de la respuesta de la home en runtime.
+Esqueleto en Kotlin (sin valores inventados):
+val base = "https://movievn.z3azky.com"
+val curTime = System.currentTimeMillis().toString()
+val deviceId = /* SharedPreferences("deviceId").getString("key") o generar 22 hex */ ""
+val sign = md5Hex(des3Decrypt("MxASAkl/yHTGg+/Tw1R7u96nGqkWsOZ2") + deviceId + curTime).uppercase()
+
+// Home (JSON)
+val body = """{"videoType":0,"curPage":1,"pageSize":20}"""
+// POST $base/sunshine/video/showHomePageVideosForPage  con headers de §4
+
+// Detalle (form): vod_id de la home
+// POST $base/api/vod/info_new  vod_id=<ID>&cur_time=$curTime&sign=<sign del verify>&audio_type=<n>
+Cómo reproducir:
+- Directo si is_p2p != 1: pasar vod_url tal cual a ExoPlayer.
+- Vía proxy si is_p2p == 1: http://127.0.0.1:<port>/resource.m3u8?src= + Base64(vod_url). El port lo decide la librería nativa; hay que leerlo en runtime.
+Notas
+- La cadena de headers del §4 es extensa. Si quieres, puedo reducir la PoC a los mínimos que el backend exige probando contra la respuesta real.
+- El delegado funcionó bien: las tres tareas en paralelo costaron una fracción del contexto. Para siguientes fases puedo usar el mismo patrón.

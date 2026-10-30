@@ -1,0 +1,1 @@
+go install github.com/Gentleman-Programming/engram/cmd/engram@latest

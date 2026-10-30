@@ -1,0 +1,4 @@
+# From your project root
+mkdir -p .claude/skills
+cd .claude/skills
+git clone https://github.com/bcharleson/webscraping-skill.git web-scraping

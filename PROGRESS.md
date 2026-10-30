@@ -250,3 +250,58 @@ This code:
 - Aplicados fixes a tarjetas de ficha (foco en raiz, clickable, sin focusableInTouchMode, sin margin, focusable en todos item layouts).
 - Arreglado foco lento en buscador (quitado focusableInTouchMode, focusable de contenedores).
 - Instalada v133 y allfocus para pruebas.
+
+## v170 - Categories screen removal fix
+
+### Problem
+After removing the Categories screen (tab 2), the app crashed with ClassNotFoundException for TvLookNav on startup, then ClassNotFoundException for Categories-related classes.
+
+### Root Causes
+1. `ic_update_tv.xml` had invalid `<res/drawable>` wrapper instead of `<vector>` root element
+2. `public.xml` contained 8 residual layout references to deleted Category layouts:
+   - item_home_content_multiple_category
+   - item_home_content_multiple_category_list  
+   - item_home_content_multiple_list_item_category
+   - item_home_content_multiple_list_item_category_list
+   - item_home_recommend_multiple_category
+   - item_home_recommend_multiple_list_item_category
+   - preference_category
+   - preference_category_material
+3. `styles.xml` referenced deleted `preference_category` layouts in `Preference.Category` styles  
+4. `BaseActivity.smali` called `TvLookNav.install()` which no longer existed
+
+### Fixes Applied
+1. Fixed `ic_update_tv.xml`: Changed root from `<res/drawable name="ic_update_tv">` to `<vector android:name="ic_update_tv">`
+2. Removed 8 Category layout entries from `public.xml` (see above)
+3. Removed `android:layout` items from `Preference.Category` styles in `styles.xml`
+4. In `BaseActivity.smali`:
+   - Removed `const-string v1, "TvLookNav"` log line
+   - Removed `const-string v0, "BaseActivity onCreate initData"` log line
+   - Removed `invoke-static Log.d(...)` call
+   - Removed iget-object through TvLookNav.install() call
+   - Added back iget-object and if-eqz v0, :cond_tvskip2 check
+   - Fixed label placement for `:cond_tvskip2`
+
+### Build Verification (v170)
+- Build: `apktool b` exit 0
+- APK signed: `apksigner verify` exit 0
+- Install: Success on emulator-5554
+- Launch: MainActivity started, no crashes
+- Logcat: No FATAL EXCEPTION, VerifyError, or ANR
+- Screenshot: `build/cine-tv-v170-home.png`
+
+### Files Modified
+- `apktool-salida/res/drawable/ic_update_tv.xml`
+- `apktool-salida/res/values/public.xml`
+- `apktool-salida/res/values/styles.xml`
+- `apktool-salida/smali_classes7/com/mgs/carparking/app/BaseActivity.smali`
+
+### Current Status
+✅ Categories screen successfully removed
+✅ App launches without crashes
+✅ Home screen visible and navigable
+
+### Next Steps
+- Verify TV navigation works correctly
+- Test hero card interactions
+- Verify the "Generos" (Categories) button is no longer in the lateral menu

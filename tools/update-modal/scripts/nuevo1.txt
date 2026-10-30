@@ -1,0 +1,13 @@
+Calling speech-to-text (WhisperX) with : C:\Users\UsuarioLocal\AppData\Roaming\Subtitle Edit\SpeechToText\WhisperX\whisperx-standalone.exe --language en --model "distil-large-v3.5" --output_format srt --output_dir "C:\Users\UsuarioLocal\AppData\Local\Temp\se-stt-736d964e-f67c-4997-b904-57e92ef9d13e"  "C:\Cursos\Maercisa\B1_2026\Unit 1\Situation_At-the-library.mp4"
+pyannote\audio\core\io.py:48: UserWarning:
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+No module named 'torchcodec'
+warnings.warn(
+2026-09-22 18:27:14 - whisperx.asr - INFO - Compute type not specified, defaulting to float32 for device cpu
+2026-09-22 18:27:17 - whisperx.vads.pyannote - INFO - Performing voice activity detection using Pyannote...
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.6.5. 
+To apply the upgrade to your files permanently, 
+run `python -m lightning.pytorch.utilities.upgrade_checkpoint "C:\Users\UsuarioLocal\AppData\Roaming\Subtitle Edit\SpeechToText\WhisperX\_internal\whisperx\assets\pytorch_model.bin"`
+2026-09-22 18:27:18 - whisperx.transcribe - INFO - Performing transcription...

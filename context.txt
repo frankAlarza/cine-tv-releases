@@ -1,0 +1,17 @@
+->ۤۡ۟ۦ(Ljava/lang/Object;)Lme/goldze/mvvmhabit/base/BaseFragment;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/mgs/carparking/ui/۟ۦۢۦۧ;->ۣ۟۟ۨۥ(Ljava/lang/Object;)Ljava/lang/Class;
+
+    move-result-object v5
+
+    const-class v0, Lcom/mgs/carparking/ui/channelcontent/CategoryFragment;
+
+    invoke-static {v5, v0}, Lcom/mgs/carparking/ui/ۦۥ۟ۨ;->ۣۡ۠ۤ(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-static 
