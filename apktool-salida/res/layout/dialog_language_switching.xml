@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/ll_top" android:clipChildren="false" android:clipToPadding="false" android:background="@color/color_1b202b" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_language" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/sp_13" android:textColor="@color/tv_color_text_primary" android:gravity="center" android:id="@id/tv_cancel" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:focusable="true" android:background="@color/tv_color_surface" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_59" android:text="@string/text_cannel" />
+</LinearLayout>

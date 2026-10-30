@@ -1,0 +1,36 @@
+.class public Lcom/mgs/carparking/shorttk/VerticalViewPager$d;
+.super Ljava/lang/Object;
+.source "VerticalViewPager.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mgs/carparking/shorttk/VerticalViewPager;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "d"
+.end annotation
+
+
+# instance fields
+.field public a:Ljava/lang/Object;
+
+.field public b:I
+
+.field public c:Z
+
+.field public d:F
+
+.field public e:F
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

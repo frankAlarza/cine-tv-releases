@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Flag en modo Televisión. El código de la app puede leer este booleano
+         para aislar SDKs de anuncios móviles, desactivar gestos táctiles y
+         activar la navegación por D-pad cuando la app se ejecuta en Android TV. -->
+    <bool name="is_tv">true</bool>
+</resources>

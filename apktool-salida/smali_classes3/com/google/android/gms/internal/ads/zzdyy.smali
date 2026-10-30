@@ -1,0 +1,56 @@
+.class public final synthetic Lcom/google/android/gms/internal/ads/zzdyy;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@24.4.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzgci;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/ads/zzdzb;
+
+.field public final synthetic zzb:Lcom/google/android/gms/internal/ads/zzdza;
+
+.field public final synthetic zzc:Lcom/google/android/gms/internal/ads/zzbvo;
+
+.field public final synthetic zzd:Lcom/google/android/gms/internal/ads/zzgci;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzdzb;Lcom/google/android/gms/internal/ads/zzdza;Lcom/google/android/gms/internal/ads/zzbvo;Lcom/google/android/gms/internal/ads/zzgci;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zza:Lcom/google/android/gms/internal/ads/zzdzb;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzb:Lcom/google/android/gms/internal/ads/zzdza;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzc:Lcom/google/android/gms/internal/ads/zzbvo;
+
+    iput-object p4, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzd:Lcom/google/android/gms/internal/ads/zzgci;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Object;)Ld8/i;
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zza:Lcom/google/android/gms/internal/ads/zzdzb;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzb:Lcom/google/android/gms/internal/ads/zzdza;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzc:Lcom/google/android/gms/internal/ads/zzbvo;
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/ads/zzdyy;->zzd:Lcom/google/android/gms/internal/ads/zzgci;
+
+    check-cast p1, Lcom/google/android/gms/internal/ads/zzdyp;
+
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/google/android/gms/internal/ads/zzdzb;->zzd(Lcom/google/android/gms/internal/ads/zzdzb;Lcom/google/android/gms/internal/ads/zzdza;Lcom/google/android/gms/internal/ads/zzbvo;Lcom/google/android/gms/internal/ads/zzgci;Lcom/google/android/gms/internal/ads/zzdyp;)Ld8/i;
+
+    move-result-object p1
+
+    return-object p1
+.end method

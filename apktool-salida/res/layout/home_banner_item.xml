@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV style hero: imagen a sangre + degradado + titulo + affordance de play. -->
+<com.movievn.tv.TvHeroItem android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/item_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/tv_hero_scrim" />
+        <!-- Afordancia visual de reproduccion (el hero completo es el target de click). -->
+        <ImageView android:layout_width="72dp" android:layout_height="72dp" android:layout_gravity="center" android:background="@drawable/tv_play_button" android:src="@drawable/tv_ic_play" android:scaleType="center" android:padding="14dp" android:tint="@color/tv_color_cta_primary_text" android:alpha="0.92" />
+        <LinearLayout android:orientation="vertical" android:layout_gravity="bottom|start" android:paddingLeft="@dimen/tv_screen_margin_h" android:paddingRight="@dimen/tv_screen_margin_h" android:paddingBottom="@dimen/tv_space_xxl" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/tv_text_display" android:textStyle="bold" android:textColor="@color/tv_color_text_primary" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:shadowColor="#ff000000" android:shadowDx="0" android:shadowDy="2" android:shadowRadius="8" />
+        </LinearLayout>
+    </FrameLayout>
+</com.movievn.tv.TvHeroItem>

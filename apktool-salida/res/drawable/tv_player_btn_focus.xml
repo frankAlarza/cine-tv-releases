@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anillo de foco de los botones del reproductor (v32).
+     Estilo "Apple TV": halo claro y CEÃ‘IDO al icono.
+     OJO: los items del layer-list llevan insets de 2 dp para que el trazo no
+     se recorte contra los limites de la vista (un halo recortado deja un
+     borde duro y zonas oscuras). La rueda tiene ademas su interior hueco:
+     el fondo enfocado (tv_player_btn_bg) lo aclara para que no se vea negro.
+     Transparente en reposo (regla 3 de AGENTS.md). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <!-- halo suave -->
+            <item
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#00000000" />
+                    <stroke android:width="5dp" android:color="#1FFFFFFF" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            <!-- borde claro -->
+            <item
+                android:left="2dp"
+                android:top="2dp"
+                android:right="2dp"
+                android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#00000000" />
+                    <stroke android:width="1.5dp" android:color="#8CFFFFFF" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+            <stroke android:width="0dp" android:color="#00000000" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>

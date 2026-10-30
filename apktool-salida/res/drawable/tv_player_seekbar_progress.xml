@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de progreso del reproductor (v32) - estilo Apple TV.
+     Una LINEA fina (3 dp) centrada verticalmente, no una banda gruesa:
+     los items del layer-list llevan insets top/bottom para que la pista
+     no se estire a toda la altura del SeekBar.
+     Pista: blanco muy translucido (#2EFFFFFF). Reproducido: blanco roto. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:top="7dp"
+        android:bottom="7dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="2dp" />
+            <solid android:color="#2EFFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:top="7dp"
+        android:bottom="7dp">
+        <clip
+            android:drawable="@drawable/tv_player_seek_progress"
+            android:gravity="left" />
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:top="7dp"
+        android:bottom="7dp">
+        <clip
+            android:drawable="@drawable/tv_player_seek_progress"
+            android:gravity="left" />
+    </item>
+</layer-list>

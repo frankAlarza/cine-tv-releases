@@ -1,0 +1,1898 @@
+{
+  "nodes": [
+    {
+      "id": "project_app_cine_tv",
+      "label": "Proyecto app-android-cine-tv (port Android TV)",
+      "type": "project",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "1-9"
+    },
+    {
+      "id": "apk_movievn_cinevi",
+      "label": "APK base com.movievn.cinevi v4.0.0",
+      "type": "system",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "8"
+    },
+    {
+      "id": "agents_md",
+      "label": "AGENTS.md guia operativa",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "id": "tc_e",
+      "label": "tc/e.smali guardas anti-TV (i/o)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "id": "baseactivity",
+      "label": "BaseActivity (orientacion portrait->landscape)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "130"
+    },
+    {
+      "id": "tvutils",
+      "label": "TvUtils.isTv() helper",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "179"
+    },
+    {
+      "id": "splashactivity",
+      "label": "SplashActivity (arranque)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "30"
+    },
+    {
+      "id": "appapplication",
+      "label": "AppApplication (SDKs anuncios init)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "180"
+    },
+    {
+      "id": "categoryrail",
+      "label": "CategoryRail (rail lateral de categorias)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "16"
+    },
+    {
+      "id": "tvdetail",
+      "label": "TvDetail (pantalla completa)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "161"
+    },
+    {
+      "id": "tvplayerbar",
+      "label": "TvPlayerBar (barra de control reproductor)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "162"
+    },
+    {
+      "id": "tvsectiondrawer",
+      "label": "TvSectionDrawer (cajon lateral secciones)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "163"
+    },
+    {
+      "id": "tvhomerefresh",
+      "label": "TvHomeRefresh (boton actualizar Home)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "164"
+    },
+    {
+      "id": "tvsubtitlestyle",
+      "label": "TvSubtitleStyle (estilo subtítulos nd44)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "18"
+    },
+    {
+      "id": "exoplayer",
+      "label": "ExoPlayer embedded (f4/n0 interfaz Player)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md",
+      "source_location": "19-22"
+    },
+    {
+      "id": "playerctl",
+      "label": "PlayerCtl / TvPlayerCtl (reflexion Java)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "56-215"
+    },
+    {
+      "id": "focus_audit_inventario",
+      "label": "Inventario auditoria de foco v33",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-inventario.md",
+      "source_location": "1"
+    },
+    {
+      "id": "focus_audit_resultado",
+      "label": "Resultado auditoria de foco v33",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "1"
+    },
+    {
+      "id": "focus_click_por_layout",
+      "label": "Foco y clic por layout de item",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-click-por-layout.md",
+      "source_location": "1"
+    },
+    {
+      "id": "privacidad_portapapeles",
+      "label": "Privacidad: portapapeles no debe viajar v30",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "1"
+    },
+    {
+      "id": "rail_categorias_doc",
+      "label": "Rail lateral de categorias doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "1"
+    },
+    {
+      "id": "reproductor_exoplayer_doc",
+      "label": "Reproductor ExoPlayer API doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md",
+      "source_location": "1"
+    },
+    {
+      "id": "reproductor_control_doc",
+      "label": "Reproductor ExoPlayer control doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "1"
+    },
+    {
+      "id": "subtitulos_online_doc",
+      "label": "Subtitulos online doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "1"
+    },
+    {
+      "id": "design_system",
+      "label": "Design system Apple TV inspired",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "1"
+    },
+    {
+      "id": "fase_01_splash",
+      "label": "Fase 01 Splash/arranque",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "1"
+    },
+    {
+      "id": "comparisons",
+      "label": "comparisons.txt (empty)",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\comparisons.txt"
+    },
+    {
+      "id": "fragment_home",
+      "label": "fragment_home.xml (Home)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "157"
+    },
+    {
+      "id": "activity_video_play_detail",
+      "label": "activity_video_play_detail.xml (ficha+player)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "160"
+    },
+    {
+      "id": "bg_focused",
+      "label": "bg_focused.xml (anillo de foco)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "18-26"
+    },
+    {
+      "id": "tv_dimens",
+      "label": "tv_dimens.xml (dimensiones TV)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "156"
+    },
+    {
+      "id": "tv_focus_scale",
+      "label": "tv_focus_scale.xml (animacion foco)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "171"
+    },
+    {
+      "id": "apktool",
+      "label": "apktool (build tool)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "45"
+    },
+    {
+      "id": "adb",
+      "label": "adb (Android debug bridge)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "44"
+    },
+    {
+      "id": "apksigner",
+      "label": "apksigner (firma)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "46"
+    },
+    {
+      "id": "zipalign",
+      "label": "zipalign",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "46"
+    },
+    {
+      "id": "area_A_arranque_navegacion",
+      "label": "Area A - Arranque y navegacion",
+      "type": "area",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "area_B_descubrimiento_busqueda",
+      "label": "Area B - Descubrimiento y busqueda",
+      "type": "area",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "area_C_reproduccion",
+      "label": "Area C - Reproduccion",
+      "type": "area",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "fase_02_home",
+      "label": "Fase 02 - Home",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "fase_03_rankings",
+      "label": "Fase 03 - Rankings",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "id": "fase_04_categorias",
+      "label": "Fase 04 - Categorias",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "fase_05_canal",
+      "label": "Fase 05 - Canal (ChannelFragment)",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "fase_06_buscador",
+      "label": "Fase 06 - Buscador",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "fase_07_resultados_busqueda",
+      "label": "Fase 07 - Resultados de busqueda",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "id": "fase_08_ver_mas",
+      "label": "Fase 08 - Ver mas (listas)",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "id": "fase_09_especial",
+      "label": "Fase 09 - Especial / detalle nuevo",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "id": "fase_10_ficha_video",
+      "label": "Fase 10 - Ficha de video",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "fase_11_shorts",
+      "label": "Fase 11 - Shorts",
+      "type": "phase",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "build_v39",
+      "label": "Build v39",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "build_v40",
+      "label": "Build v40",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "build_v41",
+      "label": "Build v41",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "build_v49",
+      "label": "Build v49 (verificacion D-pad)",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\prompt.md"
+    },
+    {
+      "id": "build_v145",
+      "label": "Build v145 (autocompletado buscador)",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "build_v154",
+      "label": "Build v154 (UP desde primer item a flecha)",
+      "type": "build",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "id": "concept_trio_magico",
+      "label": "Trio magico (focusable + foreground bg_focused + stateListAnimator)",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "concept_after_descendants",
+      "label": "descendantFocusability=afterDescendants",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "concept_bg_focused",
+      "label": "bg_focused (anillo de foco transparente en reposo)",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "id": "concept_tv_utils_is_tv",
+      "label": "TvUtils.isTv()",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "concept_vertical_viewpager",
+      "label": "VerticalViewPager (shorts, solo trata LEFT/RIGHT/CENTER)",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "concept_smart_refresh_layout",
+      "label": "SmartRefreshLayout (refresco del feed)",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "concept_binding_click",
+      "label": "BindingCommand en raiz vs hijo (data-binding)",
+      "type": "concept",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "layout_fragment_home",
+      "label": "res/layout/fragment_home.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "layout_fragment_home_content_list",
+      "label": "fragment_home_content_list.xml (+ _multiple_list, _recommend_multiple_list, _content_search_list)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "layout_home_banner_item",
+      "label": "home_banner_item.xml / widget_banner_view.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "layout_fragment_rank_new",
+      "label": "fragment_rank_new.xml (tab_layout)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "id": "layout_fragment_rank_content_list",
+      "label": "fragment_rank_content_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "id": "layout_item_topic_filter_common",
+      "label": "item_topic_filter_common.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "id": "layout_item_rank_content_multiple_next",
+      "label": "item_rank_content_multiple_next.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "id": "layout_fragment_category",
+      "label": "fragment_category.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "layout_fragment_channel_look",
+      "label": "fragment_channel_look.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "layout_item_look_channnel_filter_common",
+      "label": "item_look_channnel_filter_common.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "layout_item_look_channnel_search_result",
+      "label": "item_look_channnel_search_result.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "layout_fragment_channel",
+      "label": "fragment_channel.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "layout_item_channnel_filter_common",
+      "label": "item_channnel_filter_common.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "layout_item_channnel_filter",
+      "label": "item_channnel_filter.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "layout_item_channnel_search_result",
+      "label": "item_channnel_search_result.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "layout_search_content_video",
+      "label": "SearchContentVideoActivity layout (et_search, tab_layout)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "layout_item_history_search",
+      "label": "item_history_search.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "layout_item_home_search_hot_search",
+      "label": "item_home_search_hot_search.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "layout_dialog_search_history_clear",
+      "label": "dialog_search_history_clear.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "layout_item_search_extend_list",
+      "label": "item_search_extend_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "layout_fragment_home_content_search_list",
+      "label": "fragment_home_content_search_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "id": "layout_item_home_content_search_movie",
+      "label": "item_home_content_search_movie/tv/variety/comic/recommend_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "id": "layout_item_search_tv_set_num",
+      "label": "item_search_tv_set_num.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "id": "layout_activity_video_more_list",
+      "label": "activity_video_more_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "id": "layout_item_video_more_list",
+      "label": "item_video_more_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "id": "layout_activity_special_detail_new",
+      "label": "activity_special_detail_new.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "id": "layout_item_special_detail_new_item_result",
+      "label": "item_special_detail_new_item_result.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "id": "layout_activity_video_play_detail_tv",
+      "label": "res/layout-land-television/activity_video_play_detail.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "layout_item_video_play_tv_set_num",
+      "label": "item_video_play_tv_set_num.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "layout_item_video_play_variety_set_num",
+      "label": "item_video_play_variety_set_num.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "layout_item_video_commit_list",
+      "label": "item_video_commit_list.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "layout_pop_layout_video_season_item",
+      "label": "pop_layout_video_season_item.xml (y otros pop_layout_*)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "layout_activity_short_tk",
+      "label": "activity_short_tk.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "layout_item_tik_tok",
+      "label": "item_tik_tok.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "layout_dialog_short_speed",
+      "label": "dialog_short_speed.xml",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "activity_search_content_video",
+      "label": "SearchContentVideoActivity",
+      "type": "activity",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "activity_video_more_list",
+      "label": "VideoMoreListActivity",
+      "type": "activity",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "id": "activity_special_detail_new",
+      "label": "SpecialDetailNewActivity",
+      "type": "activity",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "id": "activity_short_tk",
+      "label": "ShortTkActivity",
+      "type": "activity",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "activity_channel_fragment",
+      "label": "ChannelFragment (activity)",
+      "type": "activity",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "id": "fragment_look_channel",
+      "label": "LookChannelFragment / CategoryFragment",
+      "type": "fragment",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "id": "class_tv_utils",
+      "label": "TvUtils (isTv)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "class_tv_section_drawer",
+      "label": "TvSectionDrawer (wireTopFocus)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "class_tv_home_refresh",
+      "label": "TvHomeRefresh",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "class_tv_player_bar",
+      "label": "TvPlayerBar",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "class_tv_detail",
+      "label": "TvDetail (toggle fullscreen)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "class_category_rail",
+      "label": "CategoryRail",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "class_vertical_viewpager",
+      "label": "VerticalViewPager",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "class_tk_adapter",
+      "label": "TKAdapter (shorts overlay)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "class_tc_s",
+      "label": "tc.s (IME forzado en TV)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "guide_powershell_reglas",
+      "label": "Guia powershell-reglas.md (R0-R17)",
+      "type": "guide",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\guias\\powershell-reglas.md"
+    },
+    {
+      "id": "prompt_verificacion_v49",
+      "label": "prompt.md (verificacion D-pad v49)",
+      "type": "prompt",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\prompt.md"
+    },
+    {
+      "id": "p0_tarjetas_sin_focusable",
+      "label": "P0: tarjetas del feed sin focusable",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "p0_containeres_comen_dpad",
+      "label": "P0: contenedores que se comen el D-pad",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "p0_ime_forzado_tv",
+      "label": "P0: IME forzado en TV (tc.s.d)",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "p0_enter_no_envia_busqueda",
+      "label": "P0: ENTER del mando no envia busqueda",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "id": "p0_vertical_viewpager_no_up_down",
+      "label": "P0: VerticalViewPager no trata UP/DOWN",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "p0_shorts_overlay_sin_focusable",
+      "label": "P0: overlay de shorts sin focusable",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "id": "p0_iv_back_focusable_false",
+      "label": "P0: iv_back con focusable=false explicito",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "p0_popups_sin_focusable",
+      "label": "P0: todos los popups con 0 vistas enfocables",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "id": "p0_resultados_sin_focusable",
+      "label": "P0: resultados sin focusable (multiples pantallas)",
+      "type": "bug",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents_md",
+      "target": "project_app_cine_tv",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "source": "project_app_cine_tv",
+      "target": "apk_movievn_cinevi",
+      "relation": "ports",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "8"
+    },
+    {
+      "source": "project_app_cine_tv",
+      "target": "tc_e",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "source": "tc_e",
+      "target": "project_app_cine_tv",
+      "relation": "enables_tv_mode",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "source": "baseactivity",
+      "target": "project_app_cine_tv",
+      "relation": "part_of",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "130"
+    },
+    {
+      "source": "tvutils",
+      "target": "splashactivity",
+      "relation": "used_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "36-38"
+    },
+    {
+      "source": "splashactivity",
+      "target": "project_app_cine_tv",
+      "relation": "entry_point",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "30"
+    },
+    {
+      "source": "appapplication",
+      "target": "project_app_cine_tv",
+      "relation": "application_class",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "180"
+    },
+    {
+      "source": "appapplication",
+      "target": "tc_e",
+      "relation": "guarded_by",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "101-102"
+    },
+    {
+      "source": "categoryrail",
+      "target": "fragment_home",
+      "relation": "injected_into",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "16-21"
+    },
+    {
+      "source": "categoryrail",
+      "target": "tv_dimens",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "40"
+    },
+    {
+      "source": "tvdetail",
+      "target": "activity_video_play_detail",
+      "relation": "controls",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "161"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "activity_video_play_detail",
+      "relation": "controls",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "162"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "exoplayer",
+      "relation": "reflects",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "11"
+    },
+    {
+      "source": "tvsectiondrawer",
+      "target": "fragment_home",
+      "relation": "used_in",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "163"
+    },
+    {
+      "source": "tvhomerefresh",
+      "target": "fragment_home",
+      "relation": "used_in",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "164"
+    },
+    {
+      "source": "exoplayer",
+      "target": "playerctl",
+      "relation": "controlled_via",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "37-41"
+    },
+    {
+      "source": "playerctl",
+      "target": "tvplayerbar",
+      "relation": "used_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "190-209"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "tvsubtitlestyle",
+      "relation": "applies",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "18"
+    },
+    {
+      "source": "focus_audit_inventario",
+      "target": "focus_audit_resultado",
+      "relation": "complements",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-inventario.md",
+      "source_location": "205"
+    },
+    {
+      "source": "focus_click_por_layout",
+      "target": "focus_audit_inventario",
+      "relation": "extends",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-click-por-layout.md",
+      "source_location": "1"
+    },
+    {
+      "source": "bg_focused",
+      "target": "focus_audit_resultado",
+      "relation": "styled_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "18-26"
+    },
+    {
+      "source": "bg_focused",
+      "target": "project_app_cine_tv",
+      "relation": "focus_ring",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "95-96"
+    },
+    {
+      "source": "privacidad_portapapeles",
+      "target": "splashactivity",
+      "relation": "documents_patch",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "35-41"
+    },
+    {
+      "source": "privacidad_portapapeles",
+      "target": "tvutils",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "36-38"
+    },
+    {
+      "source": "rail_categorias_doc",
+      "target": "categoryrail",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md"
+    },
+    {
+      "source": "reproductor_exoplayer_doc",
+      "target": "exoplayer",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md"
+    },
+    {
+      "source": "reproductor_control_doc",
+      "target": "playerctl",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md"
+    },
+    {
+      "source": "subtitulos_online_doc",
+      "target": "tvsubtitlestyle",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md"
+    },
+    {
+      "source": "design_system",
+      "target": "project_app_cine_tv",
+      "relation": "guides_ui",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "1"
+    },
+    {
+      "source": "design_system",
+      "target": "tv_dimens",
+      "relation": "defines_tokens",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "290"
+    },
+    {
+      "source": "design_system",
+      "target": "bg_focused",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "243"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "splashactivity",
+      "relation": "validates",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "20-22"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "tc_e",
+      "relation": "checks",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "32"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "tvutils",
+      "relation": "checks",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "33"
+    },
+    {
+      "source": "apktool",
+      "target": "project_app_cine_tv",
+      "relation": "builds",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "62"
+    },
+    {
+      "source": "apksigner",
+      "target": "project_app_cine_tv",
+      "relation": "signs",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "66-69"
+    },
+    {
+      "source": "zipalign",
+      "target": "project_app_cine_tv",
+      "relation": "aligns",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "65"
+    },
+    {
+      "source": "adb",
+      "target": "project_app_cine_tv",
+      "relation": "installs",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "74"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "area_A_arranque_navegacion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "area_A_arranque_navegacion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "area_A_arranque_navegacion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "area_A_arranque_navegacion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "area_B_descubrimiento_busqueda",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "area_B_descubrimiento_busqueda",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "area_B_descubrimiento_busqueda",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "area_B_descubrimiento_busqueda",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "area_C_reproduccion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "area_C_reproduccion",
+      "relation": "belongs_to",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "build_v39",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "build_v39",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "build_v39",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "build_v39",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "build_v40",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "build_v40",
+      "relation": "verified_on",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "build_v40",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "build_v40",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "build_v41",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "build_v41",
+      "relation": "verified_on",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "build_v145",
+      "relation": "incremental_fix",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "build_v154",
+      "relation": "incremental_fix",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "layout_fragment_home",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "layout_fragment_home_content_list",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "layout_home_banner_item",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "class_tv_section_drawer",
+      "relation": "uses",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "class_tv_home_refresh",
+      "relation": "uses",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "class_category_rail",
+      "relation": "uses",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "concept_after_descendants",
+      "relation": "applies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "concept_smart_refresh_layout",
+      "relation": "uses",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "concept_binding_click",
+      "relation": "documents",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "p0_tarjetas_sin_focusable",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_02_home",
+      "target": "p0_containeres_comen_dpad",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "layout_fragment_rank_new",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "layout_fragment_rank_content_list",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "layout_item_topic_filter_common",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "layout_item_rank_content_multiple_next",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_03_rankings",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-03-rankings.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "layout_fragment_category",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "layout_fragment_channel_look",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "layout_item_look_channnel_filter_common",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "layout_item_look_channnel_search_result",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "fragment_look_channel",
+      "relation": "targets",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_04_categorias",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-04-categorias.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "layout_fragment_channel",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "layout_item_channnel_filter_common",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "layout_item_channnel_filter",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "layout_item_channnel_search_result",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "activity_channel_fragment",
+      "relation": "targets",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_05_canal",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-05-canal.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "activity_search_content_video",
+      "relation": "targets",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "layout_search_content_video",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "layout_item_history_search",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "layout_item_home_search_hot_search",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "layout_dialog_search_history_clear",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "layout_item_search_extend_list",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "class_tc_s",
+      "relation": "patches",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "class_tv_utils",
+      "relation": "uses",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "concept_tv_utils_is_tv",
+      "relation": "uses",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "p0_ime_forzado_tv",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_06_buscador",
+      "target": "p0_enter_no_envia_busqueda",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "layout_fragment_home_content_search_list",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "layout_item_home_content_search_movie",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "layout_item_search_tv_set_num",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_07_resultados_busqueda",
+      "target": "p0_resultados_sin_focusable",
+      "relation": "fixes",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-07-resultados-busqueda.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "layout_activity_video_more_list",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "layout_item_video_more_list",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "activity_video_more_list",
+      "relation": "targets",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_08_ver_mas",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-08-ver-mas.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "layout_activity_special_detail_new",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "layout_item_special_detail_new_item_result",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "activity_special_detail_new",
+      "relation": "targets",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_09_especial",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-09-especial.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "layout_activity_video_play_detail_tv",
+      "relation": "modifies",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "layout_item_video_play_tv_set_num",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "layout_item_video_play_variety_set_num",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "layout_item_video_commit_list",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "layout_pop_layout_video_season_item",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "activity_video_play_detail",
+      "relation": "targets",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "class_tv_player_bar",
+      "relation": "uses",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "class_tv_detail",
+      "relation": "uses",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "p0_iv_back_focusable_false",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_10_ficha_video",
+      "target": "p0_popups_sin_focusable",
+      "relation": "fixes",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "layout_activity_short_tk",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "layout_item_tik_tok",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "layout_dialog_short_speed",
+      "relation": "modifies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "activity_short_tk",
+      "relation": "targets",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "class_vertical_viewpager",
+      "relation": "patches",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "class_tk_adapter",
+      "relation": "patches",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "concept_vertical_viewpager",
+      "relation": "documents",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "concept_trio_magico",
+      "relation": "applies",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "p0_vertical_viewpager_no_up_down",
+      "relation": "fixes",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "fase_11_shorts",
+      "target": "p0_shorts_overlay_sin_focusable",
+      "relation": "fixes",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "class_tc_s",
+      "target": "class_tv_utils",
+      "relation": "depends_on",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-06-buscador.md"
+    },
+    {
+      "source": "class_tv_section_drawer",
+      "target": "layout_fragment_home",
+      "relation": "wires_focus",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "class_tv_home_refresh",
+      "target": "concept_smart_refresh_layout",
+      "relation": "triggers",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "source": "class_tv_player_bar",
+      "target": "activity_video_play_detail",
+      "relation": "used_in",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "class_tv_detail",
+      "target": "activity_video_play_detail",
+      "relation": "used_in",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-10-ficha-video.md"
+    },
+    {
+      "source": "class_vertical_viewpager",
+      "target": "concept_vertical_viewpager",
+      "relation": "implements",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-11-shorts.md"
+    },
+    {
+      "source": "prompt_verificacion_v49",
+      "target": "build_v49",
+      "relation": "tests",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\prompt.md"
+    },
+    {
+      "source": "prompt_verificacion_v49",
+      "target": "project_app_cine_tv",
+      "relation": "scopes",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\prompt.md"
+    },
+    {
+      "source": "guide_powershell_reglas",
+      "target": "project_app_cine_tv",
+      "relation": "supports",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\guias\\powershell-reglas.md"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_startup_guards",
+      "label": "Arranque en TV depende de guards anti-TV",
+      "nodes": [
+        "tc_e",
+        "baseactivity",
+        "tvutils",
+        "splashactivity",
+        "appapplication"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "id": "he_home_navigation",
+      "label": "Navegacion D-pad del Home",
+      "nodes": [
+        "categoryrail",
+        "tvsectiondrawer",
+        "tvhomerefresh",
+        "fragment_home"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md"
+    },
+    {
+      "id": "he_player_control",
+      "label": "Control del reproductor",
+      "nodes": [
+        "tvplayerbar",
+        "exoplayer",
+        "playerctl",
+        "tvdetail"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md"
+    },
+    {
+      "id": "he_trio_magico_aplicado",
+      "label": "Trio magico aplicado en layouts de Home/Rankings/Categorias/Canal/Buscador/Ficha/Shorts",
+      "nodes": [
+        "concept_trio_magico",
+        "fase_02_home",
+        "fase_03_rankings",
+        "fase_04_categorias",
+        "fase_05_canal",
+        "fase_06_buscador",
+        "fase_07_resultados_busqueda",
+        "fase_08_ver_mas",
+        "fase_09_especial",
+        "fase_10_ficha_video",
+        "fase_11_shorts"
+      ],
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    },
+    {
+      "id": "he_foco_auditoria",
+      "label": "Auditoria de foco D-pad: de P0 (sin focusable) a enfocable con anillo",
+      "nodes": [
+        "p0_tarjetas_sin_focusable",
+        "p0_resultados_sin_focusable",
+        "p0_containeres_comen_dpad",
+        "concept_bg_focused",
+        "concept_after_descendants",
+        "concept_trio_magico"
+      ],
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-02-home.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Animacion de foco para los controles del reproductor (v32).
+     Estilo "Apple TV": el elemento se eleva ligeramente (escala 1.05) al
+     recibir el foco, con una transicion suave. El resto de la app usa tambien
+     1.05 (tv_focus_scale), asi que el reproductor se distingue por el halo
+     claro y no por el color. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <set>
+            <objectAnimator android:propertyName="scaleX" android:valueTo="1.05" android:valueType="floatType" android:duration="160" android:interpolator="@android:interpolator/fast_out_slow_in" />
+            <objectAnimator android:propertyName="scaleY" android:valueTo="1.05" android:valueType="floatType" android:duration="160" android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </set>
+    </item>
+    <item>
+        <set>
+            <objectAnimator android:propertyName="scaleX" android:valueTo="1.0" android:valueType="floatType" android:duration="130" android:interpolator="@android:interpolator/fast_out_slow_in" />
+            <objectAnimator android:propertyName="scaleY" android:valueTo="1.0" android:valueType="floatType" android:duration="130" android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </set>
+    </item>
+</selector>

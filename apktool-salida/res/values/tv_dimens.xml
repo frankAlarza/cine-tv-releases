@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensiones del diseno "10-foot" (TV 1080p). -->
+    <dimen name="tv_hero_height">212dp</dimen>
+    <dimen name="tv_hero_title_size">34sp</dimen>
+    <dimen name="tv_hero_cta_size">18sp</dimen>
+    <dimen name="tv_topbar_height">56dp</dimen>
+    <dimen name="tv_top_icon">38dp</dimen>
+    <dimen name="tv_tab_text_size">20sp</dimen>
+    <dimen name="tv_card_width">176dp</dimen>
+    <dimen name="tv_card_height">248dp</dimen>
+    <dimen name="tv_card_title_size">15sp</dimen>
+    <dimen name="tv_row_title_size">24sp</dimen>
+    <dimen name="tv_row_padding">20dp</dimen>
+    <dimen name="tv_nav_height">78dp</dimen>
+    <dimen name="tv_nav_icon">34dp</dimen>
+    <dimen name="tv_nav_label_size">14sp</dimen>
+    <dimen name="tv_action_icon">32dp</dimen>
+    <dimen name="tv_action_label_size">14sp</dimen>
+    <dimen name="tv_detail_title_size">32sp</dimen>
+    <dimen name="tv_detail_meta_size">17sp</dimen>
+    <dimen name="tv_player_height">340dp</dimen>
+    <!-- Rail lateral de categorias del Home (sustituye a la fila de tabs). -->
+    <dimen name="tv_rail_width">44dp</dimen>
+    <dimen name="tv_rail_width_expanded">101dp</dimen>
+    <dimen name="tv_rail_item_height">72dp</dimen>
+    <dimen name="tv_rail_icon">28dp</dimen>
+    <dimen name="tv_rail_label_size">12sp</dimen>
+    <!-- Cajon lateral derecho de secciones (v31): sustituye a la barra inferior. -->
+    <dimen name="tv_drawer_width">340dp</dimen>
+    <dimen name="tv_drawer_item_height">64dp</dimen>
+    <dimen name="tv_drawer_icon">32dp</dimen>
+    <dimen name="tv_drawer_label_size">18sp</dimen>
+    <dimen name="tv_drawer_header_size">13sp</dimen>
+    <!-- Modal de idioma estilo TV (v102, guia DESIGN.md). -->
+    <dimen name="tv_lang_safe_x">120dp</dimen>
+    <dimen name="tv_lang_safe_y">48dp</dimen>
+    <dimen name="tv_lang_radius">20dp</dimen>
+    <dimen name="tv_lang_item_radius">14dp</dimen>
+    <dimen name="tv_lang_header_height">76dp</dimen>
+    <dimen name="tv_lang_item_height">56dp</dimen>
+    <dimen name="tv_lang_list_pad">16dp</dimen>
+    <dimen name="tv_lang_item_gap">6dp</dimen>
+    <dimen name="tv_lang_text_pad">24dp</dimen>
+    <dimen name="tv_lang_icon_pad">20dp</dimen>
+    <!-- Radio del banner/heroe del Home (v103): casa con el anillo bg_focused (16dp). -->
+    <dimen name="tv_hero_radius">16dp</dimen>
+    <!-- v107: tarjetas de la fila "Streaming" del Home. En sw540dp dp_110/dp_60 valen
+         165dp/90dp y las 5 tarjetas (5*165 + 5*9 de margen) no caben en el ancho del
+         banner: la quinta queda cortada. Con 155dp/84dp las 5 caben enteras y la fila
+         termina justo en el borde derecho del banner, sin scroll horizontal. -->
+    <dimen name="tv_stream_card_width">155dp</dimen>
+    <dimen name="tv_stream_card_height">84dp</dimen>
+
+  <!-- ============================================================ -->
+  <!-- Design System: Apple TV inspired (dark-only) — nuevos tokens  -->
+  <!-- ============================================================ -->
+  <!-- Espaciado (8-pt grid, generoso) -->
+  <dimen name="tv_space_xxs">4dp</dimen>
+  <dimen name="tv_space_xs">8dp</dimen>
+  <dimen name="tv_space_sm">12dp</dimen>
+  <dimen name="tv_space_md">16dp</dimen>
+  <dimen name="tv_space_lg">24dp</dimen>
+  <dimen name="tv_space_xl">32dp</dimen>
+  <dimen name="tv_space_xxl">48dp</dimen>
+  <dimen name="tv_space_xxxl">64dp</dimen>
+  <!-- Margenes de pantalla (10-foot) -->
+  <dimen name="tv_screen_margin_h">48dp</dimen>
+  <dimen name="tv_screen_margin_v">32dp</dimen>
+  <!-- Tipografia -->
+  <dimen name="tv_text_display">56sp</dimen>
+  <dimen name="tv_text_title_l">40sp</dimen>
+  <dimen name="tv_text_title_m">32sp</dimen>
+  <dimen name="tv_text_title_s">24sp</dimen>
+  <dimen name="tv_text_headline">20sp</dimen>
+  <dimen name="tv_text_body_l">18sp</dimen>
+  <dimen name="tv_text_body">16sp</dimen>
+  <dimen name="tv_text_caption">14sp</dimen>
+  <dimen name="tv_text_small">12sp</dimen>
+  <!-- Radios -->
+  <dimen name="tv_radius_xs">4dp</dimen>
+  <dimen name="tv_radius_sm">8dp</dimen>
+  <dimen name="tv_radius_md">12dp</dimen>
+  <dimen name="tv_radius_lg">16dp</dimen>
+  <dimen name="tv_radius_xl">24dp</dimen>
+  <dimen name="tv_radius_pill">999dp</dimen>
+  <!-- Elevacion -->
+  <dimen name="tv_elev_card">2dp</dimen>
+  <dimen name="tv_elev_card_focus">12dp</dimen>
+  <dimen name="tv_elev_modal">16dp</dimen>
+  <dimen name="tv_elev_player_bar">8dp</dimen>
+  <!-- Componentes Apple TV -->
+  <dimen name="tv_hero_height_new">640dp</dimen>
+  <dimen name="tv_card_width_new">200dp</dimen>
+  <dimen name="tv_card_height_new">300dp</dimen>
+  <dimen name="tv_card_radius">12dp</dimen>
+  <dimen name="tv_button_height">52dp</dimen>
+  <dimen name="tv_button_padding_h">24dp</dimen>
+  <dimen name="tv_chip_height">40dp</dimen>
+  <dimen name="tv_icon_button_size">48dp</dimen>
+  <dimen name="tv_icon_size">24dp</dimen>
+  <dimen name="tv_focus_scale">108</dimen>
+  <!-- Focus scale como porcentaje (1.08) -->
+  <dimen name="tv_rail_gap">12dp</dimen>
+  <dimen name="tv_rail_header_size">32sp</dimen>
+  <dimen name="tv_drawer_width_new">340dp</dimen>
+  <dimen name="tv_drawer_item_height_new">56dp</dimen>
+  <dimen name="tv_player_icon_size">32dp</dimen>
+  <dimen name="tv_empty_icon_size">64dp</dimen>
+</resources>

@@ -1,0 +1,401 @@
+.class public final Landroidx/compose/ui/graphics/AndroidPathEffect_androidKt;
+.super Ljava/lang/Object;
+.source "AndroidPathEffect.android.kt"
+
+
+# direct methods
+.method public static final actualChainPathEffect(Landroidx/compose/ui/graphics/PathEffect;Landroidx/compose/ui/graphics/PathEffect;)Landroidx/compose/ui/graphics/PathEffect;
+    .locals 2
+    .param p0    # Landroidx/compose/ui/graphics/PathEffect;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/compose/ui/graphics/PathEffect;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    const-string v0, "outer"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    const-string v0, "inner"
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-static {p1, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 11
+    .line 12
+    new-instance v0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 13
+    .line 14
+    new-instance v1, Landroid/graphics/ComposePathEffect;
+
+    .line 15
+    .line 16
+    check-cast p0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {p0}, Landroidx/compose/ui/graphics/AndroidPathEffect;->getNativePathEffect()Landroid/graphics/PathEffect;
+
+    .line 20
+    move-result-object p0
+
+    .line 21
+    .line 22
+    check-cast p1, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 23
+    .line 24
+    .line 25
+    invoke-virtual {p1}, Landroidx/compose/ui/graphics/AndroidPathEffect;->getNativePathEffect()Landroid/graphics/PathEffect;
+
+    .line 26
+    move-result-object p1
+
+    .line 27
+    .line 28
+    .line 29
+    invoke-direct {v1, p0, p1}, Landroid/graphics/ComposePathEffect;-><init>(Landroid/graphics/PathEffect;Landroid/graphics/PathEffect;)V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-direct {v0, v1}, Landroidx/compose/ui/graphics/AndroidPathEffect;-><init>(Landroid/graphics/PathEffect;)V
+
+    .line 33
+    return-object v0
+.end method
+
+.method public static final actualCornerPathEffect(F)Landroidx/compose/ui/graphics/PathEffect;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    new-instance v0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 3
+    .line 4
+    new-instance v1, Landroid/graphics/CornerPathEffect;
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-direct {v1, p0}, Landroid/graphics/CornerPathEffect;-><init>(F)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-direct {v0, v1}, Landroidx/compose/ui/graphics/AndroidPathEffect;-><init>(Landroid/graphics/PathEffect;)V
+
+    .line 11
+    return-object v0
+.end method
+
+.method public static final actualDashPathEffect([FF)Landroidx/compose/ui/graphics/PathEffect;
+    .locals 2
+    .param p0    # [F
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    const-string v0, "intervals"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    new-instance v0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 8
+    .line 9
+    new-instance v1, Landroid/graphics/DashPathEffect;
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-direct {v1, p0, p1}, Landroid/graphics/DashPathEffect;-><init>([FF)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-direct {v0, v1}, Landroidx/compose/ui/graphics/AndroidPathEffect;-><init>(Landroid/graphics/PathEffect;)V
+
+    .line 16
+    return-object v0
+.end method
+
+.method public static final actualStampedPathEffect-7aD1DOk(Landroidx/compose/ui/graphics/Path;FFI)Landroidx/compose/ui/graphics/PathEffect;
+    .locals 3
+    .param p0    # Landroidx/compose/ui/graphics/Path;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    const-string v0, "shape"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    new-instance v0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 8
+    .line 9
+    new-instance v1, Landroid/graphics/PathDashPathEffect;
+
+    .line 10
+    .line 11
+    instance-of v2, p0, Landroidx/compose/ui/graphics/AndroidPath;
+
+    .line 12
+    .line 13
+    if-eqz v2, :cond_0
+
+    .line 14
+    .line 15
+    check-cast p0, Landroidx/compose/ui/graphics/AndroidPath;
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {p0}, Landroidx/compose/ui/graphics/AndroidPath;->getInternalPath()Landroid/graphics/Path;
+
+    .line 19
+    move-result-object p0
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {p3}, Landroidx/compose/ui/graphics/AndroidPathEffect_androidKt;->toAndroidPathDashPathEffectStyle-oQv6xUo(I)Landroid/graphics/PathDashPathEffect$Style;
+
+    .line 23
+    move-result-object p3
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-direct {v1, p0, p1, p2, p3}, Landroid/graphics/PathDashPathEffect;-><init>(Landroid/graphics/Path;FFLandroid/graphics/PathDashPathEffect$Style;)V
+
+    .line 27
+    .line 28
+    .line 29
+    invoke-direct {v0, v1}, Landroidx/compose/ui/graphics/AndroidPathEffect;-><init>(Landroid/graphics/PathEffect;)V
+
+    .line 30
+    return-object v0
+
+    .line 31
+    .line 32
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    .line 33
+    .line 34
+    const-string p1, "Unable to obtain android.graphics.Path"
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 38
+    throw p0
+.end method
+
+.method public static final asAndroidPathEffect(Landroidx/compose/ui/graphics/PathEffect;)Landroid/graphics/PathEffect;
+    .locals 1
+    .param p0    # Landroidx/compose/ui/graphics/PathEffect;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    const-string v0, "<this>"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    check-cast p0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p0}, Landroidx/compose/ui/graphics/AndroidPathEffect;->getNativePathEffect()Landroid/graphics/PathEffect;
+
+    .line 11
+    move-result-object p0
+
+    .line 12
+    return-object p0
+.end method
+
+.method public static final toAndroidPathDashPathEffectStyle-oQv6xUo(I)Landroid/graphics/PathDashPathEffect$Style;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    sget-object v0, Landroidx/compose/ui/graphics/StampedPathEffectStyle;->Companion:Landroidx/compose/ui/graphics/StampedPathEffectStyle$Companion;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StampedPathEffectStyle$Companion;->getMorph-Ypspkwk()I
+
+    .line 6
+    move-result v1
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {p0, v1}, Landroidx/compose/ui/graphics/StampedPathEffectStyle;->equals-impl0(II)Z
+
+    .line 10
+    move-result v1
+
+    .line 11
+    .line 12
+    if-eqz v1, :cond_0
+
+    .line 13
+    .line 14
+    sget-object p0, Landroid/graphics/PathDashPathEffect$Style;->MORPH:Landroid/graphics/PathDashPathEffect$Style;
+
+    .line 15
+    goto :goto_0
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StampedPathEffectStyle$Companion;->getRotate-Ypspkwk()I
+
+    .line 19
+    move-result v1
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {p0, v1}, Landroidx/compose/ui/graphics/StampedPathEffectStyle;->equals-impl0(II)Z
+
+    .line 23
+    move-result v1
+
+    .line 24
+    .line 25
+    if-eqz v1, :cond_1
+
+    .line 26
+    .line 27
+    sget-object p0, Landroid/graphics/PathDashPathEffect$Style;->ROTATE:Landroid/graphics/PathDashPathEffect$Style;
+
+    .line 28
+    goto :goto_0
+
+    .line 29
+    .line 30
+    .line 31
+    :cond_1
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StampedPathEffectStyle$Companion;->getTranslate-Ypspkwk()I
+
+    .line 32
+    move-result v0
+
+    .line 33
+    .line 34
+    .line 35
+    invoke-static {p0, v0}, Landroidx/compose/ui/graphics/StampedPathEffectStyle;->equals-impl0(II)Z
+
+    .line 36
+    move-result p0
+
+    .line 37
+    .line 38
+    if-eqz p0, :cond_2
+
+    .line 39
+    .line 40
+    sget-object p0, Landroid/graphics/PathDashPathEffect$Style;->TRANSLATE:Landroid/graphics/PathDashPathEffect$Style;
+
+    .line 41
+    goto :goto_0
+
+    .line 42
+    .line 43
+    :cond_2
+    sget-object p0, Landroid/graphics/PathDashPathEffect$Style;->TRANSLATE:Landroid/graphics/PathDashPathEffect$Style;
+
+    .line 44
+    :goto_0
+    return-object p0
+.end method
+
+.method public static final toComposePathEffect(Landroid/graphics/PathEffect;)Landroidx/compose/ui/graphics/PathEffect;
+    .locals 1
+    .param p0    # Landroid/graphics/PathEffect;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    const-string v0, "<this>"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    new-instance v0, Landroidx/compose/ui/graphics/AndroidPathEffect;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-direct {v0, p0}, Landroidx/compose/ui/graphics/AndroidPathEffect;-><init>(Landroid/graphics/PathEffect;)V
+
+    .line 11
+    return-object v0
+.end method

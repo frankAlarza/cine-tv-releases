@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Apple TV style: chip de filtro. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_color_accent" />
+            <corners android:radius="@dimen/tv_radius_pill" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_color_surface_elevated" />
+            <stroke android:width="1dp" android:color="@color/tv_color_text_primary" />
+            <corners android:radius="@dimen/tv_radius_pill" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tv_color_surface" />
+            <corners android:radius="@dimen/tv_radius_pill" />
+            <stroke android:width="1dp" android:color="@color/tv_color_divider" />
+        </shape>
+    </item>
+</selector>

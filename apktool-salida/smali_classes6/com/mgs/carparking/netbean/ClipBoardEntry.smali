@@ -1,0 +1,83 @@
+.class public final Lcom/mgs/carparking/netbean/ClipBoardEntry;
+.super Ljava/lang/Object;
+.source "ClipBoardEntry.kt"
+
+
+# instance fields
+.field private channel_code:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field private invited_by:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getChannel_code()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lcom/mgs/carparking/netbean/ClipBoardEntry;->channel_code:Ljava/lang/String;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public final getInvited_by()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lcom/mgs/carparking/netbean/ClipBoardEntry;->invited_by:Ljava/lang/String;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public final setChannel_code(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    .line 2
+    iput-object p1, p0, Lcom/mgs/carparking/netbean/ClipBoardEntry;->channel_code:Ljava/lang/String;
+
+    .line 3
+    return-void
+.end method
+
+.method public final setInvited_by(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    .line 2
+    iput-object p1, p0, Lcom/mgs/carparking/netbean/ClipBoardEntry;->invited_by:Ljava/lang/String;
+
+    .line 3
+    return-void
+.end method

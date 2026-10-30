@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:descendantFocusability="afterDescendants" android:orientation="horizontal" android:background="@drawable/tv_hero_round" android:clipToOutline="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.movievn.tv.TvHeroImage android:id="@id/ivImage" android:focusable="true" android:foreground="@drawable/bg_focused" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_video_default_horizontal" android:scaleType="fitXY" android:contentDescription="@string/app_name" />
+    <View android:background="@drawable/tv_hero_gradient" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/tv_hero_title_size" android:textStyle="bold" android:textColor="@color/tv_color_text_primary" android:gravity="center_vertical" android:id="@id/tvTitle" android:padding="@dimen/dp_28" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_70" android:ellipsize="end" android:maxLines="2" android:layout_alignParentBottom="true" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/layout_adView" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="0.0dp" />
+
+</RelativeLayout>

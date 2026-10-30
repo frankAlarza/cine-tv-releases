@@ -1,0 +1,16 @@
+# Builds y salidas pesadas
+build/
+output_v*/
+base/
+*.apk
+*.jar
+*.tmp
+
+# Backups locales
+.bak*
+*.bak
+
+# Datos locales de herramientas
+.engram/
+
+# Ignorar builds temporales; NO ignorar graphify-out/

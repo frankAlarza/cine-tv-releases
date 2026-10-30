@@ -1,0 +1,31 @@
+# graphify ignore - reduce noise from backups, decoded APKs and obfuscated smali
+
+# Backups / decoded APK copies (not part of the working project)
+output_v131/
+output_v133/
+output_v131/**
+output_v133/**
+base/
+base/**
+build/
+build/**
+
+# Decoded/unknown resources inside apktool output
+apktool-salida/unknown/
+apktool-salida/unknown/**
+
+# Obfuscated / third-party smali: ignore all smali, then re-include our own app code
+**/*.smali
+!apktool-salida/smali*/com/mgs/**
+!apktool-salida/smali*/com/movievn/**
+
+# Ignore image assets (icons/drawables) - not useful for code navigation, avoids vision costs
+apktool-salida/res/drawable*/
+apktool-salida/res/drawable*/**
+apktool-salida/res/mipmap*/
+apktool-salida/res/mipmap*/**
+**/*.png
+**/*.webp
+**/*.gif
+**/*.jpg
+**/*.jpeg

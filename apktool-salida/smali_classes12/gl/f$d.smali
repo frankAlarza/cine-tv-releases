@@ -1,0 +1,168 @@
+.class public final Lgl/f$d;
+.super Lgl/f;
+.source "ReadWriteBufferState.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lgl/f;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "d"
+.end annotation
+
+
+# instance fields
+.field public final c:Lgl/f$c;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lgl/f$c;)V
+    .locals 3
+    .param p1    # Lgl/f$c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    .line 1
+    .line 2
+    const-string v0, "initial"
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {p1, v0}, Lfn/p;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    iget-object v0, p1, Lgl/f;->a:Ljava/nio/ByteBuffer;
+
+    .line 8
+    .line 9
+    iget-object v1, p1, Lgl/f;->b:Lgl/h;
+
+    .line 10
+    const/4 v2, 0x0
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-direct {p0, v0, v1, v2}, Lgl/f;-><init>(Ljava/nio/ByteBuffer;Lgl/h;Lfn/i;)V
+
+    .line 14
+    .line 15
+    iput-object p1, p0, Lgl/f$d;->c:Lgl/f$c;
+
+    .line 16
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/nio/ByteBuffer;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lgl/f$d;->c:Lgl/f$c;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Lgl/f$c;->a()Ljava/nio/ByteBuffer;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+.end method
+
+.method public bridge synthetic d()Lgl/f;
+    .locals 1
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Lgl/f$d;->g()Lgl/f$e;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public bridge synthetic e()Lgl/f;
+    .locals 1
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Lgl/f$d;->h()Lgl/f$b;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public g()Lgl/f$e;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lgl/f$d;->c:Lgl/f$c;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Lgl/f$c;->i()Lgl/f$e;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+.end method
+
+.method public h()Lgl/f$b;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lgl/f$d;->c:Lgl/f$c;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Lgl/f$c;->g()Lgl/f$b;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "Reading"
+
+    return-object v0
+.end method

@@ -1,0 +1,191 @@
+.class public Lhh/j;
+.super Lio/bidmachine/ads/networks/gam_dynamic/InternalRewardedAd;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lhh/j$b;,
+        Lhh/j$d;,
+        Lhh/j$c;
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lio/bidmachine/ads/networks/gam_dynamic/NetworkParams;Lio/bidmachine/ads/networks/gam_dynamic/TaskExecutor;Lio/bidmachine/AdsFormat;Lio/bidmachine/protobuf/Waterfall$Configuration$AdUnit;Lio/bidmachine/ads/networks/gam_dynamic/InternalAdListener;)V
+    .locals 0
+    .param p1    # Lio/bidmachine/ads/networks/gam_dynamic/NetworkParams;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lio/bidmachine/ads/networks/gam_dynamic/TaskExecutor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lio/bidmachine/AdsFormat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Lio/bidmachine/protobuf/Waterfall$Configuration$AdUnit;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p5    # Lio/bidmachine/ads/networks/gam_dynamic/InternalAdListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-direct/range {p0 .. p5}, Lio/bidmachine/ads/networks/gam_dynamic/InternalRewardedAd;-><init>(Lio/bidmachine/ads/networks/gam_dynamic/NetworkParams;Lio/bidmachine/ads/networks/gam_dynamic/TaskExecutor;Lio/bidmachine/AdsFormat;Lio/bidmachine/protobuf/Waterfall$Configuration$AdUnit;Lio/bidmachine/ads/networks/gam_dynamic/InternalAdListener;)V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lhh/j;Lcom/google/android/gms/ads/rewarded/RewardedAd;)Lcom/google/android/gms/ads/rewarded/RewardedAd;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    return-object p1
+.end method
+
+.method public static synthetic a(Lhh/j;Ljava/lang/Runnable;)V
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lio/bidmachine/ads/networks/gam_dynamic/InternalAd;->onBackground(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static synthetic b(Lhh/j;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lio/bidmachine/ads/networks/gam_dynamic/InternalAd;->onBackground(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static synthetic c(Lhh/j;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lio/bidmachine/ads/networks/gam_dynamic/InternalAd;->onBackground(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public destroyAd()V
+    .locals 2
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
+
+    iget-object v0, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/rewarded/RewardedAd;->setFullScreenContentCallback(Lcom/google/android/gms/ads/FullScreenContentCallback;)V
+
+    iget-object v0, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/rewarded/RewardedAd;->setOnPaidEventListener(Lcom/google/android/gms/ads/OnPaidEventListener;)V
+
+    iput-object v1, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    :cond_0
+    return-void
+.end method
+
+.method public loadAd(Landroid/content/Context;Lio/bidmachine/ads/networks/gam_dynamic/InternalLoadListener;)V
+    .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lio/bidmachine/ads/networks/gam_dynamic/InternalLoadListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
+
+    invoke-virtual {p0}, Lio/bidmachine/ads/networks/gam_dynamic/InternalAd;->getAdUnitId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lio/bidmachine/ads/networks/gam_dynamic/InternalAd;->getAdUnit()Lio/bidmachine/protobuf/Waterfall$Configuration$AdUnit;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lhh/n;->a(Lio/bidmachine/protobuf/Waterfall$Configuration$AdUnit;)Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;
+
+    move-result-object v1
+
+    new-instance v2, Lhh/j$b;
+
+    invoke-direct {v2, p0, p2}, Lhh/j$b;-><init>(Lhh/j;Lio/bidmachine/ads/networks/gam_dynamic/InternalLoadListener;)V
+
+    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/ads/rewarded/RewardedAd;->load(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+
+    return-void
+.end method
+
+.method public showAd(Landroid/app/Activity;Lio/bidmachine/ads/networks/gam_dynamic/InternalFullscreenAdPresentListener;)V
+    .locals 2
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lio/bidmachine/ads/networks/gam_dynamic/InternalFullscreenAdPresentListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
+
+    iget-object v0, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lhh/e;
+
+    invoke-direct {v1, p2}, Lhh/e;-><init>(Lio/bidmachine/ads/networks/gam_dynamic/InternalFullscreenAdPresentListener;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/rewarded/RewardedAd;->setFullScreenContentCallback(Lcom/google/android/gms/ads/FullScreenContentCallback;)V
+
+    iget-object p2, p0, Lhh/j;->a:Lcom/google/android/gms/ads/rewarded/RewardedAd;
+
+    new-instance v0, Lhh/j$d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lhh/j$d;-><init>(Lhh/j$a;)V
+
+    invoke-virtual {p2, p1, v0}, Lcom/google/android/gms/ads/rewarded/RewardedAd;->show(Landroid/app/Activity;Lcom/google/android/gms/ads/OnUserEarnedRewardListener;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "Internal GAM rewarded object is null or not loaded"
+
+    invoke-static {p1}, Lio/bidmachine/utils/BMError;->internal(Ljava/lang/String;)Lio/bidmachine/utils/BMError;
+
+    move-result-object p1
+
+    invoke-interface {p2, p1}, Lio/bidmachine/ads/networks/gam_dynamic/InternalFullscreenAdPresentListener;->onAdShowFailed(Lio/bidmachine/utils/BMError;)V
+
+    :goto_0
+    return-void
+.end method

@@ -1,0 +1,41 @@
+.class public interface abstract Lcom/monetization/ads/mediation/interstitial/MediatedInterstitialAdapter$MediatedInterstitialAdapterListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/monetization/ads/mediation/interstitial/MediatedInterstitialAdapter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "MediatedInterstitialAdapterListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onAdImpression()V
+.end method
+
+.method public abstract onInterstitialClicked()V
+.end method
+
+.method public abstract onInterstitialDismissed()V
+.end method
+
+.method public abstract onInterstitialFailedToLoad(Lcom/monetization/ads/mediation/base/MediatedAdRequestError;)V
+    .param p1    # Lcom/monetization/ads/mediation/base/MediatedAdRequestError;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract onInterstitialLeftApplication()V
+.end method
+
+.method public abstract onInterstitialLoaded()V
+.end method
+
+.method public abstract onInterstitialShown()V
+.end method

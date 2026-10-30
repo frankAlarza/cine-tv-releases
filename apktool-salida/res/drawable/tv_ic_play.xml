@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icono moderno "reproducir" para la barra de control del reproductor (v32).
+     Triangulo limpio; el PNG de la app (ic_video_play) mide 41x56 px y ademas
+     esta INVERTIDO (es el icono de pausa). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M16,8 L38,24 L16,40 Z"
+        android:fillColor="#FFFFFFFF" />
+</vector>

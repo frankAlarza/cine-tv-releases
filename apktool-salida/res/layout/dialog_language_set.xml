@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modal de idioma TV (v102, guia DESIGN.md): cortina oscura a pantalla completa,
+     tarjeta centrada con margen de seguridad >= 48dp, cabecera con degradado y lista
+     de tarjetas. Los ids ll_top / rv_language / tv_cancel / tv_save NO se pueden
+     quitar: se buscan con findViewById en SetLanguageDialog.onCreate. -->
+<LinearLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  android:orientation="horizontal" android:gravity="center" android:background="@drawable/tv_modal_scrim"
+  android:paddingLeft="@dimen/tv_lang_safe_x" android:paddingRight="@dimen/tv_lang_safe_x"
+  android:paddingTop="@dimen/tv_lang_safe_y" android:paddingBottom="@dimen/tv_lang_safe_y"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_top" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_tv_lang_card" android:clipToOutline="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_tv_lang_header" android:layout_width="match_parent" android:layout_height="@dimen/tv_lang_header_height">
+            <TextView android:textSize="@dimen/sp_18" android:textStyle="bold" android:letterSpacing="0.05" android:textColor="@color/tv_color_text_primary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_app_lan" />
+            <TextView android:textSize="@dimen/sp_14" android:textColor="@color/tv_modal_hint" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_6" android:text="@string/tv_lang_hint" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_language" android:layout_width="match_parent" android:layout_height="wrap_content" android:clipChildren="false" android:clipToPadding="false" android:overScrollMode="never" android:paddingLeft="@dimen/tv_lang_list_pad" android:paddingRight="@dimen/tv_lang_list_pad" android:paddingTop="@dimen/tv_lang_list_pad" android:paddingBottom="@dimen/tv_lang_list_pad" />
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:background="@drawable/bg_set_language_bot" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_commen" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_cancel" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:focusable="true" android:background="@drawable/bg_set_language_bt" android:paddingTop="@dimen/dp_6" android:paddingBottom="@dimen/dp_6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_14" android:layout_marginRight="@dimen/dp_14" android:text="@string/text_cannel" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/dp_14" android:paddingVertical="@dimen/dp_6" />
+            <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_setlanguage_save" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_save" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:focusable="true" android:background="@drawable/bg_set_language_save_bt" android:paddingTop="@dimen/dp_6" android:paddingBottom="@dimen/dp_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_14" android:layout_marginRight="@dimen/dp_14" android:text="@string/str_save" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/dp_14" android:paddingVertical="@dimen/dp_6" android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

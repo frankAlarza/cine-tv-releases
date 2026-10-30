@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fila de idioma TV (v102, guia DESIGN.md): tarjeta redondeada, foco con halo + escala
+     1.05 (tv_focus_scale) y estado "selected" (lo pone SetLanguageAdapter.d) con borde de
+     marca. El divisor fino original se sustituye por separacion entre tarjetas.
+     El id rl_click NO se puede quitar: lo usa SetLanguageAdapter$b (view holder). -->
+<RelativeLayout android:id="@id/rl_click" android:background="@drawable/bg_tv_lang_item" android:foreground="@drawable/tv_modal_focus" android:focusable="true" android:focusableInTouchMode="true" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="@dimen/tv_lang_item_height"
+  android:layout_marginLeft="@dimen/dp_12" android:layout_marginRight="@dimen/dp_12" android:layout_marginTop="@dimen/tv_lang_item_gap" android:layout_marginBottom="@dimen/tv_lang_item_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tv_lang_text_pad" android:layout_centerVertical="true" android:layout_alignParentLeft="true" />
+    <ImageView android:id="@id/iv_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tv_lang_icon_pad" android:src="@drawable/ic_set_language_selected_normal" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

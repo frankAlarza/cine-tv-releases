@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icono moderno "avanzar 10 s" para la barra de control del reproductor (v32).
+     Espejo del icono de retroceder: flecha circular horaria con el "10" dentro.
+     Los digitos NO se reflejan (siempre se leen "10" de izquierda a derecha). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Arco de 300 grados (de 330 a 270 grados, sentido horario) -->
+    <path
+        android:pathData="M40.02,14.75 A18.5,18.5 0 1,1 24,5.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+
+    <!-- Punta de flecha (apunta a la derecha) -->
+    <path
+        android:pathData="M31.5,5.5 L23.5,0.5 L23.5,10.5 Z"
+        android:fillColor="#FFFFFFFF" />
+
+    <!-- Digito "1" -->
+    <path
+        android:pathData="M16.75,21.5 L20.25,18.5 L20.25,29.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Digito "0" -->
+    <path
+        android:pathData="M27.25,18.3 C29.46,18.3 31.25,20.85 31.25,24 C31.25,27.15 29.46,29.7 27.25,29.7 C25.04,29.7 23.25,27.15 23.25,24 C23.25,20.85 25.04,18.3 27.25,18.3 Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.6" />
+</vector>

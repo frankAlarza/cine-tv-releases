@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cursor (bola) de la barra de progreso del reproductor (v32) - estilo Apple TV.
+     Bola blanca de 12 dp: marca por donde va la reproduccion sin ensuciar la
+     linea. OJO: el SeekBar NO debe tintar el thumb (el tema de TV tiene
+     colorControlActivated NEGRO): en TvPlayerBar se anula con
+     setThumbTintList(null) / setThumbTintMode(null). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFFFFFFF" />
+    <size
+        android:width="12dp"
+        android:height="12dp" />
+</shape>

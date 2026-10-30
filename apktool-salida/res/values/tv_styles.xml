@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Texto de las pestanas en la home TV (10-foot). Hereda color/no-caps de Tab1. -->
+    <style name="TextAppearance.TV.Tab" parent="@style/TextAppearance.Design.Tab1">
+        <item name="android:textSize">@dimen/tv_tab_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

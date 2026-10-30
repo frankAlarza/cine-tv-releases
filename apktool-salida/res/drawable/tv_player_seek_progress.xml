@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Parte ya reproducida de la barra de progreso del reproductor (v32).
+     Blanco roto (no rojo): la linea se "enciende" al avanzar. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="2dp" />
+    <solid android:color="#F2FFFFFF" />
+</shape>

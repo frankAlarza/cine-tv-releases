@@ -1,0 +1,22 @@
+.class public synthetic Landroid/icu/number/FormattedNumber;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/icu/text/FormattedValue;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/NoClassDefFoundError;
+
+    invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public native synthetic getOutputUnit()Landroid/icu/util/MeasureUnit;
+.end method

@@ -1,0 +1,65 @@
+.class public final Landroidx/compose/ui/platform/InspectionModeKt;
+.super Ljava/lang/Object;
+.source "InspectionMode.kt"
+
+
+# static fields
+.field private static final LocalInspectionMode:Landroidx/compose/runtime/ProvidableCompositionLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/compose/runtime/ProvidableCompositionLocal<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    .line 2
+    sget-object v0, Landroidx/compose/ui/platform/InspectionModeKt$LocalInspectionMode$1;->INSTANCE:Landroidx/compose/ui/platform/InspectionModeKt$LocalInspectionMode$1;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-static {v0}, Landroidx/compose/runtime/CompositionLocalKt;->staticCompositionLocalOf(Len/a;)Landroidx/compose/runtime/ProvidableCompositionLocal;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    .line 8
+    sput-object v0, Landroidx/compose/ui/platform/InspectionModeKt;->LocalInspectionMode:Landroidx/compose/runtime/ProvidableCompositionLocal;
+
+    .line 9
+    return-void
+.end method
+
+.method public static final getLocalInspectionMode()Landroidx/compose/runtime/ProvidableCompositionLocal;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/compose/runtime/ProvidableCompositionLocal<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    .line 2
+    sget-object v0, Landroidx/compose/ui/platform/InspectionModeKt;->LocalInspectionMode:Landroidx/compose/runtime/ProvidableCompositionLocal;
+
+    .line 3
+    return-object v0
+.end method

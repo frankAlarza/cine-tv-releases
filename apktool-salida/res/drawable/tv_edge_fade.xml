@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- v106: difuminado del borde derecho del contenido del Home.
+     Degradado horizontal: transparente a la izquierda -> color de fondo del tema a
+     la derecha, para que las imagenes cortadas por scroll no terminen en corte seco.
+     El color de fin es el del tema (#020d19) y se funde con el fondo real. -->
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:angle="0" android:startColor="#00020d19" android:endColor="@color/theme_bg_color" />
+</shape>

@@ -1,0 +1,11 @@
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\docs\sesiones\sesion-nd44-subtitulos-estilo.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\plan-definitivo.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\SKILL.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\add-watch.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\exports.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\extraction-spec.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\github-and-merge.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\hooks.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\query.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\transcribe.md
+C:\Users\UsuarioLocal\Documents\app-cine-new-design\skills\graphify\references\update.md

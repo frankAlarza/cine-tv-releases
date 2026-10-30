@@ -1,0 +1,140 @@
+.class public final Lpm/f$b;
+.super Lpm/k;
+.source "AbstractMap.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lpm/f;->getKeys()Ljava/util/Set;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lpm/k<",
+        "TK;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic b:Lpm/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lpm/f<",
+            "TK;TV;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lpm/f;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lpm/f<",
+            "TK;+TV;>;)V"
+        }
+    .end annotation
+
+    .line 1
+    .line 2
+    iput-object p1, p0, Lpm/f$b;->b:Lpm/f;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-direct {p0}, Lpm/k;-><init>()V
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lpm/f$b;->b:Lpm/f;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0, p1}, Lpm/f;->containsKey(Ljava/lang/Object;)Z
+
+    .line 6
+    move-result p1
+
+    .line 7
+    return p1
+.end method
+
+.method public getSize()I
+    .locals 1
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lpm/f$b;->b:Lpm/f;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Lpm/f;->size()I
+
+    .line 6
+    move-result v0
+
+    .line 7
+    return v0
+.end method
+
+.method public iterator()Ljava/util/Iterator;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "TK;>;"
+        }
+    .end annotation
+
+    .line 1
+    .line 2
+    iget-object v0, p0, Lpm/f$b;->b:Lpm/f;
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Lpm/f;->entrySet()Ljava/util/Set;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 10
+    move-result-object v0
+
+    .line 11
+    .line 12
+    new-instance v1, Lpm/f$b$a;
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-direct {v1, v0}, Lpm/f$b$a;-><init>(Ljava/util/Iterator;)V
+
+    .line 16
+    return-object v1
+.end method

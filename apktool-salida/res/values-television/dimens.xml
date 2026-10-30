@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Las dimensiones del diseno TV viven en res/values/tv_dimens.xml
+         para que existan tambien en la configuracion por defecto. -->
+</resources>

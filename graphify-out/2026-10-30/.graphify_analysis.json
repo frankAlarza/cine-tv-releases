@@ -1,0 +1,842 @@
+{
+  "communities": {
+    "0": [
+      "android_view_keyevent",
+      "android_widget_seekbar",
+      "onfocuschangelistener",
+      "onkeylistener",
+      "onseekbarchangelistener",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey_barkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_boxkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus_buttonfocus",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus_onfocuschange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress_clearsuppress",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_clocktask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_decorkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusbar_focusbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusbar_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfirst",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfirst_focusfirst",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfirst_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfix",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfix_focusfix",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_focusfix_onglobalfocuschanged",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidetask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidetask_hidetask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidetask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_java_onclicklistener",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_java_override",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick_playpauseclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_retreatclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_retreatclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_retreatclick_retreatclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onprogresschanged",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstarttrackingtouch",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstoptrackingtouch",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_seekchange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey_seekkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_createbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_describe",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_dp",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_findfullscreenbutton",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_focusbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_focusfirstbutton",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_format",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_handlemediakey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_hidebarnow",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_isdpad",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_isincontroller",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_isinside",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_linkcontroller",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_makebutton",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_oncontentchanged",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_onfocusmoved",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_onmediakey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_refreshplayer",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_resid",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_schedule",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_schedulehide",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_scrubstep",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_seekby",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_seekto",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setplaying",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setup",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_showbar",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_toggleplaypause",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updateclock",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updateicon",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview_getplayerview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview_getplayer",
+      "tools_tv_detail_stub_f4_n0",
+      "tools_tv_detail_stub_f4_n0_n0",
+      "tools_tv_detail_stub_f4_n0_n0_getcurrentposition",
+      "tools_tv_detail_stub_f4_n0_n0_getcurrentwindowindex",
+      "tools_tv_detail_stub_f4_n0_n0_getduration",
+      "tools_tv_detail_stub_f4_n0_n0_getplaybackstate",
+      "tools_tv_detail_stub_f4_n0_n0_getplaywhenready",
+      "tools_tv_detail_stub_f4_n0_n0_isplayingad",
+      "tools_tv_detail_stub_f4_n0_n0_seekto",
+      "tools_tv_detail_stub_f4_n0_n0_setplaywhenready"
+    ],
+    "1": [
+      "android_animation_valueanimator",
+      "android_view_view",
+      "animatorupdatelistener",
+      "onglobalfocuschangelistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_additem",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_attach",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_bindkeyto",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_builditembackground",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_buildpanelbackground",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_categoryrail",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_containsany",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimen",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimenfloat",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dp",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_drawable",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_expand",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_findfocusable",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_firstbottombartab",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_iconfor",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_icontint",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_isdescendant",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_nearestitem",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_normalize",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_rebuild",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_scrollitemintoview",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_showlabel",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_updateselection",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_collapsecheck",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_run",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener_contentkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener_onkey",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_focuswatcher",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_onglobalfocuschanged",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_item",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_item_item",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_itemclicklistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_onclick",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_itemfocuslistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_onfocuschange",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_java_override",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_layoutscan",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_ongloballayout",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_onkey",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_railkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_run",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_scrollitemtask",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabreselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabunselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_tablistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_onanimationupdate",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_widthupdate",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabreselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabunselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_gettext",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_select",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_addontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_getselectedtabposition",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabat",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabcount",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_removeontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_tablayout"
+    ],
+    "2": [
+      "android_widget_textview",
+      "onclicklistener",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected_focusselected",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected_run",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focuswatcher",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focuswatcher_focuswatcher",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focuswatcher_onglobalfocuschanged",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_hidepanel",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_hidepanel_hidepanel",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_hidepanel_run",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item_item",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick_itemclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick_onclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_java_override",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_layoutwatcher",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_layoutwatcher_layoutwatcher",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_layoutwatcher_ongloballayout",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_restorefocus",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_restorefocus_restorefocus",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_restorefocus_run",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowfocus",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowfocus_onfocuschange",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowfocus_rowfocus",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowkey",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowkey_onkey",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_rowkey_rowkey",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_scrimclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_scrimclick_onclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_scrimclick_scrimclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_setuptask",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_setuptask_run",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_setuptask_setuptask",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_toggleclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_toggleclick_onclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_toggleclick_toggleclick",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_additem",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_applyselection",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_attach",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_blockcontent",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_buildrowbackground",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_close",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_createfallbackbutton",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_createpanel",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_createscrim",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_currenttab",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_dimen",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_dimenfloat",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_dp",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_ensurebutton",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_findfocusable",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_findtext",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_focusselected",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_hidebottombar",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_iconfor",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_isdescendant",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_isinpanel",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_ispromotion",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_istv",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_move",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_normalize",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_onkey",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_opendrawer",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_rebuilditems",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_resid",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_restorefocus",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_schedule",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_select",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_setup",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_tabtitle",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_toggle",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_tvsectiondrawer",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_updatefallback",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_wiretopfocus"
+    ],
+    "3": [
+      "android_content_context",
+      "android_content_res_colorstatelist",
+      "android_graphics_drawable_gradientdrawable",
+      "android_graphics_drawable_statelistdrawable",
+      "android_os_handler",
+      "android_view_viewgroup",
+      "android_widget_imageview",
+      "android_widget_linearlayout",
+      "android_widget_scrollview",
+      "animatorinflater",
+      "arraylist",
+      "build",
+      "colordrawable",
+      "configuration",
+      "decelerateinterpolator",
+      "drawable",
+      "gravity",
+      "handler",
+      "linearinterpolator",
+      "list",
+      "locale",
+      "log",
+      "looper",
+      "rect",
+      "relativelayout",
+      "resources",
+      "textutils",
+      "toast",
+      "tools_category_rail_src_com_movievn_tv_categoryrail",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_java_override",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_onlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_smartrefreshlayout",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_setcurrenttab",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_tablayout",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar",
+      "typedvalue",
+      "typeface",
+      "viewparent",
+      "viewtreeobserver"
+    ],
+    "4": [
+      "layoutparams",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_clickhandler",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_clickhandler_clickhandler",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_clickhandler_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_java_override",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_keyhandler",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_keyhandler_keyhandler",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_keyhandler_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_layoutwatcher",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_layoutwatcher_layoutwatcher",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_layoutwatcher_ongloballayout",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_setuptask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_setuptask_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_attach",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_createbutton",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_dp",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_enterfullscreen",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_exitfullscreen",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_handleback",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_isfullscreen",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_istv",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_onback",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_resid",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_schedule",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_setup",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_toggle",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_tvdetail",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_watcher"
+    ],
+    "5": [
+      "android_app_activity",
+      "ongloballayoutlistener",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_java_override",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_layoutwatcher",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_layoutwatcher_layoutwatcher",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_layoutwatcher_ongloballayout",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_refreshclick",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_refreshclick_onclick",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_refreshclick_refreshclick",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_setuptask",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_setuptask_run",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_setuptask_setuptask",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_attach",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_bindbutton",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_findrefreshlayout",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_istv",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_onrefresh",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_resid",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_schedule",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_setup",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_spin",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_toast",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh_tvhomerefresh",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_setstaterefreshing",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_attach",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_istv",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_tvplayerbar"
+    ],
+    "6": [
+      "android_widget_framelayout",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview_getplaybackcontrolview",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview_videoplayerview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playercontrolview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playercontrolview_java_context",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playercontrolview_playercontrolview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playercontrolview_playercontrolview_playercontrolview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_java_context",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview_playerview"
+    ],
+    "7": [
+      "doc_AGENTS_md",
+      "doc_diseno-y-navegacion_md",
+      "doc_ficha-video_md",
+      "doc_foco-auditoria-resultado_md",
+      "doc_rail-categorias_md",
+      "doc_reglas-innegociables_md"
+    ],
+    "8": [
+      "graphify_narrow",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "9": [
+      "doc_diagnostico_md",
+      "doc_estado-y-limitaciones_md"
+    ],
+    "10": [
+      "install_tv",
+      "install_tv_test_istv"
+    ],
+    "11": [
+      "tools_patch_orientation",
+      "tools_patch_orientation_set_smalitext"
+    ],
+    "12": [
+      "tools_patch_tc_e",
+      "tools_patch_tc_e_replace_method"
+    ],
+    "13": [
+      "doc_00-INDICE_md"
+    ],
+    "14": [
+      "doc_CLAUDE_md"
+    ],
+    "15": [
+      "doc_PLAN_md"
+    ],
+    "16": [
+      "doc_PROGRESS_md"
+    ],
+    "17": [
+      "doc_README_md"
+    ],
+    "18": [
+      "doc_arranque-en-tv_md"
+    ],
+    "19": [
+      "doc_build-firma-instalacion_md"
+    ],
+    "20": [
+      "doc_cajon-secciones_md"
+    ],
+    "21": [
+      "doc_cambios-de-diseno-errores_md"
+    ],
+    "22": [
+      "doc_cambios-de-diseno-recursos_md"
+    ],
+    "23": [
+      "doc_cambios-de-diseno_md"
+    ],
+    "24": [
+      "doc_fase-01-splash_md"
+    ],
+    "25": [
+      "doc_fase-02-home_md"
+    ],
+    "26": [
+      "doc_fase-03-rankings_md"
+    ],
+    "27": [
+      "doc_fase-04-categorias_md"
+    ],
+    "28": [
+      "doc_fase-05-canal_md"
+    ],
+    "29": [
+      "doc_fase-06-buscador_md"
+    ],
+    "30": [
+      "doc_fase-07-resultados-busqueda_md"
+    ],
+    "31": [
+      "doc_fase-08-ver-mas_md"
+    ],
+    "32": [
+      "doc_fase-09-especial_md"
+    ],
+    "33": [
+      "doc_fase-10-ficha-video_md"
+    ],
+    "34": [
+      "doc_fase-11-shorts_md"
+    ],
+    "35": [
+      "doc_fase-12-reproductor-descargas_md"
+    ],
+    "36": [
+      "doc_fase-13-descargas_md"
+    ],
+    "37": [
+      "doc_fase-14-ajustes_md"
+    ],
+    "38": [
+      "doc_fase-15-editar-perfil_md"
+    ],
+    "39": [
+      "doc_fase-16-feedback_md"
+    ],
+    "40": [
+      "doc_fase-17-feedback-registros_md"
+    ],
+    "41": [
+      "doc_fase-18-mio_md"
+    ],
+    "42": [
+      "doc_fase-19-reproductor-tv_md"
+    ],
+    "43": [
+      "doc_fase-20-historial_md"
+    ],
+    "44": [
+      "doc_fase-21-coleccion_md"
+    ],
+    "45": [
+      "doc_fase-22-login_md"
+    ],
+    "46": [
+      "doc_fase-23-registro_md"
+    ],
+    "47": [
+      "doc_fase-24-pedidos_md"
+    ],
+    "48": [
+      "doc_fase-25-compartir_md"
+    ],
+    "49": [
+      "doc_fase-26-extension-registro_md"
+    ],
+    "50": [
+      "doc_fase-27-promocion-web_md"
+    ],
+    "51": [
+      "doc_fase-28-web-juego_md"
+    ],
+    "52": [
+      "doc_fase-29-continuar-viendo_md"
+    ],
+    "53": [
+      "doc_fase-30-descargas-completadas-2_md"
+    ],
+    "54": [
+      "doc_foco-auditoria-inventario_md"
+    ],
+    "55": [
+      "doc_indice_md"
+    ],
+    "56": [
+      "doc_patch_tc_e_ps1"
+    ],
+    "57": [
+      "doc_plan-definitivo_md"
+    ],
+    "58": [
+      "doc_privacidad-portapapeles_md"
+    ],
+    "59": [
+      "doc_procedimiento-subagentes_md"
+    ],
+    "60": [
+      "doc_reproductor-exoplayer-control_md"
+    ],
+    "61": [
+      "doc_reproductor-exoplayer_md"
+    ],
+    "62": [
+      "doc_sesion-01-04_md"
+    ],
+    "63": [
+      "doc_sesion-05-08_md"
+    ],
+    "64": [
+      "doc_sesion-09-11_md"
+    ],
+    "65": [
+      "doc_sesion-09_md"
+    ],
+    "66": [
+      "doc_sesion-10_md"
+    ],
+    "67": [
+      "doc_sesion-11_md"
+    ],
+    "68": [
+      "doc_sesion-12_md"
+    ],
+    "69": [
+      "doc_sesion-13_md"
+    ],
+    "70": [
+      "doc_sesion-14_md"
+    ],
+    "71": [
+      "doc_sesion-15_md"
+    ],
+    "72": [
+      "doc_sesion-16_md"
+    ],
+    "73": [
+      "doc_trampas-resueltas_md"
+    ],
+    "74": [
+      "doc_verificacion_md"
+    ],
+    "75": [
+      "tools_build_category_rail"
+    ],
+    "76": [
+      "tools_build_home_refresh"
+    ],
+    "77": [
+      "tools_build_section_drawer"
+    ],
+    "78": [
+      "tools_build_tv_detail"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05025773195876289,
+    "1": 0.05860805860805861,
+    "2": 0.0645933014354067,
+    "3": 0.09951690821256039,
+    "4": 0.13333333333333333,
+    "5": 0.13756613756613756,
+    "6": 0.23076923076923078,
+    "7": 0.3333333333333333,
+    "8": 0.5,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0
+  },
+  "gods": [
+    {
+      "id": "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar",
+      "label": "TvPlayerBar",
+      "degree": 73
+    },
+    {
+      "id": "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer",
+      "label": "TvSectionDrawer",
+      "degree": 70
+    },
+    {
+      "id": "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail",
+      "label": "CategoryRail",
+      "degree": 51
+    },
+    {
+      "id": "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail",
+      "label": "TvDetail",
+      "degree": 30
+    },
+    {
+      "id": "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh",
+      "label": "TvHomeRefresh",
+      "degree": 21
+    },
+    {
+      "id": "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout",
+      "label": "TabLayout",
+      "degree": 14
+    },
+    {
+      "id": "tools_tv_detail_stub_f4_n0_n0",
+      "label": "n0",
+      "degree": 13
+    },
+    {
+      "id": "tools_category_rail_src_com_movievn_tv_categoryrail_item",
+      "label": "Item",
+      "degree": 12
+    },
+    {
+      "id": "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item",
+      "label": "Item",
+      "degree": 12
+    },
+    {
+      "id": "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab",
+      "label": "Tab",
+      "degree": 10
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AGENTS.md — Guía operativa para agentes de IA",
+      "target": "Ficha de vídeo en TV (v27 → v32)",
+      "source_files": [
+        "AGENTS.md",
+        "docs/componentes/ficha-video.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "AGENTS.md — Guía operativa para agentes de IA",
+      "target": "Reglas innegociables",
+      "source_files": [
+        "AGENTS.md",
+        "docs/reglas/reglas-innegociables.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "TvSectionDrawer",
+      "target": "Item",
+      "source_files": [
+        "tools/section-drawer/src/com/movievn/tv/TvSectionDrawer.java",
+        "tools/category-rail/src/com/movievn/tv/CategoryRail.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "TvDetail",
+      "target": "LayoutWatcher",
+      "source_files": [
+        "tools/tv-detail/src/com/movievn/tv/TvDetail.java",
+        "tools/home-refresh/src/com/movievn/tv/TvHomeRefresh.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "TvSectionDrawer",
+      "target": "TabLayout",
+      "source_files": [
+        "tools/section-drawer/src/com/movievn/tv/TvSectionDrawer.java",
+        "tools/section-drawer/stub/com/mgs/carparking/widgets/tab/TabLayout.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `TvPlayerBar` connect `Community 0` to `Community 1`, `Community 2`, `Community 3`, `Community 5`?",
+      "why": "High betweenness centrality (0.193) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `graphify`, `PLAN — Adaptación a Android TV (`com.movievn.cinevi`)`, `PROGRESS — Bitácora de avances (proyecto Android TV)` to the rest of the system?",
+      "why": "67 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05025773195876289 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `TvSectionDrawer` connect `Community 2` to `Community 1`, `Community 3`, `Community 5`?",
+      "why": "High betweenness centrality (0.166) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05860805860805861 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `CategoryRail` connect `Community 1` to `Community 3`?",
+      "why": "High betweenness centrality (0.128) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0645933014354067 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

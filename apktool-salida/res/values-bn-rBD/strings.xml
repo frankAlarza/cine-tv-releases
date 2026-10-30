@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="main_ad">à¦¬à¦¿à¦œà§à¦žà¦¾à¦ªà¦¨</string>
+  <string name="main_app_exist">à¦¬à¦¿à¦œà§à¦žà¦¾à¦ªà¦¨ à¦…à§à¦¯à¦¾à¦ª à¦‡à¦¨à¦¸à§à¦Ÿà¦² à¦•à¦°à¦¾ à¦¹à¦¯à¦¼à§‡à¦›à§‡</string>
+  <string name="main_downLoad">à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡</string>
+  <string name="main_downLoad_fail">à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦¬à§à¦¯à¦°à§à¦¥ à¦¹à¦¯à¦¼à§‡à¦›à§‡</string>
+  <string name="main_downLoad_now">à¦…à¦¬à¦¿à¦²à¦®à§à¦¬à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦•à¦°à§à¦¨</string>
+  <string name="main_forward_detail">à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦•à¦°à¦¤à§‡ à¦•à§à¦²à¦¿à¦• à¦•à¦°à§à¦¨ à¦¬à¦¾ à¦¬à¦¿à¦¸à§à¦¤à¦¾à¦°à¦¿à¦¤ à¦œà¦¾à¦¨à¦¾à¦¤à§‡ à¦¯à¦¾à¦¨</string>
+  <string name="main_has_start_downLoad">à¦‡à¦¤à¦¿à¦®à¦§à§à¦¯à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦¹à¦šà§à¦›à§‡</string>
+  <string name="main_install">à¦‡à¦¨à¦¸à§à¦Ÿà¦² à¦•à¦°à§à¦¨</string>
+  <string name="main_install_now">à¦à¦–à¦¨ à¦‡à¦¨à§à¦¸à¦Ÿà¦² à¦•à¦°à§à¦¨</string>
+  <string name="main_load_data_fail">à¦¡à§‡à¦Ÿà¦¾ à¦²à§‹à¦¡ à¦•à¦°à¦¤à§‡ à¦¬à§à¦¯à¦°à§à¦¥ à¦¹à¦¯à¦¼à§‡à¦›à§‡à§·</string>
+  <string name="main_load_fail">à¦²à§‹à¦¡ à¦•à¦°à¦¤à§‡ à¦¬à§à¦¯à¦°à§à¦¥</string>
+  <string name="main_open">à¦–à§‹à¦²à¦¾</string>
+  <string name="main_open_now">à¦à¦–à¦¨ à¦–à§à¦²à§à¦¨</string>
+  <string name="main_skip">à¦‰à¦ªà¦° à¦²à¦¾à¦«</string>
+  <string name="main_start_downLoad">à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦¶à§à¦°à§</string>
+  <string name="main_stop_downLoad">à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦¬à¦¨à§à¦§ à¦•à¦°à§à¦¨</string>
+  <string name="main_storage_forbid">à¦¸à§à¦Ÿà§‹à¦°à§‡à¦œ à¦…à¦¨à§à¦®à¦¤à¦¿ à¦¨à¦¿à¦·à¦¿à¦¦à§à¦§, à¦†à¦ªà¦¨à¦¿ à¦¶à§à¦§à§à¦®à¦¾à¦¤à§à¦° à¦…à¦¨à§à¦®à§‹à¦¦à¦¨ à¦ªà¦°à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦•à¦°à¦¤à§‡ à¦ªà¦¾à¦°à§‡à¦¨</string>
+</resources>

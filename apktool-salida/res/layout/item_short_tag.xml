@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RTextView android:textSize="@dimen/sp_10" android:textColor="@color/color_commen" android:id="@id/tv_name" android:paddingLeft="5.0dp" android:paddingTop="2.0dp" android:paddingRight="5.0dp" android:paddingBottom="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="5.0dp" android:paddingVertical="2.0dp" app:border_color_normal="@color/color_commen" app:border_width_normal="@dimen/dp_1" app:corner_radius="@dimen/dp_3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

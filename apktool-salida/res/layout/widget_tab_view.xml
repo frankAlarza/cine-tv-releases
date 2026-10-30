@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="@dimen/tv_nav_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mTabImg" android:duplicateParentState="true" android:layout_width="@dimen/tv_nav_icon" android:layout_height="@dimen/tv_nav_icon" android:layout_marginTop="8dp" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/tv_nav_label_size" android:textColor="@drawable/selector_tab_home_color" android:id="@id/mTabLabel" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" android:maxLines="1" android:fallbackLineSpacing="false" />
+</merge>

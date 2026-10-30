@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tv_color_surface">
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/subtitle_es"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ES"
+        android:textColor="@color/color_text_light_3"
+        android:padding="@dimen/dp_8"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="@drawable/bg_focused_rect"
+        android:textSize="@dimen/sp_14"
+        android:tag="subtitle_es"
+        android:stateListAnimator="@animator/tv_focus_scale" />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/subtitle_en"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EN"
+        android:textColor="@color/color_text_light_3"
+        android:padding="@dimen/dp_8"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="@drawable/bg_focused_rect"
+        android:textSize="@dimen/sp_14"
+        android:tag="subtitle_en"
+        android:stateListAnimator="@animator/tv_focus_scale" />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/subtitle_none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ninguno"
+        android:textColor="@color/color_text_light_3"
+        android:padding="@dimen/dp_8"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="@drawable/bg_focused_rect"
+        android:textSize="@dimen/sp_14"
+        android:tag="subtitle_none"
+        android:stateListAnimator="@animator/tv_focus_scale" />
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+{
+ "channels": [
+  {
+   "id": 378,
+   "channel_name": "Inicio",
+   "vod_type_id": 0
+  },
+  {
+   "id": 379,
+   "channel_name": "Películas",
+   "vod_type_id": 1
+  },
+  {
+   "id": 380,
+   "channel_name": "Series",
+   "vod_type_id": 2
+  },
+  {
+   "id": 381,
+   "channel_name": "Animación",
+   "vod_type_id": 4
+  },
+  {
+   "id": 490,
+   "channel_name": "Halloween🎃",
+   "vod_type_id": 0
+  }
+ ],
+ "home_videos": [
+  {
+   "vod_id": 1199394901,
+   "vod_name": "Resident Evil: Noche cero",
+   "module": "banner"
+  },
+  {
+   "vod_id": 1955457194,
+   "vod_name": "Other Mommy",
+   "module": "banner"
+  },
+  {
+   "vod_id": 1219873437,
+   "vod_name": "Tenzing: conquistando el Everest",
+   "module": "banner"
+  },
+  {
+   "vod_id": 1376021303,
+   "vod_name": "La noche del demonio: Están entre nosotros",
+   "module": "banner"
+  },
+  {
+   "vod_id": 1073778672,
+   "vod_name": "Street Fighter",
+   "module": "banner"
+  },
+  {
+   "vod_id": 109037806,
+   "vod_name": "El Amor de Tu Vida",
+   "module": "banner"
+  }
+ ],
+ "detail": {
+  "id": 1199394901,
+  "vod_name": "Resident Evil: Noche cero",
+  "vod_serial": 1,
+  "audio_type": 1,
+  "vod_pic": "https://movievn.j5t2n.com/img/vod_pic/20260920/023afb489b34.jpg"
+ },
+ "episodes": [
+  {
+   "id": 6207772,
+   "title": "1",
+   "vod_url": "http://movievn.j5t2n.com/vod/1/2026/09/20/bccd3100a040/index5.m3u8",
+   "is_p2p": 1
+  }
+ ],
+ "proxy_m3u8_head": "Server: bad_sdk\n\nContent-Length: 40102\n\nDate: Tue, 27 Oct 2026 03:34:46 GMT\n\nContent-Type: application/vnd.apple.mpegurl\n\nConnection: close\n\n\n\n#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-MEDIA-SEQUENCE:0\n#EXT-X-ALLOW-CACHE:YES\n#EXT-X-TARGETDURATION:21\n#EXTINF:20.958333,\n0000.ts?sz=4023200&m8=459d7b4b1d67fda9&resource=06E3B473EB7C17BB962FFBDD4A5613A8\n#EXTINF:10.416667,\n0001.ts?sz=1410752&m8=97ab0386b17b6765&resource=06E3B473EB7C17BB962FFBDD4A5613A8\n#EXTINF:10.416667,\n0002.ts?sz=1905944&m8=b66f89ea80a6118b&resource=06E3B473EB7C17BB962FFBDD4A5613A8\n#EXTINF:10.416667,\n0003.ts?sz=1790324&m8=685acc9f157af419&re",
+ "vod_url_direct": "http://movievn.j5t2n.com/vod/1/2026/09/20/bccd3100a040/index5.m3u8"
+}

@@ -1,0 +1,615 @@
+{
+  "nodes": [
+    {
+      "id": "project_app_cine_tv",
+      "label": "Proyecto app-android-cine-tv (port Android TV)",
+      "type": "project",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "1-9"
+    },
+    {
+      "id": "apk_movievn_cinevi",
+      "label": "APK base com.movievn.cinevi v4.0.0",
+      "type": "system",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "8"
+    },
+    {
+      "id": "agents_md",
+      "label": "AGENTS.md guia operativa",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "id": "tc_e",
+      "label": "tc/e.smali guardas anti-TV (i/o)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "id": "baseactivity",
+      "label": "BaseActivity (orientacion portrait->landscape)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "130"
+    },
+    {
+      "id": "tvutils",
+      "label": "TvUtils.isTv() helper",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "179"
+    },
+    {
+      "id": "splashactivity",
+      "label": "SplashActivity (arranque)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "30"
+    },
+    {
+      "id": "appapplication",
+      "label": "AppApplication (SDKs anuncios init)",
+      "type": "class",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "180"
+    },
+    {
+      "id": "categoryrail",
+      "label": "CategoryRail (rail lateral de categorias)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "16"
+    },
+    {
+      "id": "tvdetail",
+      "label": "TvDetail (pantalla completa)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "161"
+    },
+    {
+      "id": "tvplayerbar",
+      "label": "TvPlayerBar (barra de control reproductor)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "162"
+    },
+    {
+      "id": "tvsectiondrawer",
+      "label": "TvSectionDrawer (cajon lateral secciones)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "163"
+    },
+    {
+      "id": "tvhomerefresh",
+      "label": "TvHomeRefresh (boton actualizar Home)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "164"
+    },
+    {
+      "id": "tvsubtitlestyle",
+      "label": "TvSubtitleStyle (estilo subtítulos nd44)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "18"
+    },
+    {
+      "id": "exoplayer",
+      "label": "ExoPlayer embedded (f4/n0 interfaz Player)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md",
+      "source_location": "19-22"
+    },
+    {
+      "id": "playerctl",
+      "label": "PlayerCtl / TvPlayerCtl (reflexion Java)",
+      "type": "component",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "56-215"
+    },
+    {
+      "id": "focus_audit_inventario",
+      "label": "Inventario auditoria de foco v33",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-inventario.md",
+      "source_location": "1"
+    },
+    {
+      "id": "focus_audit_resultado",
+      "label": "Resultado auditoria de foco v33",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "1"
+    },
+    {
+      "id": "focus_click_por_layout",
+      "label": "Foco y clic por layout de item",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-click-por-layout.md",
+      "source_location": "1"
+    },
+    {
+      "id": "privacidad_portapapeles",
+      "label": "Privacidad: portapapeles no debe viajar v30",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "1"
+    },
+    {
+      "id": "rail_categorias_doc",
+      "label": "Rail lateral de categorias doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "1"
+    },
+    {
+      "id": "reproductor_exoplayer_doc",
+      "label": "Reproductor ExoPlayer API doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md",
+      "source_location": "1"
+    },
+    {
+      "id": "reproductor_control_doc",
+      "label": "Reproductor ExoPlayer control doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "1"
+    },
+    {
+      "id": "subtitulos_online_doc",
+      "label": "Subtitulos online doc",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "1"
+    },
+    {
+      "id": "design_system",
+      "label": "Design system Apple TV inspired",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "1"
+    },
+    {
+      "id": "fase_01_splash",
+      "label": "Fase 01 Splash/arranque",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "1"
+    },
+    {
+      "id": "comparisons",
+      "label": "comparisons.txt (empty)",
+      "type": "document",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\comparisons.txt"
+    },
+    {
+      "id": "fragment_home",
+      "label": "fragment_home.xml (Home)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "157"
+    },
+    {
+      "id": "activity_video_play_detail",
+      "label": "activity_video_play_detail.xml (ficha+player)",
+      "type": "layout",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "160"
+    },
+    {
+      "id": "bg_focused",
+      "label": "bg_focused.xml (anillo de foco)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "18-26"
+    },
+    {
+      "id": "tv_dimens",
+      "label": "tv_dimens.xml (dimensiones TV)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "156"
+    },
+    {
+      "id": "tv_focus_scale",
+      "label": "tv_focus_scale.xml (animacion foco)",
+      "type": "resource",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "171"
+    },
+    {
+      "id": "apktool",
+      "label": "apktool (build tool)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "45"
+    },
+    {
+      "id": "adb",
+      "label": "adb (Android debug bridge)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "44"
+    },
+    {
+      "id": "apksigner",
+      "label": "apksigner (firma)",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "46"
+    },
+    {
+      "id": "zipalign",
+      "label": "zipalign",
+      "type": "tool",
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "46"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents_md",
+      "target": "project_app_cine_tv",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "source": "project_app_cine_tv",
+      "target": "apk_movievn_cinevi",
+      "relation": "ports",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "8"
+    },
+    {
+      "source": "project_app_cine_tv",
+      "target": "tc_e",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "source": "tc_e",
+      "target": "project_app_cine_tv",
+      "relation": "enables_tv_mode",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "129"
+    },
+    {
+      "source": "baseactivity",
+      "target": "project_app_cine_tv",
+      "relation": "part_of",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "130"
+    },
+    {
+      "source": "tvutils",
+      "target": "splashactivity",
+      "relation": "used_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "36-38"
+    },
+    {
+      "source": "splashactivity",
+      "target": "project_app_cine_tv",
+      "relation": "entry_point",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "30"
+    },
+    {
+      "source": "appapplication",
+      "target": "project_app_cine_tv",
+      "relation": "application_class",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "180"
+    },
+    {
+      "source": "appapplication",
+      "target": "tc_e",
+      "relation": "guarded_by",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "101-102"
+    },
+    {
+      "source": "categoryrail",
+      "target": "fragment_home",
+      "relation": "injected_into",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "16-21"
+    },
+    {
+      "source": "categoryrail",
+      "target": "tv_dimens",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md",
+      "source_location": "40"
+    },
+    {
+      "source": "tvdetail",
+      "target": "activity_video_play_detail",
+      "relation": "controls",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "161"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "activity_video_play_detail",
+      "relation": "controls",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "162"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "exoplayer",
+      "relation": "reflects",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "11"
+    },
+    {
+      "source": "tvsectiondrawer",
+      "target": "fragment_home",
+      "relation": "used_in",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "163"
+    },
+    {
+      "source": "tvhomerefresh",
+      "target": "fragment_home",
+      "relation": "used_in",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "164"
+    },
+    {
+      "source": "exoplayer",
+      "target": "playerctl",
+      "relation": "controlled_via",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "37-41"
+    },
+    {
+      "source": "playerctl",
+      "target": "tvplayerbar",
+      "relation": "used_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md",
+      "source_location": "190-209"
+    },
+    {
+      "source": "tvplayerbar",
+      "target": "tvsubtitlestyle",
+      "relation": "applies",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md",
+      "source_location": "18"
+    },
+    {
+      "source": "focus_audit_inventario",
+      "target": "focus_audit_resultado",
+      "relation": "complements",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-inventario.md",
+      "source_location": "205"
+    },
+    {
+      "source": "focus_click_por_layout",
+      "target": "focus_audit_inventario",
+      "relation": "extends",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-click-por-layout.md",
+      "source_location": "1"
+    },
+    {
+      "source": "bg_focused",
+      "target": "focus_audit_resultado",
+      "relation": "styled_by",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md",
+      "source_location": "18-26"
+    },
+    {
+      "source": "bg_focused",
+      "target": "project_app_cine_tv",
+      "relation": "focus_ring",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "95-96"
+    },
+    {
+      "source": "privacidad_portapapeles",
+      "target": "splashactivity",
+      "relation": "documents_patch",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "35-41"
+    },
+    {
+      "source": "privacidad_portapapeles",
+      "target": "tvutils",
+      "relation": "uses",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md",
+      "source_location": "36-38"
+    },
+    {
+      "source": "rail_categorias_doc",
+      "target": "categoryrail",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md"
+    },
+    {
+      "source": "reproductor_exoplayer_doc",
+      "target": "exoplayer",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md"
+    },
+    {
+      "source": "reproductor_control_doc",
+      "target": "playerctl",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md"
+    },
+    {
+      "source": "subtitulos_online_doc",
+      "target": "tvsubtitlestyle",
+      "relation": "documents",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md"
+    },
+    {
+      "source": "design_system",
+      "target": "project_app_cine_tv",
+      "relation": "guides_ui",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "1"
+    },
+    {
+      "source": "design_system",
+      "target": "tv_dimens",
+      "relation": "defines_tokens",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "290"
+    },
+    {
+      "source": "design_system",
+      "target": "bg_focused",
+      "relation": "references",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md",
+      "source_location": "243"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "splashactivity",
+      "relation": "validates",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "20-22"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "tc_e",
+      "relation": "checks",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "32"
+    },
+    {
+      "source": "fase_01_splash",
+      "target": "tvutils",
+      "relation": "checks",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md",
+      "source_location": "33"
+    },
+    {
+      "source": "apktool",
+      "target": "project_app_cine_tv",
+      "relation": "builds",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "62"
+    },
+    {
+      "source": "apksigner",
+      "target": "project_app_cine_tv",
+      "relation": "signs",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "66-69"
+    },
+    {
+      "source": "zipalign",
+      "target": "project_app_cine_tv",
+      "relation": "aligns",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "65"
+    },
+    {
+      "source": "adb",
+      "target": "project_app_cine_tv",
+      "relation": "installs",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md",
+      "source_location": "74"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_startup_guards",
+      "label": "Arranque en TV depende de guards anti-TV",
+      "nodes": [
+        "tc_e",
+        "baseactivity",
+        "tvutils",
+        "splashactivity",
+        "appapplication"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md"
+    },
+    {
+      "id": "he_home_navigation",
+      "label": "Navegacion D-pad del Home",
+      "nodes": [
+        "categoryrail",
+        "tvsectiondrawer",
+        "tvhomerefresh",
+        "fragment_home"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md"
+    },
+    {
+      "id": "he_player_control",
+      "label": "Control del reproductor",
+      "nodes": [
+        "tvplayerbar",
+        "exoplayer",
+        "playerctl",
+        "tvdetail"
+      ],
+      "source_file": "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "coverage": {
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\AGENTS.md": 335,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\comparisons.txt": 0,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-inventario.md": 205,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-auditoria-resultado.md": 127,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\foco-click-por-layout.md": 114,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\privacidad-portapapeles.md": 62,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\rail-categorias.md": 151,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer-control.md": 426,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\reproductor-exoplayer.md": 404,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\componentes\\subtitulos-online.md": 276,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\design-system.md": 355,
+    "C:\\Users\\UsuarioLocal\\Documents\\app-cine-new-design\\docs\\fases\\fase-01-splash.md": 104
+  }
+}

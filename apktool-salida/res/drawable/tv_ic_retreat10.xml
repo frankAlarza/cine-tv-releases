@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icono moderno "retroceder 10 s" para la barra de control del reproductor (v32).
+     Flecha circular antihoraria con el "10" dentro. Vector propio: el PNG de la
+     app (ic_retreat10) es pequeno (107x119 px en xxhdpi) y se ve anticuado. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Arco de 300 grados (de 210 a 270 grados, sentido antihorario) -->
+    <path
+        android:pathData="M7.98,14.75 A18.5,18.5 0 1,0 24,5.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+
+    <!-- Punta de flecha (apunta a la izquierda) -->
+    <path
+        android:pathData="M16.5,5.5 L24.5,0.5 L24.5,10.5 Z"
+        android:fillColor="#FFFFFFFF" />
+
+    <!-- Digito "1" -->
+    <path
+        android:pathData="M16.75,21.5 L20.25,18.5 L20.25,29.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Digito "0" -->
+    <path
+        android:pathData="M27.25,18.3 C29.46,18.3 31.25,20.85 31.25,24 C31.25,27.15 29.46,29.7 27.25,29.7 C25.04,29.7 23.25,27.15 23.25,24 C23.25,20.85 25.04,18.3 27.25,18.3 Z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.6" />
+</vector>

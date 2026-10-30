@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Overrides TV: resaltado de foco visible (10 pies) -->
+<resources>
+<style name="AppTheme_Main" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/tv_color_bg</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="colorAccent">@android:color/black</item>
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="android:colorControlHighlight">#FF4FC3F7</item>
+    <item name="android:defaultFocusHighlightEnabled">true</item>
+</style>
+<style name="AppTheme_Splash" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_spl</item>
+        <item name="android:windowAnimationStyle">@style/SplashWindowAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/main_navigation_color</item>
+        <item name="android:colorControlHighlight">#FF4FC3F7</item>
+    <item name="android:defaultFocusHighlightEnabled">true</item>
+</style>
+<style name="SplashWindowAnimation">
+    <item name="android:windowEnterAnimation">@anim/splash_enter</item>
+    <item name="android:windowExitAnimation">@anim/splash_exit</item>
+</style>
+<style name="BrowserTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorControlHighlight">#FF4FC3F7</item>
+    <item name="android:defaultFocusHighlightEnabled">true</item>
+</style>
+</resources>

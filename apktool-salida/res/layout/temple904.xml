@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:descendantFocusability="afterDescendants" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:id="@id/button4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="å…³é—­å¹¿å‘Š" />
+    <Button android:id="@id/button5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="è§¦å‘ç‚¹å‡»" />
+    <Button android:id="@id/button6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="é™éŸ³" />
+    <Button android:id="@id/button7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="apptitle" />
+    <ImageView android:id="@id/imageView" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <VideoView android:id="@id/videoView" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>
+

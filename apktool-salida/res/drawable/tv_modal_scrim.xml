@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fondo a pantalla completa del modal de idioma (v102): cortina oscura que separa el
+     dialogo del contenido y acenta la profundidad estilo cinema. -->
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tv_modal_scrim" />
+</shape>

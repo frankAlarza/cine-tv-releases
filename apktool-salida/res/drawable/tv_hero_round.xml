@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fondo del banner/heroe del Home (v103): forma redondeada para que el contenedor
+     pueda recortar la imagen con android:clipToOutline. El color es el del tema para
+     que las esquinas se fundan con el fondo real de la pantalla. -->
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/theme_bg_color" />
+    <corners android:radius="@dimen/tv_hero_radius" />
+</shape>
