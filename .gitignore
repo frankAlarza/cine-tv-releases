@@ -16,6 +16,7 @@ base/
 # graphify: cache y locks (ruido de rebuild)
 graphify-out/cache/
 graphify-out/.rebuild.lock
+graphify-out/.pending_changes
 *.lock
 
 # Ignorar builds temporales; NO ignorar graphify-out/
