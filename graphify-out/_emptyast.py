@@ -1,4 +1,0 @@
-import json
-from pathlib import Path
-Path('graphify-out/.graphify_ast.json').write_text(json.dumps({'nodes':[],'edges':[],'hyperedges':[],'input_tokens':0,'output_tokens':0}, ensure_ascii=False), encoding='utf-8')
-print('empty AST written')

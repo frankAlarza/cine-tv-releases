@@ -19,6 +19,25 @@ v4.0.0 (MovieVN): sin "Expired App", sin Telegram del modder, sin actualización
 
 ---
 
+## REGLA CRÍTICA: Ejecución y edición de código Python en PowerShell
+
+Queda estrictamente PROHIBIDO encadenar lectura de ficheros en variables para ejecutarlos en la misma línea (evitar sintaxis como `$py = Get-Content ...; & $py ...`). PowerShell destruye/escapa mal las comillas internas.
+
+**Protocolo obligatorio de ejecución:**
+1. Para ejecutar scripts de Python en la ruta actual, usa directamente la llamada simple al intérprete:
+   python graphify-out/_partc2.py
+
+2. Si necesitas la ruta del entorno ejecutable (`.graphify_python`), ejecútalo en un solo paso limpio de Python o activa el entorno virtual previamente:
+   # Opción A: Activar entorno primero
+   Set-Location "C:\Users\UsuarioLocal\Documents\app-cine-new-design"
+   python graphify-out/_partc2.py
+
+   # Opción B: Si debes usar el binario de .graphify_python, pásalo como argumento directo sin variables intermadias:
+   & (Get-Content graphify-out/.graphify_python -Raw).Trim() graphify-out/_partc2.py
+
+3. Para la EDICIÓN de ficheros Python:
+   NUNCA edites código escribiendo bloques multilínea o comillas directamente en el shell/PowerShell. Usa únicamente herramientas nativas de edición del sistema (como `write_file` / `edit_file`) o escribe un script auxiliar en un paso independiente sin escapar cadenas en el comando.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
