@@ -44,12 +44,16 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     .line 2
     .line 3
     invoke-direct {p0}, Lme/goldze/mvvmhabit/base/BaseFragment;-><init>()V
+
+    const-string v0, "TvLookNav"
+    const-string v1, "CategoryFragment constructor"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 4
     .line 5

@@ -640,7 +640,7 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     .line 1
     .line 2
@@ -757,7 +757,18 @@
     .line 61
     .line 62
     .line 63
+    const-string v1, "TvLookNav"
+    const-string v0, "BaseActivity onCreate initData"
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-virtual {p0}, Lcom/mgs/carparking/app/BaseActivity;->initData()V
+
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+    if-eqz v0, :cond_tvskip2
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
+    move-result-object v0
+    invoke-static {v0}, Lcom/movievn/tv/TvLookNav;->install(Landroid/view/View;)V
+    :cond_tvskip2
 
     .line 64
     .line 65

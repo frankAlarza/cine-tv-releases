@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_secondary" android:id="@id/tv_name" android:background="@drawable/bg_home_search_history" android:layout_width="wrap_content" android:layout_height="wrap_content"
+<TextView android:focusable="true" android:foreground="@drawable/bg_focused" android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_secondary" android:id="@id/tv_name" android:background="@drawable/bg_home_search_history" android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android" />

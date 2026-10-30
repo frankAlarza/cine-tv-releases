@@ -20,12 +20,16 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .line 1
     .line 2
     .line 3
     invoke-direct {p0}, Lme/goldze/mvvmhabit/base/BaseFragment;-><init>()V
+
+    const-string v0, "TvLookNav"
+    const-string v1, "LookChannelFragment constructor"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 4
     return-void
@@ -652,6 +656,10 @@
     .line 3
     invoke-super {p0}, Lme/goldze/mvvmhabit/base/BaseFragment;->initData()V
 
+    const-string v0, "TvLookNav"
+    const-string v1, "initData entered"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 4
     .line 5
     iget-object v0, p0, Lme/goldze/mvvmhabit/base/BaseFragment;->binding:Landroidx/databinding/ViewDataBinding;
@@ -804,6 +812,11 @@
     .line 83
     .line 84
     invoke-virtual {v0}, Lcom/mgs/carparking/model/LOOKCHANNELVIEWMODEL;->U()V
+
+    iget-object v0, p0, Lme/goldze/mvvmhabit/base/BaseFragment;->binding:Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
+    move-result-object v0
+    invoke-static {v0}, Lcom/movievn/tv/TvLookNav;->install(Landroid/view/View;)V
 
     .line 85
     return-void

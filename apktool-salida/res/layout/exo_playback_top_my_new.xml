@@ -28,7 +28,7 @@
             <TextView android:visibility="gone" android:textSize="16.0sp" android:text="@string/exo_fenge" style="@style/ExoMediaSpan" />
             <TextView android:id="@id/exo_duration" android:textSize="16.0sp" android:layout_marginEnd="@dimen/dp_16" style="@style/ExoMediaDuration" />
             <TextView android:visibility="gone" style="@style/ExoMediaTextSwitch" />
-            <androidx.appcompat.widget.AppCompatCheckBox android:gravity="center_vertical" android:id="@id/exo_video_fullscreen" android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:layout_width="52.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_8" style="@style/ExoMediaButton.Fullscreen" />
+            <androidx.appcompat.widget.AppCompatCheckBox android:gravity="center_vertical" android:id="@id/exo_video_fullscreen" android:focusable="true" android:foreground="@drawable/bg_focused" android:layout_width="52.0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_8" style="@style/ExoMediaButton.Fullscreen" />
         </LinearLayout>
     </RelativeLayout>
     <RelativeLayout android:id="@id/rl_bottom_land" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">

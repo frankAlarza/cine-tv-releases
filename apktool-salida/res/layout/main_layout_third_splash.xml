@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:descendantFocusability="afterDescendants" android:id="@id/main_layout_content" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <RelativeLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:descendantFocusability="afterDescendants" android:id="@id/main_layout_content" android:layout_width="match_parent" android:layout_height="match_parent" />
     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:layout_marginEnd="20.0dp" android:layout_alignParentEnd="true">
         <include layout="@layout/main_txt_skip" />
     </LinearLayout>

@@ -1,93 +1,15 @@
 {
   "communities": {
     "0": [
-      "android_animation_valueanimator",
-      "android_content_res_colorstatelist",
       "android_view_view",
-      "android_widget_scrollview",
-      "animatorupdatelistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_additem",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_attach",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_bindkeyto",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_builditembackground",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_buildpanelbackground",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_categoryrail",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_containsany",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimen",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimenfloat",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dp",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_drawable",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_expand",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_findfocusable",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_firstbottombartab",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_iconfor",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_icontint",
+      "android_widget_imageview",
+      "android_widget_textview",
+      "onclicklistener",
       "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_isdescendant",
       "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_nearestitem",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_normalize",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_rebuild",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_scrollitemintoview",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_showlabel",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_updateselection",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_collapsecheck",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_run",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener_contentkeylistener",
       "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener_onkey",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_focuswatcher",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_onglobalfocuschanged",
       "tools_category_rail_src_com_movievn_tv_categoryrail_item",
       "tools_category_rail_src_com_movievn_tv_categoryrail_item_item",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_itemclicklistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_onclick",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_itemfocuslistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_onfocuschange",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_java_override",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_layoutscan",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_ongloballayout",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_onkey",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_railkeylistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_run",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_scrollitemtask",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabreselected",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabselected",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabunselected",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_tablistener",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_onanimationupdate",
-      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_widthupdate",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabreselected",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabselected",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabunselected",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_gettext",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_select",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_addontabselectedlistener",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_getselectedtabposition",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabat",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabcount",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_removeontabselectedlistener",
-      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_tablayout",
-      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener",
-      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_findpager",
-      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_onkey",
-      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_tvherokeylistener"
-    ],
-    "1": [
-      "onclicklistener",
-      "onfocuschangelistener",
-      "onglobalfocuschangelistener",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected_focusselected",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_focusselected_run",
@@ -98,6 +20,7 @@
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_hidepanel_hidepanel",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_hidepanel_run",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item_item",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick_itemclick",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_itemclick_onclick",
@@ -146,7 +69,6 @@
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_isdescendant",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_isinpanel",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_ispromotion",
-      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_istv",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_move",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_normalize",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_onkey",
@@ -161,7 +83,105 @@
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_toggle",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_tvsectiondrawer",
       "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_updatefallback",
-      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_wiretopfocus"
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_wiretopfocus",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_collecttextviews",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick_colorclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick_fontclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_java_onclicklistener",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_java_override",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick_offsetclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick_shadowclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick_sizeclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_addrow",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_dp",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_show"
+    ],
+    "1": [
+      "android_animation_valueanimator",
+      "android_content_res_colorstatelist",
+      "android_widget_scrollview",
+      "animatorupdatelistener",
+      "onfocuschangelistener",
+      "onglobalfocuschangelistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_additem",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_attach",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_bindkeyto",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_builditembackground",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_buildpanelbackground",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_categoryrail",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_containsany",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimen",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dimenfloat",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_dp",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_drawable",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_expand",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_findfocusable",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_firstbottombartab",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_iconfor",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_icontint",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_normalize",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_rebuild",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_scrollitemintoview",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_showlabel",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_categoryrail_updateselection",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_collapsecheck",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_collapsecheck_run",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_contentkeylistener_contentkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_focuswatcher",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_focuswatcher_onglobalfocuschanged",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_itemclicklistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemclicklistener_onclick",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_itemfocuslistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_itemfocuslistener_onfocuschange",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_java_override",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_layoutscan",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_layoutscan_ongloballayout",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_onkey",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_railkeylistener_railkeylistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_run",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_scrollitemtask_scrollitemtask",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabreselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_ontabunselected",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_tablistener_tablistener",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_onanimationupdate",
+      "tools_category_rail_src_com_movievn_tv_categoryrail_widthupdate_widthupdate",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabreselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_ontabselectedlistener_ontabunselected",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_gettext",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tab_select",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_addontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_getselectedtabposition",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabat",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_gettabcount",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_removeontabselectedlistener",
+      "tools_category_rail_stub_com_google_android_material_tabs_tablayout_tablayout_tablayout"
     ],
     "2": [
       "layoutparams",
@@ -316,6 +336,52 @@
       "tools_test_load"
     ],
     "5": [
+      "area_a",
+      "area_d",
+      "area_e",
+      "collection_activity",
+      "crit_p0",
+      "crit_p1",
+      "crit_p2",
+      "data_binding",
+      "dialog_video_delete",
+      "download_activity",
+      "download_complete_second_activity",
+      "edit_mine_activity",
+      "extension_record_activity",
+      "extension_share_activity",
+      "fase13_doc",
+      "fase14_doc",
+      "fase15_doc",
+      "fase16_doc",
+      "fase17_doc",
+      "fase18_doc",
+      "fase20_doc",
+      "fase21_doc",
+      "fase22_doc",
+      "fase23_doc",
+      "fase24_doc",
+      "fase25_doc",
+      "fase26_doc",
+      "fase27_doc",
+      "fase28_doc",
+      "fase29_doc",
+      "fase30_doc",
+      "feedback_activity",
+      "feedback_record_activity",
+      "game_activity",
+      "history_activity",
+      "login_activity",
+      "mine_fragment",
+      "order_list_activity",
+      "register_activity",
+      "setting_activity",
+      "spiel_fragment",
+      "trio_magico",
+      "web_activity",
+      "webview"
+    ],
+    "6": [
       "apktool_salida_assets_ad_viewer_omsdk_v1",
       "apktool_salida_assets_ad_viewer_omsdk_v1_a",
       "apktool_salida_assets_ad_viewer_omsdk_v1_a_m",
@@ -355,83 +421,42 @@
       "apktool_salida_assets_ad_viewer_omsdk_v1_z",
       "apktool_salida_assets_ad_viewer_omsdk_v1_zc"
     ],
-    "6": [
-      "android_graphics_drawable_gradientdrawable",
-      "android_graphics_drawable_statelistdrawable",
-      "android_graphics_rect",
-      "android_graphics_typeface",
-      "android_os_handler",
-      "android_view_viewgroup",
-      "android_widget_imageview",
-      "android_widget_popupwindow",
-      "animatorinflater",
-      "arraylist",
-      "build",
-      "color",
-      "colordrawable",
-      "configuration",
-      "decelerateinterpolator",
-      "drawable",
-      "gravity",
-      "handler",
-      "linearinterpolator",
-      "list",
-      "locale",
-      "log",
-      "looper",
-      "resources",
-      "smartrefreshlayout",
-      "textutils",
-      "toast",
-      "tools_category_rail_src_com_movievn_tv_categoryrail",
-      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh",
-      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout",
-      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout",
-      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer",
-      "tools_tv_detail_src_com_movievn_tv_tvdetail",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog",
-      "typedvalue",
-      "viewtreeobserver"
-    ],
     "7": [
-      "area_a",
-      "area_d",
-      "collection_activity",
-      "crit_p0",
-      "crit_p1",
-      "crit_p2",
-      "data_binding",
-      "dialog_video_delete",
-      "download_activity",
-      "download_complete_second_activity",
-      "edit_mine_activity",
-      "extension_record_activity",
-      "extension_share_activity",
-      "fase13_doc",
-      "fase14_doc",
-      "fase15_doc",
-      "fase16_doc",
-      "fase17_doc",
-      "fase18_doc",
-      "fase20_doc",
-      "fase21_doc",
-      "fase22_doc",
-      "fase23_doc",
-      "fase24_doc",
-      "fase25_doc",
-      "fase26_doc",
-      "fase29_doc",
-      "fase30_doc",
-      "feedback_activity",
-      "feedback_record_activity",
-      "history_activity",
-      "login_activity",
-      "mine_fragment",
-      "order_list_activity",
-      "register_activity",
-      "setting_activity",
-      "trio_magico"
+      "build-v145",
+      "build-v154",
+      "build-v40",
+      "class_SearchContentVideoActivity",
+      "class_SpecialDetailNewActivity",
+      "comp-tvutils",
+      "concept_autocomplete",
+      "concept_findContainingViewHolder",
+      "concept_phase_07_search",
+      "issue-ime-forzado",
+      "layout-activity-special-detail-new",
+      "layout-activity-video-more-list",
+      "layout-dialog-search-history-clear",
+      "layout-fragment-home-content-search-list",
+      "layout-item-history-search",
+      "layout-item-home-content-search-movie",
+      "layout-item-home-search-hot-search",
+      "layout-item-search-extend-list",
+      "layout-item-special-detail-new-item-result",
+      "layout-item-video-more-list",
+      "phase-06-buscador",
+      "phase-08-vermas",
+      "phase-09-especial",
+      "screen-buscador",
+      "screen-especial",
+      "screen-resultados-busqueda",
+      "screen-ver-mas",
+      "sesion_36",
+      "sesion_37",
+      "smali-searchcontentvideoactivity",
+      "smali-specialdetailnewactivity",
+      "smali-tc-s",
+      "v142_v145",
+      "v145",
+      "v154"
     ],
     "8": [
       "apktool_salida_res_raw_omsdk_v1_5_3_ab",
@@ -467,38 +492,6 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_yb"
     ],
     "9": [
-      "android_app_activity",
-      "android_app_alertdialog",
-      "android_widget_textview",
-      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_item_item",
-      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog",
-      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog",
-      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_show",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick_acceptclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick_colorclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_colorclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick_fontclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_fontclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_java_onclicklistener",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_java_override",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick_offsetclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_offsetclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_shadowclick_shadowclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_sizeclick_sizeclick",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_addrow",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_dp",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_show"
-    ],
-    "10": [
       "apktool_salida_assets_ad_viewer_omsdk_v1_b",
       "apktool_salida_assets_ad_viewer_omsdk_v1_b_add",
       "apktool_salida_assets_ad_viewer_omsdk_v1_b_clear",
@@ -530,15 +523,15 @@
       "apktool_salida_assets_ad_viewer_omsdk_v1_x_h",
       "apktool_salida_assets_ad_viewer_omsdk_v1_x_j"
     ],
-    "11": [
+    "10": [
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress_clearsuppress",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clearsuppress_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_clocktask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_run",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlecue",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlecue_subtitlecue",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask_subtitleloadtask",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlesyncbackclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlesyncbackclick_onclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlesyncbackclick_subtitlesyncbackclick",
@@ -558,11 +551,70 @@
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_parsetime",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_showsubtitlesynccontrols",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_startsubtitlesync",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updatelangdisplay",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updateoffsetdisplay",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updatesubtitle"
     ],
+    "11": [
+      "activity_download_video_play",
+      "area_c",
+      "doc_subtitulos",
+      "docs_fases_fase_33_subtitulos",
+      "docs_fases_fase_34_subtitulos",
+      "docs_fases_fase_35_subtitulos",
+      "docs_prompts_prompt_subtitulos_estilo",
+      "fase12_doc",
+      "fase19_doc",
+      "mainactivity",
+      "media_keys",
+      "subripdecoder",
+      "subtitle_available_state",
+      "subtitle_focus_chain",
+      "subtitle_language_cycle",
+      "subtitle_offset",
+      "subtitle_style_config",
+      "subtitle_sync_task",
+      "subtitlecue",
+      "subtitles_online",
+      "subtitleview",
+      "tvdetail",
+      "tvplayerbar",
+      "tvsectiondrawer",
+      "tvsubtitlestyle",
+      "tvutils_istv",
+      "videoplaydetailactivity",
+      "webvttdecoder"
+    ],
     "12": [
+      "bottom_bar_navigation",
+      "cambios_diseno",
+      "category_rail",
+      "concept_dpad",
+      "concept_smali_classes16",
+      "concept_smali_classes7",
+      "doc_rail",
+      "docs_prompts_sesion_10",
+      "fragment_home",
+      "fragment_home_content_list",
+      "rule_r9",
+      "section_more_button",
+      "session_14",
+      "smart_refresh_layout",
+      "tablayout",
+      "tools_build_category_rail",
+      "tools_build_home_refresh",
+      "tools_build_section_drawer",
+      "trap_button_dead",
+      "trap_clickable_no_focus",
+      "trap_dex_limit",
+      "trap_smartrefresh",
+      "tv_home_refresh",
+      "tv_section_drawer",
+      "v36",
+      "v37",
+      "v38",
+      "viewpager"
+    ],
+    "13": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_deepfreeze",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argschecker_assertfunction",
@@ -589,34 +641,6 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_windowutils_istopwindowaccessible",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_windowutils_removedomelements",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_sessionclient_verificationvendor_verificationvendoridforscripturl"
-    ],
-    "13": [
-      "bottom_bar_navigation",
-      "cambios_diseno",
-      "category_rail",
-      "concept_dpad",
-      "concept_smali_classes16",
-      "concept_smali_classes7",
-      "docs_prompts_sesion_10",
-      "fragment_home",
-      "fragment_home_content_list",
-      "rule_r9",
-      "section_more_button",
-      "session_14",
-      "smart_refresh_layout",
-      "tools_build_category_rail",
-      "tools_build_home_refresh",
-      "tools_build_section_drawer",
-      "trap_button_dead",
-      "trap_clickable_no_focus",
-      "trap_dex_limit",
-      "trap_smartrefresh",
-      "tv_home_refresh",
-      "tv_section_drawer",
-      "tvhomerefresh",
-      "v36",
-      "v37",
-      "v38"
     ],
     "14": [
       "tools_tv_detail_src_com_movievn_tv_tvdetail_tvdetail_isfullscreen",
@@ -647,60 +671,6 @@
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_showbar"
     ],
     "15": [
-      "docs_componentes_subtitulos_online_doc",
-      "docs_fases_fase_32_subtitulos",
-      "docs_fases_fase_33_subtitulos",
-      "docs_fases_fase_34_subtitulos",
-      "docs_fases_fase_35_subtitulos",
-      "docs_prompts_prompt_subtitulos_estilo",
-      "progress_subtitles_online",
-      "subdl_api",
-      "subtitle_available_state",
-      "subtitle_cache",
-      "subtitle_clean_cue",
-      "subtitle_decode",
-      "subtitle_download_task",
-      "subtitle_focus_chain",
-      "subtitle_formats",
-      "subtitle_language_cycle",
-      "subtitle_load_task",
-      "subtitle_offset",
-      "subtitle_style_config",
-      "subtitle_sync_task",
-      "subtitlecue",
-      "tmdb_api",
-      "tvplayerbar",
-      "tvsubtitlesearch",
-      "tvsubtitlestyle"
-    ],
-    "16": [
-      "onlongclicklistener",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask_subtitleavailabletask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleclick_onclickold",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask_subtitledownloadtask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangitemclick_onclick",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick_onlongclick",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick_subtitlelongclick",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask_subtitleunavailabletask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_attach",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_closesubtitlepopup",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_collecttextviews",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_findcachedsubtitle",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_findtitle",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_hidesubtitlesynccontrols",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_istv",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setsubtitleavailable",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_stopsubtitlesync",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_tvplayerbar"
-    ],
-    "17": [
       "apktool_salida_res_raw_omsdk_v1_5_3",
       "apktool_salida_res_raw_omsdk_v1_5_3_a",
       "apktool_salida_res_raw_omsdk_v1_5_3_ca",
@@ -726,12 +696,11 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_wa",
       "apktool_salida_res_raw_omsdk_v1_5_3_z"
     ],
-    "18": [
+    "16": [
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey_barkey",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus_buttonfocus",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_java_onclicklistener",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick_onclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick_playpauseclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_retreatclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_retreatclick_onclick",
@@ -752,57 +721,7 @@
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_resid",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_showsubtitlepopup"
     ],
-    "19": [
-      "adb",
-      "agents_md",
-      "apk_movievn_cinevi",
-      "apktool",
-      "appapplication",
-      "baseactivity",
-      "build_v49",
-      "concept_phase_01_splash",
-      "docs_componentes_privacidad_portapapeles",
-      "docs_fases_fase_01_splash",
-      "guide_powershell_reglas",
-      "main_activity",
-      "project_app_cine_tv",
-      "prompt_verificacion_v49",
-      "session_15",
-      "splash_activity",
-      "splash_wx_activity",
-      "splashactivity",
-      "tc_e",
-      "tools_patch_tc_e",
-      "tools_patch_tc_e_replace_method",
-      "tvutils",
-      "v39"
-    ],
-    "20": [
-      "android_widget_seekbar",
-      "onseekbarchangelistener",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus_onfocuschange",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_clocktask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_clocktask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage_hidesubtitlemessage",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_java_override",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onprogresschanged",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstarttrackingtouch",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstoptrackingtouch",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_seekchange",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask_subtitlelangsearchtask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask_subtitlepopuppopulatetask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_populatesubtitlepopup"
-    ],
-    "21": [
+    "17": [
       "ad_sdk_admob",
       "ad_sdk_applovin",
       "ad_sdk_bidmachine",
@@ -826,7 +745,55 @@
       "audit_fase6_sdk_deletion",
       "audit_manifest_inventory"
     ],
-    "22": [
+    "18": [
+      "android_app_activity",
+      "android_graphics_rect",
+      "android_os_handler",
+      "android_widget_popupwindow",
+      "animatorinflater",
+      "configuration",
+      "drawable",
+      "handler",
+      "linearinterpolator",
+      "log",
+      "looper",
+      "resources",
+      "smartrefreshlayout",
+      "toast",
+      "tools_home_refresh_src_com_movievn_tv_tvhomerefresh",
+      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog",
+      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog",
+      "tools_section_drawer_stub_com_movievn_tv_tvsubtitlestyledialog_tvsubtitlestyledialog_show",
+      "tools_tv_detail_src_com_movievn_tv_tvdetail",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar",
+      "tvhomerefresh",
+      "viewtreeobserver"
+    ],
+    "19": [
+      "android_widget_seekbar",
+      "onseekbarchangelistener",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_buttonfocus_onfocuschange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_java_override",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onprogresschanged",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstarttrackingtouch",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_onstoptrackingtouch",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekchange_seekchange",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleavailabletask_subtitleavailabletask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleloadtask_subtitleloadtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleunavailabletask_subtitleunavailabletask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_findcachedsubtitle"
+    ],
+    "20": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_deepfreeze",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argschecker_assertfunction",
@@ -850,7 +817,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_windowutils_removedomelements",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_sessionclient_verificationvendor_verificationvendoridforscripturl"
     ],
-    "23": [
+    "21": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argschecker_assertnotnullobject",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_error",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_finish",
@@ -874,7 +841,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_aduserinteraction",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_playerstatechange"
     ],
-    "24": [
+    "22": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argschecker_assertnotnullobject",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_error",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_finish",
@@ -898,59 +865,38 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_aduserinteraction",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_playerstatechange"
     ],
-    "25": [
-      "android_util_attributeset",
-      "android_view_keyevent",
-      "android_widget_relativelayout",
-      "rect",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_java_override",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_dispatchkeyevent",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_findpager",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_onfocuschanged",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_onkeydown",
-      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_tvheroimage",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem_java_override",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_findpager",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_onkeydown",
-      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_tvheroitem",
-      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener",
-      "view",
-      "viewparent"
+    "23": [
+      "bg_focused",
+      "binding_adapter",
+      "concept_apple_tv_halo",
+      "concept_focus_ring",
+      "content_key_listener",
+      "d_pad_navigation",
+      "doc_design_system",
+      "doc_foco_click",
+      "doc_foco_inventario",
+      "doc_foco_resultado",
+      "docs_design_system",
+      "docs_guias_procedimiento_subagentes",
+      "focus_auditing",
+      "focus_click_by_layout",
+      "focus_trio",
+      "fragment_mine",
+      "layout_land_television",
+      "phase_focus_audit",
+      "rule_r2",
+      "trap_foreground_opaco",
+      "tv_dimens",
+      "tv_focus_scale"
     ],
-    "26": [
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ba",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_da",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_db",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ea",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_fa",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ia",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_j",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_j_m",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ja",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_r",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_rb",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_u",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_u_a",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_u_i",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_u_k",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ua",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_va",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_wa",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_xa",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_ya",
-      "apktool_salida_assets_ad_viewer_omsdk_v1_za"
-    ],
-    "27": [
+    "24": [
       "docs_sesiones_sesion_nd44_subtitulos_estilo_rebuilditems",
       "docs_sesiones_sesion_nd44_subtitulos_estilo_tvsectiondrawer",
       "docs_sesiones_sesion_nd44_subtitulos_estilo_tvsubtitlestyledialog",
       "plan_definitivo_118_activities",
       "plan_definitivo_30_fases",
       "plan_definitivo_area_a",
+      "plan_definitivo_area_b",
       "plan_definitivo_area_c",
       "plan_definitivo_area_d",
       "plan_definitivo_area_e",
@@ -967,7 +913,8 @@
       "plan_definitivo_tvsectiondrawer",
       "plan_definitivo_v38"
     ],
-    "28": [
+    "25": [
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_playpauseclick_onclick",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey_onkey",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_format",
       "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_handlemediakey",
@@ -990,7 +937,53 @@
       "tools_tv_detail_stub_f4_n0_n0_seekto",
       "tools_tv_detail_stub_f4_n0_n0_setplaywhenready"
     ],
-    "29": [
+    "26": [
+      "android_graphics_drawable_gradientdrawable",
+      "android_graphics_drawable_statelistdrawable",
+      "android_graphics_typeface",
+      "android_widget_linearlayout",
+      "arraylist",
+      "build",
+      "color",
+      "colordrawable",
+      "decelerateinterpolator",
+      "gravity",
+      "list",
+      "locale",
+      "textutils",
+      "tools_category_rail_src_com_movievn_tv_categoryrail",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_setcurrenttab",
+      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_tablayout",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog",
+      "typedvalue"
+    ],
+    "27": [
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ba",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_da",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_db",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ea",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_fa",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ia",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_j",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_j_m",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ja",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_r",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_rb",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_u",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_u_a",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_u_i",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_u_k",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ua",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_va",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_wa",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_xa",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_ya",
+      "apktool_salida_assets_ad_viewer_omsdk_v1_za"
+    ],
+    "28": [
       "aes_encryption",
       "base_url_surfclick",
       "cdn_403",
@@ -1012,7 +1005,7 @@
       "vod_url",
       "wssecret"
     ],
-    "30": [
+    "29": [
       "apktool_salida_assets_ad_viewer_omsdk_v1_ec",
       "apktool_salida_assets_ad_viewer_omsdk_v1_hc",
       "apktool_salida_assets_ad_viewer_omsdk_v1_ic",
@@ -1033,6 +1026,27 @@
       "apktool_salida_assets_ad_viewer_omsdk_v1_ta_h",
       "apktool_salida_assets_ad_viewer_omsdk_v1_y",
       "apktool_salida_assets_ad_viewer_omsdk_v1_zb"
+    ],
+    "30": [
+      "android_app_alertdialog",
+      "sharedpreferences",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_applysubtitlestyle",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_applysubtitlestyletoactive",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_createsubtitletext",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowcolor",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowdx",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowdy",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowradius",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_gettextsizesp",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_gettypeface",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_load",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_save",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick_acceptclick",
+      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick_onclick",
+      "typeface"
     ],
     "31": [
       "apktool_salida_res_raw_omsdk_v1_5_3_bc",
@@ -1075,26 +1089,6 @@
       "version:v30"
     ],
     "33": [
-      "onkeylistener",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_boxkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_onkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_decorkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_onkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey_seekkey",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_run",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_setuptask",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_refreshplayer",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_schedule",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setup",
-      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview_getplayerview",
-      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview_getplayer"
-    ],
-    "34": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_d",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_d_clear",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_d_delete",
@@ -1113,7 +1107,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_l",
       "apktool_salida_assets_ad_viewer_omsdk_v1_mc_m"
     ],
-    "35": [
+    "34": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_d",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_d_clear",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_d_delete",
@@ -1132,7 +1126,7 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_l",
       "apktool_salida_res_raw_omsdk_v1_5_3_qc_m"
     ],
-    "36": [
+    "35": [
       "apktool_salida_res_raw_omsdk_v1_5_3_db",
       "apktool_salida_res_raw_omsdk_v1_5_3_eb",
       "apktool_salida_res_raw_omsdk_v1_5_3_gb",
@@ -1151,130 +1145,80 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_y",
       "apktool_salida_res_raw_omsdk_v1_5_3_zb"
     ],
-    "37": [
-      "ad_sdk",
-      "base_activity",
-      "concept_ads_guard",
-      "concept_letterbox",
-      "concept_storage_perms",
-      "manifest",
-      "rule_r4",
-      "rule_r5",
-      "rule_r7",
-      "session_01_04",
-      "tools_patch_orientation",
-      "tools_patch_orientation_set_smalitext",
-      "trap_letterbox",
-      "v15",
-      "v24",
-      "v4"
-    ],
-    "38": [
-      "bg_focused",
-      "categoryrail",
-      "concept_apple_tv_halo",
-      "concept_focus_ring",
-      "docs_componentes_rail_categorias_doc",
-      "docs_design_system",
-      "docs_guias_procedimiento_subagentes",
-      "focus_audit_inventario",
-      "focus_audit_resultado",
-      "focus_click_por_layout",
-      "focus_trio",
-      "fragment_mine",
-      "rule_r10",
-      "rule_r2",
-      "trap_foreground_opaco",
-      "tv_dimens"
-    ],
-    "39": [
-      "class_category_rail",
-      "class_tv_home_refresh",
-      "class_tv_section_drawer",
-      "concept_after_descendants",
-      "concept_binding_click",
-      "concept_data_binding_click",
-      "concept_focus_trio",
-      "concept_smart_refresh_layout",
-      "docs_fases_fase_02_home",
-      "docs_sesiones_sesion_16",
-      "layout_fragment_home",
-      "layout_fragment_home_content_list",
-      "layout_home_banner_item",
-      "p0_containeres_comen_dpad",
-      "p0_tarjetas_sin_focusable",
-      "phase_02_home"
-    ],
-    "40": [
+    "36": [
       "concept_fullscreen",
+      "concept_rail",
       "docs_guias_diagnostico",
       "docs_prompts_sesion_09",
       "docs_prompts_sesion_11",
-      "docs_sesiones_sesion_nd44_subtitulos_estilo_applystyle",
-      "docs_sesiones_sesion_nd44_subtitulos_estilo_sharedpreferences",
-      "docs_sesiones_sesion_nd44_subtitulos_estilo_tvplayerbar",
-      "docs_sesiones_sesion_nd44_subtitulos_estilo_tvsubtitlestyle",
-      "docs_sesiones_sesion_nd44_subtitulos_estilo_version",
+      "focus_watcher",
+      "layout_scan",
       "letterbox_portrait_baseactivity",
       "player_modern_buttons",
+      "rail_key_listener",
+      "session_05_08",
       "surfaceview_action_down",
       "tc_e_i_o",
-      "tools_build_tv_detail",
       "trap_relpos",
-      "tv_detail"
+      "tv_detail",
+      "v26",
+      "v27"
     ],
-    "41": [
-      "activity_channel_fragment",
-      "area_A_arranque_navegacion",
-      "build_v39",
-      "docs_fases_fase_03_rankings",
-      "docs_fases_fase_05_canal",
-      "docs_sesiones_sesion_17",
-      "layout_fragment_channel",
-      "layout_fragment_rank_content_list",
-      "layout_fragment_rank_new",
-      "layout_item_channnel_filter",
-      "layout_item_channnel_filter_common",
-      "layout_item_channnel_search_result",
-      "layout_item_rank_content_multiple_next",
-      "layout_item_topic_filter_common",
-      "phase_03_rankings"
+    "37": [
+      "onlongclicklistener",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage_hidesubtitlemessage",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_hidesubtitlemessage_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitleclick_onclickold",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitledownloadtask_subtitledownloadtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangitemclick_onclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick_onlongclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelongclick_subtitlelongclick",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_closesubtitlepopup",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_findtitle",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_hidesubtitlesynccontrols",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_istv",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setsubtitleavailable",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_stopsubtitlesync",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_updatelangdisplay"
     ],
-    "42": [
-      "activity_download_video_play",
-      "area_c",
-      "concept_media_keys_dispatch",
-      "dispatchkeyevent",
-      "fase12_doc",
-      "fase19_doc",
-      "fase31_doc",
-      "recommand_videos_entity",
-      "series_info_entry",
-      "subdl",
-      "tmdb",
-      "tv_subtitle_search",
-      "tvutils_istv",
-      "video_bean",
-      "video_play_detail_activity"
+    "38": [
+      "concept_autohide_bar",
+      "doc_exo_api",
+      "doc_exo_control",
+      "exoplayer",
+      "exoplayer_iface",
+      "player_list_cine",
+      "playercontrolview",
+      "playerctl",
+      "playerview",
+      "trap_fullscreen_bar",
+      "trap_media_keys",
+      "trap_player_release",
+      "tv_player_bar",
+      "tv_seekbar",
+      "v28",
+      "videoplayerview"
     ],
-    "43": [
-      "activity_special_detail_new",
-      "activity_video_more_list",
-      "build_v154",
-      "build_v40",
-      "concept_trio_magico",
-      "docs_fases_fase_07_resultados_busqueda",
-      "docs_fases_fase_08_ver_mas",
-      "docs_fases_fase_09_especial",
-      "layout_activity_video_more_list",
-      "layout_fragment_home_content_search_list",
-      "layout_item_home_content_search_movie",
-      "layout_item_search_tv_set_num",
-      "layout_item_video_more_list",
-      "p0_resultados_sin_focusable",
-      "plan_definitivo_area_b"
+    "39": [
+      "apksigner",
+      "apktool_build",
+      "cambios_diseno_errores",
+      "cambios_diseno_recursos",
+      "data_binding_binding_n",
+      "dex_limit_65536",
+      "docs_guias_build_firma_instalacion",
+      "docs_guias_verificacion",
+      "getidentifier",
+      "java_to_smali_bridge",
+      "premium_keystore",
+      "public_xml",
+      "r_classes_precompiled",
+      "smali_classes16",
+      "smali_utf8"
     ],
-    "44": [
+    "40": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argsserde_deserializemessageargs",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argsserde_serializemessageargs",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_guid_generateguid",
@@ -1291,7 +1235,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_sendmessage",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_watchsessionevents"
     ],
-    "45": [
+    "41": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argsserde_deserializemessageargs",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argsserde_serializemessageargs",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_guid_generateguid",
@@ -1308,23 +1252,23 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_sendmessage",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_watchsessionevents"
     ],
-    "46": [
-      "activity_video_play_detail",
-      "build_v41",
-      "class_tv_detail",
-      "class_tv_player_bar",
-      "docs_fases_fase_10_ficha_video",
-      "layout_activity_video_play_detail_tv",
-      "layout_item_video_commit_list",
-      "layout_item_video_play_tv_set_num",
-      "layout_item_video_play_variety_set_num",
-      "layout_pop_layout_video_season_item",
-      "p0_iv_back_focusable_false",
-      "p0_popups_sin_focusable",
-      "trap_media_keys",
-      "tvdetail"
+    "42": [
+      "android_content_context",
+      "android_util_attributeset",
+      "android_widget_relativelayout",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_tvheroimage",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem_java_override",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_findpager",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_onkeydown",
+      "tools_hero_item_src_com_movievn_tv_tvheroitem_tvheroitem_tvheroitem",
+      "tools_section_drawer_src_com_movievn_tv_tvsectiondrawer_tvsectiondrawer_istv",
+      "view",
+      "viewparent"
     ],
-    "47": [
+    "43": [
       "android_widget_framelayout",
       "tools_category_rail_stub_com_google_android_material_tabs_tablayout",
       "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview",
@@ -1340,7 +1284,7 @@
       "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview",
       "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview_playerview"
     ],
-    "48": [
+    "44": [
       "api:SubDL",
       "api:TMDB",
       "class:SubripDecoder",
@@ -1356,7 +1300,7 @@
       "phase:fase-34",
       "phase:fase-35"
     ],
-    "49": [
+    "45": [
       "apktool_salida_apktool",
       "apktool_salida_apktool_apkfilename",
       "apktool_salida_apktool_donotcompress",
@@ -1372,7 +1316,7 @@
       "apktool_salida_apktool_versioninfo_versioncode",
       "apktool_salida_apktool_versioninfo_versionname"
     ],
-    "50": [
+    "46": [
       "apktool_salida_res_raw_omsdk_v1_5_3_tb",
       "apktool_salida_res_raw_omsdk_v1_5_3_tb_clearinterval",
       "apktool_salida_res_raw_omsdk_v1_5_3_tb_setinterval",
@@ -1388,7 +1332,7 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_yc",
       "apktool_salida_res_raw_omsdk_v1_5_3_zc"
     ],
-    "51": [
+    "47": [
       "class:MainActivity",
       "concept:bg_focused",
       "concept:binding_click_ownership",
@@ -1404,23 +1348,23 @@
       "res:tv_focus_scale.xml",
       "version:v33"
     ],
-    "52": [
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_applysubtitlestyle",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_applysubtitlestyletoactive",
-      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_createsubtitletext",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowcolor",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowdx",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowdy",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_getshadowradius",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_gettextsizesp",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_gettypeface",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_load",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle_tvsubtitlestyle_save",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyledialog_acceptclick_onclick",
-      "typeface"
+    "48": [
+      "onkeylistener",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_barkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_boxkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_boxkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_decorkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_decorkey_onkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_seekkey_seekkey",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_refreshplayer",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_setup",
+      "tools_tv_detail_stub_chuangyuan_ycj_videolibrary_widget_videoplayerview_videoplayerview_getplayerview",
+      "tools_tv_detail_stub_com_google_android_exoplayer_ui_playerview_playerview_getplayer"
     ],
-    "53": [
+    "49": [
       "tools_tv_detail_src_com_movievn_tv_tvsubtitlesearch_subtitleresult",
       "tools_tv_detail_src_com_movievn_tv_tvsubtitlesearch_subtitleresult_subtitleresult",
       "tools_tv_detail_src_com_movievn_tv_tvsubtitlesearch_tvsubtitlesearch",
@@ -1436,7 +1380,22 @@
       "tools_tv_detail_src_com_movievn_tv_tvsubtitlesearch_tvsubtitlesearch_search",
       "tools_tv_detail_src_com_movievn_tv_tvsubtitlesearch_tvsubtitlesearch_tvsubtitlesearch"
     ],
-    "54": [
+    "50": [
+      "android_view_keyevent",
+      "rect",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_java_override",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_dispatchkeyevent",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_findpager",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_onfocuschanged",
+      "tools_hero_image_src_com_movievn_tv_tvheroimage_tvheroimage_onkeydown",
+      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener",
+      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener",
+      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_findpager",
+      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_onkey",
+      "tools_hero_listener_src_com_movievn_tv_tvherokeylistener_tvherokeylistener_tvherokeylistener"
+    ],
+    "51": [
       "apktool_salida_assets_ad_viewer_omsdk_v1_ab",
       "apktool_salida_assets_ad_viewer_omsdk_v1_bb",
       "apktool_salida_assets_ad_viewer_omsdk_v1_cb",
@@ -1451,7 +1410,7 @@
       "apktool_salida_assets_ad_viewer_omsdk_v1_u_o",
       "apktool_salida_assets_ad_viewer_omsdk_v1_yb"
     ],
-    "55": [
+    "52": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_servicecommunication_getvalueforkeypath",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_servicecommunication_startservicecommunication",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_servicecommunication_startservicecommunicationfromcandidates",
@@ -1466,22 +1425,21 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_sessionclient_servicecommunication_listenforservicewindow",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_postmessagecommunication_iscrossorigin"
     ],
-    "56": [
-      "class:PresenterW",
-      "class:VideoPlayDetailActivity",
-      "class:VideoPlayerView",
-      "comp:TvDetail",
-      "comp:TvPlayerBar",
-      "concept:fullscreen",
-      "doc:fase-10-ficha-video",
-      "phase:fase-10",
-      "res:exo_playback_top_my_new.xml",
-      "version:v27",
-      "version:v28",
-      "version:v32",
-      "version:v41"
+    "53": [
+      "ads_content_providers",
+      "android_tv",
+      "apktool",
+      "app_android_cine_tv",
+      "app_cine_new_design",
+      "build_pipeline",
+      "doc_agents_md",
+      "emulator_tv",
+      "keystore_premium",
+      "movievn_app",
+      "smali",
+      "storage_permissions"
     ],
-    "57": [
+    "54": [
       "apktool_salida_res_raw_omsdk_v1_5_3_aa",
       "apktool_salida_res_raw_omsdk_v1_5_3_ba",
       "apktool_salida_res_raw_omsdk_v1_5_3_c",
@@ -1495,47 +1453,62 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_z_n",
       "apktool_salida_res_raw_omsdk_v1_5_3_za"
     ],
+    "55": [
+      "build-v41",
+      "comp-tvdetail",
+      "comp-tvplayerbar",
+      "issue-iv-back-focusable-false",
+      "issue-popups-sin-foco",
+      "layout-item-video-commit-list",
+      "layout-item-video-play-tv-set-num",
+      "layout-item-video-play-variety-set-num",
+      "layout-land-television-activity-video-play-detail",
+      "layout-pop-layout-video-season-item",
+      "phase-10-ficha",
+      "screen-ficha-video"
+    ],
+    "56": [
+      "build-v49",
+      "comp-categoryrail",
+      "comp-tvhomerefresh",
+      "comp-tvsectiondrawer",
+      "issue-contenedores-dpad",
+      "issue-tarjetas-sin-foco",
+      "layout-fragment-home",
+      "layout-home-banner-item",
+      "layout-item-home-content-list",
+      "phase-02-home",
+      "prompt-v49",
+      "screen-home"
+    ],
+    "57": [
+      "comp-fixedseekbar",
+      "comp-tkadapter",
+      "comp-verticalviewpager",
+      "issue-verticalviewpager-updown",
+      "layout-activity-short-tk",
+      "layout-dialog-short-speed",
+      "layout-fragment-t-k",
+      "layout-item-tik-tok",
+      "phase-11-shorts",
+      "screen-shorts",
+      "smali-tkadapter",
+      "smali-verticalviewpager"
+    ],
     "58": [
-      "class:HomePageFragment",
-      "comp:TvHomeRefresh",
-      "comp:TvSectionDrawer",
-      "comp:TvSubtitleStyle",
-      "comp:TvSubtitleStyleDialog",
-      "concept:smartrefresh",
-      "doc:fase-02-home",
-      "phase:fase-02",
-      "res:fragment_home.xml",
-      "version:v31",
-      "version:v38",
-      "version:v39"
+      "ad_sdk",
+      "concept_ads_guard",
+      "concept_storage_perms",
+      "manifest",
+      "rule_r4",
+      "rule_r7",
+      "session_01_04",
+      "v15",
+      "v24",
+      "v25",
+      "v4"
     ],
     "59": [
-      "activity_search_content_video",
-      "build_v145",
-      "class_tc_s",
-      "class_tv_utils",
-      "docs_fases_fase_06_buscador",
-      "layout_dialog_search_history_clear",
-      "layout_item_history_search",
-      "layout_item_home_search_hot_search",
-      "layout_search_content_video",
-      "p0_enter_no_envia_busqueda",
-      "p0_ime_forzado_tv"
-    ],
-    "60": [
-      "activity_short_tk",
-      "area_C_reproduccion",
-      "class_tk_adapter",
-      "class_vertical_viewpager",
-      "concept_vertical_viewpager",
-      "docs_fases_fase_11_shorts",
-      "layout_activity_short_tk",
-      "layout_dialog_short_speed",
-      "layout_item_tik_tok",
-      "p0_shorts_overlay_sin_focusable",
-      "p0_vertical_viewpager_no_up_down"
-    ],
-    "61": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_servicecommunication_getvalueforkeypath",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_servicecommunication_startservicecommunication",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_servicecommunication_startservicecommunicationfromcandidates",
@@ -1548,7 +1521,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_windowutils_resolvetopwindowcontext",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_postmessagecommunication_iscrossorigin"
     ],
-    "62": [
+    "60": [
       "apktool_salida_assets_ad_viewer_omsdk_v1_dc",
       "apktool_salida_assets_ad_viewer_omsdk_v1_f",
       "apktool_salida_assets_ad_viewer_omsdk_v1_jc",
@@ -1561,7 +1534,7 @@
       "apktool_salida_assets_ad_viewer_omsdk_v1_oc_e",
       "apktool_salida_assets_ad_viewer_omsdk_v1_uc_e"
     ],
-    "63": [
+    "61": [
       "concept_banner_margen",
       "concept_home_streaming_back",
       "concept_modal_idioma",
@@ -1574,19 +1547,20 @@
       "v141_v161",
       "v147_v154"
     ],
-    "64": [
-      "activity_main",
-      "concept_clipboard_guard",
-      "concept_section_drawer",
-      "session_09_11",
-      "splash_activity_a",
-      "trap_clipboard",
-      "v29",
-      "v30",
-      "v31",
-      "v32"
+    "62": [
+      "docs_fases_fase_32_subtitulos",
+      "progress_subtitles_online",
+      "subdl_api",
+      "subtitle_cache",
+      "subtitle_clean_cue",
+      "subtitle_decode",
+      "subtitle_download_task",
+      "subtitle_formats",
+      "subtitle_load_task",
+      "tmdb_api",
+      "tvsubtitlesearch"
     ],
-    "65": [
+    "63": [
       "audit_phase_3_4",
       "concept_r8_synthetic_bridge",
       "sesion_audit",
@@ -1598,31 +1572,19 @@
       "v115",
       "v116"
     ],
-    "66": [
-      "cambios_diseno_errores",
-      "cambios_diseno_recursos",
-      "data_binding_binding_n",
-      "dex_limit_65536",
-      "getidentifier",
-      "java_to_smali_bridge",
-      "public_xml",
-      "r_classes_precompiled",
-      "smali_classes16",
-      "smali_utf8"
+    "64": [
+      "class:HomePageFragment",
+      "comp:TvHomeRefresh",
+      "comp:TvSectionDrawer",
+      "concept:smartrefresh",
+      "doc:fase-02-home",
+      "phase:fase-02",
+      "res:fragment_home.xml",
+      "version:v31",
+      "version:v38",
+      "version:v39"
     ],
-    "67": [
-      "class:BasePlayer",
-      "class:ExoPlayerImpl",
-      "class:ExoPlayerInterface",
-      "class:PlayerControlView",
-      "class:SimpleExoPlayer",
-      "comp:PlayerCtl",
-      "concept:player_reflection",
-      "concept:seekTo_IJ",
-      "doc:reproductor-exoplayer",
-      "doc:reproductor-exoplayer-control"
-    ],
-    "68": [
+    "65": [
       "class:SearchContentVideoActivity",
       "class:SpecialDetailNewActivity",
       "concept:dispatchKeyEvent",
@@ -1634,7 +1596,19 @@
       "version:v154",
       "version:v40"
     ],
-    "69": [
+    "66": [
+      "clipboard_privacy",
+      "clipboardutil",
+      "concept_clipboard_guard",
+      "doc_fase_01",
+      "doc_privacidad",
+      "phase_01_splash",
+      "splash_activity_a",
+      "splashactivity",
+      "trap_clipboard",
+      "tvutils"
+    ],
+    "67": [
       "comp:CategoryRail",
       "comp:ContentKeyListener",
       "comp:FocusWatcher",
@@ -1646,42 +1620,19 @@
       "res:tv_dimens.xml",
       "version:v26"
     ],
-    "70": [
-      "concept_autohide_bar",
-      "docs_componentes_reproductor_exoplayer_doc",
-      "exoplayer",
-      "exoplayer_iface",
-      "playerctl",
-      "reproductor_control_doc",
-      "trap_fullscreen_bar",
-      "trap_player_release",
-      "tv_player_bar",
-      "tv_seekbar"
+    "68": [
+      "concept_media_keys_dispatch",
+      "dispatchkeyevent",
+      "fase31_doc",
+      "recommand_videos_entity",
+      "series_info_entry",
+      "subdl",
+      "tmdb",
+      "tv_subtitle_search",
+      "video_bean",
+      "video_play_detail_activity"
     ],
-    "71": [
-      "concept_rail",
-      "content_key_listener",
-      "focus_watcher",
-      "layout_scan",
-      "rail_key_listener",
-      "session_05_08",
-      "v25",
-      "v26",
-      "v27",
-      "v28"
-    ],
-    "72": [
-      "android_content_context",
-      "android_widget_linearlayout",
-      "sharedpreferences",
-      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_smartrefreshlayout",
-      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout",
-      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout",
-      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_setcurrenttab",
-      "tools_section_drawer_stub_com_mgs_carparking_widgets_tab_tablayout_tablayout_tablayout",
-      "tools_tv_detail_src_com_movievn_tv_tvsubtitlestyle"
-    ],
-    "73": [
+    "69": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_a",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_a_c",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_b",
@@ -1692,7 +1643,7 @@
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_windowutils_resolveglobalcontext",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_sessionclient_servicecommunication_listenforservicewindow"
     ],
-    "74": [
+    "70": [
       "apktool_salida_res_raw_omsdk_v1_5_3_ac",
       "apktool_salida_res_raw_omsdk_v1_5_3_n",
       "apktool_salida_res_raw_omsdk_v1_5_3_nb",
@@ -1703,7 +1654,18 @@
       "apktool_salida_res_raw_omsdk_v1_5_3_rb",
       "apktool_salida_res_raw_omsdk_v1_5_3_tc"
     ],
-    "75": [
+    "71": [
+      "build-v39",
+      "guide-powershell-reglas",
+      "layout-fragment-category",
+      "layout-fragment-channel-look",
+      "layout-item-look-channnel-filter-common",
+      "layout-item-look-channnel-search-result",
+      "phase-04-categorias",
+      "screen-categorias",
+      "smali-lookchannelfragment"
+    ],
+    "72": [
       "bytearrayoutputstream",
       "file",
       "fileoutputstream",
@@ -1714,7 +1676,29 @@
       "url",
       "urlencoder"
     ],
-    "76": [
+    "73": [
+      "class:PresenterW",
+      "class:VideoPlayDetailActivity",
+      "class:VideoPlayerView",
+      "comp:TvDetail",
+      "concept:fullscreen",
+      "doc:fase-10-ficha-video",
+      "phase:fase-10",
+      "version:v27",
+      "version:v41"
+    ],
+    "74": [
+      "comp:TvPlayerBar",
+      "comp:TvSubtitleStyle",
+      "comp:TvSubtitleStyleDialog",
+      "concept:player_reflection",
+      "concept:seekTo_IJ",
+      "doc:reproductor-exoplayer-control",
+      "res:exo_playback_top_my_new.xml",
+      "version:v28",
+      "version:v32"
+    ],
+    "75": [
       "concept:focus_patterns",
       "pattern:pattern_A",
       "pattern:pattern_B",
@@ -1725,7 +1709,7 @@
       "pattern:pattern_G",
       "pattern:pattern_H"
     ],
-    "77": [
+    "76": [
       "plan_phases_t0_t14",
       "plan_t12_focus_audit",
       "plan_t13_three_dots",
@@ -1736,7 +1720,7 @@
       "plan_t4_dpad",
       "plan_t5_player"
     ],
-    "78": [
+    "77": [
       "project:app-android-cine",
       "project:app-android-cine-tv",
       "project:app-cine-new-design",
@@ -1747,7 +1731,7 @@
       "tool:uiautomator",
       "tool:zipalign"
     ],
-    "79": [
+    "78": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_a",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_a_c",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_b",
@@ -1757,7 +1741,7 @@
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_logger_executelog",
       "apktool_salida_res_raw_omsdk_v1_5_3_da"
     ],
-    "80": [
+    "79": [
       "audit_phase_7",
       "class_AppApplication",
       "class_AppLovinCommunicator",
@@ -1767,14 +1751,24 @@
       "sesion_fase5_7",
       "v127"
     ],
+    "80": [
+      "docs_sesiones_sesion_17",
+      "layout-fragment-rank-content-list",
+      "layout-fragment-rank-new",
+      "layout-item-rank-content-multiple-next",
+      "layout-item-topic-filter-common",
+      "phase-03-rankings",
+      "phase_03_rankings",
+      "screen-rankings"
+    ],
     "81": [
-      "area_e",
-      "fase27_doc",
-      "fase28_doc",
-      "game_activity",
-      "spiel_fragment",
-      "web_activity",
-      "webview"
+      "activity_main",
+      "concept_section_drawer",
+      "session_09_11",
+      "v29",
+      "v30",
+      "v31",
+      "v32"
     ],
     "82": [
       "audit_phase_6",
@@ -1786,6 +1780,24 @@
       "sdk_unity"
     ],
     "83": [
+      "baseactivity",
+      "letterbox",
+      "rule_r5",
+      "screen_orientation",
+      "tc_e",
+      "tools_patch_tc_e",
+      "tools_patch_tc_e_replace_method"
+    ],
+    "84": [
+      "class:BasePlayer",
+      "class:ExoPlayerImpl",
+      "class:ExoPlayerInterface",
+      "class:PlayerControlView",
+      "class:SimpleExoPlayer",
+      "comp:PlayerCtl",
+      "doc:reproductor-exoplayer"
+    ],
+    "85": [
       "class_TvHeroImage",
       "concept_clip_to_outline",
       "docs_sesiones_sesion_21",
@@ -1794,15 +1806,42 @@
       "v104",
       "v105"
     ],
-    "84": [
-      "apksigner",
-      "apktool_build",
-      "docs_guias_build_firma_instalacion",
-      "docs_guias_verificacion",
-      "premium_keystore",
-      "zipalign"
+    "86": [
+      "concept_focus_audit",
+      "rule_r10",
+      "session_12_prompt",
+      "session_13",
+      "trap_color_digits",
+      "trap_uiautomator",
+      "v33"
     ],
-    "85": [
+    "87": [
+      "layout-fragment-channel",
+      "layout-item-channnel-filter",
+      "layout-item-channnel-filter-common",
+      "layout-item-channnel-search-result",
+      "phase-05-canal",
+      "screen-canal",
+      "smali-channelfragment"
+    ],
+    "88": [
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlelangsearchtask_subtitlelangsearchtask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_subtitlepopuppopulatetask_subtitlepopuppopulatetask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_populatesubtitlepopup"
+    ],
+    "89": [
+      "android_view_viewgroup",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_java_override",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_onlayout",
+      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_smartrefreshlayout"
+    ],
+    "90": [
       "class_SetLanguageDialog",
       "class_SetLanguageDialog_a",
       "docs_sesiones_sesion_20",
@@ -1810,585 +1849,580 @@
       "v101",
       "v102"
     ],
-    "86": [
-      "class_SpecialDetailNewActivity",
-      "concept_findContainingViewHolder",
-      "layout_activity_special_detail_new",
-      "layout_item_special_detail_new_item_result",
-      "sesion_37",
-      "v154"
+    "91": [
+      "concept_phase_01_splash",
+      "main_activity",
+      "session_15",
+      "splash_activity",
+      "splash_wx_activity",
+      "v39"
     ],
-    "87": [
-      "concept_focus_audit",
-      "session_12_prompt",
-      "session_13",
-      "trap_color_digits",
-      "trap_uiautomator",
-      "v33"
+    "92": [
+      "docs_sesiones_sesion_nd44_subtitulos_estilo_applystyle",
+      "docs_sesiones_sesion_nd44_subtitulos_estilo_sharedpreferences",
+      "docs_sesiones_sesion_nd44_subtitulos_estilo_tvplayerbar",
+      "docs_sesiones_sesion_nd44_subtitulos_estilo_tvsubtitlestyle",
+      "docs_sesiones_sesion_nd44_subtitulos_estilo_version",
+      "tools_build_tv_detail"
     ],
-    "88": [
-      "docs_fases_fase_04_categorias",
-      "fragment_look_channel",
-      "layout_fragment_category",
-      "layout_fragment_channel_look",
-      "layout_item_look_channnel_filter_common",
-      "layout_item_look_channnel_search_result"
+    "93": [
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_run",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_setuptask_setuptask",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_attach",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_schedule",
+      "tools_tv_detail_src_com_movievn_tv_tvplayerbar_tvplayerbar_tvplayerbar"
     ],
-    "89": [
+    "94": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argschecker_assertnumber",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argschecker_assertnumberbetween",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_contents_omid_common_argschecker_assertpositivenumber",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_start",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_volumechange"
     ],
-    "90": [
+    "95": [
       "apktool_salida_assets_ad_viewer_omsdk_v1_t",
       "apktool_salida_assets_ad_viewer_omsdk_v1_t_a",
       "apktool_salida_assets_ad_viewer_omsdk_v1_t_i",
       "apktool_salida_assets_ad_viewer_omsdk_v1_t_k",
       "apktool_salida_assets_ad_viewer_omsdk_v1_t_o"
     ],
-    "91": [
+    "96": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argschecker_assertnumber",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argschecker_assertnumberbetween",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_contents_omid_common_argschecker_assertpositivenumber",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_start",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_volumechange"
     ],
-    "92": [
+    "97": [
       "apktool_salida_res_raw_omsdk_v1_5_3_k",
       "apktool_salida_res_raw_omsdk_v1_5_3_q",
       "apktool_salida_res_raw_omsdk_v1_5_3_ta",
       "apktool_salida_res_raw_omsdk_v1_5_3_ua",
       "apktool_salida_res_raw_omsdk_v1_5_3_va_h"
     ],
-    "93": [
+    "98": [
       "apktool_salida_res_raw_omsdk_v1_5_3_t",
       "apktool_salida_res_raw_omsdk_v1_5_3_t_a",
       "apktool_salida_res_raw_omsdk_v1_5_3_t_i",
       "apktool_salida_res_raw_omsdk_v1_5_3_t_k",
       "apktool_salida_res_raw_omsdk_v1_5_3_t_o"
     ],
-    "94": [
+    "99": [
       "audit_phase_2",
       "concept_audit_ads",
       "sesion_audit_plan",
       "v106",
       "v107"
     ],
-    "95": [
+    "100": [
+      "base_activity",
+      "concept_letterbox",
+      "tools_patch_orientation",
+      "tools_patch_orientation_set_smalitext",
+      "trap_letterbox"
+    ],
+    "101": [
       "class:BaseView",
       "concept:player_list_cine",
       "concept:show_timeout",
       "phase:fase-33",
       "res:activity_video_play_detail.xml"
     ],
-    "96": [
+    "102": [
       "class:TKAdapter",
       "class:VerticalViewPager",
       "concept:verticalviewpager",
       "doc:fase-11-shorts",
       "phase:fase-11"
     ],
-    "97": [
+    "103": [
       "apktool_salida_res_raw_omsdk_v1_5_3_pa",
       "apktool_salida_res_raw_omsdk_v1_5_3_u",
       "apktool_salida_res_raw_omsdk_v1_5_3_u_i",
       "apktool_salida_res_raw_omsdk_v1_5_3_u_o"
     ],
-    "98": [
-      "class_SearchContentVideoActivity",
-      "layout_item_search_extend_list",
-      "sesion_36",
-      "v145"
+    "104": [
+      "concept_data_binding_click",
+      "concept_focus_trio",
+      "docs_sesiones_sesion_16",
+      "phase_02_home"
     ],
-    "99": [
+    "105": [
       "concept_serie_idioma",
       "docs_sesiones_sesion_35",
       "layout_activity_video_play_detail",
       "v109"
     ],
-    "100": [
+    "106": [
       "skills_graphify_skill_ambiguous",
       "skills_graphify_skill_confidence_score",
       "skills_graphify_skill_extracted",
       "skills_graphify_skill_inferred"
     ],
-    "101": [
+    "107": [
       "apktool_salida_assets_mraid",
       "apktool_salida_assets_mraid_js_mraidtonativebridge",
       "apktool_salida_assets_mraid_js_mraidtonativebridge_posttoparentbridge"
     ],
-    "102": [
+    "108": [
       "class:ChannelFragment",
       "doc:fase-05-canal",
       "phase:fase-05"
     ],
-    "103": [
+    "109": [
       "class:LookChannelFragment",
       "doc:fase-04-categorias",
       "phase:fase-04"
     ],
-    "104": [
+    "110": [
       "class:RankNumberNewFragment",
       "doc:fase-03-rankings",
       "phase:fase-03"
     ],
-    "105": [
+    "111": [
       "class:VideoMoreListActivity",
       "doc:fase-08-ver-mas",
       "phase:fase-08"
     ],
-    "106": [
-      "concept_autocomplete",
-      "concept_phase_07_search",
-      "v142_v145"
-    ],
-    "107": [
+    "112": [
       "concept_binding",
       "rule_r1",
       "trap_binding_n"
     ],
-    "108": [
+    "113": [
       "concept_layout_land_television",
       "concept_tv_dimens",
       "rule_r6"
     ],
-    "109": [
+    "114": [
       "engram_manifest",
       "engram_manifest_chunks",
       "engram_manifest_version"
     ],
-    "110": [
+    "115": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_handlemessage",
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_directcommunication_handleexportedmessage"
     ],
-    "111": [
+    "116": [
       "apktool_salida_assets_mraid_bridge",
       "apktool_salida_assets_mraid_bridge_sendmessagetoiframe"
     ],
-    "112": [
+    "117": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_handlemessage",
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_directcommunication_handleexportedmessage"
     ],
-    "113": [
+    "118": [
       "comp_ficha_video",
       "ykplayer_ycj"
     ],
-    "114": [
+    "119": [
       "design_cinema_style",
       "design_compose_tv"
     ],
-    "115": [
+    "120": [
       "doc:fase-07-resultados-busqueda",
       "phase:fase-07"
     ],
-    "116": [
+    "121": [
       "install_tv",
       "install_tv_test_istv"
     ],
-    "117": [
+    "122": [
       "skills_graphify_skill_hyperedges",
       "skills_graphify_skill_semantic_similarity"
     ],
-    "118": [
+    "123": [
       "skills_graphify_skill_node_id_format",
       "skills_graphify_skill_source_file_rule"
     ],
-    "119": [
-      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_java_override",
-      "tools_home_refresh_stub_com_scwang_smart_refresh_layout_smartrefreshlayout_smartrefreshlayout_onlayout"
-    ],
-    "120": [
+    "124": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_deserialize"
     ],
-    "121": [
+    "125": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_iscrossorigin"
     ],
-    "122": [
+    "126": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_isdirectcommunication"
     ],
-    "123": [
+    "127": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_sendmessage"
     ],
-    "124": [
+    "128": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_communication_serialize"
     ],
-    "125": [
+    "129": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_directcommunication_iscrossorigin"
     ],
-    "126": [
+    "130": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_directcommunication_sendmessage"
     ],
-    "127": [
+    "131": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_internalmessage_serialize"
     ],
-    "128": [
+    "132": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_postmessagecommunication_sendmessage"
     ],
-    "129": [
+    "133": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_common_vastproperties_tojson"
     ],
-    "130": [
+    "134": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adevents_impressionoccurred"
     ],
-    "131": [
+    "135": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adevents_loaded"
     ],
-    "132": [
+    "136": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_assertsessionrunning"
     ],
-    "133": [
+    "137": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_creativeloaded"
     ],
-    "134": [
+    "138": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_getadsessionid"
     ],
-    "135": [
+    "139": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_impressionoccurred"
     ],
-    "136": [
+    "140": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_adsession_issupported"
     ],
-    "137": [
+    "141": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_bufferfinish"
     ],
-    "138": [
+    "142": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_bufferstart"
     ],
-    "139": [
+    "143": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_complete"
     ],
-    "140": [
+    "144": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_firstquartile"
     ],
-    "141": [
+    "145": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_midpoint"
     ],
-    "142": [
+    "146": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_pause"
     ],
-    "143": [
+    "147": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_resume"
     ],
-    "144": [
+    "148": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_skipped"
     ],
-    "145": [
+    "149": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_mediaevents_thirdquartile"
     ],
-    "146": [
+    "150": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_omidjssessioninterface_issupported"
     ],
-    "147": [
+    "151": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_omidjssessioninterface_sendmessage"
     ],
-    "148": [
+    "152": [
       "apktool_salida_assets_ad_viewer_omid_session_client_v1_module_exports_omid_sessionclient_verificationscriptresource_tojson"
     ],
-    "149": [
+    "153": [
       "apktool_salida_assets_com_moloco_sdk_xenoss_sdkdevkit_mraid"
     ],
-    "150": [
+    "154": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_deserialize"
     ],
-    "151": [
+    "155": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_iscrossorigin"
     ],
-    "152": [
+    "156": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_isdirectcommunication"
     ],
-    "153": [
+    "157": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_sendmessage"
     ],
-    "154": [
+    "158": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_communication_serialize"
     ],
-    "155": [
+    "159": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_directcommunication_iscrossorigin"
     ],
-    "156": [
+    "160": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_directcommunication_sendmessage"
     ],
-    "157": [
+    "161": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_internalmessage_serialize"
     ],
-    "158": [
+    "162": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_postmessagecommunication_sendmessage"
     ],
-    "159": [
+    "163": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_common_vastproperties_tojson"
     ],
-    "160": [
+    "164": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adevents_impressionoccurred"
     ],
-    "161": [
+    "165": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adevents_loaded"
     ],
-    "162": [
+    "166": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_assertsessionrunning"
     ],
-    "163": [
+    "167": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_creativeloaded"
     ],
-    "164": [
+    "168": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_getadsessionid"
     ],
-    "165": [
+    "169": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_impressionoccurred"
     ],
-    "166": [
+    "170": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_adsession_issupported"
     ],
-    "167": [
+    "171": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_bufferfinish"
     ],
-    "168": [
+    "172": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_bufferstart"
     ],
-    "169": [
+    "173": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_complete"
     ],
-    "170": [
+    "174": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_firstquartile"
     ],
-    "171": [
+    "175": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_midpoint"
     ],
-    "172": [
+    "176": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_pause"
     ],
-    "173": [
+    "177": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_resume"
     ],
-    "174": [
+    "178": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_skipped"
     ],
-    "175": [
+    "179": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_mediaevents_thirdquartile"
     ],
-    "176": [
+    "180": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_omidjssessioninterface_issupported"
     ],
-    "177": [
+    "181": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_omidjssessioninterface_sendmessage"
     ],
-    "178": [
+    "182": [
       "apktool_salida_res_raw_omid_session_client_v1_5_3_module_exports_omid_sessionclient_verificationscriptresource_tojson"
     ],
-    "179": [
+    "183": [
       "assets_apk_control_flow"
     ],
-    "180": [
+    "184": [
       "avd_cinetv32"
     ],
-    "181": [
+    "185": [
       "claude_claude_md"
     ],
-    "182": [
+    "186": [
       "comp_arranque_tv"
     ],
-    "183": [
+    "187": [
       "comp_cajon_secciones"
     ],
-    "184": [
+    "188": [
       "comp_diseno_navegacion"
     ],
-    "185": [
+    "189": [
       "comp_estado_limitaciones"
     ],
-    "186": [
+    "190": [
       "comparisons"
     ],
-    "187": [
-      "concept_bg_focused"
-    ],
-    "188": [
+    "191": [
       "concept_content_provider_ads"
     ],
-    "189": [
+    "192": [
       "docs_indice"
     ],
-    "190": [
+    "193": [
       "docs_sesiones_sesion_nd44_subtitulos_estilo_dialog"
     ],
-    "191": [
+    "194": [
       "file:VideoPlayDetailActivity.smali"
     ],
-    "192": [
+    "195": [
       "fix_all_item_focus"
     ],
-    "193": [
+    "196": [
       "fix_click"
     ],
-    "194": [
+    "197": [
       "fix_ficha_margin2"
     ],
-    "195": [
-      "progress_nd44_subtitles"
-    ],
-    "196": [
-      "progress_video_playback"
-    ],
-    "197": [
-      "readme_project"
-    ],
     "198": [
-      "res:actionbar_back.xml"
+      "layout-activity-search-content-video"
     ],
     "199": [
-      "rule_r0"
+      "progress_nd44_subtitles"
     ],
     "200": [
-      "rule_r11"
+      "progress_video_playback"
     ],
     "201": [
-      "rule_r13"
+      "readme_project"
     ],
     "202": [
-      "rule_r3"
+      "res:actionbar_back.xml"
     ],
     "203": [
-      "rule_r8"
+      "rule_r0"
     ],
     "204": [
-      "tools_add_focus_to_items"
+      "rule_r11"
     ],
     "205": [
-      "tools_build_hero_image"
+      "rule_r13"
     ],
     "206": [
-      "tools_build_hero_item"
+      "rule_r3"
     ],
     "207": [
-      "tools_build_hero_listener"
+      "rule_r8"
     ],
     "208": [
-      "tv_focus_scale"
+      "tools_add_focus_to_items"
     ],
     "209": [
-      "v20"
+      "tools_build_hero_image"
     ],
     "210": [
+      "tools_build_hero_item"
+    ],
+    "211": [
+      "tools_build_hero_listener"
+    ],
+    "212": [
+      "v20"
+    ],
+    "213": [
       "version:v116"
     ]
   },
   "cohesion": {
-    "0": 0.05480277024992472,
-    "1": 0.063568010936432,
+    "0": 0.05054945054945055,
+    "1": 0.05405405405405406,
     "2": 0.07547169811320754,
     "3": 0.05087881591119334,
     "4": 0.0927536231884058,
-    "5": 0.09815078236130868,
-    "6": 0.12312312312312312,
-    "7": 0.09759759759759759,
+    "5": 0.08139534883720931,
+    "6": 0.09815078236130868,
+    "7": 0.06554621848739496,
     "8": 0.1032258064516129,
-    "9": 0.1471264367816092,
-    "10": 0.11954022988505747,
-    "11": 0.12643678160919541,
-    "12": 0.1076923076923077,
-    "13": 0.11076923076923077,
+    "9": 0.11954022988505747,
+    "10": 0.12561576354679804,
+    "11": 0.10582010582010581,
+    "12": 0.10052910052910052,
+    "13": 0.1076923076923077,
     "14": 0.09538461538461539,
-    "15": 0.13333333333333333,
-    "16": 0.11333333333333333,
-    "17": 0.18478260869565216,
-    "18": 0.15217391304347827,
-    "19": 0.11857707509881422,
-    "20": 0.1067193675889328,
-    "21": 0.11688311688311688,
-    "22": 0.12554112554112554,
-    "23": 0.09523809523809523,
-    "24": 0.09523809523809523,
-    "25": 0.16666666666666666,
-    "26": 0.1761904761904762,
-    "27": 0.09523809523809523,
-    "28": 0.18571428571428572,
-    "29": 0.23157894736842105,
-    "30": 0.1631578947368421,
+    "15": 0.18478260869565216,
+    "16": 0.16205533596837945,
+    "17": 0.11688311688311688,
+    "18": 0.1471861471861472,
+    "19": 0.12121212121212122,
+    "20": 0.12554112554112554,
+    "21": 0.09523809523809523,
+    "22": 0.09523809523809523,
+    "23": 0.09956709956709957,
+    "24": 0.09090909090909091,
+    "25": 0.17316017316017315,
+    "26": 0.18095238095238095,
+    "27": 0.1761904761904762,
+    "28": 0.23157894736842105,
+    "29": 0.1631578947368421,
+    "30": 0.19883040935672514,
     "31": 0.1568627450980392,
     "32": 0.13725490196078433,
-    "33": 0.13071895424836602,
+    "33": 0.20588235294117646,
     "34": 0.20588235294117646,
-    "35": 0.20588235294117646,
-    "36": 0.19852941176470587,
-    "37": 0.16666666666666666,
-    "38": 0.13333333333333333,
-    "39": 0.15,
-    "40": 0.15,
+    "35": 0.19852941176470587,
+    "36": 0.15441176470588236,
+    "37": 0.18382352941176472,
+    "38": 0.175,
+    "39": 0.19047619047619047,
+    "40": 0.1523809523809524,
     "41": 0.1523809523809524,
-    "42": 0.20952380952380953,
-    "43": 0.17142857142857143,
-    "44": 0.1523809523809524,
-    "45": 0.1523809523809524,
-    "46": 0.16483516483516483,
-    "47": 0.2087912087912088,
+    "42": 0.23076923076923078,
+    "43": 0.2087912087912088,
+    "44": 0.16483516483516483,
+    "45": 0.14285714285714285,
+    "46": 0.17582417582417584,
+    "47": 0.17582417582417584,
     "48": 0.16483516483516483,
-    "49": 0.14285714285714285,
-    "50": 0.17582417582417584,
-    "51": 0.17582417582417584,
-    "52": 0.2857142857142857,
-    "53": 0.2967032967032967,
-    "54": 0.2564102564102564,
-    "55": 0.19230769230769232,
-    "56": 0.19230769230769232,
+    "49": 0.2967032967032967,
+    "50": 0.24358974358974358,
+    "51": 0.2564102564102564,
+    "52": 0.19230769230769232,
+    "53": 0.18181818181818182,
+    "54": 0.24242424242424243,
+    "55": 0.22727272727272727,
+    "56": 0.19696969696969696,
     "57": 0.24242424242424243,
-    "58": 0.21212121212121213,
-    "59": 0.2,
-    "60": 0.2,
-    "61": 0.23636363636363636,
-    "62": 0.2727272727272727,
-    "63": 0.18181818181818182,
+    "58": 0.21818181818181817,
+    "59": 0.23636363636363636,
+    "60": 0.2727272727272727,
+    "61": 0.18181818181818182,
+    "62": 0.2909090909090909,
+    "63": 0.2,
     "64": 0.26666666666666666,
-    "65": 0.2,
+    "65": 0.2222222222222222,
     "66": 0.26666666666666666,
-    "67": 0.26666666666666666,
-    "68": 0.2222222222222222,
-    "69": 0.2222222222222222,
-    "70": 0.26666666666666666,
+    "67": 0.2222222222222222,
+    "68": 0.28888888888888886,
+    "69": 0.25,
+    "70": 0.3055555555555556,
     "71": 0.2222222222222222,
-    "72": 0.2777777777777778,
+    "72": 0.2222222222222222,
     "73": 0.25,
-    "74": 0.3055555555555556,
+    "74": 0.2222222222222222,
     "75": 0.2222222222222222,
     "76": 0.2222222222222222,
     "77": 0.2222222222222222,
-    "78": 0.2222222222222222,
-    "79": 0.2857142857142857,
-    "80": 0.25,
-    "81": 0.38095238095238093,
+    "78": 0.2857142857142857,
+    "79": 0.25,
+    "80": 0.2857142857142857,
+    "81": 0.3333333333333333,
     "82": 0.2857142857142857,
     "83": 0.2857142857142857,
-    "84": 0.6666666666666666,
-    "85": 0.3333333333333333,
+    "84": 0.42857142857142855,
+    "85": 0.2857142857142857,
     "86": 0.3333333333333333,
-    "87": 0.4,
-    "88": 0.3333333333333333,
-    "89": 0.5,
-    "90": 0.5,
-    "91": 0.5,
-    "92": 0.6,
-    "93": 0.5,
-    "94": 0.4,
+    "87": 0.2857142857142857,
+    "88": 0.2857142857142857,
+    "89": 0.4,
+    "90": 0.3333333333333333,
+    "91": 0.4,
+    "92": 0.3333333333333333,
+    "93": 0.4,
+    "94": 0.5,
     "95": 0.5,
     "96": 0.5,
-    "97": 0.5,
+    "97": 0.6,
     "98": 0.5,
-    "99": 0.5,
-    "100": 0.5,
-    "101": 0.6666666666666666,
-    "102": 0.6666666666666666,
-    "103": 0.6666666666666666,
-    "104": 0.6666666666666666,
-    "105": 0.6666666666666666,
-    "106": 0.6666666666666666,
+    "99": 0.4,
+    "100": 0.6,
+    "101": 0.5,
+    "102": 0.5,
+    "103": 0.5,
+    "104": 0.5,
+    "105": 0.5,
+    "106": 0.5,
     "107": 0.6666666666666666,
     "108": 0.6666666666666666,
     "109": 0.6666666666666666,
-    "110": 1.0,
-    "111": 1.0,
-    "112": 1.0,
-    "113": 1.0,
-    "114": 1.0,
+    "110": 0.6666666666666666,
+    "111": 0.6666666666666666,
+    "112": 0.6666666666666666,
+    "113": 0.6666666666666666,
+    "114": 0.6666666666666666,
     "115": 1.0,
     "116": 1.0,
     "117": 1.0,
@@ -2484,7 +2518,10 @@
     "207": 1.0,
     "208": 1.0,
     "209": 1.0,
-    "210": 1.0
+    "210": 1.0,
+    "211": 1.0,
+    "212": 1.0,
+    "213": 1.0
   },
   "gods": [
     {
@@ -2523,17 +2560,17 @@
       "degree": 30
     },
     {
+      "id": "tvplayerbar",
+      "label": "TvPlayerBar (control bar, refreshPlayer, media keys)",
+      "degree": 22
+    },
+    {
       "id": "tools_home_refresh_src_com_movievn_tv_tvhomerefresh_tvhomerefresh",
       "label": "TvHomeRefresh",
       "degree": 21
     },
     {
       "id": "apktool_salida_assets_ad_viewer_omsdk_v1_c",
-      "label": "c()",
-      "degree": 20
-    },
-    {
-      "id": "apktool_salida_res_raw_omsdk_v1_5_3_c",
       "label": "c()",
       "degree": 20
     }
@@ -2551,80 +2588,80 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
     },
     {
-      "source": "PlayerCtl / TvPlayerCtl (reflexion Java)",
-      "target": "TvPlayerBar (barra de control reproductor)",
+      "source": "MainActivity (Home container)",
+      "target": "CategoryRail",
       "source_files": [
-        "docs/componentes/reproductor-exoplayer-control.md",
+        "AGENTS.md",
+        "docs/guias/cambios-de-diseno.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "hosts",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `MainActivity (Home container)` unexpectedly reaches hub `CategoryRail`"
+    },
+    {
+      "source": "res/values/tv_dimens.xml",
+      "target": "CategoryRail",
+      "source_files": [
+        "AGENTS.md",
+        "docs/guias/cambios-de-diseno.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "dimensions_for",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `res/values/tv_dimens.xml` unexpectedly reaches hub `CategoryRail`"
+    },
+    {
+      "source": "TvPlayerBar (control bar, refreshPlayer, media keys)",
+      "target": "Formatos SRT/VTT/ASS",
+      "source_files": [
+        "AGENTS.md",
+        "docs/fases/fase-32-subtitulos.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "parses",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Formatos SRT/VTT/ASS` unexpectedly reaches hub `TvPlayerBar (control bar, refreshPlayer, media keys)`"
+    },
+    {
+      "source": "SubtitleLoadTask",
+      "target": "TvPlayerBar (control bar, refreshPlayer, media keys)",
+      "source_files": [
+        "docs/fases/fase-32-subtitulos.md",
         "AGENTS.md"
       ],
-      "confidence": "INFERRED",
-      "relation": "used_by",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
-      "source": "TvPlayerBar (barra de control reproductor)",
-      "target": "ExoPlayer (reproductor de vídeo)",
-      "source_files": [
-        "AGENTS.md",
-        "docs/fases/fase-12-reproductor-descargas.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "reflects",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
-    },
-    {
-      "source": "TvHomeRefresh (boton actualizar Home)",
-      "target": "fragment_home.xml",
-      "source_files": [
-        "AGENTS.md",
-        "docs/sesiones/sesion-13.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "used_in",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `TvHomeRefresh (boton actualizar Home)` unexpectedly reaches hub `fragment_home.xml`"
-    },
-    {
-      "source": "Fase 06 - Buscador",
-      "target": "Área B descubrimiento y búsqueda",
-      "source_files": [
-        "docs/fases/fase-06-buscador.md",
-        "plan-definitivo.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "belongs_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `SubtitleLoadTask` unexpectedly reaches hub `TvPlayerBar (control bar, refreshPlayer, media keys)`"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `TvPlayerBar` connect `Ad SDKs` to `Focus Audit`, `Ad SDKs`, `Community 6`, `Community 72`, `Ad SDKs`, `Session Notes`, `TvPlayerBar Controls`, `Phase Docs`, `Ad SDKs`, `Community 52`, `Ad SDKs`?",
-      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+      "question": "Why does `TvPlayerBar` connect `Section Drawer` to `Focus Audit`, `TvPlayerBar Controls`, `Session Notes`, `TvPlayerBar Controls`, `Community 48`, `Phase Docs`, `TvPlayerBar Controls`, `Ad SDKs`, `Community 88`, `Community 89`, `TvPlayerBar Controls`, `Community 93`, `Ad SDKs`?",
+      "why": "High betweenness centrality (0.034) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
-      "question": "What connects `APK v142-v145 (buscador autocompletado)`, `R1: no borrar/reordenar binding_N`, `Trampa: binding_N descolocados` to the rest of the system?",
-      "why": "275 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "question": "What connects `AMBIGUOUS confidence`, `EXTRACTED confidence`, `INFERRED confidence` to the rest of the system?",
+      "why": "271 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Focus Audit` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.05480277024992472 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.05054945054945055 - nodes in this community are weakly interconnected."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `fragment_home.xml` connect `TvPlayerBar Controls` to `Community 58`, `Ad SDKs`, `Community 71`?",
-      "why": "High betweenness centrality (0.035) - this node is a cross-community bridge."
+      "question": "Why does `z()` connect `Layout Resources` to `Ad SDKs`, `Community 51`, `Community 54`, `Community 27`, `Ad SDKs`?",
+      "why": "High betweenness centrality (0.031) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Section Drawer` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.063568010936432 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Fase 01 Splash/arranque` connect `TvPlayerBar Controls` to `Community 64`, `TvPlayerBar Controls`, `Community 63`?",
-      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
+      "question": "Why does `Fase 01 Splash/arranque` connect `Community 91` to `Community 66`, `Community 83`, `TvPlayerBar Controls`, `Community 61`?",
+      "why": "High betweenness centrality (0.023) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",

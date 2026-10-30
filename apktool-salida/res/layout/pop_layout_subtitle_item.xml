@@ -18,7 +18,7 @@
         android:foreground="@drawable/bg_focused_rect"
         android:textSize="@dimen/sp_14"
         android:tag="subtitle_es"
-        android:stateListAnimator="@animator/tv_focus_scale" />
+        />
 
     <com.ruffian.library.widget.RTextView
         android:id="@+id/subtitle_en"
@@ -32,7 +32,7 @@
         android:foreground="@drawable/bg_focused_rect"
         android:textSize="@dimen/sp_14"
         android:tag="subtitle_en"
-        android:stateListAnimator="@animator/tv_focus_scale" />
+        />
 
     <com.ruffian.library.widget.RTextView
         android:id="@+id/subtitle_none"
@@ -46,6 +46,6 @@
         android:foreground="@drawable/bg_focused_rect"
         android:textSize="@dimen/sp_14"
         android:tag="subtitle_none"
-        android:stateListAnimator="@animator/tv_focus_scale" />
+        />
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Apple TV style hero: imagen a sangre + degradado + titulo + affordance de play. -->
-<com.movievn.tv.TvHeroItem android:focusable="true" android:foreground="@drawable/bg_focused" android:stateListAnimator="@animator/tv_focus_scale" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+<com.movievn.tv.TvHeroItem android:focusable="true" android:foreground="@drawable/bg_focused" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <ImageView android:id="@id/item_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />

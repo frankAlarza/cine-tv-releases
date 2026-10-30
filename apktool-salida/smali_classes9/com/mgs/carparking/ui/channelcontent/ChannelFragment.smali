@@ -24,12 +24,16 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .line 1
     .line 2
     .line 3
     invoke-direct {p0}, Lcom/mgs/carparking/app/BaseActivity;-><init>()V
+
+    const-string v0, "TvLookNav"
+    const-string v1, "ChannelFragment constructor"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 4
     return-void
@@ -556,6 +560,10 @@
     .line 1
     .line 2
     .line 3
+    const-string v0, "TvLookNav"
+    const-string v1, "ChannelFragment initData start"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-super {p0}, Lcom/mgs/carparking/app/BaseActivity;->initData()V
 
     .line 4
@@ -1045,6 +1053,11 @@
     .line 248
     invoke-virtual {v0, v1}, Lcom/mgs/carparking/model/CHANNELVIEWMODEL;->S(Z)V
 
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
+    move-result-object v0
+    invoke-static {v0}, Lcom/movievn/tv/TvLookNav;->install(Landroid/view/View;)V
+
     .line 249
     return-void
 .end method
@@ -1093,7 +1106,16 @@
     .line 1
     .line 2
     .line 3
+    const-string v0, "TvLookNav"
+    const-string v1, "initViewObservable entered"
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-super {p0}, Lcom/mgs/carparking/app/BaseActivity;->initViewObservable()V
+
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
+    move-result-object v0
+    invoke-static {v0}, Lcom/movievn/tv/TvLookNav;->install(Landroid/view/View;)V
 
     .line 4
     .line 5

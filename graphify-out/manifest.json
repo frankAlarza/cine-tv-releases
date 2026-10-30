@@ -258,10 +258,10 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1793319067.887875,
-    "seen": 1793361738.791105,
-    "ast_hash": "54d1cca87ee87679eaee6db377d5d36d",
-    "semantic_hash": "54d1cca87ee87679eaee6db377d5d36d"
+    "mtime": 1793363910.7444053,
+    "seen": 1793365024.2102666,
+    "ast_hash": "b8ef9dec007e69941683b3b85e998d24",
+    "semantic_hash": "b8ef9dec007e69941683b3b85e998d24"
   },
   "DESIGN.md": {
     "mtime": 1792859443.2505796,
@@ -325,9 +325,9 @@
   },
   "comparisons.txt": {
     "mtime": 1792944366.9043522,
-    "seen": 1792950609.561625,
+    "seen": 1793365024.2102785,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
-    "semantic_hash": ""
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "docs/00-INDICE.md": {
     "mtime": 1793001784.409995,
@@ -385,111 +385,111 @@
   },
   "docs/componentes/foco-auditoria-inventario.md": {
     "mtime": 1792612014.3458586,
-    "seen": 1792950609.5616379,
+    "seen": 1793365024.21029,
     "ast_hash": "f58058ca3069350fe82d4509088be311",
-    "semantic_hash": ""
+    "semantic_hash": "f58058ca3069350fe82d4509088be311"
   },
   "docs/componentes/foco-auditoria-resultado.md": {
     "mtime": 1792612555.8241556,
-    "seen": 1792950609.561639,
+    "seen": 1793365024.210291,
     "ast_hash": "58d27a9d4af8e8087eb44176a89b5094",
-    "semantic_hash": ""
+    "semantic_hash": "58d27a9d4af8e8087eb44176a89b5094"
   },
   "docs/componentes/privacidad-portapapeles.md": {
     "mtime": 1792611955.175222,
-    "seen": 1792950609.5616403,
+    "seen": 1793365024.2102933,
     "ast_hash": "f396a38c337a7e5c30b01657be66e9ee",
-    "semantic_hash": ""
+    "semantic_hash": "f396a38c337a7e5c30b01657be66e9ee"
   },
   "docs/componentes/rail-categorias.md": {
     "mtime": 1792612060.6898837,
-    "seen": 1792950609.5616415,
+    "seen": 1793365024.2102942,
     "ast_hash": "e93ef0128535118f41fc64e1760f325c",
-    "semantic_hash": ""
+    "semantic_hash": "e93ef0128535118f41fc64e1760f325c"
   },
   "docs/componentes/reproductor-exoplayer-control.md": {
     "mtime": 1792611946.1158476,
-    "seen": 1792950609.5616443,
+    "seen": 1793365024.2102954,
     "ast_hash": "db2345e5e07c917ecbfb7d2ec70db61f",
-    "semantic_hash": ""
+    "semantic_hash": "db2345e5e07c917ecbfb7d2ec70db61f"
   },
   "docs/componentes/reproductor-exoplayer.md": {
     "mtime": 1792611946.1133366,
-    "seen": 1792950609.5616455,
+    "seen": 1793365024.2102966,
     "ast_hash": "42f0d3640fa68ee83072bc17c52077c4",
-    "semantic_hash": ""
+    "semantic_hash": "42f0d3640fa68ee83072bc17c52077c4"
   },
   "docs/componentes/subtitulos-online.md": {
     "mtime": 1793319063.1905038,
-    "seen": 1793360808.4203618,
+    "seen": 1793365024.2102978,
     "ast_hash": "bfa883a8594d16d39b94b3a1b47511e3",
-    "semantic_hash": ""
+    "semantic_hash": "bfa883a8594d16d39b94b3a1b47511e3"
   },
   "docs/fases/fase-01-splash.md": {
     "mtime": 1792657111.8681705,
-    "seen": 1792950609.5616481,
+    "seen": 1793365024.2103,
     "ast_hash": "bbd2dedaaa1217016516b59b4d0bad47",
-    "semantic_hash": ""
+    "semantic_hash": "bbd2dedaaa1217016516b59b4d0bad47"
   },
   "docs/fases/fase-02-home.md": {
     "mtime": 1792673861.9355726,
-    "seen": 1792950609.561649,
+    "seen": 1793365024.210301,
     "ast_hash": "f39aaf0f4d259e7fa4f20feef1319ecb",
-    "semantic_hash": ""
+    "semantic_hash": "f39aaf0f4d259e7fa4f20feef1319ecb"
   },
   "docs/fases/fase-03-rankings.md": {
     "mtime": 1792699651.4792514,
-    "seen": 1792950609.5616503,
+    "seen": 1793365024.2103019,
     "ast_hash": "dc63e4b697c70894a8a45ec2610ad321",
-    "semantic_hash": ""
+    "semantic_hash": "dc63e4b697c70894a8a45ec2610ad321"
   },
   "docs/fases/fase-04-categorias.md": {
     "mtime": 1792700778.895799,
-    "seen": 1792950609.5616515,
+    "seen": 1793365024.210303,
     "ast_hash": "57c7462a48ec70bbc8fea317aa94a5c8",
-    "semantic_hash": ""
+    "semantic_hash": "57c7462a48ec70bbc8fea317aa94a5c8"
   },
   "docs/fases/fase-05-canal.md": {
     "mtime": 1792702297.7466383,
-    "seen": 1792950609.5616524,
+    "seen": 1793365024.210304,
     "ast_hash": "f16353391afc580a98ee80961b5eb352",
-    "semantic_hash": ""
+    "semantic_hash": "f16353391afc580a98ee80961b5eb352"
   },
   "docs/fases/fase-06-buscador.md": {
     "mtime": 1792950190.547351,
-    "seen": 1792950609.561654,
+    "seen": 1793365024.210305,
     "ast_hash": "edb3c6fb99ba4538d0d71eab52e38791",
-    "semantic_hash": ""
+    "semantic_hash": "edb3c6fb99ba4538d0d71eab52e38791"
   },
   "docs/fases/fase-07-resultados-busqueda.md": {
     "mtime": 1792694681.5626688,
-    "seen": 1792950609.5616553,
+    "seen": 1793365024.210306,
     "ast_hash": "b6550c193d2882343797fa19aaa0df88",
-    "semantic_hash": ""
+    "semantic_hash": "b6550c193d2882343797fa19aaa0df88"
   },
   "docs/fases/fase-08-ver-mas.md": {
     "mtime": 1792709352.2925625,
-    "seen": 1792950609.5616565,
+    "seen": 1793365024.2103071,
     "ast_hash": "650d31604490afe4eeaaed49283cfd1d",
-    "semantic_hash": ""
+    "semantic_hash": "650d31604490afe4eeaaed49283cfd1d"
   },
   "docs/fases/fase-09-especial.md": {
     "mtime": 1792952985.6598988,
-    "seen": 1792953120.4192476,
+    "seen": 1793365024.210308,
     "ast_hash": "1da7ff930dc71386a5b510b135a921d2",
-    "semantic_hash": ""
+    "semantic_hash": "1da7ff930dc71386a5b510b135a921d2"
   },
   "docs/fases/fase-10-ficha-video.md": {
     "mtime": 1792709792.4275448,
-    "seen": 1792950609.5616589,
+    "seen": 1793365024.2103093,
     "ast_hash": "07e81da1589fd68857502b4262d42fef",
-    "semantic_hash": ""
+    "semantic_hash": "07e81da1589fd68857502b4262d42fef"
   },
   "docs/fases/fase-11-shorts.md": {
     "mtime": 1792709897.2686179,
-    "seen": 1792950609.5616598,
+    "seen": 1793365024.2103105,
     "ast_hash": "9c5e7bf692d07bf68d70c5488c2b7501",
-    "semantic_hash": ""
+    "semantic_hash": "9c5e7bf692d07bf68d70c5488c2b7501"
   },
   "docs/fases/fase-12-reproductor-descargas.md": {
     "mtime": 1792709970.6502213,
@@ -666,10 +666,10 @@
     "semantic_hash": "4f41e944c183d2e263db3cbe77aa0fa6"
   },
   "docs/guias/powershell-reglas.md": {
-    "mtime": 1792846374.2659686,
-    "seen": 1793361738.791189,
-    "ast_hash": "00b98ae387910c80bb580f823263a9fb",
-    "semantic_hash": "00b98ae387910c80bb580f823263a9fb"
+    "mtime": 1793362392.6610527,
+    "seen": 1793365024.210342,
+    "ast_hash": "e972370892bb872500081cec4659cdab",
+    "semantic_hash": "e972370892bb872500081cec4659cdab"
   },
   "docs/guias/procedimiento-subagentes.md": {
     "mtime": 1792697294.9859796,
@@ -823,9 +823,9 @@
   },
   "prompt.md": {
     "mtime": 1792740646.532213,
-    "seen": 1792950609.561742,
+    "seen": 1793365024.2103765,
     "ast_hash": "cedd820f8a478f4004a8067d71f5eebe",
-    "semantic_hash": ""
+    "semantic_hash": "cedd820f8a478f4004a8067d71f5eebe"
   },
   "skills/graphify/SKILL.md": {
     "mtime": 1792692296.2206974,
@@ -911,12 +911,6 @@
     "ast_hash": "9039a010b0a09a1a66ebb81d24a786c8",
     "semantic_hash": "9039a010b0a09a1a66ebb81d24a786c8"
   },
-  ".engram/manifest.json": {
-    "mtime": 1793193080.567073,
-    "seen": 1793361738.7909832,
-    "ast_hash": "ce921427c5d47306311d1000e642e3f0",
-    "semantic_hash": "ce921427c5d47306311d1000e642e3f0"
-  },
   "fix_all_item_focus.ps1": {
     "mtime": 1793349608.6838498,
     "seen": 1793361738.7910116,
@@ -996,16 +990,16 @@
     "semantic_hash": "7b42cf785c02ba5f2d5c2848d4615439"
   },
   "docs/componentes/foco-click-por-layout.md": {
-    "mtime": 1793360729.218182,
-    "seen": 1793360808.420354,
-    "ast_hash": "7765374132a8a97dda6c34b3a61f2d1b",
-    "semantic_hash": ""
+    "mtime": 1793362291.199899,
+    "seen": 1793365024.2102919,
+    "ast_hash": "6b8ff7be3f8e7f6f04a6b4d2dff08cd3",
+    "semantic_hash": "6b8ff7be3f8e7f6f04a6b4d2dff08cd3"
   },
   "docs/design-system.md": {
     "mtime": 1793299630.0576053,
-    "seen": 1793360808.420363,
+    "seen": 1793365024.2102988,
     "ast_hash": "797071d9bbecf83e354677829038f31c",
-    "semantic_hash": ""
+    "semantic_hash": "797071d9bbecf83e354677829038f31c"
   },
   "docs/poc-info-new-captura-real.md": {
     "mtime": 1793008395.6670513,
