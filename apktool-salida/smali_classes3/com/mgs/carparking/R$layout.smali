@@ -731,9 +731,9 @@
 
 .field public static final item_home_content_list:I = 0x7f0d016b
 
-.field public static final item_home_content_multiple_category:I = 0x7f0d016c
+.field public static final item_home_content_multiple_category:I = 0x7f0d0041
 
-.field public static final item_home_content_multiple_category_list:I = 0x7f0d016d
+.field public static final item_home_content_multiple_category_list:I = 0x7f0d0042
 
 .field public static final item_home_content_multiple_gallery:I = 0x7f0d016e
 

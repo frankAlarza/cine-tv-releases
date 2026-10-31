@@ -12,6 +12,8 @@
     <public type="anim" name="abc_slide_out_top" id="0x7f010009" />
     <public type="anim" name="abc_tooltip_enter" id="0x7f01000a" />
     <public type="anim" name="abc_tooltip_exit" id="0x7f01000b" />
+    <public type="anim" name="splash_enter" id="0x7f01000c" />
+    <public type="anim" name="splash_exit" id="0x7f01000d" />
     <public type="anim" name="bm_bottom_sheet_slide_in" id="0x7f01000e" />
     <public type="anim" name="bm_bottom_sheet_slide_out" id="0x7f01000f" />
     <public type="anim" name="btn_checkbox_to_checked_box_inner_merged_animation" id="0x7f010010" />
@@ -94,6 +96,8 @@
     <public type="animator" name="nav_default_exit_anim" id="0x7f02001b" />
     <public type="animator" name="nav_default_pop_enter_anim" id="0x7f02001c" />
     <public type="animator" name="nav_default_pop_exit_anim" id="0x7f02001d" />
+    <public type="animator" name="tv_focus_scale" id="0x7f02001e" />
+    <public type="animator" name="tv_player_focus_scale" id="0x7f02001f" />
     <public type="array" name="array_tr_bl" id="0x7f030000" />
     <public type="array" name="emoji_code_list" id="0x7f030001" />
     <public type="array" name="emoji_res_list" id="0x7f030002" />
@@ -1856,6 +1860,7 @@
     <public type="bool" name="md_is_tablet" id="0x7f050007" />
     <public type="bool" name="mtrl_btn_textappearance_all_caps" id="0x7f050008" />
     <public type="bool" name="workmanager_test_configuration" id="0x7f050009" />
+    <public type="bool" name="is_tv" id="0x7f05000a" />
     <public type="color" name="abc_background_cache_hint_selector_material_dark" id="0x7f060000" />
     <public type="color" name="abc_background_cache_hint_selector_material_light" id="0x7f060001" />
     <public type="color" name="abc_btn_colored_borderless_text_material" id="0x7f060002" />
@@ -1886,13 +1891,26 @@
     <public type="color" name="androidx_core_ripple_material_light" id="0x7f06001b" />
     <public type="color" name="androidx_core_secondary_text_default_material_light" id="0x7f06001c" />
     <public type="color" name="applovin_sdk_adBadgeTextColor" id="0x7f06001d" />
+    <public type="color" name="tv_card_bottom" id="0x7f06001e" />
     <public type="color" name="applovin_sdk_brand_color" id="0x7f06001f" />
     <public type="color" name="applovin_sdk_brand_color_dark" id="0x7f060020" />
+    <public type="color" name="tv_card_stroke" id="0x7f060021" />
     <public type="color" name="applovin_sdk_ctaButtonColor" id="0x7f060022" />
     <public type="color" name="applovin_sdk_ctaButtonPressedColor" id="0x7f060023" />
+    <public type="color" name="tv_card_top" id="0x7f060024" />
     <public type="color" name="applovin_sdk_grayColor" id="0x7f060025" />
     <public type="color" name="applovin_sdk_greenColor" id="0x7f060026" />
+    <public type="color" name="tv_color_accent" id="0x7f060027" />
+    <public type="color" name="tv_color_bg" id="0x7f060028" />
+    <public type="color" name="tv_color_bg_elevated" id="0x7f060029" />
+    <public type="color" name="tv_color_cta_primary" id="0x7f06002a" />
+    <public type="color" name="tv_color_cta_primary_text" id="0x7f06002b" />
+    <public type="color" name="tv_color_cta_secondary" id="0x7f06002c" />
+    <public type="color" name="tv_color_disabled" id="0x7f06002d" />
+    <public type="color" name="tv_color_divider" id="0x7f06002e" />
     <public type="color" name="applovin_sdk_textColorPrimary" id="0x7f06002f" />
+    <public type="color" name="tv_color_error" id="0x7f060030" />
+    <public type="color" name="tv_color_focus_glow" id="0x7f060031" />
     <public type="color" name="background_floating_material_dark" id="0x7f060032" />
     <public type="color" name="background_floating_material_light" id="0x7f060033" />
     <public type="color" name="background_material_dark" id="0x7f060034" />
@@ -2203,6 +2221,28 @@
     <public type="color" name="material_timepicker_clock_text_color" id="0x7f060165" />
     <public type="color" name="material_timepicker_clockface" id="0x7f060166" />
     <public type="color" name="material_timepicker_modebutton_tint" id="0x7f060167" />
+    <public type="color" name="tv_color_scrim" id="0x7f060168" />
+    <public type="color" name="tv_color_success" id="0x7f060169" />
+    <public type="color" name="tv_color_surface" id="0x7f06016a" />
+    <public type="color" name="tv_color_surface_elevated" id="0x7f06016b" />
+    <public type="color" name="tv_color_surface_glass" id="0x7f06016c" />
+    <public type="color" name="tv_color_text_on_accent" id="0x7f06016d" />
+    <public type="color" name="tv_color_text_primary" id="0x7f06016e" />
+    <public type="color" name="tv_color_text_secondary" id="0x7f06016f" />
+    <public type="color" name="tv_color_text_tertiary" id="0x7f060170" />
+    <public type="color" name="tv_color_warning" id="0x7f060171" />
+    <public type="color" name="tv_focus_glow" id="0x7f060172" />
+    <public type="color" name="tv_focus_ring" id="0x7f060173" />
+    <public type="color" name="tv_header_bottom" id="0x7f060174" />
+    <public type="color" name="tv_header_top" id="0x7f060175" />
+    <public type="color" name="tv_item_bg" id="0x7f060176" />
+    <public type="color" name="tv_item_bg_focused" id="0x7f060177" />
+    <public type="color" name="tv_item_bg_selected" id="0x7f060178" />
+    <public type="color" name="tv_item_stroke" id="0x7f060179" />
+    <public type="color" name="tv_item_stroke_focused" id="0x7f06017a" />
+    <public type="color" name="tv_item_stroke_selected" id="0x7f06017b" />
+    <public type="color" name="tv_modal_hint" id="0x7f06017c" />
+    <public type="color" name="tv_modal_scrim" id="0x7f06017d" />
     <public type="color" name="monetization_ads_internal_call_to_action_background_color_blue" id="0x7f0601aa" />
     <public type="color" name="monetization_ads_internal_call_to_action_text_color_black" id="0x7f0601b0" />
     <public type="color" name="monetization_ads_internal_text_color_white" id="0x7f0601bf" />
@@ -2477,6 +2517,18 @@
     <public type="dimen" name="activity_vertical_margin" id="0x7f070053" />
     <public type="dimen" name="appcompat_dialog_background_inset" id="0x7f070054" />
     <public type="dimen" name="applovin_sdk_actionBarHeight" id="0x7f070055" />
+    <public type="dimen" name="tv_action_icon" id="0x7f070056" />
+    <public type="dimen" name="tv_action_label_size" id="0x7f070057" />
+    <public type="dimen" name="tv_button_height" id="0x7f070058" />
+    <public type="dimen" name="tv_button_padding_h" id="0x7f070059" />
+    <public type="dimen" name="tv_card_height" id="0x7f07005a" />
+    <public type="dimen" name="tv_card_height_new" id="0x7f07005b" />
+    <public type="dimen" name="tv_card_radius" id="0x7f07005c" />
+    <public type="dimen" name="tv_card_title_size" id="0x7f07005d" />
+    <public type="dimen" name="tv_card_width" id="0x7f07005e" />
+    <public type="dimen" name="tv_card_width_new" id="0x7f07005f" />
+    <public type="dimen" name="tv_chip_height" id="0x7f070060" />
+    <public type="dimen" name="tv_detail_meta_size" id="0x7f070061" />
     <public type="dimen" name="bm_bottom_sheet_round_radius" id="0x7f070062" />
     <public type="dimen" name="browser_actions_context_menu_max_width" id="0x7f070063" />
     <public type="dimen" name="browser_actions_context_menu_min_padding" id="0x7f070064" />
@@ -2507,12 +2559,20 @@
     <public type="dimen" name="customactivityoncrash_activity_horizontal_margin" id="0x7f07007d" />
     <public type="dimen" name="customactivityoncrash_activity_vertical_margin" id="0x7f07007e" />
     <public type="dimen" name="customactivityoncrash_error_activity_error_details_text_size" id="0x7f07007f" />
+    <public type="dimen" name="tv_detail_title_size" id="0x7f070080" />
+    <public type="dimen" name="tv_drawer_header_size" id="0x7f070081" />
+    <public type="dimen" name="tv_drawer_icon" id="0x7f070082" />
     <public type="dimen" name="debug_panel_line_spacing_body1" id="0x7f070083" />
     <public type="dimen" name="debug_panel_line_spacing_body2" id="0x7f070084" />
     <public type="dimen" name="debug_panel_line_spacing_header1" id="0x7f070085" />
     <public type="dimen" name="debug_panel_line_spacing_header2" id="0x7f070086" />
+    <public type="dimen" name="tv_drawer_item_height" id="0x7f070087" />
+    <public type="dimen" name="tv_drawer_item_height_new" id="0x7f070088" />
     <public type="dimen" name="debug_panel_space_medium_large" id="0x7f070089" />
+    <public type="dimen" name="tv_drawer_label_size" id="0x7f07008a" />
+    <public type="dimen" name="tv_drawer_width" id="0x7f07008b" />
     <public type="dimen" name="debug_panel_space_small_extra" id="0x7f07008c" />
+    <public type="dimen" name="tv_drawer_width_new" id="0x7f07008d" />
     <public type="dimen" name="debug_panel_text_body1" id="0x7f07008e" />
     <public type="dimen" name="debug_panel_text_body2" id="0x7f07008f" />
     <public type="dimen" name="debug_panel_text_header1" id="0x7f070090" />
@@ -2952,11 +3012,78 @@
     <public type="dimen" name="material_time_picker_minimum_screen_height" id="0x7f070242" />
     <public type="dimen" name="material_time_picker_minimum_screen_width" id="0x7f070243" />
     <public type="dimen" name="material_timepicker_dialog_buttons_margin_top" id="0x7f070244" />
+    <public type="dimen" name="tv_elev_card" id="0x7f070245" />
+    <public type="dimen" name="tv_elev_card_focus" id="0x7f070246" />
+    <public type="dimen" name="tv_elev_modal" id="0x7f070247" />
+    <public type="dimen" name="tv_elev_player_bar" id="0x7f070248" />
+    <public type="dimen" name="tv_empty_icon_size" id="0x7f070249" />
+    <public type="dimen" name="tv_focus_scale" id="0x7f07024a" />
+    <public type="dimen" name="tv_hero_cta_size" id="0x7f07024b" />
+    <public type="dimen" name="tv_hero_height" id="0x7f07024c" />
+    <public type="dimen" name="tv_hero_height_new" id="0x7f07024d" />
+    <public type="dimen" name="tv_hero_radius" id="0x7f07024e" />
+    <public type="dimen" name="tv_hero_title_size" id="0x7f07024f" />
     <public type="dimen" name="md_dialog_max_width" id="0x7f070250" />
+    <public type="dimen" name="tv_icon_button_size" id="0x7f070251" />
+    <public type="dimen" name="tv_icon_size" id="0x7f070252" />
+    <public type="dimen" name="tv_lang_header_height" id="0x7f070253" />
+    <public type="dimen" name="tv_lang_icon_pad" id="0x7f070254" />
+    <public type="dimen" name="tv_lang_item_gap" id="0x7f070255" />
+    <public type="dimen" name="tv_lang_item_height" id="0x7f070256" />
+    <public type="dimen" name="tv_lang_item_radius" id="0x7f070257" />
+    <public type="dimen" name="tv_lang_list_pad" id="0x7f070258" />
+    <public type="dimen" name="tv_lang_radius" id="0x7f070259" />
+    <public type="dimen" name="tv_lang_safe_x" id="0x7f07025a" />
+    <public type="dimen" name="tv_lang_safe_y" id="0x7f07025b" />
+    <public type="dimen" name="tv_lang_text_pad" id="0x7f07025c" />
+    <public type="dimen" name="tv_nav_height" id="0x7f07025d" />
+    <public type="dimen" name="tv_nav_icon" id="0x7f07025e" />
+    <public type="dimen" name="tv_nav_label_size" id="0x7f07025f" />
+    <public type="dimen" name="tv_player_height" id="0x7f070260" />
+    <public type="dimen" name="tv_player_icon_size" id="0x7f070261" />
+    <public type="dimen" name="tv_radius_lg" id="0x7f070262" />
+    <public type="dimen" name="tv_radius_md" id="0x7f070263" />
+    <public type="dimen" name="tv_radius_pill" id="0x7f070264" />
+    <public type="dimen" name="tv_radius_sm" id="0x7f070265" />
+    <public type="dimen" name="tv_radius_xl" id="0x7f070266" />
+    <public type="dimen" name="tv_radius_xs" id="0x7f070267" />
+    <public type="dimen" name="tv_rail_gap" id="0x7f070268" />
+    <public type="dimen" name="tv_rail_header_size" id="0x7f070269" />
+    <public type="dimen" name="tv_rail_icon" id="0x7f07026a" />
+    <public type="dimen" name="tv_rail_item_height" id="0x7f07026b" />
+    <public type="dimen" name="tv_rail_label_size" id="0x7f07026c" />
+    <public type="dimen" name="tv_rail_width" id="0x7f07026d" />
     <public type="dimen" name="monetization_ads_internal_button_elevation" id="0x7f07026e" />
     <public type="dimen" name="monetization_ads_internal_button_min_height" id="0x7f07026f" />
     <public type="dimen" name="monetization_ads_internal_button_min_width" id="0x7f070270" />
+    <public type="dimen" name="tv_rail_width_expanded" id="0x7f070271" />
+    <public type="dimen" name="tv_row_padding" id="0x7f070272" />
+    <public type="dimen" name="tv_row_title_size" id="0x7f070273" />
+    <public type="dimen" name="tv_screen_margin_h" id="0x7f070274" />
+    <public type="dimen" name="tv_screen_margin_v" id="0x7f070275" />
+    <public type="dimen" name="tv_space_lg" id="0x7f070276" />
+    <public type="dimen" name="tv_space_md" id="0x7f070277" />
     <public type="dimen" name="monetization_ads_internal_call_to_action_radius" id="0x7f070278" />
+    <public type="dimen" name="tv_space_sm" id="0x7f070279" />
+    <public type="dimen" name="tv_space_xl" id="0x7f07027a" />
+    <public type="dimen" name="tv_space_xs" id="0x7f07027b" />
+    <public type="dimen" name="tv_space_xxl" id="0x7f07027c" />
+    <public type="dimen" name="tv_space_xxs" id="0x7f07027d" />
+    <public type="dimen" name="tv_space_xxxl" id="0x7f07027e" />
+    <public type="dimen" name="tv_stream_card_height" id="0x7f07027f" />
+    <public type="dimen" name="tv_stream_card_width" id="0x7f070280" />
+    <public type="dimen" name="tv_tab_text_size" id="0x7f070281" />
+    <public type="dimen" name="tv_text_body" id="0x7f070282" />
+    <public type="dimen" name="tv_text_body_l" id="0x7f070283" />
+    <public type="dimen" name="tv_text_caption" id="0x7f070284" />
+    <public type="dimen" name="tv_text_display" id="0x7f070285" />
+    <public type="dimen" name="tv_text_headline" id="0x7f070286" />
+    <public type="dimen" name="tv_text_small" id="0x7f070287" />
+    <public type="dimen" name="tv_text_title_l" id="0x7f070288" />
+    <public type="dimen" name="tv_text_title_m" id="0x7f070289" />
+    <public type="dimen" name="tv_text_title_s" id="0x7f07028a" />
+    <public type="dimen" name="tv_top_icon" id="0x7f07028b" />
+    <public type="dimen" name="tv_topbar_height" id="0x7f07028c" />
     <public type="dimen" name="monetization_instream_internal_adtune_corner_margin" id="0x7f0702a3" />
     <public type="dimen" name="monetization_instream_internal_adtune_size" id="0x7f0702a4" />
     <public type="dimen" name="monetization_instream_internal_advertiser_block_height" id="0x7f0702a5" />
@@ -3382,6 +3509,53 @@
     <public type="drawable" name="admob_close_button_white_circle_black_cross" id="0x7f080060" />
     <public type="drawable" name="admob_close_button_white_cross" id="0x7f080061" />
     <public type="drawable" name="applovin_creative_debugger_report_ad_rounded_button" id="0x7f080062" />
+    <public type="drawable" name="banner" id="0x7f080063" />
+    <public type="drawable" name="bg_button_focused" id="0x7f080064" />
+    <public type="drawable" name="bg_focused" id="0x7f080065" />
+    <public type="drawable" name="bg_focused_card" id="0x7f080066" />
+    <public type="drawable" name="bg_focused_rect" id="0x7f080067" />
+    <public type="drawable" name="bg_focused_season" id="0x7f080068" />
+    <public type="drawable" name="bg_tv_card" id="0x7f080069" />
+    <public type="drawable" name="bg_tv_lang_card" id="0x7f08006a" />
+    <public type="drawable" name="bg_tv_lang_header" id="0x7f08006b" />
+    <public type="drawable" name="bg_tv_lang_item" id="0x7f08006c" />
+    <public type="drawable" name="ic_home_refresh" id="0x7f08006d" />
+    <public type="drawable" name="ic_more_dots" id="0x7f08006e" />
+    <public type="drawable" name="ic_rail_animation" id="0x7f08006f" />
+    <public type="drawable" name="ic_rail_drama" id="0x7f080070" />
+    <public type="drawable" name="ic_rail_generic" id="0x7f080071" />
+    <public type="drawable" name="ic_rail_halloween" id="0x7f080072" />
+    <public type="drawable" name="ic_rail_home" id="0x7f080073" />
+    <public type="drawable" name="ic_rail_movie" id="0x7f080074" />
+    <public type="drawable" name="ic_rail_series" id="0x7f080075" />
+    <public type="drawable" name="ic_refresh" id="0x7f080076" />
+    <public type="drawable" name="ic_section_generic" id="0x7f080077" />
+    <public type="drawable" name="ic_section_grid" id="0x7f080078" />
+    <public type="drawable" name="ic_section_home" id="0x7f080079" />
+    <public type="drawable" name="ic_section_list" id="0x7f08007a" />
+    <public type="drawable" name="ic_section_mine" id="0x7f08007b" />
+    <public type="drawable" name="ic_update_tv" id="0x7f08007c" />
+    <public type="drawable" name="tv_button_primary" id="0x7f08007d" />
+    <public type="drawable" name="tv_button_secondary" id="0x7f08007e" />
+    <public type="drawable" name="tv_card_bg" id="0x7f08007f" />
+    <public type="drawable" name="tv_chip" id="0x7f080080" />
+    <public type="drawable" name="tv_detail_top_gradient" id="0x7f080081" />
+    <public type="drawable" name="tv_drawer_bg" id="0x7f080082" />
+    <public type="drawable" name="tv_drawer_fab_bg" id="0x7f080083" />
+    <public type="drawable" name="tv_edge_fade" id="0x7f080084" />
+    <public type="drawable" name="tv_fullscreen_button_bg" id="0x7f080085" />
+    <public type="drawable" name="tv_hero_gradient" id="0x7f080086" />
+    <public type="drawable" name="tv_hero_round" id="0x7f080087" />
+    <public type="drawable" name="tv_hero_scrim" id="0x7f080088" />
+    <public type="drawable" name="tv_ic_fast10" id="0x7f080089" />
+    <public type="drawable" name="tv_ic_pause" id="0x7f08008a" />
+    <public type="drawable" name="tv_ic_play" id="0x7f08008b" />
+    <public type="drawable" name="tv_ic_retreat10" id="0x7f08008c" />
+    <public type="drawable" name="tv_modal_focus" id="0x7f08008d" />
+    <public type="drawable" name="tv_modal_scrim" id="0x7f08008e" />
+    <public type="drawable" name="tv_play_button" id="0x7f08008f" />
+    <public type="drawable" name="tv_player_bar_bg" id="0x7f080090" />
+    <public type="drawable" name="tv_player_btn_bg" id="0x7f080091" />
     <public type="drawable" name="applovin_rounded_button" id="0x7f080092" />
     <public type="drawable" name="applovin_rounded_text_view_border" id="0x7f080093" />
     <public type="drawable" name="avd_hide_password" id="0x7f080094" />
@@ -3455,6 +3629,17 @@
     <public type="drawable" name="bg_vip_bt_gradient2" id="0x7f0800d8" />
     <public type="drawable" name="bg_vip_item_normal" id="0x7f0800d9" />
     <public type="drawable" name="bg_vip_item_selected" id="0x7f0800da" />
+    <public type="drawable" name="tv_player_btn_focus" id="0x7f0800db" />
+    <public type="drawable" name="tv_player_fs_focus" id="0x7f0800dc" />
+    <public type="drawable" name="tv_player_seek_focus" id="0x7f0800dd" />
+    <public type="drawable" name="tv_player_seek_progress" id="0x7f0800de" />
+    <public type="drawable" name="tv_player_seek_thumb" id="0x7f0800df" />
+    <public type="drawable" name="tv_player_seekbar_progress" id="0x7f0800e0" />
+    <public type="drawable" name="tv_seek_progress" id="0x7f0800e1" />
+    <public type="drawable" name="tv_seek_thumb" id="0x7f0800e2" />
+    <public type="drawable" name="tv_seek_track" id="0x7f0800e3" />
+    <public type="drawable" name="tv_seekbar_progress" id="0x7f0800e4" />
+    <public type="drawable" name="tv_tab_focus_bg" id="0x7f0800e5" />
     <public type="drawable" name="bigo_ad_default_progressbar" id="0x7f0800f4" />
     <public type="drawable" name="bm_bg_privacy_button" id="0x7f080168" />
     <public type="drawable" name="bm_bg_privacy_divider" id="0x7f080169" />
@@ -4501,6 +4686,8 @@
     <public type="id" name="chain" id="0x7f0a0123" />
     <public type="id" name="chain2" id="0x7f0a0124" />
     <public type="id" name="chains" id="0x7f0a0125" />
+    <public type="id" name="btn_home_refresh" id="0x7f0a0126" />
+    <public type="id" name="channel_rv" id="0x7f0a0127" />
     <public type="id" name="checkbox" id="0x7f0a0128" />
     <public type="id" name="checked" id="0x7f0a0129" />
     <public type="id" name="chip" id="0x7f0a012a" />
@@ -5914,6 +6101,8 @@
     <public type="id" name="snackbar_text" id="0x7f0a06aa" />
     <public type="id" name="snap" id="0x7f0a06ab" />
     <public type="id" name="snapMargins" id="0x7f0a06ac" />
+    <public type="id" name="channel_sort" id="0x7f0a06ad" />
+    <public type="id" name="item_img_container" id="0x7f0a06ae" />
     <public type="id" name="south" id="0x7f0a06af" />
     <public type="id" name="spacer" id="0x7f0a06b0" />
     <public type="id" name="special_effects_controller_view_tag" id="0x7f0a06b1" />
@@ -6250,6 +6439,14 @@
     <public type="id" name="x_right" id="0x7f0a07fc" />
     <public type="id" name="zero_corner_chip" id="0x7f0a07fd" />
     <public type="id" name="zoom" id="0x7f0a07fe" />
+    <public type="id" name="menu_more" id="0x7f0a07ff" />
+    <public type="id" name="rv_search_results" id="0x7f0a0800" />
+    <public type="id" name="selectSubtitle" id="0x7f0a0801" />
+    <public type="id" name="sortToolbar" id="0x7f0a0802" />
+    <public type="id" name="sortToolbar_title" id="0x7f0a0803" />
+    <public type="id" name="subtitle_en" id="0x7f0a0804" />
+    <public type="id" name="subtitle_es" id="0x7f0a0805" />
+    <public type="id" name="subtitle_none" id="0x7f0a0806" />
     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
     <public type="integer" name="app_bar_elevation_anim_duration" id="0x7f0b0002" />
@@ -6363,7 +6560,21 @@
     <public type="layout" name="activity_web" id="0x7f0d003a" />
     <public type="layout" name="activity_web_game" id="0x7f0d003b" />
     <public type="layout" name="admob_empty_layout" id="0x7f0d003c" />
+    <public type="layout" name="fragment_category" id="0x7f0d003d" />
+    <public type="layout" name="fragment_channel" id="0x7f0d003e" />
     <public type="layout" name="banner_item" id="0x7f0d003f" />
+    <public type="layout" name="fragment_channel_look" id="0x7f0d0040" />
+    <public type="layout" name="item_home_content_multiple_category" id="0x7f0d0041" />
+    <public type="layout" name="item_home_content_multiple_category_list" id="0x7f0d0042" />
+    <public type="layout" name="item_home_content_multiple_list_item_category" id="0x7f0d0043" />
+    <public type="layout" name="item_home_content_multiple_list_item_category_list" id="0x7f0d0044" />
+    <public type="layout" name="item_home_recommend_multiple_category" id="0x7f0d0045" />
+    <public type="layout" name="item_home_recommend_multiple_list_item_category" id="0x7f0d0046" />
+    <public type="layout" name="pop_layout_subtitle_item" id="0x7f0d0047" />
+    <public type="layout" name="preference_category" id="0x7f0d0048" />
+    <public type="layout" name="preference_category_material" id="0x7f0d0049" />
+    <public type="layout" name="preference_information_material" id="0x7f0d004a" />
+    <public type="layout" name="preference_list_fragment" id="0x7f0d004b" />
     <public type="layout" name="bm_exo_legacy_player_control_view" id="0x7f0d00e2" />
     <public type="layout" name="bm_exo_list_divider" id="0x7f0d00e3" />
     <public type="layout" name="bm_exo_player_control_ffwd_button" id="0x7f0d00e4" />
@@ -6960,6 +7171,7 @@
     <public type="string" name="app_version" id="0x7f120024" />
     <public type="string" name="appbar_scrolling_view_behavior" id="0x7f120025" />
     <public type="string" name="application_info" id="0x7f120026" />
+    <public type="string" name="tv_lang_hint" id="0x7f120027" />
     <public type="string" name="bottom_sheet_behavior" id="0x7f120064" />
     <public type="string" name="bottomsheet_action_expand_halfway" id="0x7f120065" />
     <public type="string" name="button_ok" id="0x7f120066" />
@@ -8618,7 +8830,9 @@
     <public type="style" name="main_dialog_activity_theme" id="0x7f1303a3" />
     <public type="style" name="main_game_web_bottom" id="0x7f1303a4" />
     <public type="style" name="mbridge_common_activity_style" id="0x7f1303a5" />
+    <public type="style" name="SplashWindowAnimation" id="0x7f1303a6" />
     <public type="style" name="mbridge_transparent_common_activity_style" id="0x7f1303a7" />
+    <public type="style" name="TextAppearance.TV.Tab" id="0x7f1303a8" />
     <public type="style" name="myDialog" id="0x7f1303a9" />
     <public type="style" name="myProgressBarStyle" id="0x7f1303aa" />
     <public type="style" name="pop_shop_anim" id="0x7f1303ab" />
