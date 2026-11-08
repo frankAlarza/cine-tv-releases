@@ -258,9 +258,9 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1794165730.9578183,
-    "seen": 1794165833.330453,
-    "ast_hash": "3a555189f8dc012a4a0b5f68de746f14",
+    "mtime": 1794167309.8226202,
+    "seen": 1794167461.0712476,
+    "ast_hash": "c620dd1473f5d8591b5e50f4f9ea14db",
     "semantic_hash": ""
   },
   "DESIGN.md": {
@@ -276,9 +276,9 @@
     "semantic_hash": "cb6f8e34e585cd7005a4ebefe79d348a"
   },
   "PROGRESS.md": {
-    "mtime": 1794165716.8153841,
-    "seen": 1794165833.3304565,
-    "ast_hash": "1189830b1f4f0233559c281d26933cc1",
+    "mtime": 1794167271.441583,
+    "seen": 1794167461.071254,
+    "ast_hash": "c781e53d5cc10d738d11e93b0d83c01c",
     "semantic_hash": ""
   },
   "README.md": {
@@ -330,9 +330,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "docs/00-INDICE.md": {
-    "mtime": 1793407178.3960686,
-    "seen": 1793413454.9562523,
-    "ast_hash": "e5bec3989ab49b69ea6de84851f3bbdf",
+    "mtime": 1794167136.2173722,
+    "seen": 1794167461.0712726,
+    "ast_hash": "3730fe54a6bc0908b372f09b0f5249d1",
     "semantic_hash": ""
   },
   "docs/auditoria/anuncios-inventario-manifest.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "e0a909d735eec461106b5ea95ff998e9"
   },
   "docs/sesiones/indice.md": {
-    "mtime": 1794165615.3055875,
-    "seen": 1794165833.330555,
-    "ast_hash": "300f50024228bb079632afff93be4c44",
+    "mtime": 1794167128.5437021,
+    "seen": 1794167461.0714211,
+    "ast_hash": "eadcefbb11346134c3dd5a0682a554d7",
     "semantic_hash": ""
   },
   "docs/sesiones/sesion-01-04.md": {
@@ -1152,15 +1152,15 @@
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/upload-release.sh": {
-    "mtime": 1794163487.193866,
-    "seen": 1794165833.3304448,
-    "ast_hash": "2f455543859f48bbd7d517bab929ef99",
+    "mtime": 1794167207.5818179,
+    "seen": 1794167461.0712333,
+    "ast_hash": "7a6c1624788d35ba9ceddbb13e1e0a0c",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/upload-v172.sh": {
-    "mtime": 1794163481.4992626,
-    "seen": 1794165833.3304458,
-    "ast_hash": "de280924ab2031a404fcf98ea7416baa",
+    "mtime": 1794167217.8333144,
+    "seen": 1794167461.0712354,
+    "ast_hash": "b635ab72e95226a560ee6c97604c5d5a",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/verify-menu.ps1": {
@@ -1194,9 +1194,9 @@
     "semantic_hash": ""
   },
   "docs/actualizacion-apk.md": {
-    "mtime": 1794152070.228943,
-    "seen": 1794156253.1530943,
-    "ast_hash": "aea4dea92f15e1275293c77cfcfeea44",
+    "mtime": 1794167240.4579346,
+    "seen": 1794167461.0712745,
+    "ast_hash": "681d8e69dfa8bd518a836c66193bcc94",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/nuevo1.txt": {
@@ -1320,9 +1320,21 @@
     "semantic_hash": ""
   },
   "docs/sesiones/sesion-39-auditoria-update-seguridad.md": {
-    "mtime": 1794165594.4700089,
-    "seen": 1794165833.3305728,
-    "ast_hash": "73153593470140117e92c8eb0543f2cb",
+    "mtime": 1794167181.3646424,
+    "seen": 1794167461.0714514,
+    "ast_hash": "29ce6b69506bec01ea084da3d02b1a0e",
+    "semantic_hash": ""
+  },
+  "tools/publish-release.ps1": {
+    "mtime": 1794167336.938392,
+    "seen": 1794167461.0711906,
+    "ast_hash": "8071c8a7f598f2e776c2c5409218a302",
+    "semantic_hash": ""
+  },
+  "docs/sesiones/sesion-40-cierre-release-v203.md": {
+    "mtime": 1794167261.5472202,
+    "seen": 1794167461.071453,
+    "ast_hash": "c04c99da614633ab0bbead5fa0680136",
     "semantic_hash": ""
   }
 }
