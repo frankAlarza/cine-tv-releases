@@ -4,7 +4,8 @@
 
 set -e
 
-TOKEN="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"
+# NUNCA poner el token aqui: leer de entorno (revocar el que estuvo expuesto).
+TOKEN="${GITHUB_TOKEN:?exporta GITHUB_TOKEN antes de ejecutar este script}"
 REPO="frankAlarza/cine-tv-releases"
 RELEASE_TAG="v40"
 APK_FILE="build/cine-tv-v172-signed.apk"

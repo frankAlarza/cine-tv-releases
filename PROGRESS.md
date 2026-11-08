@@ -326,3 +326,35 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 ### Next Steps (pendientes de sesión)
 - 🔲 Bug con idioma español (funciona en inglés) — revisar `SetLanguageAdapter`/`SetLanguageDialog` (smali_classes10/12) y `hd/c`.
 - 🔲 Implementar recomendaciones de `docs/security-update-audit.md`.
+
+## v203 — Auditoría de seguridad del flujo de actualización (sesión 39)
+
+- ✅ **CRÍTICO: PAT de GitHub expuesto** en 3 scripts commiteados → saneados a
+  `$GITHUB_TOKEN` (env). **Pendiente del usuario: revocar el token** en
+  github.com/settings/tokens.
+- ✅ `TvGithubUpdate` endurecido (recompilado vía nuevo puente `tools/build_github_update.ps1`):
+  - Digest **SHA-256 obligatorio**: la API `/releases/latest` ya publica el
+    digest del asset (lo calcula GitHub); sin digest → no se instala.
+  - Descarga a **almacenamiento interno** (`getDir("updates")`, era
+    `externalCacheDir`); purge de descargas residuales; borrado en cancelación
+    o mismatch.
+  - **Anti-downgrade**: comparación numérica (`isNewer`); check de red fallido
+    = error explícito (antes descargaba a ciegas).
+  - User-Agent propio; logs sin URLs ni datos sensibles.
+  - Certificate pinning descartado deliberadamente (rompería el canal con la
+    rotación de certs de GitHub).
+- ✅ **E2E verificado** con build de test `v100t`: trazas `start() ctx=ok` →
+  `check: info=v188/digest current=v100t` → `DownloadTask: begin` → instalador
+  del sistema lanzado (descarga 40 MB + verificación OK).
+- ⚠️ **Trampa nueva**: `apktool b` reutiliza el manifest compilado del caché
+  `apktool-salida\build` → 2 builds salieron con versión vieja. Regla:
+  verificar con `aapt dump badging` ANTES de instalar; si no coincide, borrar
+  `apktool-salida\build` y rebuild.
+- 📌 Workflow nuevo (preferencia del usuario): procesos pesados (build/install/
+  verificación en emulador) delegados a subagentes con modelos gratuitos
+  (`opencode-go/beam-free#low`); el agente principal mantiene diagnóstico,
+  edición y commits.
+
+### Next Steps (v203)
+- 🔲 Revocar PAT + subir v203 al release con el script saneado.
+- 🔲 (Opcional) purgar el token del historial con `git filter-repo`.

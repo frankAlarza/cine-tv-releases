@@ -29,31 +29,33 @@
 .method constructor <init>(Landroid/content/Context;Landroid/app/AlertDialog;Ljava/io/File;)V
     .locals 0
 
-    .line 306
+    .line 464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 307
+    .line 465
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->ctx:Landroid/content/Context;
 
-    .line 308
+    .line 466
     iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->dialog:Landroid/app/AlertDialog;
 
-    .line 309
+    .line 467
     iput-object p3, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->apkFile:Ljava/io/File;
 
-    .line 310
+    .line 468
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 5
 
-    .line 314
+    .line 472
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -61,12 +63,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 473
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 318
+    .line 476
     :cond_0
     new-instance v0, Landroid/os/StrictMode$VmPolicy$Builder;
 
@@ -78,10 +80,10 @@
 
     invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
 
-    .line 320
+    .line 478
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->ctx:Landroid/content/Context;
 
-    const-string v1, "Abriendo instalador de aplicaciones..."
+    const-string v1, "Instalando version verificada..."
 
     const/4 v2, 0x1
 
@@ -91,7 +93,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 324
+    .line 482
     :try_start_0
     const-string v0, "androidx.core.content.FileProvider"
 
@@ -99,47 +101,33 @@
 
     move-result-object v0
 
-    .line 325
+    .line 483
     const-string v1, "getUriForFile"
 
-    const/4 v3, 0x3
+    const-class v2, Landroid/content/Context;
 
-    new-array v4, v3, [Ljava/lang/Class;
+    const-class v3, Ljava/lang/String;
 
-    const-class v5, Landroid/content/Context;
+    const-class v4, Ljava/io/File;
 
-    const/4 v6, 0x0
+    filled-new-array {v2, v3, v4}, [Ljava/lang/Class;
 
-    aput-object v5, v4, v6
+    move-result-object v2
 
-    const-class v5, Ljava/lang/String;
-
-    aput-object v5, v4, v2
-
-    const-class v5, Ljava/io/File;
-
-    const/4 v7, 0x2
-
-    aput-object v5, v4, v7
-
-    invoke-virtual {v0, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 326
-    new-array v1, v3, [Ljava/lang/Object;
+    .line 485
+    iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->ctx:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->ctx:Landroid/content/Context;
+    const-string v2, "com.movievn.cinevi.fileprovider"
 
-    aput-object v3, v1, v6
+    iget-object v3, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->apkFile:Ljava/io/File;
 
-    const-string v3, "com.movievn.cinevi.fileprovider"
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
 
-    aput-object v3, v1, v2
-
-    iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->apkFile:Ljava/io/File;
-
-    aput-object v2, v1, v7
+    move-result-object v1
 
     const/4 v2, 0x0
 
@@ -151,21 +139,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
+    .line 488
     goto :goto_0
 
-    .line 327
+    .line 486
     :catch_0
     move-exception v0
 
-    .line 328
+    .line 487
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->apkFile:Ljava/io/File;
 
     invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 330
+    .line 489
     :goto_0
     new-instance v1, Landroid/content/Intent;
 
@@ -173,21 +161,21 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 331
+    .line 490
     const-string v2, "application/vnd.android.package-archive"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 332
+    .line 491
     const v0, 0x10000001
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 333
+    .line 492
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;->ctx:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 334
+    .line 493
     return-void
 .end method

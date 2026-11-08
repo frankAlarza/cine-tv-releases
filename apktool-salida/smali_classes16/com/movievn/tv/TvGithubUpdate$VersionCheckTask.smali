@@ -25,133 +25,209 @@
 .method constructor <init>(Lcom/movievn/tv/TvGithubUpdate;)V
     .locals 0
 
-    .line 110
+    .line 249
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
+    .line 250
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 112
+    .line 251
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 6
+    .locals 7
 
-    .line 116
+    .line 255
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    invoke-static {v0}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$mfetchLatestTag(Lcom/movievn/tv/TvGithubUpdate;)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/movievn/tv/TvGithubUpdate;->fetchReleaseInfo()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 117
+    .line 256
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    invoke-static {v1}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$mgetCurrentVersion(Lcom/movievn/tv/TvGithubUpdate;)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/movievn/tv/TvGithubUpdate;->getCurrentVersion()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 118
-    if-eqz v0, :cond_0
+    .line 257
+    const/4 v2, 0x1
 
-    if-eqz v1, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_0
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 119
-    :goto_0
-    nop
-
-    .line 120
-    if-eqz v1, :cond_1
-
-    .line 121
-    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
-
-    invoke-static {v0}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$fgethandler(Lcom/movievn/tv/TvGithubUpdate;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/movievn/tv/TvGithubUpdate$StartDownloadAction;
-
-    iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
-
-    invoke-direct {v1, v2}, Lcom/movievn/tv/TvGithubUpdate$StartDownloadAction;-><init>(Lcom/movievn/tv/TvGithubUpdate;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const-string v4, "null"
 
     goto :goto_1
 
-    .line 122
+    :cond_0
+    aget-object v4, v0, v3
+
+    aget-object v5, v0, v2
+
+    if-nez v5, :cond_1
+
+    const-string v5, "sinDigest"
+
+    goto :goto_0
+
     :cond_1
-    if-eqz v0, :cond_2
+    const-string v5, "digest"
 
-    .line 123
-    iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+    :goto_0
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$fgethandler(Lcom/movievn/tv/TvGithubUpdate;)Landroid/os/Handler;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lcom/movievn/tv/TvGithubUpdate$ToastAction;
+    move-result-object v4
 
-    iget-object v3, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+    const-string v6, "/"
 
-    invoke-static {v3}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$fgetdialogCtx(Lcom/movievn/tv/TvGithubUpdate;)Landroid/content/Context;
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Ya tienes la ultima version ("
+    move-result-object v4
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
+
+    :goto_1
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "check: info="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " current="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "TvGithubUpdate"
+
+    invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 258
+    if-nez v0, :cond_2
+
+    .line 259
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+
+    const-string v1, "No se pudo comprobar la version (sin conexion?)"
+
+    invoke-virtual {v0, v1}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
+
+    .line 260
+    return-void
+
+    .line 262
+    :cond_2
+    aget-object v3, v0, v3
+
+    .line 263
+    aget-object v0, v0, v2
+
+    .line 264
+    invoke-static {v3, v1}, Lcom/movievn/tv/TvGithubUpdate;->isNewer(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 265
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+
+    iget-object v0, v0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/movievn/tv/TvGithubUpdate$ToastAction;
+
+    iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+
+    iget-object v2, v2, Lcom/movievn/tv/TvGithubUpdate;->dialogCtx:Landroid/content/Context;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "No hay version mas reciente ("
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     const-string v4, ")"
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-direct {v2, v3, v0}, Lcom/movievn/tv/TvGithubUpdate$ToastAction;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lcom/movievn/tv/TvGithubUpdate$ToastAction;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    goto :goto_1
+    .line 267
+    return-void
 
-    .line 125
-    :cond_2
+    .line 269
+    :cond_3
+    if-nez v0, :cond_4
+
+    .line 270
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    invoke-static {v0}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$fgethandler(Lcom/movievn/tv/TvGithubUpdate;)Landroid/os/Handler;
+    const-string v1, "El release no publica digest SHA-256. No se instala por seguridad."
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
+
+    .line 271
+    return-void
+
+    .line 273
+    :cond_4
+    iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+
+    iput-object v0, v1, Lcom/movievn/tv/TvGithubUpdate;->expectedDigest:Ljava/lang/String;
+
+    .line 274
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
+
+    iget-object v0, v0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvGithubUpdate$StartDownloadAction;
 
@@ -161,7 +237,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 127
-    :goto_1
+    .line 275
     return-void
 .end method

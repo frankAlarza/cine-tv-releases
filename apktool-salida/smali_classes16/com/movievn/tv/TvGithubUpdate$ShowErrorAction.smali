@@ -24,29 +24,24 @@
 
 .field private final message:Ljava/lang/String;
 
-.field private final tag:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Landroid/app/AlertDialog;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+.method constructor <init>(Landroid/app/AlertDialog;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    .line 343
+    .line 501
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 344
+    .line 502
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->dialog:Landroid/app/AlertDialog;
 
-    .line 345
-    iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->tag:Ljava/lang/String;
+    .line 503
+    iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->message:Ljava/lang/String;
 
-    .line 346
-    iput-object p3, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->message:Ljava/lang/String;
+    .line 504
+    iput-object p3, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->ctx:Landroid/content/Context;
 
-    .line 347
-    iput-object p4, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->ctx:Landroid/content/Context;
-
-    .line 348
+    .line 505
     return-void
 .end method
 
@@ -55,10 +50,12 @@
 .method public run()V
     .locals 4
 
-    .line 352
+    .line 509
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -66,20 +63,38 @@
 
     if-eqz v0, :cond_0
 
-    .line 353
+    .line 510
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 355
+    .line 512
     :cond_0
-    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->tag:Ljava/lang/String;
+    iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->message:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->message:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 356
+    const-string v2, "update error: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "TvGithubUpdate"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 513
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->ctx:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;->message:Ljava/lang/String;
@@ -110,6 +125,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 357
+    .line 514
     return-void
 .end method

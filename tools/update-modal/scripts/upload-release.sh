@@ -1,9 +1,9 @@
 #!/bin/bash
 # Subir APK al repo privado frankAlarza/cine-tv-releases (release v40)
-# Requisitos: curl + token (scope repo + read:packages)
-# Edita TOKEN con tu PAT real antes de ejecutar.
-
-TOKEN="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"
+# Requisitos: curl + GITHUB_TOKEN en el entorno (scope repo). El token que
+# estuvo hardcodeado aqui quedo expuesto en git: REVOCARLO en
+# https://github.com/settings/tokens y usar uno nuevo via export.
+TOKEN="${GITHUB_TOKEN:?exporta GITHUB_TOKEN antes de ejecutar}"
 REPO="frankAlarza/cine-tv-releases"
 RELEASE_TAG="v40"
 APK_FILE="build/cine-tv-v40-signed.apk"

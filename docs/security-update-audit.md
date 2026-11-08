@@ -149,6 +149,15 @@ Audit the update mechanism (`TvGithubUpdate.java`) at security level to identify
 
 ## 7. Próximos Pasos Planificados
 
+> **ACTUALIZADO (sesión 39, v203):** implementadas las recomendaciones 1
+> (digest SHA-256 de la propia API de GitHub — sin sidecar), 2 (almacenamiento
+> interno), 3 (purge), 6 (User-Agent) y 8 (comparación numérica +
+> anti-downgrade). 4 (pinning) y 5 (URLs a recursos) descartadas
+> deliberadamente. **HALLAZGO CRÍTICO no previsto en este plan: PAT expuesto
+> en 3 scripts commiteados** — saneados a `$GITHUB_TOKEN`, revocación
+> pendiente del usuario. E2E verificado en emulador con build de test.
+> Detalle: [sesión 39](sesiones/sesion-39-auditoria-update-seguridad.md).
+
 1. **Sesión de auditoría**: Ejecutar checklist en emulador con herramientas de seguridad
 2. **Implementar fixes**: Mover almacenamiento, añadir verificación de hash, optional certificate pinning
 3. **Actualizar documentación**: `docs/actualizacion-apk.md` + nuevo `docs/seguridad-update.md`
