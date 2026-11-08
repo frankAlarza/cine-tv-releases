@@ -219,14 +219,14 @@ auto-ocultado), finales `v26-39-home-collapsed.png`, `v26-46-rail-focus-expanded
 $pr = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 
 & 'C:\herramientas\apktool\apktool.bat' b "$pr\apktool-salida" -o "$pr\build\cine-tv-vN-unsigned.apk"
-& 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\zipalign.exe' -f -p 4 `
+& 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\zipalign.exe' -f -p 4 `
   "$pr\build\cine-tv-vN-unsigned.apk" "$pr\build\cine-tv-vN-aligned.apk"
-& 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\apksigner.bat' sign `
+& 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\apksigner.bat' sign `
   --ks 'C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore' `
   --ks-key-alias premium --ks-pass pass:premium123 --key-pass pass:premium123 `
   --out "$pr\build\cine-tv-vN-signed.apk" "$pr\build\cine-tv-vN-aligned.apk"
 
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 & $adb -s emulator-5556 shell settings put global verifier_verify_adb_installs 0
 & $adb -s emulator-5556 shell settings put global package_verifier_enable 0
 & $adb -s emulator-5556 install --no-incremental -r -g "$pr\build\cine-tv-vN-signed.apk"

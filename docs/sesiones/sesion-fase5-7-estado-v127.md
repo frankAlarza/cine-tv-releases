@@ -110,23 +110,23 @@ Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;
 & 'C:\herramientas\apktool\apktool.bat' b 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv\apktool-salida' -o 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-v128-unsigned.apk'
 
 # 2) Align + sign
-$bt = 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0'
+$bt = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0'
 $pr = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 & "$bt\zipalign.exe" -f -p 4 "$pr\build\cine-tv-v128-unsigned.apk" "$pr\build\cine-tv-v128-aligned.apk"
 & "$bt\apksigner.bat" sign --ks 'C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore' --ks-key-alias premium --ks-pass pass:premium123 --key-pass pass:premium123 --out "$pr\build\cine-tv-v128-signed.apk" "$pr\build\cine-tv-v128-aligned.apk"
 
 # 3) Install (emulator-5554, puede cambiar tras cold boot)
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 install --no-incremental -r -g "$pr\build\cine-tv-v128-signed.apk"
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 install --no-incremental -r -g "$pr\build\cine-tv-v128-signed.apk"
 
 # 4) Launch + capture
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 logcat -c
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 shell am start -n 'com.movievn.cinevi/com.mgs.carparking.ui.login.splash.SplashActivity'
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 logcat -c
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 shell am start -n 'com.movievn.cinevi/com.mgs.carparking.ui.login.splash.SplashActivity'
 Start-Sleep -Seconds 25
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 shell screencap -p /sdcard/x128.png
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 pull /sdcard/x128.png "$pr\build\v128-home.png"
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 shell screencap -p /sdcard/x128.png
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 pull /sdcard/x128.png "$pr\build\v128-home.png"
 
 # 5) Verificar logcat
-C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe -s emulator-5554 logcat -d -v time | Select-String -Pattern "FATAL|VerifyError|ClassNotFound|NoClassDefFoundError|ANR in|NoSuchMethodError"
+C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5554 logcat -d -v time | Select-String -Pattern "FATAL|VerifyError|ClassNotFound|NoClassDefFoundError|ANR in|NoSuchMethodError"
 ```
 
 ### Paso D — Si hay más clases faltantes

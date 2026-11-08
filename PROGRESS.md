@@ -305,3 +305,24 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - Verify TV navigation works correctly
 - Test hero card interactions
 - Verify the "Generos" (Categories) button is no longer in the lateral menu
+
+## v202 — Crash Películas/Series (sesión 38, commit 9d960c87)
+
+- ✅ **Causa real diagnosticada con evidencia** (`logcat -b crash`):
+  `Resources$NotFoundException #0x7f0d0170` al inflar
+  `item_home_content_multiple_list_item_category` en
+  `BindingRecyclerViewAdapter.onCreateViewHolder`. NO era `iconFor()` (fixes
+  previos declarados "verificados" no tocaban el problema).
+- ✅ **Fix**: `public.xml` repineado a los IDs originales que hardcodea el DEX
+  (`0x13a/0x13b/0x13c`, `0x170/0x171`, `0x180/0x185`) + `preference_*`
+  (`0x28a/0x28b/0x290/0x291`) en lugar de parchear 27 literales smali.
+- ✅ **Bump**: versionCode 40003 / versionName v202 (regla 13).
+- ✅ **Verificado en emulator-5554**: los 5 items del rail cargan contenido
+  ("Nuevas películas de hoy"), cajón ••• sin regresión, crash buffer limpio.
+  Evidencia: `build/v202-peliculas.png`, `build/v202-rail-full.png`.
+- 📌 Regla nueva documentada en AGENTS.md §4: recurso borrado+re-añadido →
+  fijar en `public.xml` el ID EXACTO que espera el DEX (`R$*`/mapper).
+
+### Next Steps (pendientes de sesión)
+- 🔲 Bug con idioma español (funciona en inglés) — revisar `SetLanguageAdapter`/`SetLanguageDialog` (smali_classes10/12) y `hd/c`.
+- 🔲 Implementar recomendaciones de `docs/security-update-audit.md`.

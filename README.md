@@ -139,15 +139,15 @@ $pr = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 & 'C:\herramientas\apktool\apktool.bat' b "$pr\apktool-salida" -o "$pr\build\cine-tv-v38-unsigned.apk"
 
 # 2) Alinear y firmar
-& 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\zipalign.exe' -f -p 4 `
+& 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\zipalign.exe' -f -p 4 `
   "$pr\build\cine-tv-v38-unsigned.apk" "$pr\build\cine-tv-v38-aligned.apk"
-& 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\apksigner.bat' sign `
+& 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\apksigner.bat' sign `
   --ks 'C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore' `
   --ks-key-alias premium --ks-pass pass:premium123 --key-pass pass:premium123 `
   --out "$pr\build\cine-tv-v38-signed.apk" "$pr\build\cine-tv-v38-aligned.apk"
 
 # 3) Instalar en el emulador TV
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 & $adb -s emulator-5556 shell settings put global verifier_verify_adb_installs 0
 & $adb -s emulator-5556 shell settings put global package_verifier_enable 0
 & $adb -s emulator-5556 install --no-incremental -r -g "$pr\build\cine-tv-v38-signed.apk"
@@ -202,8 +202,8 @@ app-android-cine-tv/
 
 | Herramienta | Ruta |
 |---|---|
-| adb | `C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe` |
+| adb | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe` |
 | apktool | `C:\herramientas\apktool\apktool.bat` |
-| zipalign / apksigner | `C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\` |
-| emulador | `C:\Users\UsuarioLocal\Documents\Android\emulator\emulator.exe` |
+| zipalign / apksigner | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\` |
+| emulador | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\emulator\emulator.exe` |
 | keystore | `C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore` (alias `premium`, pass `premium123`) |

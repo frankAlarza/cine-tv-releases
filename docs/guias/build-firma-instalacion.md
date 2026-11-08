@@ -11,9 +11,9 @@
 | Herramienta | Ruta |
 |---|---|
 | apktool | `C:\herramientas\apktool\apktool.bat` |
-| zipalign / apksigner | `C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\` |
-| adb | `C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe` |
-| emulador | `C:\Users\UsuarioLocal\Documents\Android\emulator\emulator.exe` |
+| zipalign / apksigner | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\` |
+| adb | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe` |
+| emulador | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\emulator\emulator.exe` |
 | Keystore | `C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore` (alias `premium`, pass `premium123`) — **fuera** del proyecto TV |
 | Proyecto TV | `...\app-android-cine-tv\apktool-salida\` |
 | Salida | `...\app-android-cine-tv\build\cine-tv-v<N>-signed.apk` |
@@ -33,8 +33,8 @@ Entornos de prueba:
 ```powershell
 $pr  = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 $v   = 'v33'                 # incrementar en cada cambio
-$bt  = 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0'
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$bt  = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 $ks  = 'C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore'
 
 # 1) Recompilar smali + recursos con apktool
@@ -113,7 +113,7 @@ Detalle completo de cada error:
 ## 5. Emulador apagado
 
 ```powershell
-Start-Process 'C:\Users\UsuarioLocal\Documents\Android\emulator\emulator.exe' `
+Start-Process 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\emulator\emulator.exe' `
   -ArgumentList '-avd','AndroidTV1080p','-port','5556','-no-boot-anim'
 # esperar: adb -s emulator-5556 shell getprop sys.boot_completed  ==  1
 ```

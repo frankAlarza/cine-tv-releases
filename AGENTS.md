@@ -61,10 +61,10 @@ Rules:
 | Proyecto apktool | `...\app-android-cine-tv\apktool-salida\` |
 | APK base (referencia) | `...\app-android-cine-tv\base\base.apk` |
 | APKs + capturas | `...\app-android-cine-tv\build\` |
-| adb | `C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe` |
+| adb | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe` |
 | apktool | `C:\herramientas\apktool\apktool.bat` |
-| zipalign / apksigner | `C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\` |
-| emulador | `C:\Users\UsuarioLocal\Documents\Android\emulator\emulator.exe` |
+| zipalign / apksigner | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\` |
+| emulador | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\emulator\emulator.exe` |
 | keystore | `C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore` (alias `premium`, pass `premium123`) |
 | Emulador TV | `emulator-5556` (AVD `AndroidTV1080p`, Google TV API 34, 1920x1080, 320 dpi) |
 
@@ -75,8 +75,8 @@ Rules:
 ```powershell
 $pr  = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 $v   = 'v33'   # incrementar en cada cambio
-$bt  = 'C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0'
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$bt  = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 
 # 1) Build
 & 'C:\herramientas\apktool\apktool.bat' b "$pr\apktool-salida" -o "$pr\build\cine-tv-$v-unsigned.apk"
@@ -168,6 +168,8 @@ build falla**): [`docs/guias/build-firma-instalacion.md`](docs/guias/build-firma
 | El botón de actualizar no recarga nada | no tenía listener; el refresco de la app es un `SmartRefreshLayout` (`com.scwang.smart.refresh.layout`), no un `SwipeRefreshLayout` | v38: `TvHomeRefresh` llama a `setStateRefreshing(true)` sobre el `SmartRefreshLayout` **visible** (`getGlobalVisibleRect`, porque el ViewPager mantiene infladas las páginas fuera de pantalla) |
 | Una tarjeta enfocada no abre nada al pulsar ENTER | el `OnClickListener` de los items del feed **no está en la raíz**: va por data-binding (`@BindingAdapter` `yo/a.b` invocado desde el `executeBindings()` de cada `*BindingImpl`), y según el layout cae en la raíz, en un hijo (`@id/tv_video_play`) o en un `binding_1` interior | antes de añadir `focusable`, localizar el `yo/a.b(field X)` en el `*BindingImpl` del layout y enfocar **la vista que recibe el clic**. Si el `BindingCommand` del ViewModel es un stub (`dc/f0`), el clic está muerto: no dar foco. v39, [sesión 16](docs/sesiones/sesion-16.md) |
 | Una edición con `edit` no casa en `MainActivity.smali` | los nombres de método ofuscados son solo marcas combinantes árabes (U+06E0..U+06E7) y el match exacto falla | anclar el `oldString` en la **cola ASCII** del cuerpo (`check-cast` + `invoke` + etiquetas) y dejar cabecera/predicado intactos; [sesión 24](docs/sesiones/sesion-auditoria-anuncios.md) |
+| Crash al abrir Películas/Series: `Resources$NotFoundException #0x7f0d…` en `onCreateViewHolder` | los layouts re-añadidos a `res/` se fijaron en `public.xml` con IDs secuenciales nuevos, pero el DEX compilado hardcodea los IDs **originales** (`R$layout`, `DataBinderMapperImpl`, `dc/j0`, ViewModels) | diagnosticar con `adb logcat -b crash` y cruzar el ID contra `public.xml`/`R$*`; **repinear `public.xml` al ID original que espera el código** (no parchear literales). Regla: recurso borrado+re-añadido → fijarlo en `public.xml` con el ID exacto del DEX. v202, [sesión 38](docs/sesiones/sesion-38-crash-categorias-ids-publicxml.md) |
+| `am start` lanza la app pero al momento aparece `dreamx` (`DreamActivity`) | el screensaver de Google TV roba el foco tras instalar/arrancar | `adb shell settings put system screen_sleep_timeout_sec -1` antes de automatizar keyevents; emulador real en esta máquina = `emulator-5554` |
 
 **Diagnóstico del letterbox:**
 `dumpsys activity activities` → `letterboxReason=FIXED_ORIENTATION` + `sw304dp ... port`
@@ -295,7 +297,7 @@ Detalle: [`docs/guias/verificacion.md`](docs/guias/verificacion.md).
 ## 9. Diagnóstico rápido
 
 ```powershell
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 
 & $adb -s emulator-5556 shell dumpsys uimode | Select-String mCurrentModeType   # 0x24 = TV
 & $adb -s emulator-5556 shell dumpsys activity activities | Select-String topResumedActivity

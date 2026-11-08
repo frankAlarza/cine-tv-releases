@@ -76,10 +76,10 @@ Ejecutar el ciclo completo (§2 del AGENTS.md):
 & 'C:\herramientas\apktool\apktool.bat' b "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\apktool-salida" -o "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-unsigned.apk"
 
 # 2) Alinear
-& "C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\zipalign.exe" -f -p 4 "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-unsigned.apk" "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-aligned.apk"
+& C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\zipalign.exe -f -p 4 "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-unsigned.apk" "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-aligned.apk"
 
 # 3) Firmar
-& "C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\apksigner.bat" sign `
+& C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\apksigner.bat sign `
   --ks "C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore" `
   --ks-key-alias premium --ks-pass pass:premium123 --key-pass pass:premium123 `
   --out "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-signed.apk" "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-aligned.apk"

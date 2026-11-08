@@ -1,23 +1,23 @@
-# Graph Report - app-cine-new-design  (2026-10-31)
+# Graph Report - app-cine-new-design  (2026-11-08)
 
 ## Corpus Check
-- 192 files · ~184,997 words
+- 194 files · ~642,877 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 2327 file(s) not represented in the graph (top: .smali 1182, .xml 1093, .so 22)
+- Unclassified: 2316 file(s) not represented in the graph (top: .smali 1181, .xml 1086, .so 22)
 
 ## Summary
-- 1735 nodes · 3063 edges · 207 communities (84 shown, 123 thin omitted)
-- Extraction: 81% EXTRACTED · 19% INFERRED · 0% AMBIGUOUS · INFERRED: 590 edges (avg confidence: 0.91)
+- 1810 nodes · 3260 edges · 217 communities (86 shown, 131 thin omitted)
+- Extraction: 82% EXTRACTED · 18% INFERRED · 0% AMBIGUOUS · INFERRED: 592 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `59318744`
+- Built from commit: `8f346fda`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Focus Audit
-- CategoryRail
+- android.view.View
 - Home Refresh
 - Ad SDKs
 - e2e.py
@@ -48,25 +48,23 @@
 - Ad SDKs
 - TvSubtitleStyle
 - f
-- TabLayout
 - Ad SDKs
 - Session Notes
-- .loadSubtitle
+- Security Audit Plan: Android TV Update Flow
 - Focus Audit
 - .onClickOld
 - Ad SDKs
 - T
 - module$contents$omid$common$argsChecker_assertNumber
 - .createSubtitleText
-- TvHeroImage
-- .setup
+- VideoPlayerView
 - get_sign_and_home.py
 - mraidToNativeBridge
 - wc
 - decrypt_api.py
-- android.view.View
+- Override
 - .handleMessage
-- .schedule
+- .setup
 - install_tv.ps1
 - patch_orientation.ps1
 - patch_tc_e.ps1
@@ -78,7 +76,7 @@
 - .isCrossOrigin
 - .sendMessage
 - .serialize
-- Item
+- SeekChange
 - .toJSON
 - gen_banner3.py
 - probe_h2.py
@@ -93,7 +91,7 @@
 - .isSupported
 - .sendMessage
 - .toJSON
-- .adjustOffset
+- tc.e (anti-TV / anti-emulador)
 - .isCrossOrigin
 - .isDirectCommunication
 - .sendMessage
@@ -110,19 +108,21 @@
 - .getAdSessionId
 - .impressionOccurred
 - .isSupported
-- TvHeroItem
-- .focusFirstButton
+- .run
+- TvDetail
 - u
 - .firstQuartile
 - .midpoint
 - .pause
 - .resume
-- .scrollItemIntoView
+- TabLayout
+- build-apk.sh
 - .toJSON
 - Índice de la documentación
 - b
 - Arranque en TV: compatibilidad, orientación, anuncios y permisos
 - Build, firma e instalación
+- count-invokes.sh
 - Cómo añadir recursos y clases — MovieVN TV
 - Proceso de cambios de diseño — MovieVN TV (smali + recursos)
 - CategoryRail$RailKeyListener.smali
@@ -136,26 +136,29 @@
 - TvDetail$LayoutWatcher.smali
 - TvDetail$SetupTask.smali
 - TvDetail.smali
+- test-apktool.sh
 - TvPlayerBar$BarKey.smali
 - TvPlayerBar$BoxKey.smali
 - TvPlayerBar$ButtonFocus.smali
 - TvPlayerBar$ClearSuppress.smali
+- upload-v172.sh
 - TvPlayerBar$DecorKey.smali
 - TvPlayerBar$FocusBar.smali
 - TvPlayerBar$FocusFirst.smali
 - TvPlayerBar$FocusFix.smali
 - TvPlayerBar$HideTask.smali
 - TvPlayerBar$SetupTask.smali
+- upload-release-debug.sh
 
 ## God Nodes (most connected - your core abstractions)
-1. `TvPlayerBar` - 121 edges
-2. `TvSectionDrawer` - 65 edges
+1. `TvPlayerBar` - 129 edges
+2. `TvSectionDrawer` - 69 edges
 3. `CategoryRail` - 47 edges
 4. `graphify skill` - 45 edges
 5. `b()` - 33 edges
 6. `b()` - 31 edges
-7. `TvGithubUpdate` - 28 edges
-8. `TvDetail` - 26 edges
+7. `TvDetail` - 30 edges
+8. `TvGithubUpdate` - 28 edges
 9. `TvPlayerBar (control bar, refreshPlayer, media keys)` - 22 edges
 10. `c()` - 20 edges
 
@@ -203,19 +206,19 @@
 - **Cadena de foco del Home (barra→héroe→tarjetas→rail)** — docs_sesiones_sesion_16, layout-fragment-home, concept_data_binding_click [INFERRED]
 - **Modal idioma Apple TV (auto-guardado + rediseño)** — docs_sesiones_sesion_20, class_SetLanguageDialog, class_SetLanguageDialog_a, layout_dialog_language_set [INFERRED]
 
-## Communities (207 total, 123 thin omitted)
+## Communities (217 total, 131 thin omitted)
 
 ### Community 0 - "Focus Audit"
-Cohesion: 0.06
-Nodes (14): FocusSelected, FocusWatcher, HidePanel, Item, ItemClick, LayoutWatcher, RestoreFocus, RowFocus (+6 more)
+Cohesion: 0.07
+Nodes (13): FocusSelected, FocusWatcher, HidePanel, Item, ItemClick, LayoutWatcher, RestoreFocus, RowFocus (+5 more)
 
-### Community 1 - "CategoryRail"
-Cohesion: 0.14
-Nodes (5): CategoryRail, ContentKeyListener, FocusWatcher, ItemClickListener, LayoutScan
+### Community 1 - "android.view.View"
+Cohesion: 0.05
+Nodes (16): CategoryRail, CollapseCheck, ContentKeyListener, FocusWatcher, Item, ItemClickListener, ItemFocusListener, LayoutScan (+8 more)
 
 ### Community 2 - "Home Refresh"
-Cohesion: 0.06
-Nodes (12): SmartRefreshLayout (app refresh), LayoutWatcher, RefreshClick, SetupTask, TvHomeRefresh, SmartRefreshLayout, ClickHandler, KeyHandler (+4 more)
+Cohesion: 0.12
+Nodes (7): SmartRefreshLayout (app refresh), LayoutWatcher, RefreshClick, SetupTask, TvHomeRefresh, SmartRefreshLayout, TvHomeRefresh (SmartRefreshLayout trigger, v38)
 
 ### Community 3 - "Ad SDKs"
 Cohesion: 0.05
@@ -245,6 +248,10 @@ Nodes (15): ab(), b(), bb(), cb(), d(), e(), fb(), Ia() (+7 more)
 Cohesion: 0.12
 Nodes (8): b(), c(), d(), e(), hb(), ma(), v(), x()
 
+### Community 10 - ".createBar"
+Cohesion: 0.10
+Nodes (6): ButtonFocus, PlayPauseClick, RetreatClick, SubtitleClick, SubtitleLangItemClick, SubtitleSyncBackClick
+
 ### Community 11 - "Ad SDKs"
 Cohesion: 0.11
 Nodes (23): Fase 33 - UI de subtitulos en el reproductor, Fase 34 - Integracion con el reproductor (sync de cues), Fase 35 - Verificacion y cierre (subtitulos), Prompt - Estilo configurable de subtitulos, MainActivity (Home container), Media keys dispatchKeyEvent (play/pause/seek), SubripDecoder (SRT) t5.a, setSubtitleAvailable (+15 more)
@@ -257,13 +264,17 @@ Nodes (19): Barra inferior oculta, Guia - Proceso de cambios de diseno, smali_cl
 Cohesion: 0.11
 Nodes (16): deepFreeze(), module$contents$omid$common$exporter_getOmidExports(), module$contents$omid$common$exporter_getOrCreateName(), module$contents$omid$common$exporter_packageExport(), module$contents$omid$common$FloatComparer_greaterThanOrRoughlyEqual(), module$contents$omid$common$FloatComparer_lessThanOrRoughlyEqual(), module$contents$omid$common$FloatComparer_roughlyEqual(), module$contents$omid$common$serviceMethodUtils_getUnprefixedMethod() (+8 more)
 
+### Community 14 - "Session Notes"
+Cohesion: 0.16
+Nodes (3): FocusBar, FocusFix, HideTask
+
 ### Community 15 - "omsdk_v1_5_3.js"
 Cohesion: 0.18
 Nodes (17): A(), Ca(), Ea(), Fa(), G(), Ga(), H(), Ha() (+9 more)
 
 ### Community 16 - "TvPlayerBar"
-Cohesion: 0.08
-Nodes (13): BarKey, BoxKey, ClearSuppress, ClockTask, DecorKey, HideSubtitleMessage, PlayPauseClick, RetreatClick (+5 more)
+Cohesion: 0.12
+Nodes (7): ClearSuppress, ClockTask, SubtitleCue, SubtitleLoadTask, SubtitleSyncFwdClick, SubtitleSyncTask, TvPlayerBar
 
 ### Community 17 - "Ad SDKs"
 Cohesion: 0.12
@@ -309,10 +320,6 @@ Nodes (8): TvSubtitleStyle, AcceptClick, ColorClick, FontClick, OffsetClick, Sha
 Cohesion: 0.16
 Nodes (14): bc(), cc(), dc(), f(), fc(), gc(), hc(), nc() (+6 more)
 
-### Community 32 - "TabLayout"
-Cohesion: 0.14
-Nodes (4): TabListener, OnTabSelectedListener, Tab, TabLayout
-
 ### Community 33 - "Ad SDKs"
 Cohesion: 0.21
 Nodes (3): d(), e(), l()
@@ -321,17 +328,17 @@ Nodes (3): d(), e(), l()
 Cohesion: 0.21
 Nodes (3): d(), e(), l()
 
-### Community 35 - ".loadSubtitle"
-Cohesion: 0.14
-Nodes (3): SubtitleAvailableTask, SubtitleLoadTask, SubtitleUnavailableTask
+### Community 35 - "Security Audit Plan: Android TV Update Flow"
+Cohesion: 0.11
+Nodes (18): 1. Update Flow Overview, 2.1 Network Transmission (TLS/HTTPS), 2.2 Data Sensitivity, 2.3 Storage Security, 2. Security Analysis Areas, 3. Threat Model, 4.1 Críticas (hacer obligatorio):, 4.2 Importantes: (+10 more)
 
 ### Community 36 - "Focus Audit"
 Cohesion: 0.21
 Nodes (13): Pantalla completa del reproductor, Guia - Diagnostico, Prompt sesion 09 (v29) - Control de reproduccion con mando, Prompt sesion 11 (v32) - Botones de navegacion del reproductor, Letterbox por BaseActivity portrait, Botones modernos del reproductor (v32), Sesiones 5-8 (BlueStacks/rail/fullscreen/barra), SurfaceView consume ACTION_DOWN (+5 more)
 
 ### Community 37 - ".onClickOld"
-Cohesion: 0.16
-Nodes (3): SubtitleDownloadTask, SubtitleLangItemClick, SubtitleLongClick
+Cohesion: 0.10
+Nodes (5): HideSubtitleMessage, SubtitleAvailableTask, SubtitleDownloadTask, SubtitleLongClick, SubtitleUnavailableTask
 
 ### Community 38 - "Ad SDKs"
 Cohesion: 0.19
@@ -349,10 +356,6 @@ Nodes (9): module$contents$omid$common$ArgsSerDe_deserializeMessageArgs(), modul
 Cohesion: 0.15
 Nodes (9): module$contents$omid$common$ArgsSerDe_deserializeMessageArgs(), module$contents$omid$common$ArgsSerDe_serializeMessageArgs(), module$contents$omid$common$guid_generateGuid(), module$contents$omid$common$logger_error(), module$contents$omid$common$serviceMethodUtils_getPrefixedMethod(), module$contents$omid$common$serviceMethodUtils_getPrefixedSessionServiceMethod(), module$contents$omid$common$serviceMethodUtils_getPrefixedVerificationServiceMethod(), module$contents$omid$common$VersionUtils_isValidVersion() (+1 more)
 
-### Community 43 - ".setup"
-Cohesion: 0.15
-Nodes (4): FocusFix, VideoPlayerView, PlayerControlView, PlayerView
-
 ### Community 44 - "get_sign_and_home.py"
 Cohesion: 0.47
 Nodes (4): call(), dec(), device_get(), headers()
@@ -364,6 +367,14 @@ Nodes (13): apkFileName, doNotCompress, resourcesInfo, packageId, sdkInfo, minSd
 ### Community 46 - "wc"
 Cohesion: 0.18
 Nodes (10): tb(), ub(), uc(), vb(), wb(), wc(), xb(), xc() (+2 more)
+
+### Community 48 - "Override"
+Cohesion: 0.13
+Nodes (3): TvHeroImage, TvHeroItem, FocusFirst
+
+### Community 50 - ".setup"
+Cohesion: 0.16
+Nodes (5): BarKey, BoxKey, DecorKey, SeekKey, SetupTask
 
 ### Community 51 - "install_tv.ps1"
 Cohesion: 0.26
@@ -394,8 +405,8 @@ Cohesion: 0.24
 Nodes (12): FixedSeekBar, TKAdapter, VerticalViewPager, VerticalViewPager sin UP/DOWN (P0), activity_short_tk.xml, dialog_short_speed.xml, fragment_t_k.xml, item_tik_tok.xml (+4 more)
 
 ### Community 58 - ".serialize"
-Cohesion: 0.16
-Nodes (14): SDKs de anuncios (WxSDK, MainSDK, Bigo...), BaseActivity (force landscape 0), Guard anti-anuncios en TV (AppApplication.loadAdConf), Permisos de almacenamiento (restaurados v25), Letterbox (FIXED_ORIENTATION, portrait runtime), AndroidManifest.xml, R4: ContentProvider de anuncios se conservan, R7: permisos de almacenamiento no quitar (+6 more)
+Cohesion: 0.22
+Nodes (11): SDKs de anuncios (WxSDK, MainSDK, Bigo...), Guard anti-anuncios en TV (AppApplication.loadAdConf), Permisos de almacenamiento (restaurados v25), AndroidManifest.xml, R4: ContentProvider de anuncios se conservan, R7: permisos de almacenamiento no quitar, Sesiones 1-4 (arranque/manifest/permisos), APK v15 (+3 more)
 
 ### Community 59 - ".isCrossOrigin"
 Cohesion: 0.24
@@ -408,10 +419,6 @@ Nodes (10): dc(), f(), jc(), kb(), kc(), lc(), mc(), oc() (+2 more)
 ### Community 61 - ".serialize"
 Cohesion: 0.18
 Nodes (11): Banner/margen/difuminado/foco, Home Streaming: UP vuelve a flecha, Modal de idioma (primer arranque), Fase 02 Home (feed navegable), Fase 03 Rankings, Plan definitivo (30 fases validacion UI/UX), Subtitulos online (fases 32-35), APK v101-v102 (modal idioma) (+3 more)
-
-### Community 62 - "Item"
-Cohesion: 0.19
-Nodes (5): CollapseCheck, Item, ItemFocusListener, RailKeyListener, WidthUpdate
 
 ### Community 63 - ".toJSON"
 Cohesion: 0.20
@@ -461,9 +468,9 @@ Nodes (7): activity_main.xml, Cajon lateral de secciones (derecha), Sesiones 9-1
 Cohesion: 0.29
 Nodes (7): Auditoría Fase 6 (borrado SDKs smali), Fyber/Inneractive SDK, InMobi SDK, Mbridge SDK, Moloco SDK, Pangle/ByteDance SDK, Unity Ads SDK
 
-### Community 83 - ".adjustOffset"
-Cohesion: 0.17
-Nodes (3): SubtitleSyncBackClick, SubtitleSyncFwdClick, SubtitleSyncTask
+### Community 83 - "tc.e (anti-TV / anti-emulador)"
+Cohesion: 0.29
+Nodes (5): BaseActivity (force landscape 0), Letterbox (FIXED_ORIENTATION, portrait runtime), R5: orientacion landscape (118 activities + BaseActivity), sensorLandscape on 118 activities, tc.e (anti-TV / anti-emulador)
 
 ### Community 85 - ".isCrossOrigin"
 Cohesion: 0.29
@@ -478,8 +485,8 @@ Cohesion: 0.29
 Nodes (7): fragment_channel.xml, item_channnel_filter.xml, item_channnel_filter_common.xml, item_channnel_search_result.xml, Fase 05 — Canal, Canal (ChannelFragment), ChannelFragment.smali
 
 ### Community 88 - "TvGithubUpdate"
-Cohesion: 0.06
-Nodes (10): CancelUpdateAction, ConfirmUpdateAction, DownloadTask, InstallPromptAction, ShowErrorAction, StartDownloadAction, ToastAction, TvGithubUpdate (+2 more)
+Cohesion: 0.09
+Nodes (11): 2.4 Code Analysis, CancelUpdateAction, ConfirmUpdateAction, DownloadTask, InstallPromptAction, ShowErrorAction, StartDownloadAction, ToastAction (+3 more)
 
 ### Community 89 - "p"
 Cohesion: 0.31
@@ -490,8 +497,8 @@ Cohesion: 0.33
 Nodes (6): SetLanguageDialog (smali_classes12), SetLanguageDialog$a (auto-guardado), Sesión 20 — Modal de idioma Apple TV (v101/v102), res/layout/dialog_language_set.xml, Build v101 (modal idioma auto-guardado), Build v102 (modal rediseño Apple TV)
 
 ### Community 91 - ".serialize"
-Cohesion: 0.24
-Nodes (8): Fase 01 Splash/arranque, MainActivity (Home / overlay continuar viendo), R5: orientacion landscape (118 activities + BaseActivity), Sesion 15 (Fase 01 Splash), SplashActivity (launcher), SplashWxActivity (variante muerta), tc.e (anti-TV / anti-emulador), APK v39
+Cohesion: 0.40
+Nodes (6): Fase 01 Splash/arranque, MainActivity (Home / overlay continuar viendo), Sesion 15 (Fase 01 Splash), SplashActivity (launcher), SplashWxActivity (variante muerta), APK v39
 
 ### Community 92 - ".sendMessage"
 Cohesion: 0.33
@@ -521,6 +528,10 @@ Nodes (5): Auditoría Fase 2 (recursos), Auditoria de anuncios (8 fases), Sesió
 Cohesion: 0.60
 Nodes (3): BaseActivity (smali_classes9), letterbox (FIXED_ORIENTATION, sw304dp port), Trampa: letterbox por BaseActivity portrait
 
+### Community 102 - "TvDetail"
+Cohesion: 0.14
+Nodes (5): ClickHandler, KeyHandler, LayoutWatcher, SetupTask, TvDetail
+
 ### Community 104 - ".firstQuartile"
 Cohesion: 0.50
 Nodes (4): Clic por data-binding (yo/a.b), Trío mágico de foco (focusable+foreground+stateListAnimator), Sesión 16 — Fase 02 Home (v39), Fase 02 Home (plan definitivo)
@@ -543,23 +554,23 @@ Nodes (3): layout-land-television/ (variante TV), tv_dimens.xml (medidas TV), R6
 
 ## Knowledge Gaps
 - **271 isolated node(s):** `Clic por data-binding (yo/a.b)`, `Trío mágico de foco (focusable+foreground+stateListAnimator)`, `Fase 02 Home (plan definitivo)`, `res/layout-land-television/activity_video_play_detail.xml`, `AMBIGUOUS confidence` (+266 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 562 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **123 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 596 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **131 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TvPlayerBar` connect `TvPlayerBar` to `.loadSubtitle`, `.onClickOld`, `.focusFirstButton`, `.createBar`, `.setup`, `Session Notes`, `android.view.View`, `.schedule`, `.adjustOffset`, `Ad SDKs`, `TvSubtitleStyle`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **Why does `VideoPlayerView (exo_play_context_id)` connect `Ad SDKs` to `TvSectionDrawer.java`?**
+  _High betweenness centrality (0.167) - this node is a cross-community bridge._
 - **What connects `Clic por data-binding (yo/a.b)`, `Trío mágico de foco (focusable+foreground+stateListAnimator)`, `Fase 02 Home (plan definitivo)` to the rest of the system?**
   _271 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Focus Audit` be split into smaller, more focused modules?**
-  _Cohesion score 0.05744888023369036 - nodes in this community are weakly interconnected._
-- **Why does `Fase 01 Splash/arranque` connect `.serialize` to `.assertSessionRunning`, `TvPlayerBar Controls`, `.serialize`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Should `CategoryRail` be split into smaller, more focused modules?**
-  _Cohesion score 0.14039408866995073 - nodes in this community are weakly interconnected._
-- **Why does `z()` connect `omsdk_v1_5_3.js` to `install_tv.ps1`, `.deserialize`, `eb`, `module$contents$omid$common$serviceCommunication_startServiceCommunication`, `Ad SDKs`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _Cohesion score 0.06775268419104036 - nodes in this community are weakly interconnected._
+- **Why does `TvPlayerBar (control bar, refreshPlayer, media keys)` connect `Ad SDKs` to `Focus Audit`, `Fase 32 - Busqueda y descarga de subtitulos (SubDL + TMDB)`, `Ad SDKs`, `.getAdSessionId`?**
+  _High betweenness centrality (0.118) - this node is a cross-community bridge._
+- **Should `android.view.View` be split into smaller, more focused modules?**
+  _Cohesion score 0.05209274314965372 - nodes in this community are weakly interconnected._
+- **Why does `ExoPlayer (reproductor de vídeo)` connect `Ad SDKs` to `Ad SDKs`, `.getAdSessionId`?**
+  _High betweenness centrality (0.111) - this node is a cross-community bridge._
 - **Should `Home Refresh` be split into smaller, more focused modules?**
-  _Cohesion score 0.06453634085213032 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11822660098522167 - nodes in this community are weakly interconnected._

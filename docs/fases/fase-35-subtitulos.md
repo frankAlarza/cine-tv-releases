@@ -86,10 +86,10 @@ emulador del usuario.
 
 ```powershell
 $env:JAVA_HOME = 'C:\Program Files\Android\Android Studio\jbr'
-& "C:\Users\UsuarioLocal\Documents\Android\cmdline-tools\tools\bin\avdmanager.bat" create avd `
+& C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\cmdline-tools\tools\bin\avdmanager.bat create avd `
     -n CineTVTest -k "system-images;android-34;google-tv;x86" -d tv_1080p --force
 
-$em = 'C:\Users\UsuarioLocal\Documents\Android\emulator\emulator.exe'
+$em = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\emulator\emulator.exe'
 Start-Process $em -ArgumentList '-avd','CineTVTest','-port','5560','-no-boot-anim','-no-snapshot','-gpu','host','-no-audio'
 ```
 

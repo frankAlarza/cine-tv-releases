@@ -10,7 +10,7 @@
 ### 6.1 Capturas de pantalla (siempre `screencap` + `pull`, nunca `>`)
 
 ```powershell
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 $pr  = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 $v   = 'v26'
 & $adb -s emulator-5556 shell screencap -p /sdcard/shot.png
@@ -34,7 +34,7 @@ Ejemplo: `& $adb -s emulator-5556 shell input keyevent 21` (LEFT).
 ### 6.3 Escaneo de logcat (regresión)
 
 ```powershell
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 $out = & $adb -s emulator-5556 logcat -d
 [IO.File]::WriteAllText("$pr\build\logcat-final.txt",
   (($out -join "`r`n") + "`r`n"), (New-Object System.Text.UTF8Encoding($false)))

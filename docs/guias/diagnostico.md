@@ -9,7 +9,7 @@
 ## 1. Comandos de un vistazo
 
 ```powershell
-$adb = 'C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe'
+$adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 $pr  = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
 
 # ¿Estoy en modo TV?

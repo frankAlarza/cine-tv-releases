@@ -13,7 +13,7 @@
 - **Reglas innegociables:** ver `AGENTS.md §3` (no borrar `binding_N`, nunca foreground opaco, smali UTF-8 sin BOM, clases en smali_classes16, etc.).
 - **Design system:** `docs/design-system.md` (Apple TV, dark-only, tokens `tv_color_*`, `tv_space_*`, `tv_text_*`, `tv_radius_*`).
 - **Emulador:** `emulator-5554` (AVD `AndroidTV1080p`, Google TV API 34). Verificar con `adb devices`.
-- **Tools:** apktool `C:\herramientas\apktool\apktool.bat`, build-tools `C:\Users\UsuarioLocal\Documents\Android\build-tools\34.0.0\`, adb `C:\Users\UsuarioLocal\Documents\Android\platform-tools\adb.exe`, keystore `C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore` (alias `premium`, pass `premium123`).
+- **Tools:** apktool `C:\herramientas\apktool\apktool.bat`, build-tools `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\`, adb `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe`, keystore `C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore` (alias `premium`, pass `premium123`).
 
 ## Estado actual (versión nd33)
 
