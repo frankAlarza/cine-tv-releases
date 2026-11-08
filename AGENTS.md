@@ -171,6 +171,8 @@ build falla**): [`docs/guias/build-firma-instalacion.md`](docs/guias/build-firma
 | Crash al abrir Películas/Series: `Resources$NotFoundException #0x7f0d…` en `onCreateViewHolder` | los layouts re-añadidos a `res/` se fijaron en `public.xml` con IDs secuenciales nuevos, pero el DEX compilado hardcodea los IDs **originales** (`R$layout`, `DataBinderMapperImpl`, `dc/j0`, ViewModels) | diagnosticar con `adb logcat -b crash` y cruzar el ID contra `public.xml`/`R$*`; **repinear `public.xml` al ID original que espera el código** (no parchear literales). Regla: recurso borrado+re-añadido → fijarlo en `public.xml` con el ID exacto del DEX. v202, [sesión 38](docs/sesiones/sesion-38-crash-categorias-ids-publicxml.md) |
 | `am start` lanza la app pero al momento aparece `dreamx` (`DreamActivity`) | el screensaver de Google TV roba el foco tras instalar/arrancar | `adb shell settings put system screen_sleep_timeout_sec -1` antes de automatizar keyevents; emulador real en esta máquina = `emulator-5554` |
 | El APK instalado no lleva la versión recién editada (p. ej. el update-check compara la `versionName` vieja) | `apktool b` **reutiliza el manifest compilado del caché** `apktool-salida\build\` pese a cambiar `apktool.yml` | tras cada build, verificar ANTES de instalar: `aapt dump badging <apk> \| Select-String package:`; si no coincide, `Remove-Item apktool-salida\build -Recurse -Force` y rebuild. v203, [sesión 39](docs/sesiones/sesion-39-auditoria-update-seguridad.md) |
+| "Actualizar aplicacion" no hace nada, o descarga y no instala | el release no está publicado, o no cumple los 3 invariantes: `tag_name` == `versionName`, asset llamado **exactamente** `cine-tv.apk`, y digest SHA-256 publicado por GitHub (si falta, la app **no instala**: "El release no publica digest SHA-256") | publicar con `tools\publish-release.ps1` (valida los 3 y falla con código ≠ 0); comprobar `gh api repos/frankAlarza/cine-tv-releases/releases/latest --jq '{tag:.tag_name,digest:.assets[0].digest}'`. v203, [sesión 40](docs/sesiones/sesion-40-cierre-release-v203.md) |
+| Un bug que "solo pasa en español" | el idioma decide **qué ruta de código** se ejecuta, no la causa: el layout roto (IDs de `public.xml` frente al DEX) solo se alcanzaba con el rail traducido | reproducir con `adb logcat -b crash` y cruzar el `Resources$NotFoundException` contra `public.xml` **antes** de tocar el selector de idioma. v202/v203, [sesión 40](docs/sesiones/sesion-40-cierre-release-v203.md) |
 
 **Diagnóstico del letterbox:**
 `dumpsys activity activities` → `letterboxReason=FIXED_ORIENTATION` + `sw304dp ... port`
@@ -207,6 +209,8 @@ significa que la activity pidió portrait en runtime, **no** que el layout sea e
 | Orientación del flujo de anuncios | `smali_classes12/tc/a0$b.smali` |
 | Helper `isTv()` | `smali_classes6/com/movievn/tv/TvUtils.smali` |
 | SDKs de anuncios en TV | `smali*/com/mgs/carparking/app/AppApplication.smali`, `.../ui/MainActivity.smali` |
+| Publicar un release en GitHub | `tools/publish-release.ps1` (tag == versionName, asset `cine-tv.apk`, digest obligatorio) |
+| Flujo de auto-actualización | `tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java` + `tools/build_github_update.ps1` |
 
 ---
 
@@ -268,6 +272,7 @@ Puente: `tools/build_tv_detail.ps1` / `build_category_rail.ps1` / `build_section
 | **Validar o arreglar la navegación con mando de una pantalla** | [`plan-definitivo.md`](plan-definitivo.md) → el fichero de esa fase en [`docs/fases/`](docs/fases/) (es autosuficiente: no hace falta leer nada más) |
 | **Rediseño UI/UX (Apple TV style, dark-only)** | [`docs/design-system.md`](docs/design-system.md) — tokens, componentes, patrones D-pad, plan de fases |
 | API del reproductor (ExoPlayer ofuscado) | [`docs/componentes/reproductor-exoplayer.md`](docs/componentes/reproductor-exoplayer.md) |
+| Publicar un release / canal de auto-actualización | [`docs/actualizacion-apk.md`](docs/actualizacion-apk.md) |
 | Cómo controlar el reproductor desde Java | [`docs/componentes/reproductor-exoplayer-control.md`](docs/componentes/reproductor-exoplayer-control.md) |
 | Estado global, verificaciones y limitaciones | [`docs/componentes/estado-y-limitaciones.md`](docs/componentes/estado-y-limitaciones.md) |
 | Añadir un recurso o una clase | [`docs/guias/cambios-de-diseno-recursos.md`](docs/guias/cambios-de-diseno-recursos.md) |

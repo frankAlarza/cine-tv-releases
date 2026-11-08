@@ -1,35 +1,57 @@
 # Documentación del Sistema de Actualizaciones de la Aplicación Android TV
 
-## Estado Actual (v187 / 40000)
+> **Cuándo leer esto:** para publicar un release nuevo o entender por qué la app
+> dice "No hay version mas reciente" o "El release no publica digest SHA-256".
 
-### Versión Actual
-- **android:versionName**: `"v187"`
-- **android:versionCode**: `"40000"`
+## Estado Actual (v203 / 40006)
 
-**Nota**: Los APKs de prueba construidos tienen versiones v191–v197, pero el `AndroidManifest.xml` principal sigue sin incrementarse y sigue en v187/40000. Para un release real, hay que subir el versionCode/versionName.
+- **android:versionName**: `"v203"`
+- **android:versionCode**: `"40006"`
+- **Release publicado**: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v203>
+  (asset `cine-tv.apk`, digest `sha256:e3d513c0aab15815a0e015afcb2d51bf7fb7448fd538f62122c623b4722905ed`)
 
-### Próxima versión planeada
-- **versionCode**: `40001` (o siguiente)
-- **versionName**: `"v188"` (debe coincidir con el tag del release GitHub)
+### Reglas del canal (v203 en adelante)
+
+1. El **tag del release coincide con el `versionName`** de la app.
+2. El asset **se llama exactamente `cine-tv.apk`**.
+3. El release **publica el digest SHA-256** del asset. GitHub lo calcula solo al subirlo
+   (`digest: "sha256:..."` en la API). **Si no hay digest, la app NO instala** (se rechaza
+   con "El release no publica digest SHA-256").
+4. El `versionCode` **se incrementa** en cada release (regla 13 de `AGENTS.md`).
 
 ---
 
 ## Flujo de Actualización (Update Flow)
 
-El sistema de actualizaciones funciona en 4 pasos:
+El sistema de actualizaciones funciona en 5 pasos:
 
 1. **Version Check** — `VersionCheckTask` en `TvGithubUpdate.java` consulta:
    - API: `https://api.github.com/repos/frankAlarza/cine-tv-releases/releases/latest`
+   - User-Agent propio: `CineTV-Updater/1.0 (Android TV)` (sin UA la API devuelve 403)
    - Versión actual desde `getPackageManager().getPackageInfo(..., 0).versionName`
+   - En la **misma** llamada extrae el `digest` SHA-256 del asset `cine-tv.apk`
 
-2. **Comparison** — Si `latestTag != currentVersion`, se ofrece actualización
+2. **Comparison** — `isNewer(remote, current)` compara **numéricamente** (extrae el primer
+   bloque de dígitos: "v203" -> 203). Si el remoto **no** es estrictamente mayor, NO se
+   ofrece actualización (anti-downgrade). Si la comprobación de red falla, es un **error
+   explícito** (antes descargaba "a ciegas").
 
-3. **Download** — Descarga APK desde:
-   - `https://github.com/frankAlarza/cine-tv-releases/releases/latest/download/cine-tv.apk`
+3. **Download** — descarga el asset a **almacenamiento interno privado**
+   (`ctx.getDir("updates", MODE_PRIVATE)`, no `externalCacheDir`, que era legible por otras
+   apps). Antes de cada descarga se purgan los ficheros residuales.
+   - API: `https://api.github.com/repos/frankAlarza/cine-tv-releases/releases/latest`
+   - Descarga directa: `https://github.com/frankAlarza/cine-tv-releases/releases/latest/download/cine-tv.apk`
 
-4. **Install** — Muestra diálogo del sistema Android para instalar el APK
+4. **Verification** — se calcula el SHA-256 del fichero descargado y se compara con el
+   `digest` publicado por la API. **Si no coincide, el fichero se borra y NO se instala.**
+   Si el digest no venía en la respuesta, tampoco se instala.
+
+5. **Install** — se entrega el APK al instalador del sistema Android mediante
+   `FileProvider` (`com.movievn.cinevi.fileprovider`, `@xml/file_paths` con
+   `<files-path path="."/>`), que cubre el subdirectorio `updates/`.
 
 **Ubicación del código**: `tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java`
+(compilado a smali vía `tools/build_github_update.ps1`).
 
 ---
 
@@ -46,9 +68,8 @@ El sistema de actualizaciones funciona en 4 pasos:
 
 > **El nombre del tag del release debe coincidir exactamente con `versionName` de la app instalada.**
 
-- Ejemplo: Si la app tiene `versionName="v187"`, el release debe tener tag `v187`.
+- Ejemplo: si la app tiene `versionName="v203"`, el release debe tener tag `v203`.
 - El código compara `tag_name` de la API con `versionName` local.
-- Si coinciden y `latest > current`, se ofrece la actualización.
 
 ### Asset del release:
 - El archivo APK subido debe llamarse exactamente `cine-tv.apk`.
@@ -58,57 +79,97 @@ El sistema de actualizaciones funciona en 4 pasos:
 
 ## Procedimiento para Subir una Nueva Versión
 
+> Verificado de punta a punta con v203 (2026-11-08).
+
 ### Paso 1: Incrementar versionCode y versionName
 
-En `apktool-salida/AndroidManifest.xml` (y en el source `AndroidManifest.xml`):
+En `apktool-salida/apktool.yml`:
 
-```xml
-android:versionCode="40001"
-android:versionName="v188"
+```yaml
+versionCode: 40007
+versionName: v204
 ```
+
+> Ojo: `apktool b` **reutiliza el manifest compilado del caché** (`apktool-salida/build/`).
+> Tras editar `apktool.yml`, **verifica ANTES de instalar**:
+> `aapt dump badging <apk> | Select-String package:`. Si la versión no coincide, borra
+> `apktool-salida\build` y recompila.
 
 ### Paso 2: Build, Sign y Align
 
-Ejecutar el ciclo completo (§2 del AGENTS.md):
+Ejecuta el ciclo completo (§2 del `AGENTS.md`):
 
 ```powershell
-# 1) Build
-& 'C:\herramientas\apktool\apktool.bat' b "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\apktool-salida" -o "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-unsigned.apk"
+$pr  = 'C:\Users\UsuarioLocal\Documents\app-cine-new-design'
+$bt  = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0'
 
-# 2) Alinear
-& C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\zipalign.exe -f -p 4 "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-unsigned.apk" "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-aligned.apk"
-
-# 3) Firmar
-& C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\apksigner.bat sign `
-  --ks "C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore" `
+& 'C:\herramientas\apktool\apktool.bat' b "$pr\apktool-salida" -o "$pr\build\cine-tv-v204-unsigned.apk"
+& "$bt\zipalign.exe" -f -p 4 "$pr\build\cine-tv-v204-unsigned.apk" "$pr\build\cine-tv-v204-aligned.apk"
+& "$bt\apksigner.bat" sign `
+  --ks 'C:\Users\UsuarioLocal\Documents\app-android-eventos\premium.keystore' `
   --ks-key-alias premium --ks-pass pass:premium123 --key-pass pass:premium123 `
-  --out "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-signed.apk" "C:\Users\UsuarioLocal\Documents\app-android-cine-tv\build\cine-tv-40001-aligned.apk"
+  --out "$pr\build\cine-tv-v204-signed.apk" "$pr\build\cine-tv-v204-aligned.apk"
 ```
 
-### Paso 3: Renombrar el APK
+### Paso 3: Copiar con el nombre de asset
 
-Renombrar el archivo firmado para que coincida con el nombre esperado por `TvGithubUpdate.java`:
+La app descarga un asset llamado **exactamente** `cine-tv.apk`. `tools/publish-release.ps1`
+ya hace esta copia automáticamente; si prefieres hacerlo a mano:
 
+```powershell
+Copy-Item "$pr\build\cine-tv-v204-signed.apk" "$pr\build\cine-tv.apk" -Force
 ```
-cine-tv-40001-signed.apk → cine-tv.apk
+
+### Paso 4: Crear el release en GitHub
+
+Con el script del repo, que valida los invariantes del canal y comprueba el digest
+publicado:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\publish-release.ps1 `
+  -Tag v204 `
+  -Apk build\cine-tv-v204-signed.apk `
+  -Notes "Notas del release"
 ```
 
-### Paso 4: Crear Release en GitHub
+El script usa `gh` (ya autenticado con scope `repo`), sube el asset con el nombre
+correcto (`cine-tv.apk`) y **falla con código de salida ≠ 0** si el tag no coincide con
+el `versionName`, si GitHub no publica el digest, o si el digest remoto no coincide con
+el SHA-256 local.
 
-1. Ir a `https://github.com/frankAlarza/cine-tv-releases`
-2. Crear nuevo release con tag: `v188`
-3. Subir `cine-tv.apk` como asset del release
-4. **Opcional**: Agregar notas de release (what's new)
+Equivalente manual con `gh`:
 
-### Paso 5: Probar la actualización
+```powershell
+gh release create v204 `
+  --repo frankAlarza/cine-tv-releases `
+  --target master `
+  --title "v204" `
+  --notes "Notas del release" `
+  "$pr\build\cine-tv.apk#cine-tv.apk"
+```
 
-1. Instalar la nueva APK en el emulador
-2. Entrar al cajón lateral de secciones
-3. Debe aparecer el diálogo "Actualizar Aplicación"
-4. Al pulsar "Comprobar", la app debe:
-   - Consultar la API GitHub
-   - Detectar que `v188 > v187` (versión actual)
-   - Ofrecer descargar e instalar
+**NO** uses `tools/update-modal/scripts/upload-release.sh` ni `upload-v172.sh`: ambos
+quedaron **obsoletos** (tags fijos `v40`/`v172`, nombre de asset incorrecto, sin digest
+y —en el segundo— borrando assets de un release ya publicado). Ahora fallan con un
+mensaje que remite al script correcto.
+
+### Paso 5: Verificar que el digest se publica
+
+```powershell
+gh api repos/frankAlarza/cine-tv-releases/releases/latest `
+  --jq '{tag:.tag_name,assets:[.assets[]|{name:.name,digest:.digest}]}'
+```
+
+Debe devolver un `digest` `sha256:<64 hex>`. Si no lo devuelve, la app rechazará la
+instalación ("El release no publica digest SHA-256").
+
+### Paso 6: Probar la actualización
+
+1. Instala la APK nueva en el emulador.
+2. Abre el cajón lateral derecho > "Actualizar aplicacion".
+3. Con la **misma** versión instalada debe salir el toast "No hay version mas reciente".
+4. Para probar la descarga real hay que instalar una versión **anterior** (la sesión 39
+   usó un build de test `v100t` para forzar el camino de descarga completo).
 
 ---
 
@@ -116,22 +177,33 @@ cine-tv-40001-signed.apk → cine-tv.apk
 
 ### 1. Incremento manual de versionCode
 - **No existe hook/script automático** para incrementar versionCode/versionName.
-- Cada release requiere edición manual en `AndroidManifest.xml`.
-- Se recomenta mantener un registro (por ejemplo en `PROGRESS.md` o un documento de releases) de qué versionCode se usó último.
+- Cada release requiere edición manual de `apktool.yml`.
+- Se recomienda mantener el registro en `PROGRESS.md` (ver tabla al final).
 
 ### 2. Coincidencia tagName == versionName
 - Es **obligatorio** que el tag del release GitHub coincida con `versionName` de la app.
-- Si la app tiene `versionName="v188"` y el tag es `v188`, la comparación funcionará.
-- Si hay discrepancia, `TvGithubUpdate` no detectará la actualización o dará error.
+- Si hay discrepancia, `TvGithubUpdate` no detectará la actualización.
 
 ### 3. Nombre de asset
 - El archivo APK subido debe llamarse exactamente `cine-tv.apk`.
-- Si el nombre es diferente (p. ej. `cine-tv-v188.apk`), la descarga o instalación pueden fallar.
+- Si el nombre es diferente (p. ej. `cine-tv-v204.apk`), la descarga falla.
 
-### 4. Emulador preparado
+### 4. Digest obligatorio (v203+)
+- GitHub calcula el SHA-256 del asset al subirlo y lo publica en la API.
+- La app **no instala sin digest**. Si GitHub no lo publica, hay que republicar el asset.
+
+### 5. Emulador preparado
 - El emulador tiene `com.google.android.packageinstaller` activado.
 - Se requiere el permiso `REQUEST_INSTALL_PACKAGES` (añadido en el manifest o via ADB).
-- Prueba: `adb shell settings put global verifier_verify_adb_installs 0` y `adb shell settings put global package_verifier_enable 0` si es necesario.
+- Prueba: `adb shell settings put global verifier_verify_adb_installs 0` y
+  `adb shell settings put global package_verifier_enable 0` si es necesario.
+
+### 6. Nunca hardcodear credenciales
+- `tools/publish-release.ps1` usa `gh` (que ya está autenticado con scope `repo`); no
+  necesita ningún token en el entorno ni en ficheros.
+- Un PAT estuvo hardcodeado en 3 ficheros commiteados de un repo **público**. Ya fue
+  **revocado** (verificado: HTTP 401) y los ficheros están saneados, pero sigue en el
+  historial de git. No vuelvas a escribir tokens en ficheros.
 
 ---
 
@@ -141,22 +213,23 @@ cine-tv-40001-signed.apk → cine-tv.apk
 
 | Archivo | Rol |
 |---------|-----|
-| `tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java` | Orchestrator principal: version check, download, install |
+| `tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java` | Orquestador principal: version check, digest, download, verificación, install |
+| `tools/build_github_update.ps1` | Puente Java -> d8 -> baksmali -> smali_classes16 para la clase anterior |
+| `tools/publish-release.ps1` | Publicador del release: valida tag/versionName, sube el asset con el nombre correcto y comprueba el digest publicado |
 | `tools/update-modal/src/com/movievn/tv/TvUpdateModal.java` | Modal de descarga (referencia, no usado en el flujo actual) |
-| `apktool-salida/AndroidManifest.xml` | Configuración de versionCode/versionName |
-| `base/base.apk` | APK base de referencia (no modificar) |
+| `apktool-salida/apktool.yml` | Configuración de versionCode/versionName |
+| `apktool-salida/res/xml/file_paths.xml` | Rutas del FileProvider (`<files-path path="."/>`) |
 
 ### Clases internas (inner classes) — evitan lambdas:
 
 El código usa clases estáticas internas para listeners:
-- `ConfirmUpdateAction` — OK/Comprobar en el diálogo
-- `CancelUpdateAction` — Cancelar en el diálogo
-- `DownloadTask` — hilo de descarga
-- `InstallPromptAction` — prompt de instalación
-- `ShowErrorAction` — mostrar errores
-- `ToastAction` — toast messages
-- `UpdateStatusAction` — actualizar texto en el diálogo
-- `StartDownloadAction` — iniciar descarga después del version check
+- `VersionCheckTask` — consulta la API y decide si hay actualización
+- `StartDownloadAction` — arranca la descarga tras el version check
+- `DownloadTask` — descarga + verificación SHA-256
+- `UpdateStatusAction` — actualiza el texto del diálogo de progreso
+- `InstallPromptAction` — lanza el instalador del sistema
+- `ShowErrorAction` / `ToastAction` — mensajes de error y aviso
+- `CancelUpdateAction` — cerrar el diálogo
 
 **Regla AGENTS.md §6.7**: "sin clases anonimas ni lambdas. Se usa clases inner estaticas para listeners."
 
@@ -164,20 +237,25 @@ El código usa clases estáticas internas para listeners:
 
 ## Próximos Pasos Recomendados
 
-1. **Hoy**: Realizar primera actualización real (v188) para validar el ciclo completo end-to-end.
-2. **Esta semana**: Documentar el versionCode que se usó último para no repetir números.
-3. **Próximo mes**: Considerar automatizar el incremento de versionCode en el script de build (`build-apk.ps1` o similar).
-4. **Tests**: Verificar que el flujo funciona tanto en emulador como en dispositivo físico (si disponible).
+1. **Hecho (v203, sesión 40)**: release publicado y ciclo verificado end-to-end
+   (descarga + digest coincidente + anti-downgrade + toast "No hay version mas reciente").
+2. Automatizar el incremento de versionCode en el script de build (`build-apk.ps1`).
+3. Probar el flujo en un dispositivo físico (si disponible).
 
 ---
 
-## Registro de Versiones de Testing
+## Registro de Versiones
 
 | VersionCode | versionName | Observaciones |
 |-------------|-------------|---------------|
-| 40000 | v187 | Versión base actual (no incrementada en releases recientes) |
-| 40001 | v188 | Próxima versión de release (por hacer) |
-| 40002 | v189 | Segunda actualización planeada |
-| ... | ... | Continuar incrementando de en uno |
+| 40000 | v187 | Versión base (`versionName` era `4.0.0` en el `apktool.yml` original) |
+| 40001 | v188 | Release publicado 2026-10-31 (sin digest, updater antiguo) |
+| 40002 | v199 | Builds de trabajo v199–v201 (no publicados) |
+| 40003 | v202 | Fix crash Películas/Series (no publicado como tal) |
+| **40006** | **v203** | **Release publicado 2026-11-08 con digest SHA-256** |
+| 40007 | v204 | Siguiente release |
 
-**Fuente**: `PROGRESS.md` y `AndroidManifest.xml` actuals.
+> Nota: 40004 y 40005 se reservaron para los builds de prueba de la sesión 39
+> (`v100t` y el build final con el digest). Siguiente libre: **40007**.
+
+**Fuente:** `PROGRESS.md` y `apktool-salida/apktool.yml` actuales.

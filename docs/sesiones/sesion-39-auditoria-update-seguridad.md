@@ -10,11 +10,17 @@ El token `ghp_I6Vz…` estaba **hardcodeado en 3 ficheros commiteados**:
 - `tools/update-modal/scripts/upload-v172.sh`
 - `tools/update-modal/config/github-config.properties`
 
-**Acción requerida por el usuario: REVOCAR el PAT en
+**Acción requerida del usuario: REVOCAR el PAT en
 https://github.com/settings/tokens** y crear uno nuevo (fin de vida corto,
 scope solo `repo` sobre `cine-tv-releases`). Queda en el historial de git;
 los ficheros ya solo leen `$GITHUB_TOKEN` del entorno. Borrar el historial
 (`git filter-repo`) es opcional — revocar es obligatorio.
+
+> ✅ **Resuelto en la sesión 40**: el PAT está **revocado** (verificado con una
+> llamada real: `GET api.github.com/user` → **HTTP 401**). Para publicar se usó `gh`,
+> que ya estaba autenticado con scope `repo`. Los ficheros del árbol actual están
+> saneados; el string permanece en el historial de git de un repo público, lo que ya
+> no supone riesgo con la credencial inservible.
 
 ## Qué se implementó (del plan `docs/security-update-audit.md`)
 
@@ -72,6 +78,6 @@ instalada, check de actualización → sin descarga (anti-downgrade correcto),
 crash buffer limpio. Ver `build/v203-final-check.png`.
 
 ## Pendiente
-- 🔲 **Revocar el PAT expuesto (usuario, en GitHub).**
-- 🔲 Subir el APK v203 al release con el script saneado + nuevo token en `GITHUB_TOKEN`.
-- 🔲 (Opcional) `git filter-repo` para purgar el token del historial.
+- 🔲 **Revocar el PAT expuesto (usuario, en GitHub).** → ✅ **cerrado en la sesión 40**: verificado con una llamada real (`GET api.github.com/user` → **HTTP 401**, credencial inservible).
+- **Subir el APK v203 al release con el script saneado.** → ✅ **cerrado en la sesión 40**: publicado con `gh` (scope `repo`, sin el PAT). Tag `v203`, asset `cine-tv.apk`, digest `sha256:e3d513c0aab15815a0e015afcb2d51bf7fb7448fd538f62122c623b4722905ed`. Ver [`sesion-40-cierre-release-v203.md`](sesion-40-cierre-release-v203.md).
+- (Opcional) `git filter-repo` para purgar el token del historial. **Ya no es urgente**: el PAT está revocado y los ficheros del árbol actual están saneados. No se ha hecho para no reescribir el historial de un repo con releases publicados (riesgo de romper las URLs de descarga).

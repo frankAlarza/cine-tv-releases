@@ -324,8 +324,9 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   fijar en `public.xml` el ID EXACTO que espera el DEX (`R$*`/mapper).
 
 ### Next Steps (pendientes de sesión)
-- 🔲 Bug con idioma español (funciona en inglés) — revisar `SetLanguageAdapter`/`SetLanguageDialog` (smali_classes10/12) y `hd/c`.
-- 🔲 Implementar recomendaciones de `docs/security-update-audit.md`.
+- ✅ Bug con idioma español → cerrado en la sesión 40: era el crash de layouts de arriba
+   (el rail traducido alcanzaba el layout roto), no `SetLanguageAdapter`/`hd/c`.
+- ✅ Implementar recomendaciones de `docs/security-update-audit.md` → sesión 39.
 
 ## v203 — Auditoría de seguridad del flujo de actualización (sesión 39)
 
@@ -356,5 +357,53 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   edición y commits.
 
 ### Next Steps (v203)
-- 🔲 Revocar PAT + subir v203 al release con el script saneado.
-- 🔲 (Opcional) purgar el token del historial con `git filter-repo`.
+- ✅ Revocar PAT → **verificado revocado** (HTTP 401 contra `api.github.com/user`).
+- ✅ Subir v203 al release → **publicado** (tag `v203`, asset `cine-tv.apk`, digest
+  `sha256:e3d513c0aab15815a0e015afcb2d51bf7fb7448fd538f62122c623b4722905ed`).
+
+## v204 — Cierre del canal de actualización (sesión 40)
+
+- ✅ **Release v203 publicado** en GitHub con `gh` (scope `repo`, **sin el PAT**):
+  <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v203>.
+  Los 3 invariantes del canal verificados: `tag_name`==`versionName`, asset llamado
+  exactamente `cine-tv.apk`, y digest SHA-256 publicado por la API (coincide con el
+  hash local del APK). El canal de actualización deja de estar congelado en v188.
+- ✅ **PAT confirmado revocado** (`GET api.github.com/user` → HTTP 401). El string sigue
+  en el historial de git de un repo **público**, pero la credencial es inservible y los
+  ficheros del árbol actual están saneados. No se reescribe el historial (riesgo de
+  romper las URLs de descarga de los releases publicados).
+- ✅ **6 commits pusheados**: `4a9a329a..6c1ae415 master -> master` (v202, sesión 38,
+  auditoría v203, rebuild del grafo).
+- ✅ **Pendiente "idioma español" cerrado**: era el **mismo** crash de layouts de la
+  sesión 38 (`Resources$NotFoundException #0x7f0d0170`); en español se alcanzaba el
+  layout roto porque la ruta del rail traducida varyaba con el idioma. **No era un bug
+  de `SetLanguageDialog`/`hd/c`**. Con `KEY_PREF_APP_LANGUAGE=es-ES` en el emulador, la
+  navegación en español no produce crashes.
+- ✅ **`docs/actualizacion-apk.md` reescrito**: estaba en v187 y **no documentaba el
+  requisito de digest** (un lector habría publicado un release que la app rechaza).
+  Ahora: flujo real de 5 pasos, publicación con `gh`, scripts `upload-release.sh`/
+  `upload-v172.sh` marcados como **obsoletos**, registro de versionCodes y la trampa del
+  manifest cacheado de apktool.
+- ✅ `docs/sesiones/indice.md` y `docs/00-INDICE.md` actualizados (la tabla de sesiones
+  estaba congelada en la sesión 16).
+- ✅ **E2E verificado en emulador** (delegado a subagente `opencode-go/beam-free#low`):
+  logcat `check: info=v203/digest current=v203` → sin descarga (anti-downgrade OK);
+  SHA-256 del asset descargado == digest publicado; buffer de crash limpio. Evidencia
+  visual: `build/v203-release-check.png` con el toast "No hay version mas reciente (v203)".
+- ✅ **Nuevo publicador `tools/publish-release.ps1`**: valida tag==versionName, sube el
+  asset como `cine-tv.apk`, verifica el digest publicado y sale con error si algo no
+  cuadra. Los dos scripts antiguos (`upload-release.sh`, `upload-v172.sh`) fallaban en
+  silencio subiendo un asset que la app nunca descarga (nombre incorrecto, tag fijo, sin
+  digest; el segundo además borraba assets de un release publicado) → ahora avisan y
+  remiten al correcto.
+- 📌 Reglas nuevas (detalle en [`docs/sesiones/sesion-40-cierre-release-v203.md`](docs/sesiones/sesion-40-cierre-release-v203.md)):
+  - **Publicar ≠ compilar**: un canal de actualización endurecido no hace nada si el
+    release no existe; comprobar `/releases/latest` con digest, no solo el APK firmado.
+  - **Un pendiente "idioma X" puede ser un pendiente de recursos**: reproducir con
+    `logcat -b crash` y cruzar contra `public.xml` antes de tocar el selector de idioma.
+
+### Next Steps (v204)
+- 🔲 Publicar v204 en el próximo hito que toque código.
+- 🔲 (Opcional, bajo riesgo ahora) purgar el PAT del historial con `git filter-repo`.
+- 🔲 Borrar del repo `tools/update-modal/scripts/upload-release.sh` y `upload-v172.sh`
+  (ya fallan con aviso; quedan como trampas en el árbol).

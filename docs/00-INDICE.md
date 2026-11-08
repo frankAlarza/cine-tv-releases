@@ -75,6 +75,15 @@ Ningún documento de nivel 3 supera los ~22 KB, y la mayoría no llega a 10 KB.
 | [`reproductor-exoplayer-control.md`](componentes/reproductor-exoplayer-control.md) | — | **Cómo controlar el reproductor**: rutas posibles, `PlayerCtl` en Java, puente smali, trampas |
 | [`estado-y-limitaciones.md`](componentes/estado-y-limitaciones.md) | — | Verificación acumulada por versión, limitaciones conocidas, notas técnicas y tabla de ficheros clave |
 
+### Documentos sueltos en `docs/`
+
+| Fichero | Contenido |
+|---|---|
+| [`actualizacion-apk.md`](actualizacion-apk.md) | **Sistema de actualizaciones**: flujo de 5 pasos, invariantes del canal (tag == versionName, asset `cine-tv.apk`, digest obligatorio), procedimiento de publicación con `gh`, registro de versionCodes |
+| [`security-update-audit.md`](security-update-audit.md) | Auditoría de seguridad del flujo de actualización (plan; ejecutado en la sesión 39) |
+| [`design-system.md`](design-system.md) | Tokens y patrones del rediseño Apple TV dark-only |
+| [`poc-*.md`](poc-pelicula-movievn.md) | Pruebas de concepto de la API MovieVN (cifrado AES, VOD, BD) |
+
 ---
 
 ## 5. `docs/sesiones/` — la bitácora
@@ -88,6 +97,12 @@ Ningún documento de nivel 3 supera los ~22 KB, y la mayoría no llega a 10 KB.
 | [`sesion-13.md`](sesiones/sesion-13.md) | 13, 13b (v33) |
 | [`sesion-14.md`](sesiones/sesion-14.md) | 14, 14b (v36 → v38) |
 | [`sesion-16.md`](sesiones/sesion-16.md) | 16 (v39) |
+| [`sesion-35.md`](sesiones/sesion-35.md) | 35 (v109) — foco en botones de idioma y `selectSeason` |
+| [`sesion-36-buscador-autocomplete.md`](sesiones/sesion-36-buscador-autocomplete.md) | 36 (v142–v145) — buscador |
+| [`sesion-37-home-streaming-back-focus.md`](sesiones/sesion-37-home-streaming-back-focus.md) | 37 (v147–v154) — Home Streaming |
+| [`sesion-38-crash-categorias-ids-publicxml.md`](sesiones/sesion-38-crash-categorias-ids-publicxml.md) | 38 (v202) — crash Películas/Series: IDs de `public.xml` vs DEX |
+| [`sesion-39-auditoria-update-seguridad.md`](sesiones/sesion-39-auditoria-update-seguridad.md) | 39 (v203) — auditoría de seguridad del flujo de actualización |
+| [`sesion-40-cierre-release-v203.md`](sesiones/sesion-40-cierre-release-v203.md) | 40 (v204) — publicación del release v203 y cierre de pendientes |
 
 ---
 
