@@ -258,9 +258,9 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1794152274.9028792,
-    "seen": 1794156253.1530707,
-    "ast_hash": "b3c8c02040478c6c3046fdf92d40890a",
+    "mtime": 1794159455.6712756,
+    "seen": 1794159519.4932272,
+    "ast_hash": "c78e3a80e4433ffc3612a1d455067492",
     "semantic_hash": ""
   },
   "DESIGN.md": {
@@ -276,9 +276,9 @@
     "semantic_hash": "cb6f8e34e585cd7005a4ebefe79d348a"
   },
   "PROGRESS.md": {
-    "mtime": 1793407178.3715546,
-    "seen": 1793413454.9562428,
-    "ast_hash": "ceaa8c78508d51760ca549e9c4f483b0",
+    "mtime": 1794159468.1629877,
+    "seen": 1794159519.4932334,
+    "ast_hash": "9a265a250c0a717ecbae3465c0d90491",
     "semantic_hash": ""
   },
   "README.md": {
@@ -720,10 +720,10 @@
     "semantic_hash": "e0a909d735eec461106b5ea95ff998e9"
   },
   "docs/sesiones/indice.md": {
-    "mtime": 1792982862.6324391,
-    "seen": 1793361738.7912152,
-    "ast_hash": "a790ee49ccb1a497b332eb104cf83013",
-    "semantic_hash": "a790ee49ccb1a497b332eb104cf83013"
+    "mtime": 1794159428.489806,
+    "seen": 1794159519.4933496,
+    "ast_hash": "2554476e2bc7faaec31f632625ca56de",
+    "semantic_hash": ""
   },
   "docs/sesiones/sesion-01-04.md": {
     "mtime": 1792612361.460905,
@@ -1305,6 +1305,12 @@
     "mtime": 1793485028.5035589,
     "seen": 1794151426.1028411,
     "ast_hash": "3048ed0ce70d7f32a2dfa7999b7e86e3",
+    "semantic_hash": ""
+  },
+  "docs/sesiones/sesion-38-crash-categorias-ids-publicxml.md": {
+    "mtime": 1794159417.583179,
+    "seen": 1794159519.493367,
+    "ast_hash": "70c00edc0f8c510fda131662657b36e1",
     "semantic_hash": ""
   }
 }

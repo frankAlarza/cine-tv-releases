@@ -258,9 +258,9 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1794159455.6712756,
-    "seen": 1794159519.4932272,
-    "ast_hash": "c78e3a80e4433ffc3612a1d455067492",
+    "mtime": 1794165730.9578183,
+    "seen": 1794165833.330453,
+    "ast_hash": "3a555189f8dc012a4a0b5f68de746f14",
     "semantic_hash": ""
   },
   "DESIGN.md": {
@@ -276,9 +276,9 @@
     "semantic_hash": "cb6f8e34e585cd7005a4ebefe79d348a"
   },
   "PROGRESS.md": {
-    "mtime": 1794159468.1629877,
-    "seen": 1794159519.4932334,
-    "ast_hash": "9a265a250c0a717ecbae3465c0d90491",
+    "mtime": 1794165716.8153841,
+    "seen": 1794165833.3304565,
+    "ast_hash": "1189830b1f4f0233559c281d26933cc1",
     "semantic_hash": ""
   },
   "README.md": {
@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "apktool-salida/apktool.yml": {
-    "mtime": 1794156017.335134,
-    "seen": 1794156253.1528978,
-    "ast_hash": "8e2c7f9f5ca6c0689ee79087c0d3336d",
+    "mtime": 1794165569.7394822,
+    "seen": 1794165833.3303351,
+    "ast_hash": "64130ca82b57027abf6f3742ffbb0a1f",
     "semantic_hash": ""
   },
   "apktool-salida/assets/fyb_iframe_endcard_tmpl.html": {
@@ -720,9 +720,9 @@
     "semantic_hash": "e0a909d735eec461106b5ea95ff998e9"
   },
   "docs/sesiones/indice.md": {
-    "mtime": 1794159428.489806,
-    "seen": 1794159519.4933496,
-    "ast_hash": "2554476e2bc7faaec31f632625ca56de",
+    "mtime": 1794165615.3055875,
+    "seen": 1794165833.330555,
+    "ast_hash": "300f50024228bb079632afff93be4c44",
     "semantic_hash": ""
   },
   "docs/sesiones/sesion-01-04.md": {
@@ -1128,9 +1128,9 @@
     "semantic_hash": ""
   },
   "tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java": {
-    "mtime": 1793414056.1257002,
-    "seen": 1793414123.0484664,
-    "ast_hash": "17ce65be097054d66015742bf0246706",
+    "mtime": 1794164509.5265453,
+    "seen": 1794165833.3304226,
+    "ast_hash": "e303b772ac8bd8c975e36f26fb404db0",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/build-apk.sh": {
@@ -1152,15 +1152,15 @@
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/upload-release.sh": {
-    "mtime": 1793407178.4106376,
-    "seen": 1793413454.9562323,
-    "ast_hash": "019a87c99fb084c0489ae22dfd1b2e8d",
+    "mtime": 1794163487.193866,
+    "seen": 1794165833.3304448,
+    "ast_hash": "2f455543859f48bbd7d517bab929ef99",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/upload-v172.sh": {
-    "mtime": 1793404676.681157,
-    "seen": 1793413454.9562333,
-    "ast_hash": "e5db26dff61d51cb1a0c8186bb7cc32e",
+    "mtime": 1794163481.4992626,
+    "seen": 1794165833.3304458,
+    "ast_hash": "de280924ab2031a404fcf98ea7416baa",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/verify-menu.ps1": {
@@ -1284,9 +1284,9 @@
     "semantic_hash": ""
   },
   "docs/security-update-audit.md": {
-    "mtime": 1793413658.680514,
-    "seen": 1793414123.0485957,
-    "ast_hash": "467a8cc00746e613fe3be82dff156fc0",
+    "mtime": 1794165787.7787495,
+    "seen": 1794165833.3305535,
+    "ast_hash": "bcc11d1ab4223aa1706a19c0bd020fcf",
     "semantic_hash": ""
   },
   "scratch/bump_version.py": {
@@ -1311,6 +1311,18 @@
     "mtime": 1794159417.583179,
     "seen": 1794159519.493367,
     "ast_hash": "70c00edc0f8c510fda131662657b36e1",
+    "semantic_hash": ""
+  },
+  "tools/build_github_update.ps1": {
+    "mtime": 1794163331.0176353,
+    "seen": 1794165833.3303864,
+    "ast_hash": "08ed37a0b0445ca7d528dcf960e9ade1",
+    "semantic_hash": ""
+  },
+  "docs/sesiones/sesion-39-auditoria-update-seguridad.md": {
+    "mtime": 1794165594.4700089,
+    "seen": 1794165833.3305728,
+    "ast_hash": "73153593470140117e92c8eb0543f2cb",
     "semantic_hash": ""
   }
 }
