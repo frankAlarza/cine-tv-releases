@@ -6560,21 +6560,21 @@
     <public type="layout" name="activity_web" id="0x7f0d003a" />
     <public type="layout" name="activity_web_game" id="0x7f0d003b" />
     <public type="layout" name="admob_empty_layout" id="0x7f0d003c" />
-    <public type="layout" name="fragment_category" id="0x7f0d003d" />
-    <public type="layout" name="fragment_channel" id="0x7f0d003e" />
+    <public type="layout" name="fragment_category" id="0x7f0d013a" />
+    <public type="layout" name="fragment_channel" id="0x7f0d013b" />
     <public type="layout" name="banner_item" id="0x7f0d003f" />
-    <public type="layout" name="fragment_channel_look" id="0x7f0d0040" />
+    <public type="layout" name="fragment_channel_look" id="0x7f0d013c" />
     <public type="layout" name="item_home_content_multiple_category" id="0x7f0d0041" />
     <public type="layout" name="item_home_content_multiple_category_list" id="0x7f0d0042" />
-    <public type="layout" name="item_home_content_multiple_list_item_category" id="0x7f0d0043" />
-    <public type="layout" name="item_home_content_multiple_list_item_category_list" id="0x7f0d0044" />
-    <public type="layout" name="item_home_recommend_multiple_category" id="0x7f0d0045" />
-    <public type="layout" name="item_home_recommend_multiple_list_item_category" id="0x7f0d0046" />
+    <public type="layout" name="item_home_content_multiple_list_item_category" id="0x7f0d0170" />
+    <public type="layout" name="item_home_content_multiple_list_item_category_list" id="0x7f0d0171" />
+    <public type="layout" name="item_home_recommend_multiple_category" id="0x7f0d0180" />
+    <public type="layout" name="item_home_recommend_multiple_list_item_category" id="0x7f0d0185" />
     <public type="layout" name="pop_layout_subtitle_item" id="0x7f0d0047" />
-    <public type="layout" name="preference_category" id="0x7f0d0048" />
-    <public type="layout" name="preference_category_material" id="0x7f0d0049" />
-    <public type="layout" name="preference_information_material" id="0x7f0d004a" />
-    <public type="layout" name="preference_list_fragment" id="0x7f0d004b" />
+    <public type="layout" name="preference_category" id="0x7f0d028a" />
+    <public type="layout" name="preference_category_material" id="0x7f0d028b" />
+    <public type="layout" name="preference_information_material" id="0x7f0d0290" />
+    <public type="layout" name="preference_list_fragment" id="0x7f0d0291" />
     <public type="layout" name="bm_exo_legacy_player_control_view" id="0x7f0d00e2" />
     <public type="layout" name="bm_exo_list_divider" id="0x7f0d00e3" />
     <public type="layout" name="bm_exo_player_control_ffwd_button" id="0x7f0d00e4" />
