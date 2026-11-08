@@ -941,11 +941,9 @@
 .method public static i(Landroid/content/Context;)Z
     .locals 1
 
-    # --- PATCH-TV: la app original se cierra en Android TV cuando esto devuelve true ---
     const/4 v0, 0x0
 
     return v0
-    # --- FIN PATCH-TV ---
 .end method
 
 .method public static j()I
@@ -1337,11 +1335,9 @@
 .method public static o()Z
     .locals 1
 
-    # --- PATCH-TV: deteccion anti-emulador; se neutraliza para poder probar en AVD TV ---
     const/4 v0, 0x0
 
     return v0
-    # --- FIN PATCH-TV ---
 .end method
 
 .method public static p()Z

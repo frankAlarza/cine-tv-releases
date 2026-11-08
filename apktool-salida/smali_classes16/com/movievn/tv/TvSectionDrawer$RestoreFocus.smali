@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 897
+    .line 907
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 898
+    .line 908
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$RestoreFocus;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 899
+    .line 909
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public run()V
     .locals 1
 
-    .line 903
+    .line 913
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$RestoreFocus;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mrestoreFocus(Lcom/movievn/tv/TvSectionDrawer;)V
 
-    .line 904
+    .line 914
     return-void
 .end method

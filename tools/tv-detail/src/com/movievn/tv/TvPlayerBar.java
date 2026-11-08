@@ -194,7 +194,11 @@ public class TvPlayerBar {
 
     private static boolean isTv(Context ctx) {
         int mode = ctx.getResources().getConfiguration().uiMode & Configuration.UI_MODE_TYPE_MASK;
-        return mode == Configuration.UI_MODE_TYPE_TELEVISION;
+        if (mode == Configuration.UI_MODE_TYPE_TELEVISION) return true;
+        int size = ctx.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK;
+        return size == Configuration.SCREENLAYOUT_SIZE_LARGE
+                || size == Configuration.SCREENLAYOUT_SIZE_XLARGE;
     }
 
     private void schedule(final int attempt) {
@@ -219,6 +223,15 @@ public class TvPlayerBar {
             return false;
         }
         controller = vpv.getPlaybackControlView();
+
+        // La libreria tiene su propio controlador (título, ±10s, play/pause,
+        // progreso, fullscreen) que, al estar encima del vídeo, se duplica con
+        // la barra flotante de la aplicación. Como TvPlayerBar ya expone todos
+        // los controles funcionales, dejamos el controlador de la librería
+        // oculto: solo permanece la barra flotante de la app.
+        if (controller != null) {
+            controller.setVisibility(View.GONE);
+        }
 
         // La caja del video debe ser alcanzable con el D-pad: los controles
         // (barra + boton de pantalla completa) aparecen cuando el foco entra

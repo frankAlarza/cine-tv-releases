@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 2256
+    .line 2269
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BoxKey;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -38,7 +38,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 2259
+    .line 2272
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BoxKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, p2, p3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhandleMediaKey(Lcom/movievn/tv/TvPlayerBar;ILandroid/view/KeyEvent;)Z

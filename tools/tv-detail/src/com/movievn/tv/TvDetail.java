@@ -92,7 +92,11 @@ public class TvDetail {
 
     private static boolean isTv(Context ctx) {
         int mode = ctx.getResources().getConfiguration().uiMode & Configuration.UI_MODE_TYPE_MASK;
-        return mode == Configuration.UI_MODE_TYPE_TELEVISION;
+        if (mode == Configuration.UI_MODE_TYPE_TELEVISION) return true;
+        int size = ctx.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK;
+        return size == Configuration.SCREENLAYOUT_SIZE_LARGE
+                || size == Configuration.SCREENLAYOUT_SIZE_XLARGE;
     }
 
     private void schedule(final int attempt) {

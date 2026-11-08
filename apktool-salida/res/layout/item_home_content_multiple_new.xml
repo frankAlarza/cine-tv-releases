@@ -7,11 +7,11 @@
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:tag="binding_2" android:paddingLeft="@dimen/dp_8" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_12">
-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_3" android:background="@drawable/bg_home_item_change" android:focusable="true" android:foreground="@drawable/bg_focused" android:layout_width="@dimen/dp_165" android:layout_height="@dimen/dp_36">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_3" android:background="@drawable/bg_home_item_change" android:focusable="true" android:layout_width="@dimen/dp_165" android:layout_height="@dimen/dp_36" android:foreground="@drawable/bg_focused">
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_item_change_more" />
             <TextView android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_primary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_6" android:text="@string/text_bt_more" />
         </LinearLayout>
-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_4" android:background="@drawable/bg_home_item_change" android:focusable="true" android:foreground="@drawable/bg_focused" android:layout_width="@dimen/dp_165" android:layout_height="@dimen/dp_36" android:layout_alignParentRight="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_4" android:background="@drawable/bg_home_item_change" android:focusable="true" android:layout_width="@dimen/dp_165" android:layout_height="@dimen/dp_36" android:foreground="@drawable/bg_focused" android:layout_alignParentRight="true">
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_item_change_other" />
             <TextView android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_primary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_6" android:text="@string/text_bt_change" />
         </LinearLayout>

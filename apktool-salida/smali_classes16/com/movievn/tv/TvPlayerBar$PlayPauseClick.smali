@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 2215
+    .line 2228
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2216
+    .line 2229
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$PlayPauseClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2217
+    .line 2230
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 2221
+    .line 2234
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$PlayPauseClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mtogglePlayPause(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2222
+    .line 2235
     return-void
 .end method

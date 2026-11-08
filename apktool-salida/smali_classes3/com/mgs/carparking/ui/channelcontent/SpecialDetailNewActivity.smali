@@ -231,6 +231,130 @@
 
 
 # virtual methods
+.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    .locals 5
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v0
+
+    const/16 v1, 0x14
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v1, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+
+    check-cast v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;
+
+    iget-object v2, v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->k:Landroid/widget/ImageView;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v3
+
+    if-ne v3, v2, :cond_1
+
+    iget-object v1, v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/View;->isShown()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Landroid/view/View;->requestFocus()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/16 v1, 0x13
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+
+    check-cast v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;
+
+    iget-object v1, v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->k:Landroid/widget/ImageView;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->findContainingViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAbsoluteAdapterPosition()I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public initContentView(Landroid/os/Bundle;)I
     .locals 0
 
@@ -708,89 +832,4 @@
 
     .line 66
     return-void
-.end method
-
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 5
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-    move-result v0
-    if-nez v0, :cond_super
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-    move-result v0
-    const/16 v1, 0x14
-    if-ne v0, v1, :check_up
-
-    iget-object v1, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
-    check-cast v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;
-    iget-object v2, v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->k:Landroid/widget/ImageView;
-    if-eqz v2, :cond_super
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
-    move-result-object v3
-    if-ne v3, v2, :cond_super
-
-    iget-object v1, v1, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
-    if-eqz v1, :cond_super
-
-    invoke-virtual {v1}, Landroid/view/View;->isShown()Z
-    move-result v4
-    if-eqz v4, :cond_super
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-    move-result v4
-    if-lez v4, :cond_super
-
-    const/4 v4, 0x0
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-    move-result-object v4
-    if-eqz v4, :cond_super
-
-    invoke-virtual {v4}, Landroid/view/View;->requestFocus()Z
-    move-result v4
-    if-eqz v4, :cond_super
-
-    const/4 v0, 0x1
-    return v0
-
-    :check_up
-    const/16 v1, 0x13
-    if-ne v0, v1, :cond_super
-
-    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
-    check-cast v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;
-    iget-object v1, v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
-    if-eqz v1, :cond_super
-
-    iget-object v2, v0, Lcom/mgs/carparking/databinding/ActivitySpecialDetailNewBindingImpl;->k:Landroid/widget/ImageView;
-    if-eqz v2, :cond_super
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
-    move-result-object v3
-    if-eqz v3, :cond_super
-
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->findContainingViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-    move-result-object v3
-    if-eqz v3, :cond_super
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAbsoluteAdapterPosition()I
-    move-result v3
-    if-nez v3, :cond_super
-
-    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
-    move-result v3
-    if-eqz v3, :cond_super
-
-    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
-    move-result v2
-    if-eqz v2, :cond_super
-
-    const/4 v0, 0x1
-    return v0
-
-    :cond_super
-    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    move-result v0
-    return v0
 .end method

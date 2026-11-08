@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1930
+    .line 1943
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1931
+    .line 1944
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekChange;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1932
+    .line 1945
     return-void
 .end method
 
@@ -40,12 +40,12 @@
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 0
 
-    .line 1936
+    .line 1949
     if-nez p3, :cond_0
 
     return-void
 
-    .line 1937
+    .line 1950
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekChange;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -53,20 +53,20 @@
 
     invoke-static {p1, p2, p3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mseekTo(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 1938
+    .line 1951
     return-void
 .end method
 
 .method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
-    .line 1940
+    .line 1953
     return-void
 .end method
 
 .method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
-    .line 1943
+    .line 1956
     return-void
 .end method

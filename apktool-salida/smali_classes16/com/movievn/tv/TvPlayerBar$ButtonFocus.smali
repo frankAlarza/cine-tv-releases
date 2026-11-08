@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1698
+    .line 1711
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1699
+    .line 1712
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$ButtonFocus;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1700
+    .line 1713
     return-void
 .end method
 
@@ -40,14 +40,14 @@
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 1
 
-    .line 1704
+    .line 1717
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$ButtonFocus;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0, p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputlastButton(Lcom/movievn/tv/TvPlayerBar;Landroid/view/View;)V
 
-    .line 1705
+    .line 1718
     :cond_0
     if-eqz p2, :cond_1
 
@@ -75,7 +75,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1706
+    .line 1719
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$ButtonFocus;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -84,7 +84,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1707
+    .line 1720
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$ButtonFocus;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -99,7 +99,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1708
+    .line 1721
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$ButtonFocus;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -110,7 +110,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1711
+    .line 1724
     :cond_1
     return-void
 .end method

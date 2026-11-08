@@ -49,28 +49,25 @@
 
     .line 3
     .line 4
-    # TV port (v30): en TV NO se lee el portapapeles. El mod lo volca entero al
-    # logcat (Log.e "request") y Android 12+ muestra "pasted from your clipboard".
-    # El codigo de invitacion (#invited#...#@#) del mod no aporta nada en un TV.
     invoke-static {v0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_leer_clip
+    if-eqz v1, :cond_0
 
     const-string v0, ""
 
-    goto :cond_clip_ok
+    goto :goto_0
 
-    :cond_leer_clip
+    :cond_0
     invoke-static {v0}, Ltc/i;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_clip_ok
     .line 7
     .line 8
     .line 9
+    :goto_0
     invoke-static {v0}, Lfp/o;->b(Ljava/lang/CharSequence;)Z
 
     .line 10
@@ -82,10 +79,8 @@
 
     .line 13
     .line 14
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    # TV port (v30): se elimina el Log.e("request", <portapapeles>) que el mod
-    # dejaba en el logcat (filtraba el portapapeles del usuario en texto plano).
     .line 20
     .line 21
     sput-object v0, Lcom/mgs/carparking/app/AppApplication;->clipStr:Ljava/lang/String;
@@ -120,7 +115,7 @@
 
     .line 36
     .line 37
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     .line 38
     const/4 v1, 0x1
@@ -143,7 +138,7 @@
 
     .line 47
     .line 48
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     .line 49
     .line 50
@@ -156,33 +151,33 @@
     invoke-static {}, Ltc/i;->a()V
 
     .line 55
-    goto :goto_0
+    goto :goto_1
 
     .line 56
     .line 57
     .line 58
-    :cond_0
+    :cond_1
     invoke-static {v2}, Ltc/c;->f(Ljava/lang/String;)V
 
     .line 59
-    goto :goto_0
+    goto :goto_1
 
     .line 60
     .line 61
     .line 62
-    :cond_1
+    :cond_2
     invoke-static {v2}, Ltc/c;->f(Ljava/lang/String;)V
 
     .line 63
-    goto :goto_0
+    goto :goto_1
 
     .line 64
     .line 65
     .line 66
-    :cond_2
+    :cond_3
     invoke-static {v2}, Ltc/c;->f(Ljava/lang/String;)V
 
     .line 67
-    :goto_0
+    :goto_1
     return-void
 .end method

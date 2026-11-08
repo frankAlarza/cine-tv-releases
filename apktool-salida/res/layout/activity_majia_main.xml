@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:focusable="true" android:foreground="@drawable/bg_focused" android:descendantFocusability="afterDescendants" android:id="@id/main_drawer" android:layout_width="match_parent" android:layout_height="match_parent"
+<LinearLayout android:id="@id/main_drawer" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="@drawable/bg_focused"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView android:layout_width="match_parent" android:layout_height="match_parent" />
 </LinearLayout>
-

@@ -137,7 +137,8 @@ build falla**): [`docs/guias/build-firma-instalacion.md`](docs/guias/build-firma
     el fallo en BlueStacks (Android 9).
 12. **Clases propias en `smali_classes16`** (no en `smali_classes7`, que está al límite de
     65536 referencias de método).
-13. **Commit por hito/feature/bugfix (grafo actualizado).** Tras completar cada hito,
+13. **Versionado para actualización GitHub:** cada nueva APK debe incrementar `android:versionCode`/`android:versionName` en `AndroidManifest.xml` (y en el release tag de GitHub) para que `TvGithubUpdate` detecte correctamente si hay una versión superior disponible.
+14. **Commit por hito/feature/bugfix (grafo actualizado).** Tras completar cada hito,
     feature o bugfix (y verificar build + captura), hacer `git commit` con mensaje claro.
     El hook `post-commit` de graphify rehace `graph.json`/`GRAPH_REPORT.md` sobre el código
     cambiado; sin commits frecuentes el grafo queda desactualizado y pierde utilidad.

@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:id="@id/rl_top" android:layout_width="match_parent" android:layout_height="wrap_content">
         <TextView android:textSize="@dimen/sp_15" android:textStyle="bold" android:textColor="@color/tv_color_text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="@string/str_dialog_cling_title" android:layout_centerInParent="true" />
-        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_42BD56" android:id="@id/tv_help" android:padding="@dimen/dp_9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="æŠ•å±è´´å£«" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/sp_13" android:textColor="@color/color_42BD56" android:id="@id/tv_help" android:padding="@dimen/dp_9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:text="æŠ•å±\u008fè´´å£«" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
     </RelativeLayout>
     <View android:background="@color/color_actionbar_line" android:layout_width="match_parent" android:layout_height="@dimen/dp_5" android:layout_marginBottom="@dimen/dp_9" />
     <RelativeLayout android:padding="@dimen/dp_9" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:minHeight="@dimen/dp_200">

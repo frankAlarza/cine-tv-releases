@@ -107,57 +107,6 @@
     return-void
 .end method
 
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 1
-    .param p1
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const v0, 0x13
-
-    if-eq p1, v0, :cond_dpad_none
-
-    const v0, 0x14
-
-    if-eq p1, v0, :cond_dpad_none
-
-    const v0, 0x15
-
-    if-eq p1, v0, :cond_dpad_none
-
-    const v0, 0x16
-
-    if-eq p1, v0, :cond_dpad_none
-
-    const v0, 0x17
-
-    if-eq p1, v0, :cond_dpad_none
-
-    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_dpad_none
-
-    const/4 v0, 0x0
-
-    return v0
-
-    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    return v0
-
-.end method
-
 
 # virtual methods
 .method public final a(Landroid/content/Context;)V
@@ -336,6 +285,55 @@
     .line 29
     :cond_2
     return-void
+.end method
+
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/KeyEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const v0, 0x13
+
+    if-eq p1, v0, :cond_0
+
+    const v0, 0x14
+
+    if-eq p1, v0, :cond_0
+
+    const v0, 0x15
+
+    if-eq p1, v0, :cond_0
+
+    const v0, 0x16
+
+    if-eq p1, v0, :cond_0
+
+    const v0, 0x17
+
+    if-eq p1, v0, :cond_0
+
+    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final onTextChanged(Ljava/lang/CharSequence;III)V

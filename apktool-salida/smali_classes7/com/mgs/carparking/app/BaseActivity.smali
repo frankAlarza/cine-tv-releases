@@ -756,11 +756,11 @@
 
     .line 62
     .line 63
-
     invoke-virtual {p0}, Lcom/mgs/carparking/app/BaseActivity;->initData()V
 
     iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
-    if-eqz v0, :cond_tvskip2
+
+    if-eqz v0, :cond_2
 
     .line 64
     .line 65
@@ -769,7 +769,7 @@
 
     .line 67
     .line 68
-    :cond_tvskip2
+    :cond_2
     iget-object p1, p0, Lcom/mgs/carparking/app/BaseActivity;->l:Lme/goldze/mvvmhabit/base/BaseViewModel;
 
     .line 69

@@ -1,10 +1,11 @@
 #!/bin/bash
 # Subir APK al repo privado frankAlarza/cine-tv-releases (release v40)
-# Uso: bash upload-release.sh (con TOKEN actualizado en este archivo)
+# Uso: bash upload-release.sh [VERSION]  (ej: bash upload-release.sh v180)
+VERSION="${1:-v40}"
 TOKEN="TU_PAT_AQUI"
 REPO="frankAlarza/cine-tv-releases"
-RELEASE_TAG="v40"
-APK_FILE="build/cine-tv-v40-signed.apk"
+RELEASE_TAG="$VERSION"
+APK_FILE="build/cine-tv-${VERSION#v}-signed.apk"
 
 echo "=== Intentando subir APK privado a GitHub ==="
 echo "Repo: $REPO"

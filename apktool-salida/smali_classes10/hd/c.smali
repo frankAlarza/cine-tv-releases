@@ -538,10 +538,12 @@
     invoke-super {p0, p1}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;)V
 
     .line 30
-    # Mover el foco al icono de cerrar al mostrar el modal
     iget-object v0, p0, Lhd/c;->a:Landroid/widget/ImageView;
-    if-eqz v0, :skip_focus
+
+    if-eqz v0, :cond_0
+
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
-    :skip_focus
+
+    :cond_0
     return-void
 .end method

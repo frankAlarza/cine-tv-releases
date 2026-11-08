@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Anillo de foco del boton de pantalla completa de la ficha TV (v32).
-     Halo claro ceñido (con insets para que no se recorte) y sin color de
-     acento: el boton forma parte del overlay del reproductor.
-     Transparente en reposo (nunca un foreground opaco). -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="true">
         <layer-list>
-            <item
-                android:left="2dp"
-                android:top="2dp"
-                android:right="2dp"
-                android:bottom="2dp">
+            <item android:left="2.0dp" android:top="2.0dp" android:right="2.0dp" android:bottom="2.0dp">
                 <shape android:shape="rectangle">
                     <solid android:color="#00000000" />
-                    <stroke android:width="5dp" android:color="#1FFFFFFF" />
-                    <corners android:radius="10dp" />
+                    <stroke android:width="5.0dp" android:color="#1fffffff" />
+                    <corners android:radius="10.0dp" />
                 </shape>
             </item>
-            <item
-                android:left="2dp"
-                android:top="2dp"
-                android:right="2dp"
-                android:bottom="2dp">
+            <item android:left="2.0dp" android:top="2.0dp" android:right="2.0dp" android:bottom="2.0dp">
                 <shape android:shape="rectangle">
                     <solid android:color="#00000000" />
-                    <stroke android:width="1.5dp" android:color="#8CFFFFFF" />
-                    <corners android:radius="10dp" />
+                    <stroke android:width="1.5dp" android:color="#8cffffff" />
+                    <corners android:radius="10.0dp" />
                 </shape>
             </item>
         </layer-list>
@@ -33,8 +22,8 @@
     <item>
         <shape android:shape="rectangle">
             <solid android:color="#00000000" />
-            <stroke android:width="0dp" android:color="#00000000" />
-            <corners android:radius="10dp" />
+            <stroke android:width="0.0dp" android:color="#00000000" />
+            <corners android:radius="10.0dp" />
         </shape>
     </item>
 </selector>

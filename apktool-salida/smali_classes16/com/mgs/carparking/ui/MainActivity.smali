@@ -2396,9 +2396,6 @@
 
     if-lez v0, :cond_0
 
-    # FASE 7: neutralizado (premium TV sin anuncios; antes WxSDK.preloadInterstitialAd).
-    # Rama vacia: cae por fallthrough a :goto_0 (return-void); predicate ofuscado intacto.
-
     :goto_0
     return-void
 
@@ -2694,9 +2691,6 @@
     move-result v0
 
     if-ltz v0, :cond_0
-
-    # FASE 7: neutralizado (premium TV sin anuncios; antes WxSDK.preloadRewardAd).
-    # Rama vacia: cae por fallthrough a :goto_0 (return-void); predicate ofuscado intacto.
 
     :goto_0
     return-void
@@ -3247,9 +3241,6 @@
     move-result v0
 
     if-gtz v0, :cond_0
-
-    # FASE 7: neutralizado (premium TV sin anuncios; antes WxSDK.initAdCache con guard
-    # PATCH-TV isTv). Rama vacia: cae por fallthrough a :goto_0 (return-void).
 
     :goto_0
     return-void
@@ -4102,9 +4093,6 @@
     move-result v0
 
     if-lez v0, :cond_0
-
-    # FASE 7: neutralizado (premium TV sin anuncios; antes MainSDK.initAdCache con guard
-    # PATCH-TV isTv). Rama vacia: cae por fallthrough a :goto_0 (return-void).
 
     :goto_0
     return-void
@@ -5972,10 +5960,8 @@
 
     invoke-super {v1, v2}, Lcom/mgs/carparking/app/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    # v31: cajon lateral derecho de secciones (oculta la barra inferior y la usa como motor).
     invoke-static {v1}, Lcom/movievn/tv/TvSectionDrawer;->attach(Landroid/app/Activity;)V
 
-    # v38: boton de actualizar (refrescar) del Home.
     invoke-static {v1}, Lcom/movievn/tv/TvHomeRefresh;->attach(Landroid/app/Activity;)V
 
     invoke-static {v1}, Lcom/mgs/carparking/ui/MainActivity;->ۣۣۡۧ(Ljava/lang/Object;)V
@@ -6078,29 +6064,28 @@
 
     move-object/from16 v2, p0
 
-    # v31: BACK cierra el cajon de secciones; MENU lo abre/cierra.
     move-object/from16 v0, p2
 
     invoke-static {v2, v3, v0}, Lcom/movievn/tv/TvSectionDrawer;->onKey(Landroid/app/Activity;ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_tv31_drawer
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
     return v0
 
-    :cond_tv31_drawer
+    :cond_0
     const/4 v0, 0x4
 
-    if-ne v3, v0, :cond_1
+    if-ne v3, v0, :cond_2
 
     invoke-static {v4}, Lcom/mgs/carparking/ui/۟ۢۨۥۡ;->ۣۨۧۧ(Ljava/lang/Object;)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     invoke-static {}, Lcom/mgs/carparking/ui/ۦۥ۟ۨ;->ۣۢۡ۠()J
 
@@ -6116,7 +6101,7 @@
 
     cmp-long v3, v3, v0
 
-    if-lez v3, :cond_0
+    if-lez v3, :cond_1
 
     invoke-static {}, Lcom/mgs/carparking/ui/MainActivity;->۟ۤۦۦۦ()Landroid/content/Context;
 
@@ -6174,7 +6159,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-static {v2}, Lcom/mgs/carparking/ui/۟ۦۢۦۧ;->ۦۣۧۢ(Ljava/lang/Object;)V
 
     invoke-static {v2}, Lcom/mgs/carparking/ui/ۦۥ۟ۨ;->ۣ۟۠ۧ۟(Ljava/lang/Object;)V
@@ -6188,7 +6173,7 @@
 
     return v3
 
-    :cond_1
+    :cond_2
     invoke-super {v2, v3, v4}, Landroidx/appcompat/app/AppCompatActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v3

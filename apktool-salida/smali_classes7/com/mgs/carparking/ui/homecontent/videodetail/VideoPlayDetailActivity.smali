@@ -7044,6 +7044,31 @@
     return-void
 .end method
 
+.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v0
+
+    invoke-static {v0, p1}, Lcom/movievn/tv/TvPlayerBar;->onMediaKey(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public enterLoadAd()V
     .locals 11
 
@@ -17466,19 +17491,18 @@
 .method public onBackPressed()V
     .locals 1
 
-    # TV port: si estamos en pantalla completa del reproductor, BACK sale de ella
     invoke-static {p0}, Lcom/movievn/tv/TvDetail;->onBack(Landroid/app/Activity;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_tv_back
+    if-eqz v0, :cond_0
 
     return-void
 
-    :cond_tv_back
     .line 1
     .line 2
     .line 3
+    :cond_0
     invoke-super {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
 
     .line 4
@@ -17487,7 +17511,7 @@
 
     .line 6
     .line 7
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 8
     .line 9
@@ -17499,7 +17523,7 @@
 
     .line 12
     .line 13
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 14
     .line 15
@@ -17508,12 +17532,12 @@
 
     .line 17
     .line 18
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/mgs/carparking/ui/homecontent/videodetail/VideoPlayDetailActivity;->P0:Lko/f;
 
     .line 19
     .line 20
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 21
     .line 22
@@ -17528,7 +17552,7 @@
     iput-object v0, p0, Lcom/mgs/carparking/ui/homecontent/videodetail/VideoPlayDetailActivity;->P0:Lko/f;
 
     .line 27
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -19938,34 +19962,6 @@
     return-void
 .end method
 
-# TV port (v29): teclas multimedia del mando (play/pausa, FF y REW).
-# Se interceptan aqui, ANTES de que la jerarquia de vistas las consuma, para
-# que funcionen tambien con el foco fuera de la zona de video.
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
-    move-result v0
-
-    invoke-static {v0, p1}, Lcom/movievn/tv/TvPlayerBar;->onMediaKey(ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
@@ -19974,10 +19970,8 @@
     .line 3
     invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    # TV port: boton de pantalla completa en la ficha (ver tools/tv-detail)
     invoke-static {p0}, Lcom/movievn/tv/TvDetail;->attach(Landroid/app/Activity;)V
 
-    # TV port: barra de control de reproduccion (play/pausa, +/-10 s)
     invoke-static {p0}, Lcom/movievn/tv/TvPlayerBar;->attach(Landroid/app/Activity;)V
 
     .line 4

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Barra de progreso propia de la ficha TV (v29).
-     Sustituye a la de la libreria, que no se ve en modo "cine/lista". -->
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <corners android:radius="3dp" />
-            <solid android:color="#40FFFFFF" />
-            <size android:height="6dp" />
+            <corners android:radius="3.0dp" />
+            <solid android:color="#40ffffff" />
+            <size android:height="6.0dp" />
         </shape>
     </item>
     <item android:id="@android:id/secondaryProgress">
-        <clip
-            android:drawable="@drawable/tv_seek_progress"
-            android:gravity="left" />
+        <clip android:gravity="left" android:drawable="@drawable/tv_seek_progress" />
     </item>
     <item android:id="@android:id/progress">
-        <clip
-            android:drawable="@drawable/tv_seek_progress"
-            android:gravity="left" />
+        <clip android:gravity="left" android:drawable="@drawable/tv_seek_progress" />
     </item>
 </layer-list>

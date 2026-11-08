@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1779
+    .line 1792
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1780
+    .line 1793
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1781
+    .line 1794
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 8
 
-    .line 1786
+    .line 1799
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0, p2, p3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhandleMediaKey(Lcom/movievn/tv/TvPlayerBar;ILandroid/view/KeyEvent;)Z
@@ -53,7 +53,7 @@
 
     return v1
 
-    .line 1788
+    .line 1801
     :cond_0
     if-eqz p3, :cond_4
 
@@ -63,7 +63,7 @@
 
     if-ne p3, v1, :cond_4
 
-    .line 1789
+    .line 1802
     const/16 p3, 0x17
 
     if-eq p2, p3, :cond_1
@@ -72,7 +72,7 @@
 
     if-ne p2, p3, :cond_4
 
-    .line 1790
+    .line 1803
     :cond_1
     iget-object p3, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -90,7 +90,7 @@
 
     return v1
 
-    .line 1791
+    .line 1804
     :cond_2
     iget-object p3, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -108,7 +108,7 @@
 
     return v1
 
-    .line 1792
+    .line 1805
     :cond_3
     iget-object p3, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -122,7 +122,7 @@
 
     return v1
 
-    .line 1798
+    .line 1811
     :cond_4
     const/16 p3, 0x15
 
@@ -134,16 +134,16 @@
 
     if-eq p2, v2, :cond_5
 
-    .line 1799
+    .line 1812
     return v0
 
-    .line 1804
+    .line 1817
     :cond_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 1805
+    .line 1818
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v4}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetlastMove(Lcom/movievn/tv/TvPlayerBar;)J
@@ -160,16 +160,16 @@
 
     return v1
 
-    .line 1806
+    .line 1819
     :cond_6
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v4, v2, v3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputlastMove(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 1808
+    .line 1821
     if-ne p2, p3, :cond_10
 
-    .line 1809
+    .line 1822
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleBack(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -178,7 +178,7 @@
 
     if-ne p1, p2, :cond_7
 
-    .line 1810
+    .line 1823
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitle(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -187,10 +187,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1811
+    .line 1824
     return v1
 
-    .line 1813
+    .line 1826
     :cond_7
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -200,7 +200,7 @@
 
     if-ne p1, p2, :cond_9
 
-    .line 1814
+    .line 1827
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleBack(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -221,7 +221,7 @@
 
     if-nez p1, :cond_8
 
-    .line 1815
+    .line 1828
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleBack(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -232,7 +232,7 @@
 
     goto :goto_0
 
-    .line 1817
+    .line 1830
     :cond_8
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -242,11 +242,11 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1819
+    .line 1832
     :goto_0
     return v1
 
-    .line 1821
+    .line 1834
     :cond_9
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -256,7 +256,7 @@
 
     if-ne p1, p2, :cond_a
 
-    .line 1822
+    .line 1835
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnRetreat(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -265,10 +265,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1823
+    .line 1836
     return v1
 
-    .line 1825
+    .line 1838
     :cond_a
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -278,7 +278,7 @@
 
     if-ne p1, p2, :cond_b
 
-    .line 1826
+    .line 1839
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnPlayPause(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -287,10 +287,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1827
+    .line 1840
     return v1
 
-    .line 1829
+    .line 1842
     :cond_b
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -300,7 +300,7 @@
 
     if-ne p1, p2, :cond_e
 
-    .line 1831
+    .line 1844
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleFwd(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -321,7 +321,7 @@
 
     if-nez p2, :cond_c
 
-    .line 1832
+    .line 1845
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleFwd(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -330,10 +330,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1833
+    .line 1846
     return v1
 
-    .line 1836
+    .line 1849
     :cond_c
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -355,7 +355,7 @@
 
     if-nez p2, :cond_d
 
-    .line 1837
+    .line 1850
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitle(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -364,10 +364,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1838
+    .line 1851
     return v1
 
-    .line 1840
+    .line 1853
     :cond_d
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -379,16 +379,16 @@
 
     move-result-object p2
 
-    .line 1841
+    .line 1854
     if-eqz p2, :cond_e
 
-    .line 1842
+    .line 1855
     invoke-virtual {p2}, Landroid/view/View;->requestFocus()Z
 
-    .line 1843
+    .line 1856
     return v1
 
-    .line 1846
+    .line 1859
     :cond_e
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -398,7 +398,7 @@
 
     if-ne p1, p2, :cond_f
 
-    .line 1847
+    .line 1860
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbox(Lcom/movievn/tv/TvPlayerBar;)Landroid/view/ViewGroup;
@@ -409,20 +409,20 @@
 
     move-result-object p1
 
-    .line 1848
+    .line 1861
     if-eqz p1, :cond_f
 
-    .line 1849
+    .line 1862
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    .line 1850
+    .line 1863
     return v1
 
-    .line 1853
+    .line 1866
     :cond_f
     return v0
 
-    .line 1856
+    .line 1869
     :cond_10
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -432,7 +432,7 @@
 
     if-ne p1, p2, :cond_12
 
-    .line 1857
+    .line 1870
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleBack(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -453,7 +453,7 @@
 
     if-nez p1, :cond_11
 
-    .line 1858
+    .line 1871
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleBack(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -464,7 +464,7 @@
 
     goto :goto_1
 
-    .line 1860
+    .line 1873
     :cond_11
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -474,11 +474,11 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1862
+    .line 1875
     :goto_1
     return v1
 
-    .line 1864
+    .line 1877
     :cond_12
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -488,7 +488,7 @@
 
     if-ne p1, p2, :cond_13
 
-    .line 1865
+    .line 1878
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnSubtitleFwd(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -497,10 +497,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1866
+    .line 1879
     return v1
 
-    .line 1868
+    .line 1881
     :cond_13
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -510,7 +510,7 @@
 
     if-ne p1, p2, :cond_14
 
-    .line 1869
+    .line 1882
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnRetreat(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -519,10 +519,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1870
+    .line 1883
     return v1
 
-    .line 1872
+    .line 1885
     :cond_14
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -532,7 +532,7 @@
 
     if-ne p1, p2, :cond_15
 
-    .line 1873
+    .line 1886
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnPlayPause(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -541,10 +541,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1874
+    .line 1887
     return v1
 
-    .line 1876
+    .line 1889
     :cond_15
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -554,7 +554,7 @@
 
     if-ne p1, p2, :cond_16
 
-    .line 1877
+    .line 1890
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnFast(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -563,10 +563,10 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1878
+    .line 1891
     return v1
 
-    .line 1880
+    .line 1893
     :cond_16
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -576,7 +576,7 @@
 
     if-ne p1, p2, :cond_17
 
-    .line 1881
+    .line 1894
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$BarKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetseek(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/SeekBar;
@@ -585,10 +585,10 @@
 
     invoke-virtual {p1}, Landroid/widget/SeekBar;->requestFocus()Z
 
-    .line 1882
+    .line 1895
     return v1
 
-    .line 1884
+    .line 1897
     :cond_17
     return v0
 .end method

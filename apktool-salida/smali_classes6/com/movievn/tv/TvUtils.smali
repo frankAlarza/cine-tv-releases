@@ -12,7 +12,16 @@
     return-void
 .end method
 
-# static boolean isTv(android.content.Context ctx)
+.method public static isTv(Landroid/app/Activity;)Z
+    .locals 1
+
+    invoke-static {p0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isTv(Landroid/content/Context;)Z
     .locals 3
 
@@ -47,16 +56,5 @@
     const/4 v0, 0x1
 
     :cond_2
-    return v0
-.end method
-
-# static boolean isTv(android.app.Activity act)
-.method public static isTv(Landroid/app/Activity;)Z
-    .locals 1
-
-    invoke-static {p0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
-
-    move-result v0
-
     return v0
 .end method

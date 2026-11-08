@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:focusable="true" android:foreground="@drawable/bg_focused_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_15"
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="@dimen/dp_12" android:paddingRight="@dimen/dp_12" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_15" android:foreground="@drawable/bg_focused_card"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@+id/item_img_container" android:layout_width="0.0dp" android:layout_height="0.0dp" android:padding="4dp" app:layout_constraintDimensionRatio="1:1.5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+    <FrameLayout android:id="@id/item_img_container" android:padding="4.0dp" android:layout_width="0.0dp" android:layout_height="0.0dp" app:layout_constraintDimensionRatio="1:1.5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
         <com.mgs.carparking.widgets.cardbanner.view.RoundedImageView android:id="@id/item_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:placeholderRes="@drawable/ic_video_default" />
     </FrameLayout>
     <ImageView android:id="@id/box_count" android:background="@drawable/ic_feedback_item_unselector" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@id/item_img_container" app:layout_constraintTop_toTopOf="@id/item_img_container" />

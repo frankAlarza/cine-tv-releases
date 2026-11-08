@@ -281,7 +281,6 @@
     .line 96
     .line 97
     :goto_0
-    # v102: reflejar el estado "seleccionado" en la fila (state_selected del fondo)
     iget-object v0, p0, Lcom/mgs/carparking/ui/mine/languageswitching/SetLanguageAdapter;->m:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;

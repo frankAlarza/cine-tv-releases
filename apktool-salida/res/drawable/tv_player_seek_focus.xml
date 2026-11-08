@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Foco de la barra de progreso del reproductor (v32) - estilo Apple TV.
-     NO es un recuadro alrededor del SeekBar: la LINEA se enciende con un halo
-     suave (radios de 2dp, los de la propia linea). Transparente en reposo. -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="true">
         <layer-list>
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="#00000000" />
-                    <stroke android:width="5dp" android:color="#1FFFFFFF" />
-                    <corners android:radius="2dp" />
+                    <stroke android:width="5.0dp" android:color="#1fffffff" />
+                    <corners android:radius="2.0dp" />
                 </shape>
             </item>
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="#00000000" />
-                    <stroke android:width="2.5dp" android:color="#59FFFFFF" />
-                    <corners android:radius="2dp" />
+                    <stroke android:width="2.5dp" android:color="#59ffffff" />
+                    <corners android:radius="2.0dp" />
                 </shape>
             </item>
         </layer-list>
@@ -24,8 +22,8 @@
     <item>
         <shape android:shape="rectangle">
             <solid android:color="#00000000" />
-            <stroke android:width="0dp" android:color="#00000000" />
-            <corners android:radius="2dp" />
+            <stroke android:width="0.0dp" android:color="#00000000" />
+            <corners android:radius="2.0dp" />
         </shape>
     </item>
 </selector>

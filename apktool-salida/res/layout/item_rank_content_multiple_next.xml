@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:tag="layout/item_rank_content_multiple_next_0" android:background="@color/tv_color_bg" android:focusable="true" android:foreground="@drawable/bg_focused_card" android:layout_width="match_parent" android:layout_height="wrap_content"
-  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
-  android:descendantFocusability="afterDescendants">
+<LinearLayout android:orientation="vertical" android:tag="layout/item_rank_content_multiple_next_0" android:background="@color/tv_color_bg" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/bg_focused_card"
+  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_110">
         <com.mgs.carparking.widgets.cardbanner.view.RoundedImageView android:id="@id/item_img" android:tag="binding_1" android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_110" android:scaleType="centerCrop" />
         <com.ruffian.library.widget.RTextView android:textSize="12.0sp" android:textColor="@color/black" android:tag="binding_2" android:paddingLeft="@dimen/dp_3" android:paddingTop="@dimen/dp_1" android:paddingRight="@dimen/dp_3" android:paddingBottom="@dimen/dp_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:paddingHorizontal="@dimen/dp_3" android:paddingVertical="@dimen/dp_1" app:background_normal="@color/color_37A0FC" />

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="button_ok">é€€å‡º</string>
-  <string name="close_flash">å…³é—­é—ªå…‰ç¯</string>
-  <string name="gallery">ç›¸å†Œ</string>
-  <string name="msg_camera_framework_bug">ç›¸æœºè¢«å ç”¨æˆ–æ²¡æœ‰ç›¸æœºæƒé™ï¼Œè¯·æ£€æŸ¥</string>
-  <string name="open_flash">æ‰“å¼€é—ªå…‰ç¯</string>
-  <string name="scan_code">æ‰«ä¸€æ‰«</string>
-  <string name="scan_failed_tip">å›¾ç‰‡è§£æžå¤±è´¥ï¼Œæ¢ä¸ªå›¾ç‰‡è¯•è¯•.</string>
-  <string name="srl_component_falsify" formatted="false">"%s è™šå‡åŒºåŸŸ
-ä»£è¡¨è¿è¡Œæ—¶æ‹–åŠ¨çš„é«˜åº¦ã€%.1fdpã€‘ 
-è€Œä¸ä¼šæ˜¾ç¤ºä»»ä½•ä¸œè¥¿"</string>
-  <string name="srl_content_empty">SmartRefreshLayoutä¸­æ²¡æœ‰æ‰¾åˆ°å†…å®¹è§†å›¾ã€‚æ‚¨æ˜¯å¦å¿˜è®°åœ¨xmlå¸ƒå±€æ–‡ä»¶ä¸­æ·»åŠ ï¼Ÿ</string>
-  <string name="srl_footer_failed">åŠ è½½å¤±è´¥</string>
-  <string name="srl_footer_finish">åŠ è½½å®Œæˆ</string>
-  <string name="srl_footer_loading">æ­£åœ¨åŠ è½½â€¦</string>
-  <string name="srl_footer_nothing">æ²¡æœ‰æ›´å¤šæ•°æ®äº†</string>
-  <string name="srl_footer_pulling">ä¸Šæ‹‰åŠ è½½æ›´å¤š</string>
-  <string name="srl_footer_refreshing">ç­‰å¾…å¤´éƒ¨åˆ·æ–°å®Œæˆâ€¦</string>
-  <string name="srl_footer_release">é‡Šæ”¾ç«‹å³åŠ è½½</string>
-  <string name="srl_header_failed">åˆ·æ–°å¤±è´¥</string>
-  <string name="srl_header_finish">åˆ·æ–°å®Œæˆ</string>
-  <string name="srl_header_loading">ç­‰å¾…åº•éƒ¨åŠ è½½å®Œæˆâ€¦</string>
-  <string name="srl_header_pulling">ä¸‹æ‹‰å¯ä»¥åˆ·æ–°</string>
-  <string name="srl_header_refreshing">æ­£åœ¨åˆ·æ–°â€¦</string>
-  <string name="srl_header_release">é‡Šæ”¾ç«‹å³åˆ·æ–°</string>
-  <string name="srl_header_secondary">é‡Šæ”¾è¿›å…¥äºŒæ¥¼</string>
-  <string name="srl_header_update">ä¸Šæ¬¡æ›´æ–° M-d HH:mm</string>
-  <string name="zxing_app_name">Zxing Library</string>
+    <string name="button_ok">é€€å‡º</string>
+    <string name="close_flash">å…³é—­é—ªå…‰ç\u0081¯</string>
+    <string name="gallery">ç›¸å†Œ</string>
+    <string name="msg_camera_framework_bug">ç›¸æœºè¢«å\u008d ç”¨æˆ–æ²¡æœ‰ç›¸æœºæ\u009dƒé™\u0090ï¼Œè¯·æ£€æŸ¥</string>
+    <string name="open_flash">æ‰“å¼€é—ªå…‰ç\u0081¯</string>
+    <string name="scan_code">æ‰«ä¸€æ‰«</string>
+    <string name="scan_failed_tip">å›¾ç‰‡è§£æž\u0090å¤±è´¥ï¼Œæ\u008d¢ä¸ªå›¾ç‰‡è¯•è¯•.</string>
+    <string name="srl_component_falsify" formatted="false">"%s è™šå\u0081‡åŒºåŸŸ
+ä»£è¡¨è¿\u0090è¡Œæ—¶æ‹–åŠ¨çš„é«˜åº¦ã€\u0090%.1fdpã€‘ 
+è€Œä¸\u008dä¼šæ˜¾ç¤ºä»»ä½•ä¸œè¥¿"</string>
+    <string name="srl_content_empty">SmartRefreshLayoutä¸­æ²¡æœ‰æ‰¾åˆ°å†…å®¹è§†å›¾ã€‚æ‚¨æ˜¯å\u0090¦å¿˜è®°åœ¨xmlå¸ƒå±€æ–‡ä»¶ä¸­æ·»åŠ ï¼Ÿ</string>
+    <string name="srl_footer_failed">åŠ è½½å¤±è´¥</string>
+    <string name="srl_footer_finish">åŠ è½½å®Œæˆ\u0090</string>
+    <string name="srl_footer_loading">æ­£åœ¨åŠ è½½â€¦</string>
+    <string name="srl_footer_nothing">æ²¡æœ‰æ›´å¤šæ•°æ\u008d®äº†</string>
+    <string name="srl_footer_pulling">ä¸Šæ‹‰åŠ è½½æ›´å¤š</string>
+    <string name="srl_footer_refreshing">ç­‰å¾…å¤´éƒ¨åˆ·æ–°å®Œæˆ\u0090â€¦</string>
+    <string name="srl_footer_release">é‡Šæ”¾ç«‹å\u008d³åŠ è½½</string>
+    <string name="srl_header_failed">åˆ·æ–°å¤±è´¥</string>
+    <string name="srl_header_finish">åˆ·æ–°å®Œæˆ\u0090</string>
+    <string name="srl_header_loading">ç­‰å¾…åº•éƒ¨åŠ è½½å®Œæˆ\u0090â€¦</string>
+    <string name="srl_header_pulling">ä¸‹æ‹‰å\u008f¯ä»¥åˆ·æ–°</string>
+    <string name="srl_header_refreshing">æ­£åœ¨åˆ·æ–°â€¦</string>
+    <string name="srl_header_release">é‡Šæ”¾ç«‹å\u008d³åˆ·æ–°</string>
+    <string name="srl_header_secondary">é‡Šæ”¾è¿›å…¥äºŒæ¥¼</string>
+    <string name="srl_header_update">ä¸Šæ¬¡æ›´æ–° M-d HH:mm</string>
+    <string name="zxing_app_name">Zxing Library</string>
 </resources>

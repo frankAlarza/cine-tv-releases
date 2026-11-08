@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:tag="layout/item_special_detail_result_0" android:descendantFocusability="afterDescendants" android:focusable="true" android:foreground="@drawable/bg_focused_card" android:background="@color/tv_color_bg" android:layout_width="match_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="vertical" android:tag="layout/item_special_detail_result_0" android:background="@color/tv_color_bg" android:focusable="true" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/bg_focused_card"
   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:layout_width="@dimen/dp_110" android:layout_height="@dimen/dp_168">
         <com.mgs.carparking.widgets.cardbanner.view.RoundedImageView android:id="@id/item_img" android:tag="binding_1" android:layout_width="@dimen/dp_110" android:layout_height="@dimen/dp_168" android:scaleType="centerCrop" />

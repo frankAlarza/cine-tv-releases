@@ -174,11 +174,6 @@
 .method public static loadAdConf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    # FASE 7 (premium TV sin anuncios): cuerpo neutralizado. Antes: defaults
-    # AAA5086F1E0EFD90B / 1182 / 8f317dfc21fbbb0c2c656de3cdc10b47, comparacion con
-    # tc/l0 y WxSDK.initSdk + WxSDK.setDebugFlag (envueltos con PATCH-TV if(!is_tv)).
-    # Los llamadores (AppApplication.onCreate, tc/c$j x4 y el overload de 3 args)
-    # quedan apuntando a un no-op. Firma conservada; borrar el metodo es de Fase 6/8.
     return-void
 .end method
 
@@ -832,10 +827,6 @@
     .line 238
     .line 239
     .line 240
-    # FASE 7: neutralizado AppMetrica (SDK borrado en Fase 5)
-    # const-string v0, "5b6fae87-3d0c-44d0-8f06-afdb70f81029"
-    # invoke-static AppMetricaConfig.newConfigBuilder -> build -> AppMetrica.activate (removidos: NoClassDefFoundError)
-
     .line 251
     return-void
 .end method
@@ -984,10 +975,12 @@
 
 .method public getGAID()Ljava/lang/String;
     .locals 1
-    # FASE 7: neutralizado AdvertisingIdClient
+
     const-string v0, ""
+
     return-object v0
 .end method
+
 .method public onCreate()V
     .locals 1
 

@@ -1571,8 +1571,6 @@
     invoke-virtual {p1, v0}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
     .line 252
-    # Rail lateral de categorias (sustituye visualmente a la fila de tabs).
-    # Debe ejecutarse al final de initTitle: los tabs ya existen y tienen titulo.
     iget-object v1, p0, Lme/goldze/mvvmhabit/base/BaseFragment;->binding:Landroidx/databinding/ViewDataBinding;
 
     check-cast v1, Lcom/mgs/carparking/databinding/FragmentHomeBinding;

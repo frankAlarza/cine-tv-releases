@@ -1,5 +1,5 @@
 version: 3.0.3
-apkFileName: base.apk
+apkFileName: cine-tv-v199-signed.apk
 usesFramework:
   ids:
   - 1
@@ -7,8 +7,8 @@ sdkInfo:
   minSdkVersion: 24
   targetSdkVersion: 33
 versionInfo:
-  versionCode: 40000
-  versionName: 4.0.0
+  versionCode: 40002
+  versionName: v199
 resourcesInfo:
   packageId: 127
 doNotCompress:

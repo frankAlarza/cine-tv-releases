@@ -294,8 +294,8 @@
     <id name="chain" />
     <id name="chain2" />
     <id name="chains" />
+    <id name="btn_home_refresh" />
     <id name="channel_rv" />
-    <id name="channel_sort" />
     <id name="checkbox" />
     <id name="checked" />
     <id name="chip" />
@@ -440,7 +440,6 @@
     <id name="et_phone" />
     <id name="et_search" />
     <id name="et_username" />
-    <id name="rv_search_results" />
     <id name="exitUntilCollapsed" />
     <id name="exo_ad_overlay" />
     <id name="exo_artwork" />
@@ -1407,7 +1406,6 @@
     <id name="menu_crop" />
     <id name="menu_icon" />
     <id name="menu_loader" />
-    <id name="menu_more" />
     <id name="menu_text" />
     <id name="message" />
     <id name="middle" />
@@ -1684,7 +1682,6 @@
     <id name="seekbar" />
     <id name="seekbar_value" />
     <id name="selectSeason" />
-    <id name="selectSubtitle" />
     <id name="select_click_area" />
     <id name="select_dialog_listview" />
     <id name="selected" />
@@ -1712,8 +1709,8 @@
     <id name="snackbar_text" />
     <id name="snap" />
     <id name="snapMargins" />
-    <id name="sortToolbar" />
-    <id name="sortToolbar_title" />
+    <id name="channel_sort" />
+    <id name="item_img_container" />
     <id name="south" />
     <id name="spacer" />
     <id name="special_effects_controller_view_tag" />
@@ -2050,4 +2047,12 @@
     <id name="x_right" />
     <id name="zero_corner_chip" />
     <id name="zoom" />
+    <id name="menu_more" />
+    <id name="rv_search_results" />
+    <id name="selectSubtitle" />
+    <id name="sortToolbar" />
+    <id name="sortToolbar_title" />
+    <id name="subtitle_en" />
+    <id name="subtitle_es" />
+    <id name="subtitle_none" />
 </resources>

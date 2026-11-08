@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="tv_lang_hint">Select a language — it saves automatically</string>
     <string name="click_check_video">Click to view the complete version</string>
     <string name="copy_to_past">Copied to Pasteboard</string>
     <string name="download_start_error">Failed to start download</string>
@@ -380,5 +381,5 @@ Try the request function below"</string>
     <string name="ucrop_menu_crop">Crop</string>
     <string name="ucrop_not_crop">not supported crop type</string>
     <string name="ucrop_rotate">Rotate</string>
-    <string name="ucrop_scale">Scale</string>    <string name="tv_lang_hint">Select a language — it saves automatically</string>
+    <string name="ucrop_scale">Scale</string>
 </resources>

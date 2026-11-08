@@ -1,1 +1,12 @@
 graphify-out/graph.json merge=graphify
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.apk binary
+*.keystore binary
+*.rsa binary
+*.sf binary
+*.so binary
+*.dex binary

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:tag="layout/item_video_commit_list_0" android:focusable="true" android:foreground="@drawable/bg_focused" android:background="@drawable/bg_tv_card" android:layout_width="match_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="vertical" android:tag="layout/item_video_commit_list_0" android:background="@drawable/bg_tv_card" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/bg_focused"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_23">
         <com.mgs.carparking.widgets.CircularImageView android:id="@id/iv_lord_head" android:tag="binding_1" android:layout_width="@dimen/dp_34" android:layout_height="@dimen/dp_34" android:layout_centerVertical="true" />
@@ -18,7 +18,7 @@
         </LinearLayout>
     </RelativeLayout>
     <com.green.hand.library.widget.EmojiTextview android:textSize="@dimen/sp_13" android:textColor="@color/tv_color_text_primary" android:tag="binding_9" android:paddingTop="@dimen/dp_12" android:paddingBottom="@dimen/dp_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_52" android:layout_marginRight="@dimen/dp_8" />
-    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_secondary" android:gravity="center" android:tag="binding_10" android:background="@drawable/bg_video_detail_filter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_52" android:text="Ã¥â€ºÅ¾Ã¥Â¤Â" />
+    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/tv_color_text_secondary" android:gravity="center" android:tag="binding_10" android:background="@drawable/bg_video_detail_filter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_52" android:text="Ã¥â€ºÅ¾Ã¥Â¤Â\u008d" />
     <RelativeLayout android:tag="binding_11" android:background="@drawable/bg_video_comment_second_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_52" android:layout_marginRight="@dimen/dp_9">
         <com.mgs.carparking.widgets.rv.ChildRecycleView android:tag="binding_12" android:layout_width="match_parent" android:layout_height="wrap_content" />
     </RelativeLayout>

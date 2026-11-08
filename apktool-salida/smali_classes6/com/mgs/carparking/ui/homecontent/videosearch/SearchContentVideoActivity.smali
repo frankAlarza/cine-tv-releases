@@ -1270,6 +1270,109 @@
     return-void
 .end method
 
+.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v0
+
+    const/16 v1, 0x14
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/widget/EditText;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
+
+    check-cast v0, Lcom/mgs/carparking/databinding/ActivitySearchVideoBindingImpl;
+
+    iget-object v0, v0, Lcom/mgs/carparking/databinding/ActivitySearchVideoBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/view/View;->isShown()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/16 v1, 0x17
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x42
+
+    if-ne v0, v1, :cond_3
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/mgs/carparking/ui/homecontent/videosearch/SearchContentVideoActivity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/widget/EditText;
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->l:Lme/goldze/mvvmhabit/base/BaseViewModel;
+
+    check-cast v0, Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;
+
+    invoke-static {v0}, Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;->l(Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;)V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_3
+    :goto_0
+    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public ext(Landroid/widget/EditText;)V
     .locals 3
 
@@ -2367,74 +2470,6 @@
     .line 20
     :cond_1
     return-void
-.end method
-
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-    move-result v0
-    if-nez v0, :cond_super
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-    move-result v0
-    const/16 v1, 0x14
-    if-ne v0, v1, :check_search
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
-    move-result-object v0
-    instance-of v0, v0, Landroid/widget/EditText;
-    if-eqz v0, :cond_super
-
-    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->k:Landroidx/databinding/ViewDataBinding;
-    check-cast v0, Lcom/mgs/carparking/databinding/ActivitySearchVideoBindingImpl;
-    iget-object v0, v0, Lcom/mgs/carparking/databinding/ActivitySearchVideoBindingImpl;->p:Landroidx/recyclerview/widget/RecyclerView;
-    if-eqz v0, :cond_super
-
-    invoke-virtual {v0}, Landroid/view/View;->isShown()Z
-    move-result v1
-    if-eqz v1, :cond_super
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-    move-result v1
-    if-lez v1, :cond_super
-
-    const/4 v1, 0x0
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-    move-result-object v1
-    if-eqz v1, :cond_super
-
-    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
-    move-result v1
-    if-eqz v1, :cond_super
-
-    const/4 v0, 0x1
-    return v0
-
-    :check_search
-    const/16 v1, 0x17
-    if-eq v0, v1, :maybe_search
-    const/16 v1, 0x42
-    if-ne v0, v1, :cond_super
-
-    :maybe_search
-    invoke-virtual {p0}, Lcom/mgs/carparking/ui/homecontent/videosearch/SearchContentVideoActivity;->getCurrentFocus()Landroid/view/View;
-    move-result-object v0
-    instance-of v0, v0, Landroid/widget/EditText;
-    if-nez v0, :do_search
-    goto :cond_super
-
-    :do_search
-    iget-object v0, p0, Lcom/mgs/carparking/app/BaseActivity;->l:Lme/goldze/mvvmhabit/base/BaseViewModel;
-    check-cast v0, Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;
-    invoke-static {v0}, Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;->l(Lcom/mgs/carparking/model/SEARCHCONTENTVIDEOVIEWMODEL;)V
-    const/4 v0, 0x1
-    return v0
-
-    :cond_super
-    invoke-super {p0, p1}, Lcom/mgs/carparking/app/BaseActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    move-result v0
-    return v0
 .end method
 
 .method public toggleClearHistoryDialog(Z)V

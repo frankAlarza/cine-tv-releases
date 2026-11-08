@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1670
+    .line 1683
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1671
+    .line 1684
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$HideTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1672
+    .line 1685
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public run()V
     .locals 1
 
-    .line 1676
+    .line 1689
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$HideTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhideBarNow(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 1677
+    .line 1690
     return-void
 .end method

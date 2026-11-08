@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;I)V
     .locals 0
 
-    .line 719
+    .line 723
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 720
+    .line 724
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 721
+    .line 725
     iput p2, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->attempt:I
 
-    .line 722
+    .line 726
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 2
 
-    .line 726
+    .line 730
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$msetup(Lcom/movievn/tv/TvSectionDrawer;)Z
@@ -56,7 +56,7 @@
 
     return-void
 
-    .line 727
+    .line 731
     :cond_0
     iget v0, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->attempt:I
 
@@ -64,7 +64,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 728
+    .line 732
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     add-int/lit8 v0, v0, 0x1
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 730
+    .line 734
     :cond_1
     const-string v0, "TvSectionDrawer"
 
@@ -81,7 +81,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 732
+    .line 736
     :goto_0
     return-void
 .end method

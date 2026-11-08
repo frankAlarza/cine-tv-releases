@@ -6,52 +6,52 @@
     "semantic_hash": "3ac995fbf93552a991ecab9b63f776aa"
   },
   "apktool-salida/assets/ad-viewer/omid-session-client-v1.js": {
-    "mtime": 1792524054.0167992,
-    "seen": 1793361738.7909925,
-    "ast_hash": "cbe064a9cb0fe6ca9d23ac18ce548f0d",
-    "semantic_hash": "cbe064a9cb0fe6ca9d23ac18ce548f0d"
+    "mtime": 1793406548.1553688,
+    "seen": 1793413454.9561436,
+    "ast_hash": "adfd19db83d50de67aca6c8af2bebf49",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/ad-viewer/omsdk-v1.js": {
-    "mtime": 1792524054.0167992,
-    "seen": 1793361738.790996,
-    "ast_hash": "35268a1f61e0413a8645604af920af40",
-    "semantic_hash": "35268a1f61e0413a8645604af920af40"
+    "mtime": 1793406548.1558957,
+    "seen": 1793413454.9561455,
+    "ast_hash": "7a7c4525659a1b5b021ffe557052a490",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/builddatas.json": {
-    "mtime": 1792524053.9971025,
-    "seen": 1793361738.7909987,
-    "ast_hash": "5a1a72869ac7b04ce471ebacca0b9595",
-    "semantic_hash": "5a1a72869ac7b04ce471ebacca0b9595"
+    "mtime": 1793406548.2023222,
+    "seen": 1793413454.956147,
+    "ast_hash": "e457cca932e328d8a47ae005fe6fcadf",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/com.moloco.sdk.xenoss.sdkdevkit.mraid.js": {
-    "mtime": 1792524054.004962,
-    "seen": 1793361738.791001,
-    "ast_hash": "f6c20fe6a9722b7293c39817429d5a59",
-    "semantic_hash": "f6c20fe6a9722b7293c39817429d5a59"
+    "mtime": 1793406548.204324,
+    "seen": 1793413454.956148,
+    "ast_hash": "6ca17cf4b1bd0952780ef33c5823933c",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/mraid-bridge.js": {
-    "mtime": 1792524054.0108373,
-    "seen": 1793361738.7910032,
-    "ast_hash": "ba7504cb1c97eca80444ecd548cceb25",
-    "semantic_hash": "ba7504cb1c97eca80444ecd548cceb25"
+    "mtime": 1793406548.2108448,
+    "seen": 1793413454.9561493,
+    "ast_hash": "ac2dd43f81004ff502c8c1de89301d1c",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/mraid.js": {
-    "mtime": 1792524054.011807,
-    "seen": 1793361738.7910051,
-    "ast_hash": "07983dd5ecb1db3f42615723e98e3c58",
-    "semantic_hash": "07983dd5ecb1db3f42615723e98e3c58"
+    "mtime": 1793406548.2118435,
+    "seen": 1793413454.9561503,
+    "ast_hash": "781ef2169acada29f040aaaa675a9e90",
+    "semantic_hash": ""
   },
   "apktool-salida/res/raw/omid_session_client_v1_5_3.js": {
-    "mtime": 1792524036.84129,
-    "seen": 1793361738.7910075,
-    "ast_hash": "2fb1c41b37f294a803cde91ec9ad1dd7",
-    "semantic_hash": "2fb1c41b37f294a803cde91ec9ad1dd7"
+    "mtime": 1793406549.7741873,
+    "seen": 1793413454.9561512,
+    "ast_hash": "c437eba9b6f6a8aea19859578dc4bb38",
+    "semantic_hash": ""
   },
   "apktool-salida/res/raw/omsdk_v1_5_3.js": {
-    "mtime": 1792524036.8564684,
-    "seen": 1793361738.7910094,
-    "ast_hash": "19abfc397c31025644bf7c14a3eb02f2",
-    "semantic_hash": "19abfc397c31025644bf7c14a3eb02f2"
+    "mtime": 1793406549.7751882,
+    "seen": 1793413454.9561527,
+    "ast_hash": "6dc5addde72ad1722675ecef662eff27",
+    "semantic_hash": ""
   },
   "install_tv.ps1": {
     "mtime": 1792615693.8486075,
@@ -192,10 +192,10 @@
     "semantic_hash": "5646bbf432d8b2ec35c733435845888e"
   },
   "tools/section-drawer/src/com/movievn/tv/TvSectionDrawer.java": {
-    "mtime": 1793318694.3504417,
-    "seen": 1793361738.7910774,
-    "ast_hash": "f1c288c5c9903548f2ef06bbcf9981c9",
-    "semantic_hash": "f1c288c5c9903548f2ef06bbcf9981c9"
+    "mtime": 1793409870.549822,
+    "seen": 1793413454.956214,
+    "ast_hash": "1cb0d347463d81ae5c02b37f24b1c617",
+    "semantic_hash": ""
   },
   "tools/section-drawer/stub/com/mgs/carparking/widgets/tab/TabLayout.java": {
     "mtime": 1792591476.08864,
@@ -258,9 +258,9 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1793393070.2839472,
-    "seen": 1793393126.0646129,
-    "ast_hash": "97c01f7e3e5d0bd87eaec72bfbf615fd",
+    "mtime": 1793410774.0506861,
+    "seen": 1793413454.9562395,
+    "ast_hash": "589d7303f56228844a6bce7c3dcbe051",
     "semantic_hash": ""
   },
   "DESIGN.md": {
@@ -276,10 +276,10 @@
     "semantic_hash": "cb6f8e34e585cd7005a4ebefe79d348a"
   },
   "PROGRESS.md": {
-    "mtime": 1793350243.8285012,
-    "seen": 1793361738.7911108,
-    "ast_hash": "4ce8dd8ad25b014408fc4776aba8139a",
-    "semantic_hash": "4ce8dd8ad25b014408fc4776aba8139a"
+    "mtime": 1793407178.3715546,
+    "seen": 1793413454.9562428,
+    "ast_hash": "ceaa8c78508d51760ca549e9c4f483b0",
+    "semantic_hash": ""
   },
   "README.md": {
     "mtime": 1793319072.0391638,
@@ -288,40 +288,40 @@
     "semantic_hash": "016ce2cefc2ac948b875cdf39b68d33b"
   },
   "apktool-salida/apktool.yml": {
-    "mtime": 1792524054.1769586,
-    "seen": 1793361738.7909887,
+    "mtime": 1793406548.153368,
+    "seen": 1793413454.9561398,
     "ast_hash": "164b1c56fba4e148ffc8af1bc12d6c6a",
     "semantic_hash": "164b1c56fba4e148ffc8af1bc12d6c6a"
   },
   "apktool-salida/assets/fyb_iframe_endcard_tmpl.html": {
-    "mtime": 1792524054.0069153,
-    "seen": 1793361738.7911143,
-    "ast_hash": "7844cba73b7b4b439b587dd501e92d82",
-    "semantic_hash": "7844cba73b7b4b439b587dd501e92d82"
+    "mtime": 1793406548.206849,
+    "seen": 1793413454.9562447,
+    "ast_hash": "ee7a63d91d33ac49d43ce04357b1e812",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/fyb_static_endcard_tmpl.html": {
-    "mtime": 1792524054.0069153,
-    "seen": 1793361738.7911158,
-    "ast_hash": "418709dfb2ee0025de6bf1cb439eef00",
-    "semantic_hash": "418709dfb2ee0025de6bf1cb439eef00"
+    "mtime": 1793406548.206849,
+    "seen": 1793413454.956246,
+    "ast_hash": "9f75a3870f93985e157b848a7895c641",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/ia_js_load_monitor.txt": {
-    "mtime": 1792524054.0078669,
-    "seen": 1793361738.7911177,
-    "ast_hash": "0252bdafe25a151601f464fedaac138f",
-    "semantic_hash": "0252bdafe25a151601f464fedaac138f"
+    "mtime": 1793406548.206849,
+    "seen": 1793413454.9562469,
+    "ast_hash": "73ca771ec9b5abd47607fc51a47efb70",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/ia_mraid_bridge.txt": {
-    "mtime": 1792524054.0088546,
-    "seen": 1793361738.791119,
-    "ast_hash": "44e90464b6b1c89a20cfe634da790285",
-    "semantic_hash": "44e90464b6b1c89a20cfe634da790285"
+    "mtime": 1793406548.207847,
+    "seen": 1793413454.9562478,
+    "ast_hash": "ff79fc18e8996c5ce3c185dfc6f1437b",
+    "semantic_hash": ""
   },
   "apktool-salida/assets/protected_by_np/ApkControlFlowConfusion_8.0_7bab689f1fa848ac8911bd8799382d02.txt": {
-    "mtime": 1792524054.019747,
-    "seen": 1793361738.7911212,
-    "ast_hash": "be2494a07f89cd73bf9c46048b2004f6",
-    "semantic_hash": "be2494a07f89cd73bf9c46048b2004f6"
+    "mtime": 1793406548.2138438,
+    "seen": 1793413454.956249,
+    "ast_hash": "944d10e2ee10c4e9e3fc3d02ec202633",
+    "semantic_hash": ""
   },
   "comparisons.txt": {
     "mtime": 1792944366.9043522,
@@ -330,10 +330,10 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "docs/00-INDICE.md": {
-    "mtime": 1793001784.409995,
-    "seen": 1793361738.791123,
-    "ast_hash": "9736ea5b5a84d8f9cf92eee6af36a7c2",
-    "semantic_hash": "9736ea5b5a84d8f9cf92eee6af36a7c2"
+    "mtime": 1793407178.3960686,
+    "seen": 1793413454.9562523,
+    "ast_hash": "e5bec3989ab49b69ea6de84851f3bbdf",
+    "semantic_hash": ""
   },
   "docs/auditoria/anuncios-inventario-manifest.md": {
     "mtime": 1792875014.818153,
@@ -882,14 +882,14 @@
     "semantic_hash": "54bb75d63631ba69e65d5908d52fbbd0"
   },
   "apktool-salida/res/raw/beep.ogg": {
-    "mtime": 1792524036.7801528,
-    "seen": 1793361738.7912664,
+    "mtime": 1793406549.7726605,
+    "seen": 1793413454.956381,
     "ast_hash": "4b3dfa82107c0c6868b603e5798f1462",
     "semantic_hash": "4b3dfa82107c0c6868b603e5798f1462"
   },
   "apktool-salida/res/raw/ps_click_music.wav": {
-    "mtime": 1792524036.671987,
-    "seen": 1793361738.7912688,
+    "mtime": 1793406549.7761886,
+    "seen": 1793413454.9563823,
     "ast_hash": "bb59a786e4b252aab830fdea740371c3",
     "semantic_hash": "bb59a786e4b252aab830fdea740371c3"
   },
@@ -1024,5 +1024,275 @@
     "seen": 1793361738.7912464,
     "ast_hash": "36cf20116576120574d4af9c22bdd02e",
     "semantic_hash": "36cf20116576120574d4af9c22bdd02e"
+  },
+  "build-apk.ps1": {
+    "mtime": 1793404605.1297128,
+    "seen": 1793413454.956154,
+    "ast_hash": "e114cba205ac2283a3fc38270d5d3243",
+    "semantic_hash": ""
+  },
+  "check_activity.py": {
+    "mtime": 1793401298.7067807,
+    "seen": 1793413454.9561553,
+    "ast_hash": "09e482a8fa3a422e3dcccfa9f021ffae",
+    "semantic_hash": ""
+  },
+  "check_b_smali.py": {
+    "mtime": 1793401393.181408,
+    "seen": 1793413454.9561565,
+    "ast_hash": "8156f51f37a6b911ce9016cee5e5b1a4",
+    "semantic_hash": ""
+  },
+  "check_baseactivity.py": {
+    "mtime": 1793401353.5744846,
+    "seen": 1793413454.9561577,
+    "ast_hash": "6f1619541db91606f2be1a5f678cbc81",
+    "semantic_hash": ""
+  },
+  "check_logcat.py": {
+    "mtime": 1793401415.5826228,
+    "seen": 1793413454.9561584,
+    "ast_hash": "1dea96ec4b3840e0d242f2179a7637c8",
+    "semantic_hash": ""
+  },
+  "check_main_activity.py": {
+    "mtime": 1793401902.2597063,
+    "seen": 1793413454.9561596,
+    "ast_hash": "5cc39b0d9c2f569f937aa35a79e1ff9f",
+    "semantic_hash": ""
+  },
+  "check_main_activity2.py": {
+    "mtime": 1793401913.9997628,
+    "seen": 1793413454.9561603,
+    "ast_hash": "3430ed7bebe48d48f43ad92e5d1acbb8",
+    "semantic_hash": ""
+  },
+  "check_tabs.py": {
+    "mtime": 1793401970.7730849,
+    "seen": 1793413454.9561613,
+    "ast_hash": "65ea9742121ae9841768e9b2e66e14d6",
+    "semantic_hash": ""
+  },
+  "find_categories_ref.py": {
+    "mtime": 1793401939.0557787,
+    "seen": 1793413454.956162,
+    "ast_hash": "41c7bb9162e91fde710404f5c7cebdaf",
+    "semantic_hash": ""
+  },
+  "find_strings.py": {
+    "mtime": 1793401982.3768108,
+    "seen": 1793413454.9561632,
+    "ast_hash": "3aa84fc1acc876bc7725e569d4174ff6",
+    "semantic_hash": ""
+  },
+  "fix_baseactivity.py": {
+    "mtime": 1793401544.0446427,
+    "seen": 1793413454.956167,
+    "ast_hash": "d0609823c275cdf4f2d4f353ca213f16",
+    "semantic_hash": ""
+  },
+  "fix_baseactivity2.py": {
+    "mtime": 1793401567.2465239,
+    "seen": 1793413454.9561682,
+    "ast_hash": "37eaa5423fa0e24a72863ed0a975b0d8",
+    "semantic_hash": ""
+  },
+  "fix_styles.py": {
+    "mtime": 1793401122.9431236,
+    "seen": 1793413454.9561725,
+    "ast_hash": "6c5c58dba9e554c2c7da57fac5a93289",
+    "semantic_hash": ""
+  },
+  "git_commit.py": {
+    "mtime": 1793402100.4056377,
+    "seen": 1793413454.956174,
+    "ast_hash": "02f02581e8f19052bee3e0ef8fe5f3b6",
+    "semantic_hash": ""
+  },
+  "install-apk.ps1": {
+    "mtime": 1793404631.2181413,
+    "seen": 1793413454.9561746,
+    "ast_hash": "d5697eec0b22d9a2b21c1166aa64978b",
+    "semantic_hash": ""
+  },
+  "tools/build_category_screen_tv.ps1": {
+    "mtime": 1793393469.014988,
+    "seen": 1793413454.9561796,
+    "ast_hash": "3b1924379967e47fa39e08a8e0df9386",
+    "semantic_hash": ""
+  },
+  "tools/category-screen-tv/src/com/movievn/tv/TvCategoryScreen.java": {
+    "mtime": 1793393488.3658268,
+    "seen": 1793413454.9561896,
+    "ast_hash": "7e825593ac45c76efd511e3b01bf5559",
+    "semantic_hash": ""
+  },
+  "tools/section-drawer/src/com/movievn/tv/TvGithubUpdate.java": {
+    "mtime": 1793414056.1257002,
+    "seen": 1793414123.0484664,
+    "ast_hash": "17ce65be097054d66015742bf0246706",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/build-apk.sh": {
+    "mtime": 1793404561.7812903,
+    "seen": 1793413454.9562292,
+    "ast_hash": "c71e50694e94927fd665bf91279928c4",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/count-invokes.sh": {
+    "mtime": 1793404221.7793036,
+    "seen": 1793413454.9562302,
+    "ast_hash": "a5ee40b2cd5c06f0bd4fe3ea9f91fbd4",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/test-apktool.sh": {
+    "mtime": 1793404526.914298,
+    "seen": 1793413454.956231,
+    "ast_hash": "162b55d729ffa0cf23e857155a07cc88",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/upload-release.sh": {
+    "mtime": 1793407178.4106376,
+    "seen": 1793413454.9562323,
+    "ast_hash": "019a87c99fb084c0489ae22dfd1b2e8d",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/upload-v172.sh": {
+    "mtime": 1793404676.681157,
+    "seen": 1793413454.9562333,
+    "ast_hash": "e5db26dff61d51cb1a0c8186bb7cc32e",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/verify-menu.ps1": {
+    "mtime": 1793404800.941279,
+    "seen": 1793413454.956234,
+    "ast_hash": "c10316d90ebf9cb00499b8a9cfd8f608",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/src/com/movievn/tv/TvUpdateModal.java": {
+    "mtime": 1793399700.1752055,
+    "seen": 1793413454.956235,
+    "ast_hash": "67fc9ceade990797e0e36e150b9e00ab",
+    "semantic_hash": ""
+  },
+  "update_progress.py": {
+    "mtime": 1793401821.8474212,
+    "seen": 1793413454.9562361,
+    "ast_hash": "971715c9eb8935bb0a851b8e49bf3eb0",
+    "semantic_hash": ""
+  },
+  "upload-release-debug.sh": {
+    "mtime": 1793410174.135736,
+    "seen": 1793413454.9562368,
+    "ast_hash": "1fd744bfbebb92756fc2c799aff78c29",
+    "semantic_hash": ""
+  },
+  "context.txt": {
+    "mtime": 1793401941.8849525,
+    "seen": 1793413454.9562514,
+    "ast_hash": "85fe06195b0c90e3b247fd01cc94fd81",
+    "semantic_hash": ""
+  },
+  "docs/actualizacion-apk.md": {
+    "mtime": 1793413336.5833058,
+    "seen": 1793413454.9562535,
+    "ast_hash": "a2013d66198e38c3ec224b8a51a83e43",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo1.txt": {
+    "mtime": 1793399184.655962,
+    "seen": 1793413454.9563665,
+    "ast_hash": "8a9ac4eb56f3ed3e05f74fc098b5574c",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo10.txt": {
+    "mtime": 1793399195.4260225,
+    "seen": 1793413454.9563677,
+    "ast_hash": "84bd28d769791bff07aac1ad9e78d9a6",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo11.txt": {
+    "mtime": 1793399196.7368515,
+    "seen": 1793413454.9563687,
+    "ast_hash": "f8821d2de5aba6b2f4e3edf0c6a594f2",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo12.txt": {
+    "mtime": 1793399198.008658,
+    "seen": 1793413454.9563696,
+    "ast_hash": "2d068d04b7b49b81b9afb7b28d794669",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo13.txt": {
+    "mtime": 1793399199.8105567,
+    "seen": 1793413454.9563704,
+    "ast_hash": "9b21714dc7dde22530ac816f979b73ec",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo14.txt": {
+    "mtime": 1793399202.4381204,
+    "seen": 1793413454.9563718,
+    "ast_hash": "5c75996d524df5ef548ad5958d88a612",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo15.txt": {
+    "mtime": 1793399208.5435412,
+    "seen": 1793413454.9563725,
+    "ast_hash": "406b6496c226f60c959edf7b3f211705",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo16.txt": {
+    "mtime": 1793399209.850736,
+    "seen": 1793413454.9563735,
+    "ast_hash": "875db4b5910558fa3ec752c51e048933",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo19.txt": {
+    "mtime": 1793399201.1378827,
+    "seen": 1793413454.9563746,
+    "ast_hash": "ac74bddd10d84c00ac1daa891b1a2031",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo2.txt": {
+    "mtime": 1793399185.9767554,
+    "seen": 1793413454.9563754,
+    "ast_hash": "d5490835b0d4a7cebe606d47e4cfb820",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo4.html": {
+    "mtime": 1793399187.644424,
+    "seen": 1793413454.9563763,
+    "ast_hash": "7878d599c7c649be14584f15471c23c6",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo5.txt": {
+    "mtime": 1793399189.7812347,
+    "seen": 1793413454.9563773,
+    "ast_hash": "5b6d00f55f114d3bf92a287ebd00ad52",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo6.txt": {
+    "mtime": 1793399191.0981958,
+    "seen": 1793413454.9563782,
+    "ast_hash": "6dae9ed1390b21b6e078fc12a66460b3",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo7.txt": {
+    "mtime": 1793399182.4381733,
+    "seen": 1793413454.9563792,
+    "ast_hash": "8d35deae7dc081b44e829022824587cc",
+    "semantic_hash": ""
+  },
+  "tools/update-modal/scripts/nuevo9.txt": {
+    "mtime": 1793399193.9670477,
+    "seen": 1793413454.95638,
+    "ast_hash": "9c056602f264af2929b4078e38c226da",
+    "semantic_hash": ""
+  },
+  "docs/security-update-audit.md": {
+    "mtime": 1793413658.680514,
+    "seen": 1793414123.0485957,
+    "ast_hash": "467a8cc00746e613fe3be82dff156fc0",
+    "semantic_hash": ""
   }
 }

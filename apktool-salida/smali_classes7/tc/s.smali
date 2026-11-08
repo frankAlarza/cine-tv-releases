@@ -166,24 +166,37 @@
     .locals 4
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
+
     move-result-object v0
+
     invoke-static {v0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
     move-result v0
-    if-eqz v0, :cond_keyboard_init
+
+    if-eqz v0, :cond_0
+
     return-void
 
-    :cond_keyboard_init
     .line 1
+    :cond_0
     const/4 v0, 0x1
+
     invoke-virtual {p1, v0}, Landroid/view/View;->setFocusable(Z)V
+
     invoke-virtual {p1, v0}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
     new-instance v0, Ljava/util/Timer;
+
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
+
     new-instance v1, Ltc/s$a;
+
     invoke-direct {v1, p0, p1}, Ltc/s$a;-><init>(Ltc/s;Landroid/widget/EditText;)V
+
     const-wide/16 v2, 0xc8
+
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
     return-void

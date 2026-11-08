@@ -446,6 +446,8 @@ public final class TvSectionDrawer {
         // estilo de los subtitulos. Indice -1 para distinguirlo de las
         // pestanas reales.
         addItem(-1, "Estilo de subtitulos");
+        // Item personalizado: actualizar la app desde GitHub Releases.
+        addItem(-2, "Actualizar aplicacion");
         Log.i(TAG, "items del cajon: " + items.size() + " de " + count + " pestanas");
     }
 
@@ -531,6 +533,8 @@ public final class TvSectionDrawer {
             name = "ic_section_grid";
         } else if (index == 4) {
             name = "ic_section_mine";
+        } else if (index == -2) {
+            name = "ic_arrow_down_24dp";
         } else {
             name = "ic_section_generic";
         }
@@ -769,6 +773,12 @@ public final class TvSectionDrawer {
 
         @Override
         public void onClick(View v) {
+            if (item.index == -2) {
+                // Item personalizado: actualizar la app desde GitHub.
+                TvGithubUpdate.start(drawer.activity);
+                drawer.close();
+                return;
+            }
             if (item.index < 0) {
                 // Item personalizado: abrir el dialogo de estilo de subtitulos.
                 TvSubtitleStyleDialog.show(drawer.activity);
