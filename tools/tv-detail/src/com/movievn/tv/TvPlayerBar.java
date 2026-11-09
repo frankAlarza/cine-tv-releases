@@ -153,7 +153,9 @@ public class TvPlayerBar {
         // En pantalla completa, con los controles ocultos, cualquier flecha
         // del D-pad los vuelve a mostrar (el boton de pantalla completa y la
         // barra aparecen y desaparecen juntos).
-        if (b.bar != null && !b.barVisible && TvDetail.isFullscreen() && isDpad(keyCode)) {
+        if (b.bar != null && TvDetail.isFullscreen() && isDpad(keyCode)
+                && (b.bar.getVisibility() != View.VISIBLE || !b.barVisible)) {
+            b.barVisible = false;
             b.showBar();
             // El foco se pide despues, para que la tecla no mueva dos veces.
             b.handler.post(new FocusFirst(b));
@@ -202,6 +204,9 @@ public class TvPlayerBar {
     public static void showFloatingControls() {
         TvPlayerBar b = sActive;
         if (b == null) return;
+        // Forzar el repintado aunque el estado barVisible siga en true: la libreria
+        // de pantalla completa puede ocultar las vistas a nivel de layout.
+        b.barVisible = false;
         b.showBar();
     }
 
