@@ -447,3 +447,7 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - Invocado por `TvSectionDrawer.attach()` durante `setup()` (reflexi�n, sin acoplar compile-time).
 - Repite el escaneo con cadencia decreciente + `OnLayoutChangeListener` sobre FeedRootRecyclerView.
 - Versi�n incrementada a v205 (versionCode 40008) y APK instalado en emulator-5554.
+
+## TvSubtitleSearch candidatos
+- Implementacion.
+

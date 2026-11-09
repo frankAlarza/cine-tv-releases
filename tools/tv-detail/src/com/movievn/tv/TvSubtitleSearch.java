@@ -72,6 +72,44 @@ public class TvSubtitleSearch {
     }
 
     /**
+     * Genera candidatos de titulo en orden de prioridad (exacto primero). No altera
+     * el titulo original; solo añade variantes mas limpias para casos en los que un
+     * sufijo (numeros sueltos, temporada, episodio) bloquea a TMDB.
+     */
+    private static List<String> titleCandidates(String title) {
+        List<String> out = new ArrayList<String>();
+        if (title == null) return out;
+        String base = title.trim();
+        if (base.isEmpty()) return out;
+        addUnique(out, base);
+
+        // 1) Quitar sufijos de temporada/episodio explicitos: " - Temporada 2", "S01E02"
+        String noSeason = base.replaceAll("(?i)\\s*[-–]\\s*(temporada|season|capitulo|episode)\\b.*$", "");
+        addUnique(out, noSeason);
+        String noEpisode = base.replaceAll("(?i)\\s*[Ss]\\d+\\s*[Ee]\\d+.*$", "");
+        addUnique(out, noEpisode);
+        // 2) Quitar sufijo de año en parentesis: " (2026)"
+        String noYear = base.replaceAll("\\s*\\(\\d{4}\\)\\s*$", "");
+        addUnique(out, noYear);
+        // 3) Ultimo recurso: quitar un numero suelto al final (p.ej. " 1").
+        // Solo se prueba si nada anterior funciono (TMDB probara primero los de arriba).
+        String noTrailingNumber = base.replaceAll("\\s+\\d+\\s*$", "");
+        addUnique(out, noTrailingNumber);
+
+        return out;
+    }
+
+    private static void addUnique(List<String> list, String value) {
+        if (value == null) return;
+        String v = value.trim();
+        if (v.isEmpty()) return;
+        for (String s : list) {
+            if (s.trim().equalsIgnoreCase(v)) return;
+        }
+        list.add(v);
+    }
+
+    /**
      * Busca subtitulos para un titulo. Resuelve imdb_id con TMDB, luego consulta SubDL.
      * Devuelve lista de SubtitleResult (uno por idioma disponible) o lista vacia.
      */
@@ -82,20 +120,45 @@ public class TvSubtitleSearch {
             return results;
         }
 
-        // 1. Intentar resolver imdb_id con TMDB
-        String imdbId = resolveTMDB(title, year, isTv);
+        // 1. Generar candidatos de titulo (exacto primero, versiones limpias despues).
+        //    Nunca reemplazamos el titulo original: solo añadimos opciones mas laxas
+        //    por si el nombre lleva un sufijo que bloquea TMDB (ej. "Spider-Man: ... 1").
+        List<String> cands = titleCandidates(title);
         String type = isTv ? "tv" : "movie";
+        String imdbId = null;
+        String candidateUsed = title;
+        int candidateYear = year;
 
-        // 2. Consultar SubDL (por imdb_id si se resolvio, o por film_name como fallback)
+        for (String cand : cands) {
+            imdbId = resolveTMDB(cand, year, isTv);
+            if (imdbId != null && !imdbId.isEmpty()) {
+                candidateUsed = cand;
+                if (lastResolvedYear > 0) candidateYear = lastResolvedYear;
+                Log.i(TAG, "search: imdb_id=" + imdbId + " con candidato=\"" + cand + "\" (original=\"" + title + "\")");
+                break;
+            }
+            Log.w(TAG, "search: candidato \"" + cand + "\" no resolvio imdb_id");
+        }
+
+        // 2. Consultar SubDL (por imdb_id si se resolvio, o por film_name como fallback).
+        //    Si caemos a film_name, probamos candidatos en orden (exacto -> base).
         String urlStr;
         if (imdbId != null && !imdbId.isEmpty()) {
-            Log.i(TAG, "search: imdb_id=" + imdbId + " para titulo=" + title);
             urlStr = SUBDL_SEARCH + "?imdb_id=" + imdbId + "&languages=es,en&type=" + type;
         } else {
-            Log.w(TAG, "search: no se pudo resolver imdb_id, usando film_name para titulo=" + title);
-            urlStr = SUBDL_SEARCH + "?film_name=" + encode(title) + "&languages=es,en&type=" + type;
+            Log.w(TAG, "search: no se pudo resolver imdb_id para ningun candidato; usando film_name");
+            String filmCandidate = (cands.isEmpty() ? title : cands.get(0));
+            urlStr = SUBDL_SEARCH + "?film_name=" + encode(filmCandidate) + "&languages=es,en&type=" + type;
         }
         String response = httpGet(urlStr, SUBDL_BEARER);
+
+        // Respuesta vacia con imdb_id: probar film_name con el primer candidato por si
+        // el registro existe pero SubDL no accepta ese imdb.
+        if ((response == null || response.isEmpty()) && imdbId != null && !imdbId.isEmpty()) {
+            Log.w(TAG, "search: SubDL por imdb_id sin respuesta; reintentando por film_name con candidate=\"" + candidateUsed + "\"");
+            urlStr = SUBDL_SEARCH + "?film_name=" + encode(candidateUsed) + "&languages=es,en&type=" + type;
+            response = httpGet(urlStr, SUBDL_BEARER);
+        }
         if (response == null || response.isEmpty()) {
             Log.w(TAG, "search: respuesta vacia de SubDL para titulo=" + title);
             return results;
