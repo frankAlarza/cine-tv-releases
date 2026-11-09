@@ -530,21 +530,17 @@
     .line 240
     if-eqz p1, :cond_c
 
-    .line 241
-    .line 242
     iget-object p1, p0, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView$c;->b:Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;
 
-    .line 243
-    .line 244
-    iget-object p1, p1, Lchuangyuan/ycj/videolibrary/widget/BaseView;->b:Landroid/app/Activity;
+    invoke-virtual {p1}, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;->i()Z
 
-    .line 245
-    .line 246
-    .line 247
-    invoke-virtual {p1, v2}, Landroid/app/Activity;->setRequestedOrientation(I)V
+    move-result v0
 
-    .line 248
-    goto :goto_1
+    xor-int/2addr v0, v2
+
+    invoke-virtual {p1, v0}, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;->O(Z)V
+
+    goto :goto_2
 
     .line 249
     .line 250

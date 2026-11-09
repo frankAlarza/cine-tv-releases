@@ -471,3 +471,16 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   los 4 s, D-pad lo recupera (`v222-06-dpad-show.png`), BACK restaura la ficha
   (`v222-07-back1.png`).
 - Detalle: [sesion 41](docs/sesiones/sesion-41-fullscreen-smali-desincronizado.md).
+
+## Restaurado fix de orientacion del fullscreen de libreria (tablet, v223)
+
+- Regresion de v222: al revertir `VideoPlayerView.smali` / `VideoPlayerView$c.smali` como
+  "residuo" se perdio el fix que impedia que el boton de pantalla completa de la libreria
+  pusiera la tablet en vertical.
+- El fix nunca estuvo commiteado: vivia solo en el arbol de trabajo, por eso los APK
+  v211-v221 lo llevaban y el repositorio no.
+- Restaurado byte a byte (mismos blobs): `$c.onClick` llama `O(!isFullscreen())` en vez de
+  `setRequestedOrientation(v2)`; `P()` pide orientacion 0 (landscape).
+- Version v223 (versionCode 40026), instalada en emulator-5554 y 5556; fullscreen de la app
+  verificado (`build/v223-01-fullscreen.png`). Pendiente de release en GitHub.
+- Detalle: [sesion 42](docs/sesiones/sesion-42-restauracion-fix-orientacion-tablet.md).

@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "PROGRESS.md": {
-    "mtime": 1794267099.1177702,
-    "seen": 1794267138.0170605,
-    "ast_hash": "37fba667b6df2ff47d772c8e850fc806",
+    "mtime": 1794267221.8376763,
+    "seen": 1794267258.933499,
+    "ast_hash": "0a2c49164b4a66be3ddf8f35f2865418",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1194,9 +1194,9 @@
     "semantic_hash": ""
   },
   "docs/actualizacion-apk.md": {
-    "mtime": 1794167240.4579346,
-    "seen": 1794167461.0712745,
-    "ast_hash": "681d8e69dfa8bd518a836c66193bcc94",
+    "mtime": 1794267216.1235323,
+    "seen": 1794267258.9335113,
+    "ast_hash": "b8f1680e96216da0c8f5b130dc6b4b41",
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/nuevo1.txt": {
@@ -1350,9 +1350,9 @@
     "semantic_hash": ""
   },
   "docs/sesiones/sesion-41-fullscreen-smali-desincronizado.md": {
-    "mtime": 1794267055.178598,
-    "seen": 1794267138.017184,
-    "ast_hash": "c5a1b869f1a1a82168a8b60be3603e45",
+    "mtime": 1794267221.8376763,
+    "seen": 1794267258.933611,
+    "ast_hash": "dd6013fc0294ba96d5a535585daf59c8",
     "semantic_hash": ""
   }
 }

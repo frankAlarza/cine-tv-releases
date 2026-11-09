@@ -587,7 +587,7 @@
     iget-object v0, p0, Lchuangyuan/ycj/videolibrary/widget/BaseView;->b:Landroid/app/Activity;
 
     .line 3
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     .line 4
     .line 5
