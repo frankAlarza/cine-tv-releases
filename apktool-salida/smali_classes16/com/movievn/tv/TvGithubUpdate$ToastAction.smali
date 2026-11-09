@@ -27,16 +27,16 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 668
+    .line 679
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 669
+    .line 680
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ToastAction;->ctx:Landroid/content/Context;
 
-    .line 670
+    .line 681
     iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ToastAction;->msg:Ljava/lang/String;
 
-    .line 671
+    .line 682
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 3
 
-    .line 675
+    .line 686
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$ToastAction;->ctx:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$ToastAction;->msg:Ljava/lang/String;
@@ -58,6 +58,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 676
+    .line 687
     return-void
 .end method

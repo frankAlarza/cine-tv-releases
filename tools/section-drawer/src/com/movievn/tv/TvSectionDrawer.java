@@ -102,6 +102,7 @@ public final class TvSectionDrawer {
     private LinearLayout panel;
     private LinearLayout listView;
     private ImageView moreButton;        // boton de la barra superior del Home
+    private ImageView updateButton;      // boton de actualizacion en barra superior
     private ImageView fallbackButton;    // boton flotante para el resto de secciones
 
     private final List<Item> items = new ArrayList<Item>();
@@ -117,7 +118,7 @@ public final class TvSectionDrawer {
     private boolean redirecting;
     private boolean contentBlocked;
     private View lastItemFocus;
-    private View updateBadge;
+    private View updateTopBadge;
 
     private static final class Item {
         final int index;
@@ -389,7 +390,67 @@ public final class TvSectionDrawer {
         b.setOnClickListener(toggleClick);
 
         moreButton = b;
-        wireTopFocus(top, look, b);
+        // Boton de actualizacion en la barra superior (vN): icono flaticon.
+        ImageView ub = null;
+        View existingU = top.findViewWithTag("tv_update_button");
+        if (existingU instanceof ImageView && existingU.getParent() == top) {
+            ub = (ImageView) existingU;
+        } else {
+            if (top instanceof RelativeLayout) {
+                ub = new ImageView(activity);
+                int uicon = resId("drawable", "ic_update_flaticon");
+                if (uicon == 0) uicon = resId("drawable", "ic_update_tv");
+                if (uicon != 0) ub.setImageResource(uicon);
+                int ring = resId("drawable", "bg_focused");
+                if (ring != 0) ub.setForeground(activity.getResources().getDrawable(ring));
+                int size = dimen("tv_top_icon", 38);
+                ub.setPadding(dp(7), dp(7), dp(7), dp(7));
+                ub.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                ub.setFocusable(true);
+                ub.setFocusableInTouchMode(false);
+                ub.setClickable(true);
+                ub.setId(View.generateViewId());
+                ub.setTag("tv_update_button");
+                ub.setContentDescription("Actualizar");
+                int downloadId = resId("id", "iv_download");
+                RelativeLayout.LayoutParams ulp = new RelativeLayout.LayoutParams(size, size);
+                ulp.addRule(RelativeLayout.RIGHT_OF, downloadId);
+                ulp.addRule(RelativeLayout.CENTER_VERTICAL);
+                top.addView(ub, ulp);
+                Log.i(TAG, "boton de actualizacion creado en la barra superior");
+            }
+        }
+        if (ub != null) {
+            ub.setClickable(true);
+            ub.setFocusable(true);
+            ub.setFocusableInTouchMode(false);
+            ub.setOnClickListener(new UpdateClick(this));
+            if (updateTopBadge == null || updateTopBadge.getParent() != top) {
+                View badge = new View(activity);
+                GradientDrawable badgeBg = new GradientDrawable();
+                badgeBg.setShape(GradientDrawable.OVAL);
+                badgeBg.setColor(0xFFE50914);
+                badge.setBackground(badgeBg);
+                int bsz = dp(12);
+                RelativeLayout.LayoutParams blp = new RelativeLayout.LayoutParams(bsz, bsz);
+                blp.addRule(RelativeLayout.ALIGN_RIGHT, ub.getId());
+                blp.addRule(RelativeLayout.ALIGN_TOP, ub.getId());
+                blp.rightMargin = dp(2);
+                blp.topMargin = dp(2);
+                top.addView(badge, blp);
+                updateTopBadge = badge;
+            }
+        }
+        if (ub != null && moreButton != null && moreButton.getParent() == top) {
+            RelativeLayout.LayoutParams mlp = (RelativeLayout.LayoutParams) moreButton.getLayoutParams();
+            mlp.removeRule(RelativeLayout.RIGHT_OF);
+            mlp.removeRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            mlp.addRule(RelativeLayout.RIGHT_OF, ub.getId());
+            moreButton.setLayoutParams(mlp);
+        }
+        updateButton = ub;
+        wireTopFocus(top, look, moreButton);
+        refreshUpdateBadge();
     }
 
     /**
@@ -416,14 +477,21 @@ public final class TvSectionDrawer {
         look.setFocusable(true);
         look.setNextFocusLeftId(refresh != null ? refresh.getId()
                 : (search != null ? search.getId() : View.NO_ID));
-        look.setNextFocusRightId(download != null ? download.getId() : more.getId());
+        look.setNextFocusRightId(download != null ? download.getId()
+                : (updateButton != null ? updateButton.getId() : more.getId()));
         if (download != null) {
             download.setFocusable(true);
-            download.setNextFocusRightId(more.getId());
+            download.setNextFocusRightId(updateButton != null ? updateButton.getId() : more.getId());
             download.setNextFocusLeftId(look.getId());
         }
+        if (updateButton != null) {
+            updateButton.setFocusable(true);
+            updateButton.setNextFocusRightId(more.getId());
+            updateButton.setNextFocusLeftId(download != null ? download.getId() : look.getId());
+        }
         more.setNextFocusRightId(search != null ? search.getId() : look.getId());
-        more.setNextFocusLeftId(download != null ? download.getId() : look.getId());
+        more.setNextFocusLeftId(updateButton != null ? updateButton.getId()
+                : (download != null ? download.getId() : look.getId()));
     }
 
     private void updateFallback() {
@@ -452,8 +520,6 @@ public final class TvSectionDrawer {
         // estilo de los subtitulos. Indice -1 para distinguirlo de las
         // pestanas reales.
         addItem(-1, "Estilo de subtitulos");
-        // Item personalizado: actualizar la app desde GitHub Releases.
-        addItem(-2, "Actualizar aplicacion");
         Log.i(TAG, "items del cajon: " + items.size() + " de " + count + " pestanas");
     }
 
@@ -500,20 +566,6 @@ public final class TvSectionDrawer {
         labelLp.rightMargin = dp(12);
         row.addView(label, labelLp);
 
-        if (index == -2) {
-            View badge = new View(activity);
-            GradientDrawable badgeBg = new GradientDrawable();
-            badgeBg.setShape(GradientDrawable.OVAL);
-            badgeBg.setColor(0xFFE50914);
-            badge.setBackground(badgeBg);
-            int bsz = dp(12);
-            LinearLayout.LayoutParams badgeLp = new LinearLayout.LayoutParams(bsz, bsz);
-            badgeLp.rightMargin = dp(16);
-            badgeLp.gravity = Gravity.CENTER_VERTICAL;
-            badge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
-            row.addView(badge, badgeLp);
-            updateBadge = badge;
-        }
 
         listView.addView(row, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, itemHeight));
@@ -554,8 +606,6 @@ public final class TvSectionDrawer {
             name = "ic_section_grid";
         } else if (index == 4) {
             name = "ic_section_mine";
-        } else if (index == -2) {
-            name = "ic_arrow_down_24dp";
         } else {
             name = "ic_section_generic";
         }
@@ -595,18 +645,13 @@ public final class TvSectionDrawer {
     }
 
     private void refreshUpdateBadge() {
-        if (updateBadge != null) {
-            updateBadge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
+        if (updateTopBadge != null) {
+            updateTopBadge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
         }
     }
 
     private void select(Item item) {
         int index = item.index;
-        if (index == -2) {
-            TvGithubUpdate.start(activity);
-            close();
-            return;
-        }
         if (index < 0) {
             // Item personalizado: no es una pestana real.
             TvSubtitleStyleDialog.show(activity);
@@ -650,7 +695,6 @@ public final class TvSectionDrawer {
         if (!ready || open || panel == null) return;
         selectedTab = currentTab();
         applySelection();
-        refreshUpdateBadge();
         open = true;
         scrim.setVisibility(View.VISIBLE);
         scrim.setAlpha(0f);
@@ -749,6 +793,19 @@ public final class TvSectionDrawer {
 
     // ------------------------------------------------------------ listeners
 
+    private static final class UpdateClick implements View.OnClickListener {
+        private final TvSectionDrawer drawer;
+
+        UpdateClick(TvSectionDrawer drawer) {
+            this.drawer = drawer;
+        }
+
+        @Override
+        public void onClick(View v) {
+            TvGithubUpdate.start(drawer.activity);
+        }
+    }
+
     private static final class SetupTask implements Runnable {
         private final TvSectionDrawer drawer;
         private final int attempt;
@@ -806,12 +863,6 @@ public final class TvSectionDrawer {
 
         @Override
         public void onClick(View v) {
-            if (item.index == -2) {
-                // Item personalizado: actualizar la app desde GitHub.
-                TvGithubUpdate.start(drawer.activity);
-                drawer.close();
-                return;
-            }
             if (item.index < 0) {
                 // Item personalizado: abrir el dialogo de estilo de subtitulos.
                 TvSubtitleStyleDialog.show(drawer.activity);

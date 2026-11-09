@@ -29,19 +29,19 @@
 .method constructor <init>(Landroid/app/Activity;Lcom/movievn/tv/TvGithubUpdate;Ljava/lang/String;)V
     .locals 0
 
-    .line 180
+    .line 191
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 181
+    .line 192
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmUpdateAction;->activity:Landroid/app/Activity;
 
-    .line 182
+    .line 193
     iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmUpdateAction;->updater:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 183
+    .line 194
     iput-object p3, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmUpdateAction;->remote:Ljava/lang/String;
 
-    .line 184
+    .line 195
     return-void
 .end method
 
@@ -50,7 +50,7 @@
 .method public run()V
     .locals 5
 
-    .line 189
+    .line 200
     :try_start_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -60,7 +60,7 @@
 
     const-string v1, "Nueva version disponible"
 
-    .line 190
+    .line 201
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    .line 191
+    .line 202
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -104,7 +104,7 @@
 
     invoke-direct {v2, v3}, Lcom/movievn/tv/TvGithubUpdate$ConfirmOkListener;-><init>(Lcom/movievn/tv/TvGithubUpdate;)V
 
-    .line 192
+    .line 203
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -119,49 +119,49 @@
 
     invoke-direct {v2, v3, v4}, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
-    .line 193
+    .line 204
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 194
+    .line 205
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 195
+    .line 206
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 196
+    .line 207
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 197
+    .line 208
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
 
-    .line 198
+    .line 209
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/widget/Button;->requestFocus()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
+    .line 212
     :cond_0
     goto :goto_0
 
-    .line 199
+    .line 210
     :catch_0
     move-exception v0
 
-    .line 200
+    .line 211
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -188,7 +188,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
+    .line 213
     :goto_0
     return-void
 .end method

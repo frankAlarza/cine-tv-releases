@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvGithubUpdate;)V
     .locals 0
 
-    .line 208
+    .line 219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
+    .line 220
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmOkListener;->updater:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 210
+    .line 221
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 214
+    .line 225
     :try_start_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
     :try_end_0
@@ -51,7 +51,7 @@
     :catch_0
     move-exception p1
 
-    .line 216
+    .line 227
     :goto_0
     new-instance p1, Ljava/lang/Thread;
 
@@ -65,6 +65,6 @@
 
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    .line 217
+    .line 228
     return-void
 .end method

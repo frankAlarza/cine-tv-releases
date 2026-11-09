@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 881
+    .line 932
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 882
+    .line 933
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 883
+    .line 934
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onGlobalFocusChanged(Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
-    .line 887
+    .line 938
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fgetopen(Lcom/movievn/tv/TvSectionDrawer;)Z
@@ -61,7 +61,7 @@
 
     goto :goto_0
 
-    .line 888
+    .line 939
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
@@ -73,7 +73,7 @@
 
     return-void
 
-    .line 889
+    .line 940
     :cond_1
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
@@ -81,7 +81,7 @@
 
     invoke-static {p1, p2}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fputredirecting(Lcom/movievn/tv/TvSectionDrawer;Z)V
 
-    .line 891
+    .line 942
     const/4 p1, 0x0
 
     :try_start_0
@@ -91,7 +91,7 @@
 
     move-result-object p2
 
-    .line 892
+    .line 943
     if-nez p2, :cond_2
 
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
@@ -106,7 +106,7 @@
 
     if-nez v0, :cond_2
 
-    .line 893
+    .line 944
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p2}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fgetitems(Lcom/movievn/tv/TvSectionDrawer;)Ljava/util/List;
@@ -121,7 +121,7 @@
 
     iget-object p2, p2, Lcom/movievn/tv/TvSectionDrawer$Item;->row:Landroid/widget/LinearLayout;
 
-    .line 895
+    .line 946
     :cond_2
     if-eqz p2, :cond_3
 
@@ -129,19 +129,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 897
+    .line 948
     :cond_3
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer$FocusWatcher;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p2, p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fputredirecting(Lcom/movievn/tv/TvSectionDrawer;Z)V
 
-    .line 898
+    .line 949
     nop
 
-    .line 899
+    .line 950
     return-void
 
-    .line 897
+    .line 948
     :catchall_0
     move-exception p2
 
@@ -149,10 +149,10 @@
 
     invoke-static {v0, p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fputredirecting(Lcom/movievn/tv/TvSectionDrawer;Z)V
 
-    .line 898
+    .line 949
     throw p2
 
-    .line 887
+    .line 938
     :cond_4
     :goto_0
     return-void

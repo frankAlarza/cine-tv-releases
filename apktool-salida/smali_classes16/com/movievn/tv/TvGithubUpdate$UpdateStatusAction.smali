@@ -27,16 +27,16 @@
 .method constructor <init>(Landroid/app/AlertDialog;Ljava/lang/String;)V
     .locals 0
 
-    .line 590
+    .line 601
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 591
+    .line 602
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;->dialog:Landroid/app/AlertDialog;
 
-    .line 592
+    .line 603
     iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;->text:Ljava/lang/String;
 
-    .line 593
+    .line 604
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 2
 
-    .line 597
+    .line 608
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 598
+    .line 609
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;->dialog:Landroid/app/AlertDialog;
 
     const v1, 0x102000b
@@ -69,15 +69,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 599
+    .line 610
     if-eqz v0, :cond_0
 
-    .line 600
+    .line 611
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;->text:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 603
+    .line 614
     :cond_0
     return-void
 .end method

@@ -93,7 +93,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 239
+    .line 250
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
@@ -112,17 +112,17 @@
 
     iput-boolean v0, p0, Lcom/movievn/tv/TvGithubUpdate;->cancelled:Z
 
-    .line 240
+    .line 251
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->ctx:Landroid/content/Context;
 
-    .line 241
+    .line 252
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate;->dialogCtx:Landroid/content/Context;
 
-    .line 242
+    .line 253
     return-void
 .end method
 
@@ -139,12 +139,12 @@
 .method public static clearUpdateAvailable(Landroid/content/Context;)V
     .locals 2
 
-    .line 113
+    .line 124
     if-nez p0, :cond_0
 
     return-void
 
-    .line 114
+    .line 125
     :cond_0
     invoke-static {p0}, Lcom/movievn/tv/TvGithubUpdate;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -164,19 +164,19 @@
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 115
+    .line 126
     return-void
 .end method
 
 .method private static firstNumber(Ljava/lang/String;)J
     .locals 4
 
-    .line 366
+    .line 377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 367
+    .line 378
     const/4 v1, 0x0
 
     :goto_0
@@ -186,12 +186,12 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 368
+    .line 379
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 369
+    .line 380
     const/16 v3, 0x30
 
     if-lt v2, v3, :cond_0
@@ -204,7 +204,7 @@
 
     goto :goto_1
 
-    .line 370
+    .line 381
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -214,14 +214,14 @@
 
     goto :goto_2
 
-    .line 367
+    .line 378
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 372
+    .line 383
     :cond_2
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -234,7 +234,7 @@
 
     return-wide v1
 
-    .line 374
+    .line 385
     :cond_3
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -249,16 +249,16 @@
 
     return-wide v0
 
-    .line 375
+    .line 386
     :catch_0
     move-exception p0
 
-    .line 376
+    .line 387
     return-wide v1
 .end method
 
 .method public static hasUpdate(Landroid/content/Context;)Z
-    .locals 2
+    .locals 7
 
     .line 108
     const/4 v0, 0x0
@@ -271,27 +271,104 @@
     :cond_0
     invoke-static {p0}, Lcom/movievn/tv/TvGithubUpdate;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
+    move-result-object v1
+
+    .line 110
+    const-string v2, "update_available"
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    return v0
+
+    .line 111
+    :cond_1
+    const-string v3, "latest_remote"
+
+    const/4 v4, 0x0
+
+    invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 114
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
     move-result-object p0
 
-    const-string v1, "update_available"
+    invoke-virtual {v6, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    move-result-object p0
+
+    iget-object v4, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 115
+    :catch_0
+    move-exception p0
+
+    :goto_0
+    nop
+
+    .line 116
+    if-eqz v5, :cond_3
+
+    invoke-static {v5, v4}, Lcom/movievn/tv/TvGithubUpdate;->isNewer(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
+    if-nez p0, :cond_2
+
+    goto :goto_1
+
+    .line 120
+    :cond_2
+    const/4 p0, 0x1
+
     return p0
+
+    .line 117
+    :cond_3
+    :goto_1
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p0
+
+    invoke-interface {p0, v2, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p0
+
+    invoke-interface {p0, v3}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 118
+    return v0
 .end method
 
 .method private httpGet(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .line 246
+    .line 257
     nop
 
-    .line 247
+    .line 258
     nop
 
-    .line 249
+    .line 260
     const/4 v0, 0x0
 
     :try_start_0
@@ -299,36 +376,36 @@
 
     invoke-direct {v1, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 250
+    .line 261
     invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object p1
 
     check-cast p1, Ljava/net/HttpURLConnection;
 
-    .line 251
+    .line 262
     const/16 v1, 0x3a98
 
     invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 252
+    .line 263
     invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 253
+    .line 264
     const-string v1, "User-Agent"
 
     const-string v2, "CineTV-Updater/1.0 (Android TV)"
 
     invoke-virtual {p1, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
+    .line 265
     const-string v1, "Accept"
 
     const-string v2, "application/vnd.github+json"
 
     invoke-virtual {p1, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
+    .line 266
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v1
@@ -337,19 +414,19 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 256
+    .line 267
     nop
 
-    .line 269
+    .line 280
     nop
 
-    .line 270
+    .line 281
     nop
 
-    .line 256
+    .line 267
     return-object v0
 
-    .line 258
+    .line 269
     :cond_0
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
@@ -358,7 +435,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 259
+    .line 270
     :try_start_1
     new-instance v1, Ljava/io/InputStreamReader;
 
@@ -369,18 +446,18 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 260
+    .line 271
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 261
+    .line 272
     const/16 v3, 0x1000
 
     new-array v3, v3, [C
 
-    .line 263
+    .line 274
     :goto_0
     invoke-virtual {v1, v3}, Ljava/io/Reader;->read([C)I
 
@@ -396,7 +473,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 275
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -405,7 +482,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 269
+    .line 280
     :try_start_3
     invoke-virtual {v1}, Ljava/io/Reader;->close()V
     :try_end_3
@@ -416,7 +493,7 @@
     :catch_0
     move-exception v1
 
-    .line 270
+    .line 281
     :goto_1
     if-eqz p1, :cond_2
 
@@ -430,18 +507,18 @@
     :catch_1
     move-exception p1
 
-    .line 264
+    .line 275
     :cond_2
     :goto_2
     return-object v0
 
-    .line 265
+    .line 276
     :catch_2
     move-exception v2
 
     goto :goto_3
 
-    .line 269
+    .line 280
     :catchall_0
     move-exception v1
 
@@ -453,7 +530,7 @@
 
     goto :goto_6
 
-    .line 265
+    .line 276
     :catch_3
     move-exception v2
 
@@ -461,7 +538,7 @@
 
     goto :goto_3
 
-    .line 269
+    .line 280
     :catchall_1
     move-exception p1
 
@@ -473,7 +550,7 @@
 
     goto :goto_6
 
-    .line 265
+    .line 276
     :catch_4
     move-exception v2
 
@@ -481,7 +558,7 @@
 
     move-object v1, p1
 
-    .line 266
+    .line 277
     :goto_3
     :try_start_5
     const-string v3, "TvGithubUpdate"
@@ -516,10 +593,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 267
+    .line 278
     nop
 
-    .line 269
+    .line 280
     if-eqz v1, :cond_3
 
     :try_start_6
@@ -532,7 +609,7 @@
     :catch_5
     move-exception v1
 
-    .line 270
+    .line 281
     :cond_3
     :goto_4
     if-eqz p1, :cond_4
@@ -547,12 +624,12 @@
     :catch_6
     move-exception p1
 
-    .line 267
+    .line 278
     :cond_4
     :goto_5
     return-object v0
 
-    .line 269
+    .line 280
     :catchall_2
     move-exception v0
 
@@ -569,7 +646,7 @@
     :catch_7
     move-exception v1
 
-    .line 270
+    .line 281
     :cond_5
     :goto_7
     if-eqz p1, :cond_6
@@ -584,7 +661,7 @@
     :catch_8
     move-exception p1
 
-    .line 271
+    .line 282
     :cond_6
     :goto_8
     throw v0
@@ -593,23 +670,23 @@
 .method public static initDailyCheck(Landroid/app/Activity;)V
     .locals 3
 
-    .line 132
+    .line 143
     if-nez p0, :cond_0
 
     return-void
 
-    .line 133
+    .line 144
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 134
+    .line 145
     invoke-static {v0}, Lcom/movievn/tv/TvGithubUpdate;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 135
+    .line 146
     const-string v1, "last_check_date"
 
     const/4 v2, 0x0
@@ -618,7 +695,7 @@
 
     move-result-object v1
 
-    .line 136
+    .line 147
     invoke-static {}, Lcom/movievn/tv/TvGithubUpdate;->today()Ljava/lang/String;
 
     move-result-object v2
@@ -629,17 +706,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 137
+    .line 148
     const-string p0, "TvGithubUpdate"
 
     const-string v0, "initDailyCheck: ya comprobado hoy"
 
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
+    .line 149
     return-void
 
-    .line 140
+    .line 151
     :cond_1
     new-instance v1, Ljava/lang/Thread;
 
@@ -649,17 +726,17 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 172
+    .line 183
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 173
+    .line 184
     return-void
 .end method
 
 .method private static isHex(Ljava/lang/String;)Z
     .locals 5
 
-    .line 318
+    .line 329
     const/4 v0, 0x0
 
     move v1, v0
@@ -673,12 +750,12 @@
 
     if-ge v1, v2, :cond_4
 
-    .line 319
+    .line 330
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 320
+    .line 331
     const/16 v4, 0x30
 
     if-lt v2, v4, :cond_0
@@ -701,20 +778,20 @@
     :cond_1
     move v3, v0
 
-    .line 321
+    .line 332
     :cond_2
     :goto_1
     if-nez v3, :cond_3
 
     return v0
 
-    .line 318
+    .line 329
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 323
+    .line 334
     :cond_4
     return v3
 .end method
@@ -722,7 +799,7 @@
 .method static isNewer(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
 
-    .line 358
+    .line 369
     const/4 v0, 0x0
 
     if-eqz p0, :cond_3
@@ -731,18 +808,18 @@
 
     goto :goto_0
 
-    .line 359
+    .line 370
     :cond_0
     invoke-static {p0}, Lcom/movievn/tv/TvGithubUpdate;->firstNumber(Ljava/lang/String;)J
 
     move-result-wide v1
 
-    .line 360
+    .line 371
     invoke-static {p1}, Lcom/movievn/tv/TvGithubUpdate;->firstNumber(Ljava/lang/String;)J
 
     move-result-wide v3
 
-    .line 361
+    .line 372
     const-wide/16 v5, 0x0
 
     cmp-long v7, v1, v5
@@ -764,7 +841,7 @@
     :cond_1
     return v0
 
-    .line 362
+    .line 373
     :cond_2
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -774,7 +851,7 @@
 
     return p0
 
-    .line 358
+    .line 369
     :cond_3
     :goto_0
     return v0
@@ -798,12 +875,12 @@
 .method public static setUpdateAvailable(Landroid/content/Context;ZLjava/lang/String;)V
     .locals 1
 
-    .line 118
+    .line 129
     if-nez p0, :cond_0
 
     return-void
 
-    .line 119
+    .line 130
     :cond_0
     invoke-static {p0}, Lcom/movievn/tv/TvGithubUpdate;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -813,39 +890,39 @@
 
     move-result-object p0
 
-    .line 120
+    .line 131
     const-string v0, "update_available"
 
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 121
+    .line 132
     const-string v0, "latest_remote"
 
     if-eqz p2, :cond_1
 
     invoke-interface {p0, v0, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 122
+    .line 133
     :cond_1
     if-nez p1, :cond_2
 
     invoke-interface {p0, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 123
+    .line 134
     :cond_2
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 124
+    .line 135
     return-void
 .end method
 
 .method static sha256Hex(Ljava/io/File;)Ljava/lang/String;
     .locals 6
 
-    .line 328
+    .line 339
     nop
 
-    .line 330
+    .line 341
     const/4 v0, 0x0
 
     :try_start_0
@@ -855,7 +932,7 @@
 
     move-result-object v1
 
-    .line 331
+    .line 342
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -863,13 +940,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 332
+    .line 343
     const/16 p0, 0x2000
 
     :try_start_1
     new-array p0, p0, [B
 
-    .line 334
+    .line 345
     :goto_0
     invoke-virtual {v2, p0}, Ljava/io/FileInputStream;->read([B)I
 
@@ -881,25 +958,25 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 335
+    .line 346
     invoke-virtual {v1, p0, v5, v3}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 337
+    .line 348
     :cond_0
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
 
-    .line 338
+    .line 349
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v3, 0x40
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 339
+    .line 350
     nop
 
     :goto_1
@@ -907,12 +984,12 @@
 
     if-ge v5, v3, :cond_2
 
-    .line 340
+    .line 351
     aget-byte v3, p0, v5
 
     and-int/lit16 v3, v3, 0xff
 
-    .line 341
+    .line 352
     const/16 v4, 0x10
 
     if-ge v3, v4, :cond_1
@@ -921,7 +998,7 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 342
+    .line 353
     :cond_1
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -929,12 +1006,12 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 339
+    .line 350
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 344
+    .line 355
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -943,7 +1020,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 348
+    .line 359
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -954,11 +1031,11 @@
     :catch_0
     move-exception v0
 
-    .line 344
+    .line 355
     :goto_2
     return-object p0
 
-    .line 348
+    .line 359
     :catchall_0
     move-exception p0
 
@@ -966,13 +1043,13 @@
 
     goto :goto_3
 
-    .line 345
+    .line 356
     :catch_1
     move-exception p0
 
     goto :goto_5
 
-    .line 348
+    .line 359
     :catchall_1
     move-exception p0
 
@@ -989,22 +1066,22 @@
     :catch_2
     move-exception v0
 
-    .line 349
+    .line 360
     :cond_3
     :goto_4
     throw p0
 
-    .line 345
+    .line 356
     :catch_3
     move-exception p0
 
     move-object v2, v0
 
-    .line 346
+    .line 357
     :goto_5
     nop
 
-    .line 348
+    .line 359
     if-eqz v2, :cond_4
 
     :try_start_4
@@ -1017,7 +1094,7 @@
     :catch_4
     move-exception p0
 
-    .line 346
+    .line 357
     :cond_4
     :goto_6
     return-object v0
@@ -1088,7 +1165,7 @@
 .method private startDownload()V
     .locals 3
 
-    .line 440
+    .line 451
     :try_start_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -1098,38 +1175,38 @@
 
     const-string v1, "Actualizar Aplicacion"
 
-    .line 441
+    .line 452
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
     const-string v1, "Conectando al servidor de GitHub..."
 
-    .line 442
+    .line 453
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 443
+    .line 454
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 444
+    .line 455
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->progressDialog:Landroid/app/AlertDialog;
 
-    .line 445
+    .line 456
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->progressDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 446
+    .line 457
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;
@@ -1142,21 +1219,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 450
+    .line 461
     goto :goto_0
 
-    .line 447
+    .line 458
     :catch_0
     move-exception v0
 
-    .line 448
+    .line 459
     const-string v0, "TvGithubUpdate"
 
     const-string v1, "dialogo de descarga fallo"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
+    .line 460
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->dialogCtx:Landroid/content/Context;
 
     const-string v1, "Error al iniciar actualizacion"
@@ -1169,7 +1246,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 451
+    .line 462
     :goto_0
     return-void
 .end method
@@ -1177,7 +1254,7 @@
 .method private static today()Ljava/lang/String;
     .locals 3
 
-    .line 127
+    .line 138
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd"
@@ -1206,12 +1283,12 @@
 .method fetchLatestTag()Ljava/lang/String;
     .locals 2
 
-    .line 275
+    .line 286
     invoke-virtual {p0}, Lcom/movievn/tv/TvGithubUpdate;->fetchReleaseInfo()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 276
+    .line 287
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
@@ -1230,7 +1307,7 @@
 .method fetchReleaseInfo()[Ljava/lang/String;
     .locals 6
 
-    .line 287
+    .line 298
     const-string v0, "\""
 
     const/4 v1, 0x0
@@ -1242,54 +1319,54 @@
 
     move-result-object v2
 
-    .line 288
+    .line 299
     if-nez v2, :cond_0
 
     return-object v1
 
-    .line 289
+    .line 300
     :cond_0
     nop
 
-    .line 290
+    .line 301
     nop
 
-    .line 291
+    .line 302
     const-string v3, "\"tag_name\""
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 292
+    .line 303
     if-ltz v3, :cond_1
 
-    .line 293
+    .line 304
     add-int/lit8 v3, v3, 0xa
 
     invoke-virtual {v2, v0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 294
+    .line 305
     add-int/lit8 v3, v3, 0x1
 
     invoke-virtual {v2, v0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 295
+    .line 306
     invoke-virtual {v2, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 292
+    .line 303
     :cond_1
     move-object v0, v1
 
-    .line 299
+    .line 310
     :goto_0
     const-string v3, "\"cine-tv.apk\""
 
@@ -1297,20 +1374,20 @@
 
     move-result v3
 
-    .line 300
+    .line 311
     if-ltz v3, :cond_2
 
-    .line 301
+    .line 312
     const-string v4, "sha256:"
 
     invoke-virtual {v2, v4, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 302
+    .line 313
     if-ltz v3, :cond_2
 
-    .line 303
+    .line 314
     add-int/lit8 v4, v3, 0x7
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -1327,7 +1404,7 @@
 
     move-result-object v2
 
-    .line 304
+    .line 315
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -1346,14 +1423,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 305
+    .line 316
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_1
 
-    .line 309
+    .line 320
     :cond_2
     move-object v2, v1
 
@@ -1362,7 +1439,7 @@
 
     return-object v1
 
-    .line 310
+    .line 321
     :cond_3
     filled-new-array {v0, v2}, [Ljava/lang/String;
 
@@ -1372,11 +1449,11 @@
 
     return-object v0
 
-    .line 311
+    .line 322
     :catch_0
     move-exception v0
 
-    .line 312
+    .line 323
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1407,14 +1484,14 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
+    .line 324
     return-object v1
 .end method
 
 .method getCurrentVersion()Ljava/lang/String;
     .locals 3
 
-    .line 382
+    .line 393
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->dialogCtx:Landroid/content/Context;
 
@@ -1424,7 +1501,7 @@
 
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate;->dialogCtx:Landroid/content/Context;
 
-    .line 383
+    .line 394
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1439,14 +1516,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 382
+    .line 393
     return-object v0
 
-    .line 384
+    .line 395
     :catch_0
     move-exception v0
 
-    .line 385
+    .line 396
     const/4 v0, 0x0
 
     return-object v0
@@ -1455,7 +1532,7 @@
 .method showError(Ljava/lang/String;)V
     .locals 4
 
-    .line 462
+    .line 473
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvGithubUpdate$ShowErrorAction;
@@ -1468,14 +1545,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 463
+    .line 474
     return-void
 .end method
 
 .method showInstallPrompt(Ljava/io/File;)V
     .locals 4
 
-    .line 458
+    .line 469
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvGithubUpdate$InstallPromptAction;
@@ -1488,14 +1565,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 459
+    .line 470
     return-void
 .end method
 
 .method updateStatus(Ljava/lang/String;)V
     .locals 3
 
-    .line 454
+    .line 465
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvGithubUpdate$UpdateStatusAction;
@@ -1506,6 +1583,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 455
+    .line 466
     return-void
 .end method

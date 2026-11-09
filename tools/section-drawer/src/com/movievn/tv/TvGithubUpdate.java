@@ -106,7 +106,18 @@ public final class TvGithubUpdate {
 
     public static boolean hasUpdate(Context ctx) {
         if (ctx == null) return false;
-        return prefs(ctx).getBoolean(KEY_UPDATE_AVAILABLE, false);
+        SharedPreferences p = prefs(ctx);
+        if (!p.getBoolean(KEY_UPDATE_AVAILABLE, false)) return false;
+        String remote = p.getString(KEY_LATEST_REMOTE, null);
+        String current;
+        try {
+            current = ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionName;
+        } catch (Exception e) { current = null; }
+        if (remote == null || !isNewer(remote, current)) {
+            p.edit().putBoolean(KEY_UPDATE_AVAILABLE, false).remove(KEY_LATEST_REMOTE).apply();
+            return false;
+        }
+        return true;
     }
 
     public static void clearUpdateAvailable(Context ctx) {
@@ -162,7 +173,7 @@ public final class TvGithubUpdate {
                 } else {
                     // Solo limpiar si la version local ya alcanzo la remota.
                     String latestStored = p.getString(KEY_LATEST_REMOTE, null);
-                    if (latestStored != null && remote != null && !isNewer(remote, current) && remote.equals(latestStored)) {
+                    if (remote != null && !isNewer(remote, current)) {
                         ed.putBoolean(KEY_UPDATE_AVAILABLE, false);
                         ed.remove(KEY_LATEST_REMOTE);
                     }

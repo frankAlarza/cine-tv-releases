@@ -27,16 +27,16 @@
 .method constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 0
 
-    .line 224
+    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
+    .line 236
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;->activity:Landroid/app/Activity;
 
-    .line 226
+    .line 237
     iput-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;->remote:Ljava/lang/String;
 
-    .line 227
+    .line 238
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 231
+    .line 242
     :try_start_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
     :try_end_0
@@ -56,13 +56,13 @@
     :catch_0
     move-exception p1
 
-    .line 232
+    .line 243
     :goto_0
     iget-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;->activity:Landroid/app/Activity;
 
     if-eqz p1, :cond_0
 
-    .line 233
+    .line 244
     iget-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;->activity:Landroid/app/Activity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -79,7 +79,7 @@
 
     iget-object p2, p0, Lcom/movievn/tv/TvGithubUpdate$ConfirmCancelListener;->remote:Ljava/lang/String;
 
-    .line 234
+    .line 245
     const-string v0, "dismissed_version"
 
     invoke-interface {p1, v0, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -88,7 +88,7 @@
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 236
+    .line 247
     :cond_0
     return-void
 .end method
