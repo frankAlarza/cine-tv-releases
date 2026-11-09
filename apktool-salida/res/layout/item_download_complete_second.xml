@@ -6,7 +6,7 @@
     </RelativeLayout>
     <com.mgs.carparking.widgets.cardbanner.view.RoundedImageView android:id="@id/roundImage" android:tag="binding_3" android:layout_width="@dimen/dp_68" android:layout_height="@dimen/dp_102" android:scaleType="centerCrop" android:layout_toRightOf="@id/layout_check" />
     <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_13" android:layout_toRightOf="@id/roundImage">
-        <TextView android:textSize="@dimen/dp_13" android:textColor="@color/tv_color_text_primary" android:ellipsize="end" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" />
-        <TextView android:textSize="@dimen/dp_10" android:textColor="@color/tv_color_text_secondary" android:ellipsize="end" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:maxLines="1" />
+        <TextView android:textSize="@dimen/dp_13" android:textColor="@color/tv_color_text_primary" android:ellipsize="end" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginLeft="@dimen/dp_8" android:layout_marginRight="@dimen/dp_8" />
+        <TextView android:textSize="@dimen/dp_10" android:textColor="@color/tv_color_text_secondary" android:ellipsize="end" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:maxLines="1" android:layout_marginLeft="@dimen/dp_8" android:layout_marginRight="@dimen/dp_8" />
     </LinearLayout>
 </RelativeLayout>
