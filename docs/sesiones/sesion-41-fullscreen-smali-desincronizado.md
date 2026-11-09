@@ -43,6 +43,16 @@ quedan fuera de la vista. Por eso `showFloatingControls()` no servía de nada.
    corresponda a la implementación manual.
 6. Versión v222 (versionCode 40025).
 
+## Release
+
+Publicado con `tools/publish-release.ps1`:
+
+- Tag `v222` == `versionName`, asset `cine-tv.apk`.
+- Digest local == remoto:
+  `sha256:7108004517ff5dbad8c78b86b483b921983d0783bf1d044ad84c60fc0a04ad56`.
+- URL: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v222>
+- APK instalado en `emulator-5554` y `emulator-5556`.
+
 ## Verificación en emulator-5554 (v222 firmada)
 
 - `TvDetail: pantalla completa ON root=LinearLayout box=RelativeLayout rootHijos=3

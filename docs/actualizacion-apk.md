@@ -3,12 +3,15 @@
 > **Cuándo leer esto:** para publicar un release nuevo o entender por qué la app
 > dice "No hay version mas reciente" o "El release no publica digest SHA-256".
 
-## Estado Actual (v203 / 40006)
+## Estado Actual (v222 / 40025)
 
-- **android:versionName**: `"v203"`
-- **android:versionCode**: `"40006"`
-- **Release publicado**: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v203>
-  (asset `cine-tv.apk`, digest `sha256:e3d513c0aab15815a0e015afcb2d51bf7fb7448fd538f62122c623b4722905ed`)
+- **android:versionName**: `"v222"`
+- **android:versionCode**: `"40025"`
+- **Release publicado**: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v222>
+  (asset `cine-tv.apk`, digest `sha256:7108004517ff5dbad8c78b86b483b921983d0783bf1d044ad84c60fc0a04ad56`)
+
+> Nota: los releases v204–v221 se publicaron con el mismo flujo (`publish-release.ps1`);
+> esta sección se actualiza con el último release vigente.
 
 ### Reglas del canal (v203 en adelante)
 

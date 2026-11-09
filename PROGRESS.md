@@ -464,6 +464,9 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   diagnostico (clases, hijos, bounds) y `LogBoundsTask`. Revertidos dos parches sueltos de
   `VideoPlayerView*.smali` (residuo del intento con libreria).
 - Version v222 (versionCode 40025), instalada en emulator-5554.
+- Release v222 publicado en GitHub (tag `v222`, asset `cine-tv.apk`, digest
+  `sha256:7108004517ff5dbad8c78b86b483b921983d0783bf1d044ad84c60fc0a04ad56`,
+  verificado contra el local).
 - Verificado: overlay visible al entrar (`build/v222-04-fullscreen.png`), auto-ocultado a
   los 4 s, D-pad lo recupera (`v222-06-dpad-show.png`), BACK restaura la ficha
   (`v222-07-back1.png`).
