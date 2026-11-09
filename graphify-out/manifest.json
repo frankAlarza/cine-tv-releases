@@ -54,10 +54,10 @@
     "semantic_hash": ""
   },
   "install_tv.ps1": {
-    "mtime": 1792615693.8486075,
-    "seen": 1793361738.7910182,
-    "ast_hash": "c22defb41b620a0668d593485727a40a",
-    "semantic_hash": "c22defb41b620a0668d593485727a40a"
+    "mtime": 1794267304.8458152,
+    "seen": 1794267766.1260314,
+    "ast_hash": "54f3131f0fa66840a4036fb2aadc54e8",
+    "semantic_hash": ""
   },
   "tools/add_focus_to_items.ps1": {
     "mtime": 1792785026.6601777,
@@ -66,46 +66,46 @@
     "semantic_hash": "921f79381d1277738b635a24273865e2"
   },
   "tools/build_category_rail.ps1": {
-    "mtime": 1792574496.643339,
-    "seen": 1793361738.7910225,
-    "ast_hash": "439df52f4959af7a845ab9ab8da8dc47",
-    "semantic_hash": "439df52f4959af7a845ab9ab8da8dc47"
+    "mtime": 1794267311.745107,
+    "seen": 1794267766.1260366,
+    "ast_hash": "752d0e950914120ea8cfc10d17eecc10",
+    "semantic_hash": ""
   },
   "tools/build_hero_image.ps1": {
-    "mtime": 1792745536.3749888,
-    "seen": 1793361738.7910244,
-    "ast_hash": "e12b0120353c3ac44f512aa385c173c1",
-    "semantic_hash": "e12b0120353c3ac44f512aa385c173c1"
+    "mtime": 1794267311.7641087,
+    "seen": 1794267766.1260402,
+    "ast_hash": "3066f1e290f7fc35de8d399f8533250a",
+    "semantic_hash": ""
   },
   "tools/build_hero_item.ps1": {
-    "mtime": 1792754639.859408,
-    "seen": 1793361738.7910273,
-    "ast_hash": "26a461576d57141d1f44a12b5805b0a7",
-    "semantic_hash": "26a461576d57141d1f44a12b5805b0a7"
+    "mtime": 1794267311.7641087,
+    "seen": 1794267766.1260414,
+    "ast_hash": "805dfc313e56979dabc4970e3390c9be",
+    "semantic_hash": ""
   },
   "tools/build_hero_listener.ps1": {
-    "mtime": 1792754869.578336,
-    "seen": 1793361738.791029,
-    "ast_hash": "cc801942862b03539aa4366ad8b82678",
-    "semantic_hash": "cc801942862b03539aa4366ad8b82678"
+    "mtime": 1794267311.7691066,
+    "seen": 1794267766.1260424,
+    "ast_hash": "f7dfa64968162b3c29fac3efcbdc8dae",
+    "semantic_hash": ""
   },
   "tools/build_home_refresh.ps1": {
-    "mtime": 1792615312.096388,
-    "seen": 1793361738.7910311,
-    "ast_hash": "e9de6f5b676f55548067ec0ddaa3b4e0",
-    "semantic_hash": "e9de6f5b676f55548067ec0ddaa3b4e0"
+    "mtime": 1794267311.771109,
+    "seen": 1794267766.1260433,
+    "ast_hash": "bf7c2838db7878961f8e6a53b6ecee59",
+    "semantic_hash": ""
   },
   "tools/build_section_drawer.ps1": {
-    "mtime": 1792591476.0861228,
-    "seen": 1793361738.791033,
-    "ast_hash": "52c21c9f90c4c62f620ce66a1327f7f6",
-    "semantic_hash": "52c21c9f90c4c62f620ce66a1327f7f6"
+    "mtime": 1794267311.771109,
+    "seen": 1794267766.1260445,
+    "ast_hash": "f3af3fba9cb2e6706b4d94b789b75907",
+    "semantic_hash": ""
   },
   "tools/build_tv_detail.ps1": {
-    "mtime": 1793318665.3084543,
-    "seen": 1793361738.791035,
-    "ast_hash": "25470a1df8108d3aab820c1cf9a28341",
-    "semantic_hash": "25470a1df8108d3aab820c1cf9a28341"
+    "mtime": 1794267311.771109,
+    "seen": 1794267766.1260455,
+    "ast_hash": "484a4bcc161adfe871d7ca610fbbcd78",
+    "semantic_hash": ""
   },
   "tools/category-rail/src/com/movievn/tv/CategoryRail.java": {
     "mtime": 1793304258.4031732,
@@ -258,9 +258,9 @@
     "semantic_hash": "9b31786b637be3c13978bec4c2330752"
   },
   "AGENTS.md": {
-    "mtime": 1794267044.5346217,
-    "seen": 1794267138.0170555,
-    "ast_hash": "eee164bcd8ca3358b61e24c71f5085f6",
+    "mtime": 1794267721.2170029,
+    "seen": 1794267766.1261044,
+    "ast_hash": "ce503dad51e075d980271dc6b8227a8a",
     "semantic_hash": ""
   },
   "DESIGN.md": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "PROGRESS.md": {
-    "mtime": 1794267221.8376763,
-    "seen": 1794267258.933499,
-    "ast_hash": "0a2c49164b4a66be3ddf8f35f2865418",
+    "mtime": 1794267731.460493,
+    "seen": 1794267766.1261077,
+    "ast_hash": "8a06dce0f9b444842e5a378160cc4606",
     "semantic_hash": ""
   },
   "README.md": {
@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "apktool-salida/apktool.yml": {
-    "mtime": 1794266746.9496045,
-    "seen": 1794267138.0169299,
-    "ast_hash": "00fc6d5acf4c51546947e4f02bbe9858",
+    "mtime": 1794267628.0416808,
+    "seen": 1794267766.1259892,
+    "ast_hash": "0833c69647ded6ba148bda21ffbc9351",
     "semantic_hash": ""
   },
   "apktool-salida/assets/fyb_iframe_endcard_tmpl.html": {
@@ -720,9 +720,9 @@
     "semantic_hash": "e0a909d735eec461106b5ea95ff998e9"
   },
   "docs/sesiones/indice.md": {
-    "mtime": 1794267066.8638563,
-    "seen": 1794267138.0171614,
-    "ast_hash": "271f6fa872612ccdffaa794e29aafda0",
+    "mtime": 1794267731.8163626,
+    "seen": 1794267766.1262045,
+    "ast_hash": "acd3a0b44db501455a27334f61f76f2d",
     "semantic_hash": ""
   },
   "docs/sesiones/sesion-01-04.md": {
@@ -930,10 +930,10 @@
     "semantic_hash": "28cd5411bbb68689065f4b60d7746472"
   },
   "tools/poc/capture_sdk_headers.py": {
-    "mtime": 1793001761.1726763,
-    "seen": 1793361738.7910619,
-    "ast_hash": "8eff1c90fafcf857e65ab7fdcbc24138",
-    "semantic_hash": "8eff1c90fafcf857e65ab7fdcbc24138"
+    "mtime": 1794267301.8296075,
+    "seen": 1794267766.1260633,
+    "ast_hash": "7bd90f61979e6d8bb15f3249409802ee",
+    "semantic_hash": ""
   },
   "tools/poc/decrypt_api.py": {
     "mtime": 1793002429.120228,
@@ -948,10 +948,10 @@
     "semantic_hash": "cc072ff922f9f245c3182c4d17119d29"
   },
   "tools/poc/e2e.py": {
-    "mtime": 1793002605.3557286,
-    "seen": 1793361738.7910683,
-    "ast_hash": "487273287d22c0723db8ace45008e812",
-    "semantic_hash": "487273287d22c0723db8ace45008e812"
+    "mtime": 1794267301.830534,
+    "seen": 1794267766.126067,
+    "ast_hash": "bf5cc03a9806f283d62967d243c92479",
+    "semantic_hash": ""
   },
   "tools/poc/e2e_result.json": {
     "mtime": 1793127394.7056935,
@@ -960,10 +960,10 @@
     "semantic_hash": "31bef5f973b5ab105dc5e5157ff3c433"
   },
   "tools/poc/get_sign_and_home.py": {
-    "mtime": 1793002449.561372,
-    "seen": 1793361738.7910724,
-    "ast_hash": "b233d6532cb7698be50311227c6b2000",
-    "semantic_hash": "b233d6532cb7698be50311227c6b2000"
+    "mtime": 1794267301.8310525,
+    "seen": 1794267766.126069,
+    "ast_hash": "7c3c436bf7479cfde96fd085688ab823",
+    "semantic_hash": ""
   },
   "tools/poc/probe_h2.py": {
     "mtime": 1793002321.4439912,
@@ -1026,15 +1026,15 @@
     "semantic_hash": "36cf20116576120574d4af9c22bdd02e"
   },
   "build-apk.ps1": {
-    "mtime": 1793416267.919055,
-    "seen": 1794151426.1016934,
-    "ast_hash": "76b71a839827cc66c40262f1e6ac4c94",
+    "mtime": 1794267304.8634574,
+    "seen": 1794267766.1260056,
+    "ast_hash": "acafb150bb399da3658f46b4848545b4",
     "semantic_hash": ""
   },
   "check_activity.py": {
-    "mtime": 1793401298.7067807,
-    "seen": 1793413454.9561553,
-    "ast_hash": "09e482a8fa3a422e3dcccfa9f021ffae",
+    "mtime": 1794267304.8448143,
+    "seen": 1794267766.1260076,
+    "ast_hash": "6a0c9bbac808ba90ea3d762f0772fedf",
     "semantic_hash": ""
   },
   "check_b_smali.py": {
@@ -1050,9 +1050,9 @@
     "semantic_hash": ""
   },
   "check_logcat.py": {
-    "mtime": 1793401415.5826228,
-    "seen": 1793413454.9561584,
-    "ast_hash": "1dea96ec4b3840e0d242f2179a7637c8",
+    "mtime": 1794267304.8458152,
+    "seen": 1794267766.1260114,
+    "ast_hash": "278eccf9f426b4e8ee62b144c470e982",
     "semantic_hash": ""
   },
   "check_main_activity.py": {
@@ -1110,15 +1110,15 @@
     "semantic_hash": ""
   },
   "install-apk.ps1": {
-    "mtime": 1793404631.2181413,
-    "seen": 1793413454.9561746,
-    "ast_hash": "d5697eec0b22d9a2b21c1166aa64978b",
+    "mtime": 1794267304.8458152,
+    "seen": 1794267766.12603,
+    "ast_hash": "af5d8aef99b2a93978c8b02d6fffaa2f",
     "semantic_hash": ""
   },
   "tools/build_category_screen_tv.ps1": {
-    "mtime": 1793393469.014988,
-    "seen": 1793413454.9561796,
-    "ast_hash": "3b1924379967e47fa39e08a8e0df9386",
+    "mtime": 1794267311.771109,
+    "seen": 1794267766.1260378,
+    "ast_hash": "c43ee013a5cb9e0c30440bfdc8add1d3",
     "semantic_hash": ""
   },
   "tools/category-screen-tv/src/com/movievn/tv/TvCategoryScreen.java": {
@@ -1164,9 +1164,9 @@
     "semantic_hash": ""
   },
   "tools/update-modal/scripts/verify-menu.ps1": {
-    "mtime": 1793404800.941279,
-    "seen": 1793413454.956234,
-    "ast_hash": "c10316d90ebf9cb00499b8a9cfd8f608",
+    "mtime": 1794267301.8310525,
+    "seen": 1794267766.1260982,
+    "ast_hash": "73cb0efa4ebc9ca14c2f3c5380fe72c6",
     "semantic_hash": ""
   },
   "tools/update-modal/src/com/movievn/tv/TvUpdateModal.java": {
@@ -1353,6 +1353,12 @@
     "mtime": 1794267221.8376763,
     "seen": 1794267258.933611,
     "ast_hash": "dd6013fc0294ba96d5a535585daf59c8",
+    "semantic_hash": ""
+  },
+  "docs/sesiones/sesion-42-restauracion-fix-orientacion-tablet.md": {
+    "mtime": 1794267721.220002,
+    "seen": 1794267766.1262262,
+    "ast_hash": "f36d65a8db98736377c0ecc78565222b",
     "semantic_hash": ""
   }
 }

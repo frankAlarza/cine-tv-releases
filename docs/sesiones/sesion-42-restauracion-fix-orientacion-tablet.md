@@ -45,6 +45,16 @@ Restaurados los dos parches, byte a byte (mismos blobs que en el APK que funcion
 - En la tablet física no se pudo probar desde aquí (no está conectada por ADB); la
   evidencia es la restauración exacta del código que ya funcionaba en v211–v221.
 
+## Release
+
+Publicado con `tools/publish-release.ps1`:
+
+- Tag `v223` == `versionName`, asset `cine-tv.apk`.
+- Digest local == remoto:
+  `sha256:2219b890ff56042972569f1a8bcde8060881f44327aa388c0efdb580f327b4e5`.
+- URL: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v223>
+- APK instalado en `emulator-5554` y `emulator-5556` (v223 / 40026).
+
 ## Lecciones
 
 - Los parches manuales a smali de la **librería** (`VideoPlayerView*`) son fixes reales:

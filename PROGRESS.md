@@ -482,5 +482,8 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - Restaurado byte a byte (mismos blobs): `$c.onClick` llama `O(!isFullscreen())` en vez de
   `setRequestedOrientation(v2)`; `P()` pide orientacion 0 (landscape).
 - Version v223 (versionCode 40026), instalada en emulator-5554 y 5556; fullscreen de la app
-  verificado (`build/v223-01-fullscreen.png`). Pendiente de release en GitHub.
+  verificado (`build/v223-01-fullscreen.png`).
+- Release v223 publicado en GitHub (tag `v223`, asset `cine-tv.apk`, digest
+  `sha256:2219b890ff56042972569f1a8bcde8060881f44327aa388c0efdb580f327b4e5`,
+  verificado contra el local).
 - Detalle: [sesion 42](docs/sesiones/sesion-42-restauracion-fix-orientacion-tablet.md).
