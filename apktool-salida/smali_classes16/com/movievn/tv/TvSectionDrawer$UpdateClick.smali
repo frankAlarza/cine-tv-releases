@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 799
+    .line 795
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 800
+    .line 796
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$UpdateClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 801
+    .line 797
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 805
+    .line 801
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$UpdateClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvSectionDrawer;)Landroid/app/Activity;
@@ -49,6 +49,6 @@
 
     invoke-static {p1}, Lcom/movievn/tv/TvGithubUpdate;->start(Landroid/content/Context;)V
 
-    .line 806
+    .line 802
     return-void
 .end method

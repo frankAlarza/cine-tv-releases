@@ -384,45 +384,45 @@
 .method private addItem(ILjava/lang/String;)V
     .locals 11
 
-    .line 527
+    .line 523
     new-instance v2, Landroid/widget/LinearLayout;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
     invoke-direct {v2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 528
+    .line 524
     const/4 v0, 0x0
 
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 529
+    .line 525
     const/16 v1, 0x10
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 530
+    .line 526
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setFocusable(Z)V
 
-    .line 531
+    .line 527
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setFocusableInTouchMode(Z)V
 
-    .line 532
+    .line 528
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
-    .line 533
+    .line 529
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x1a
 
     if-lt v4, v5, :cond_0
 
-    .line 534
+    .line 530
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setDefaultFocusHighlightEnabled(Z)V
 
-    .line 536
+    .line 532
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->buildRowBackground()Landroid/graphics/drawable/StateListDrawable;
 
@@ -430,7 +430,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 537
+    .line 533
     const-string v4, "drawable"
 
     const-string v5, "bg_focused"
@@ -439,7 +439,7 @@
 
     move-result v4
 
-    .line 538
+    .line 534
     if-eqz v4, :cond_1
 
     iget-object v5, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
@@ -454,23 +454,23 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 539
+    .line 535
     :cond_1
     invoke-virtual {v2, p2}, Landroid/widget/LinearLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 541
+    .line 537
     new-instance v5, Landroid/view/View;
 
     iget-object v4, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
     invoke-direct {v5, v4}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 542
+    .line 538
     const/4 v4, -0x1
 
     invoke-virtual {v5, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 543
+    .line 539
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v7, 0x4
@@ -487,7 +487,7 @@
 
     invoke-direct {v6, v7, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 544
+    .line 540
     const/4 v7, 0x2
 
     invoke-direct {p0, v7}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
@@ -496,13 +496,13 @@
 
     iput v7, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 545
+    .line 541
     iput v1, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 546
+    .line 542
     invoke-virtual {v2, v5, v6}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 548
+    .line 544
     move v6, v3
 
     new-instance v3, Landroid/widget/ImageView;
@@ -511,24 +511,24 @@
 
     invoke-direct {v3, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 549
+    .line 545
     invoke-direct {p0, p1}, Lcom/movievn/tv/TvSectionDrawer;->iconFor(I)I
 
     move-result v7
 
     invoke-virtual {v3, v7}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 550
+    .line 546
     sget-object v7, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v3, v7}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 551
+    .line 547
     const v7, -0x4c000001
 
     invoke-virtual {v3, v7}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    .line 552
+    .line 548
     new-instance v8, Landroid/widget/LinearLayout$LayoutParams;
 
     iget v9, p0, Lcom/movievn/tv/TvSectionDrawer;->iconSize:I
@@ -537,7 +537,7 @@
 
     invoke-direct {v8, v9, v10}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 553
+    .line 549
     const/16 v9, 0x12
 
     invoke-direct {p0, v9}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
@@ -546,10 +546,10 @@
 
     iput v9, v8, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 554
+    .line 550
     invoke-virtual {v2, v3, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 556
+    .line 552
     move v8, v4
 
     new-instance v4, Landroid/widget/TextView;
@@ -558,31 +558,31 @@
 
     invoke-direct {v4, v9}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 557
+    .line 553
     invoke-virtual {v4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 558
+    .line 554
     iget p2, p0, Lcom/movievn/tv/TvSectionDrawer;->labelSizePx:F
 
     invoke-virtual {v4, v0, p2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 559
+    .line 555
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 560
+    .line 556
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 561
+    .line 557
     sget-object p2, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v4, p2}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 562
+    .line 558
     sget-object p2, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     invoke-virtual {v4, p2, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 563
+    .line 559
     new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v6, -0x2
@@ -591,14 +591,14 @@
 
     invoke-direct {p2, v0, v6, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 565
+    .line 561
     invoke-direct {p0, v1}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
     move-result v0
 
     iput v0, p2, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 566
+    .line 562
     const/16 v0, 0xc
 
     invoke-direct {p0, v0}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
@@ -607,10 +607,10 @@
 
     iput v0, p2, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    .line 567
+    .line 563
     invoke-virtual {v2, v4, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 570
+    .line 566
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer;->listView:Landroid/widget/LinearLayout;
 
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
@@ -621,47 +621,47 @@
 
     invoke-virtual {p2, v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 573
+    .line 569
     new-instance v0, Lcom/movievn/tv/TvSectionDrawer$Item;
 
     move v1, p1
 
     invoke-direct/range {v0 .. v5}, Lcom/movievn/tv/TvSectionDrawer$Item;-><init>(ILandroid/widget/LinearLayout;Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/view/View;)V
 
-    .line 574
+    .line 570
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 575
+    .line 571
     new-instance p1, Lcom/movievn/tv/TvSectionDrawer$ItemClick;
 
     invoke-direct {p1, p0, v0}, Lcom/movievn/tv/TvSectionDrawer$ItemClick;-><init>(Lcom/movievn/tv/TvSectionDrawer;Lcom/movievn/tv/TvSectionDrawer$Item;)V
 
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 576
+    .line 572
     new-instance p1, Lcom/movievn/tv/TvSectionDrawer$RowKey;
 
     invoke-direct {p1, p0, v0}, Lcom/movievn/tv/TvSectionDrawer$RowKey;-><init>(Lcom/movievn/tv/TvSectionDrawer;Lcom/movievn/tv/TvSectionDrawer$Item;)V
 
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 577
+    .line 573
     new-instance p1, Lcom/movievn/tv/TvSectionDrawer$RowFocus;
 
     invoke-direct {p1, p0}, Lcom/movievn/tv/TvSectionDrawer$RowFocus;-><init>(Lcom/movievn/tv/TvSectionDrawer;)V
 
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 578
+    .line 574
     return-void
 .end method
 
 .method private applySelection()V
     .locals 5
 
-    .line 638
+    .line 634
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -681,7 +681,7 @@
 
     check-cast v1, Lcom/movievn/tv/TvSectionDrawer$Item;
 
-    .line 639
+    .line 635
     iget v2, v1, Lcom/movievn/tv/TvSectionDrawer$Item;->index:I
 
     iget v3, p0, Lcom/movievn/tv/TvSectionDrawer;->selectedTab:I
@@ -697,7 +697,7 @@
     :cond_0
     move v2, v4
 
-    .line 640
+    .line 636
     :goto_1
     iget-object v3, v1, Lcom/movievn/tv/TvSectionDrawer$Item;->marker:Landroid/view/View;
 
@@ -711,7 +711,7 @@
     :goto_2
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 641
+    .line 637
     if-eqz v2, :cond_2
 
     const/4 v2, -0x1
@@ -721,21 +721,21 @@
     :cond_2
     const v2, -0x4c000001
 
-    .line 642
+    .line 638
     :goto_3
     iget-object v3, v1, Lcom/movievn/tv/TvSectionDrawer$Item;->label:Landroid/widget/TextView;
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 643
+    .line 639
     iget-object v1, v1, Lcom/movievn/tv/TvSectionDrawer$Item;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    .line 644
+    .line 640
     goto :goto_0
 
-    .line 645
+    .line 641
     :cond_3
     return-void
 .end method
@@ -772,25 +772,25 @@
 .method private blockContent(Z)V
     .locals 1
 
-    .line 755
+    .line 751
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->container:Landroid/view/ViewGroup;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 756
+    .line 752
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 757
+    .line 753
     iget-boolean p1, p0, Lcom/movievn/tv/TvSectionDrawer;->contentBlocked:Z
 
     if-eqz p1, :cond_1
 
     return-void
 
-    .line 758
+    .line 754
     :cond_1
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->container:Landroid/view/ViewGroup;
 
@@ -800,21 +800,21 @@
 
     iput p1, p0, Lcom/movievn/tv/TvSectionDrawer;->savedFocusability:I
 
-    .line 759
+    .line 755
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->container:Landroid/view/ViewGroup;
 
     const/high16 v0, 0x60000
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
-    .line 760
+    .line 756
     const/4 p1, 0x1
 
     iput-boolean p1, p0, Lcom/movievn/tv/TvSectionDrawer;->contentBlocked:Z
 
     goto :goto_0
 
-    .line 762
+    .line 758
     :cond_2
     iget-boolean p1, p0, Lcom/movievn/tv/TvSectionDrawer;->contentBlocked:Z
 
@@ -822,7 +822,7 @@
 
     return-void
 
-    .line 763
+    .line 759
     :cond_3
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->container:Landroid/view/ViewGroup;
 
@@ -830,12 +830,12 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
-    .line 764
+    .line 760
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/movievn/tv/TvSectionDrawer;->contentBlocked:Z
 
-    .line 766
+    .line 762
     :goto_0
     return-void
 .end method
@@ -843,22 +843,22 @@
 .method private buildRowBackground()Landroid/graphics/drawable/StateListDrawable;
     .locals 4
 
-    .line 618
+    .line 614
     new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    .line 619
+    .line 615
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    .line 620
+    .line 616
     const v2, 0x1fffffff
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 621
+    .line 617
     const/16 v2, 0xc
 
     invoke-direct {p0, v2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
@@ -869,12 +869,12 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
 
-    .line 623
+    .line 619
     new-instance v2, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v2}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 624
+    .line 620
     const v3, 0x101009c
 
     filled-new-array {v3}, [I
@@ -883,7 +883,7 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 625
+    .line 621
     new-array v0, v1, [I
 
     new-instance v3, Landroid/graphics/drawable/ColorDrawable;
@@ -892,27 +892,27 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 626
+    .line 622
     return-object v2
 .end method
 
 .method private close()V
     .locals 5
 
-    .line 712
+    .line 708
     iget-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 713
+    .line 709
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
-    .line 714
+    .line 710
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->scrim:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -933,7 +933,7 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 715
+    .line 711
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->panel:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -956,7 +956,7 @@
 
     invoke-direct {v2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 716
+    .line 712
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
@@ -965,17 +965,17 @@
 
     invoke-direct {v2, p0}, Lcom/movievn/tv/TvSectionDrawer$HidePanel;-><init>(Lcom/movievn/tv/TvSectionDrawer;)V
 
-    .line 717
+    .line 713
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 718
+    .line 714
     invoke-direct {p0, v0}, Lcom/movievn/tv/TvSectionDrawer;->blockContent(Z)V
 
-    .line 719
+    .line 715
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvSectionDrawer$RestoreFocus;
@@ -986,14 +986,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 720
+    .line 716
     const-string v0, "TvSectionDrawer"
 
     const-string v1, "cajon cerrado"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 721
+    .line 717
     return-void
 .end method
 
@@ -1445,7 +1445,7 @@
 .method private currentTab()I
     .locals 3
 
-    .line 630
+    .line 626
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->tabsView:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
@@ -1454,7 +1454,7 @@
 
     return v1
 
-    .line 631
+    .line 627
     :cond_0
     move v0, v1
 
@@ -1467,7 +1467,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 632
+    .line 628
     iget-object v2, p0, Lcom/movievn/tv/TvSectionDrawer;->tabsView:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -1482,13 +1482,13 @@
 
     return v0
 
-    .line 631
+    .line 627
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 634
+    .line 630
     :cond_2
     return v1
 .end method
@@ -1496,14 +1496,14 @@
 .method private dimen(Ljava/lang/String;I)I
     .locals 1
 
-    .line 1024
+    .line 1020
     const-string v0, "dimen"
 
     invoke-direct {p0, v0, p1}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
-    .line 1025
+    .line 1021
     if-eqz p1, :cond_0
 
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
@@ -1518,7 +1518,7 @@
 
     return p1
 
-    .line 1026
+    .line 1022
     :cond_0
     invoke-direct {p0, p2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
@@ -1530,14 +1530,14 @@
 .method private dimenFloat(Ljava/lang/String;F)F
     .locals 1
 
-    .line 1030
+    .line 1026
     const-string v0, "dimen"
 
     invoke-direct {p0, v0, p1}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
-    .line 1031
+    .line 1027
     if-eqz p1, :cond_0
 
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
@@ -1552,11 +1552,11 @@
 
     return p1
 
-    .line 1032
+    .line 1028
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
-    .line 1033
+    .line 1029
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1565,7 +1565,7 @@
 
     move-result-object p1
 
-    .line 1032
+    .line 1028
     const/4 v0, 0x2
 
     invoke-static {v0, p2, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
@@ -1578,7 +1578,7 @@
 .method private dp(I)I
     .locals 1
 
-    .line 1037
+    .line 1033
     int-to-float p1, p1
 
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
@@ -1674,7 +1674,7 @@
 
     .line 352
     :goto_0
-    if-eqz v5, :cond_10
+    if-eqz v5, :cond_f
 
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getRootView()Landroid/view/View;
 
@@ -1700,17 +1700,17 @@
 
     const-string v8, "TvSectionDrawer"
 
-    const-string v11, "iv_download"
+    const-string v10, "iv_download"
 
-    const/16 v12, 0x26
+    const/16 v11, 0x26
 
-    const-string v13, "tv_top_icon"
+    const-string v12, "tv_top_icon"
 
-    const-string v14, "bg_focused"
+    const-string v13, "bg_focused"
+
+    const/4 v14, 0x7
 
     const-string v15, "drawable"
-
-    const/4 v4, 0x7
 
     if-eqz v7, :cond_4
 
@@ -1757,20 +1757,20 @@
 
     .line 367
     :cond_6
-    invoke-direct {v0, v15, v14}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v15, v13}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v7
 
     .line 368
     if-eqz v7, :cond_7
 
-    iget-object v10, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
+    iget-object v9, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
-    invoke-virtual {v10}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v9}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v10, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v9, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -1778,30 +1778,30 @@
 
     .line 369
     :cond_7
-    invoke-direct {v0, v13, v12}, Lcom/movievn/tv/TvSectionDrawer;->dimen(Ljava/lang/String;I)I
+    invoke-direct {v0, v12, v11}, Lcom/movievn/tv/TvSectionDrawer;->dimen(Ljava/lang/String;I)I
 
     move-result v7
 
     .line 370
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
-
-    move-result v10
-
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
-
-    move-result v12
-
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    invoke-direct {v0, v14}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
     move-result v9
 
+    invoke-direct {v0, v14}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+
+    move-result v11
+
+    invoke-direct {v0, v14}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+
+    move-result v4
+
     move-object/from16 v16, v2
 
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    invoke-direct {v0, v14}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
     move-result v2
 
-    invoke-virtual {v6, v10, v12, v9, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
+    invoke-virtual {v6, v9, v11, v4, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     .line 371
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
@@ -1824,7 +1824,7 @@
     invoke-virtual {v6, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 376
-    invoke-direct {v0, v3, v11}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v3, v10}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -1834,9 +1834,9 @@
     invoke-direct {v2, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 378
-    const/4 v7, 0x1
+    const/4 v4, 0x1
 
-    invoke-virtual {v2, v7, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    invoke-virtual {v2, v4, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
     .line 379
     const/16 v1, 0xb
@@ -1867,12 +1867,12 @@
 
     .line 387
     :goto_1
-    const/4 v7, 0x1
+    const/4 v4, 0x1
 
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v6, v4}, Landroid/widget/ImageView;->setClickable(Z)V
 
     .line 388
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v6, v4}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 389
     const/4 v1, 0x0
@@ -1895,149 +1895,149 @@
 
     invoke-virtual {v5, v2}, Landroid/view/ViewGroup;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
 
-    move-result-object v6
+    move-result-object v4
 
     .line 396
-    instance-of v7, v6, Landroid/widget/ImageView;
+    instance-of v6, v4, Landroid/widget/ImageView;
 
-    if-eqz v7, :cond_8
+    if-eqz v6, :cond_8
 
-    invoke-virtual {v6}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    move-result-object v7
+    move-result-object v6
 
-    if-ne v7, v5, :cond_8
+    if-ne v6, v5, :cond_8
 
     .line 397
-    move-object v2, v6
-
-    check-cast v2, Landroid/widget/ImageView;
+    check-cast v4, Landroid/widget/ImageView;
 
     goto/16 :goto_2
 
     .line 399
     :cond_8
-    instance-of v6, v5, Landroid/widget/RelativeLayout;
+    instance-of v4, v5, Landroid/widget/RelativeLayout;
 
-    if-eqz v6, :cond_c
+    if-eqz v4, :cond_c
 
     .line 400
-    new-instance v6, Landroid/widget/ImageView;
+    new-instance v4, Landroid/widget/ImageView;
 
-    iget-object v7, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
+    iget-object v6, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
-    invoke-direct {v6, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 401
-    const-string v7, "ic_update_flaticon"
+    const-string v6, "ic_update_flaticon"
 
-    invoke-direct {v0, v15, v7}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v15, v6}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v7
+    move-result v6
 
     .line 402
-    if-nez v7, :cond_9
+    if-nez v6, :cond_9
 
-    const-string v7, "ic_update_tv"
+    const-string v6, "ic_update_tv"
 
-    invoke-direct {v0, v15, v7}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v15, v6}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v7
+    move-result v6
 
     .line 403
     :cond_9
-    if-eqz v7, :cond_a
+    if-eqz v6, :cond_a
 
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 404
     :cond_a
-    invoke-direct {v0, v15, v14}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v15, v13}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v7
+    move-result v6
 
     .line 405
-    if-eqz v7, :cond_b
+    if-eqz v6, :cond_b
 
-    iget-object v9, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
+    iget-object v7, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
-    invoke-virtual {v9}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v7, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     .line 406
     :cond_b
-    const/16 v7, 0x26
+    const/16 v6, 0x26
 
-    invoke-direct {v0, v13, v7}, Lcom/movievn/tv/TvSectionDrawer;->dimen(Ljava/lang/String;I)I
+    invoke-direct {v0, v12, v6}, Lcom/movievn/tv/TvSectionDrawer;->dimen(Ljava/lang/String;I)I
 
-    move-result v7
+    move-result v6
 
     .line 407
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    const/4 v7, 0x4
+
+    invoke-direct {v0, v7}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
     move-result v9
 
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    invoke-direct {v0, v7}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
-    move-result v10
+    move-result v11
 
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    invoke-direct {v0, v7}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
     move-result v12
 
-    invoke-direct {v0, v4}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+    invoke-direct {v0, v7}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
-    move-result v13
+    move-result v7
 
-    invoke-virtual {v6, v9, v10, v12, v13}, Landroid/widget/ImageView;->setPadding(IIII)V
+    invoke-virtual {v4, v9, v11, v12, v7}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     .line 408
-    sget-object v9, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
+    sget-object v7, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v6, v9}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 409
-    const/4 v9, 0x1
+    const/4 v7, 0x1
 
-    invoke-virtual {v6, v9}, Landroid/widget/ImageView;->setFocusable(Z)V
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 410
-    invoke-virtual {v6, v1}, Landroid/widget/ImageView;->setFocusableInTouchMode(Z)V
+    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setFocusableInTouchMode(Z)V
 
     .line 411
-    invoke-virtual {v6, v9}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setClickable(Z)V
 
     .line 412
     invoke-static {}, Landroid/view/View;->generateViewId()I
 
-    move-result v9
+    move-result v7
 
-    invoke-virtual {v6, v9}, Landroid/widget/ImageView;->setId(I)V
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setId(I)V
 
     .line 413
-    invoke-virtual {v6, v2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
     .line 414
     const-string v2, "Actualizar"
 
-    invoke-virtual {v6, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 415
-    invoke-direct {v0, v3, v11}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v3, v10}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
     .line 416
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-direct {v3, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v3, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 417
     const/4 v7, 0x1
@@ -2050,44 +2050,51 @@
     invoke-virtual {v3, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 419
-    invoke-virtual {v5, v6, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+
+    move-result v2
+
+    iput v2, v3, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
     .line 420
+    invoke-virtual {v5, v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 421
     const-string v2, "boton de actualizacion creado en la barra superior"
 
     invoke-static {v8, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-object v2, v6
 
     goto :goto_2
 
     .line 399
     :cond_c
-    const/4 v2, 0x0
-
-    .line 423
-    :goto_2
-    if-eqz v2, :cond_e
+    const/4 v4, 0x0
 
     .line 424
-    const/4 v7, 0x1
-
-    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setClickable(Z)V
+    :goto_2
+    if-eqz v4, :cond_e
 
     .line 425
-    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setFocusable(Z)V
+    const/4 v7, 0x1
+
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setClickable(Z)V
 
     .line 426
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setFocusableInTouchMode(Z)V
+    invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 427
+    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setFocusableInTouchMode(Z)V
+
+    .line 428
     new-instance v1, Lcom/movievn/tv/TvSectionDrawer$UpdateClick;
 
     invoke-direct {v1, v0}, Lcom/movievn/tv/TvSectionDrawer$UpdateClick;-><init>(Lcom/movievn/tv/TvSectionDrawer;)V
 
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 428
+    .line 429
     iget-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->updateTopBadge:Landroid/view/View;
 
     if-eqz v1, :cond_d
@@ -2100,148 +2107,101 @@
 
     if-eq v1, v5, :cond_e
 
-    .line 429
+    .line 430
     :cond_d
     new-instance v1, Landroid/view/View;
 
-    iget-object v3, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
+    iget-object v2, v0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
-    invoke-direct {v1, v3}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    .line 430
-    new-instance v3, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v3}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+    invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 431
-    const/4 v7, 0x1
+    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v3, v7}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+    invoke-direct {v2}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
     .line 432
-    const v6, -0x1af6ec
-
-    invoke-virtual {v3, v6}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    .line 433
-    invoke-virtual {v1, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    .line 434
-    const/16 v3, 0xc
-
-    invoke-direct {v0, v3}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
-
-    move-result v3
-
-    .line 435
-    new-instance v6, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-direct {v6, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 436
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getId()I
-
-    move-result v3
-
-    invoke-virtual {v6, v4, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 437
-    const/4 v3, 0x6
-
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getId()I
-
-    move-result v4
-
-    invoke-virtual {v6, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 438
-    const/4 v3, 0x2
-
-    invoke-direct {v0, v3}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
-
-    move-result v4
-
-    iput v4, v6, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
-
-    .line 439
-    invoke-direct {v0, v3}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
-
-    move-result v3
-
-    iput v3, v6, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
-
-    .line 440
-    invoke-virtual {v5, v1, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 441
-    iput-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->updateTopBadge:Landroid/view/View;
-
-    .line 444
-    :cond_e
-    if-eqz v2, :cond_f
-
-    iget-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
-
-    if-eqz v1, :cond_f
-
-    iget-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
-
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    if-ne v1, v5, :cond_f
-
-    .line 445
-    iget-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
-
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    .line 446
     const/4 v7, 0x1
 
-    invoke-virtual {v1, v7}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
+    invoke-virtual {v2, v7}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    .line 447
-    const/16 v3, 0xb
+    .line 433
+    const v3, -0x1af6ec
 
-    invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
+    invoke-virtual {v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 448
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getId()I
+    .line 434
+    invoke-virtual {v1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    move-result v3
+    .line 435
+    const/16 v2, 0xc
 
-    invoke-virtual {v1, v7, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    invoke-direct {v0, v2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
 
-    .line 449
-    iget-object v3, v0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
+    move-result v2
 
-    invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 436
+    new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 451
-    :cond_f
-    iput-object v2, v0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+    invoke-direct {v3, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 452
+    .line 437
+    invoke-virtual {v4}, Landroid/widget/ImageView;->getId()I
+
+    move-result v2
+
+    invoke-virtual {v3, v14, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 438
+    const/4 v2, 0x6
+
+    invoke-virtual {v4}, Landroid/widget/ImageView;->getId()I
+
+    move-result v6
+
+    invoke-virtual {v3, v2, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 439
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+
+    move-result v6
+
+    iput v6, v3, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    .line 440
+    invoke-direct {v0, v2}, Lcom/movievn/tv/TvSectionDrawer;->dp(I)I
+
+    move-result v2
+
+    iput v2, v3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 441
+    invoke-virtual {v5, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 442
+    iput-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->updateTopBadge:Landroid/view/View;
+
+    .line 445
+    :cond_e
+    iput-object v4, v0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
+    .line 446
     iget-object v1, v0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
 
     move-object/from16 v2, v16
 
     invoke-direct {v0, v5, v2, v1}, Lcom/movievn/tv/TvSectionDrawer;->wireTopFocus(Landroid/view/ViewGroup;Landroid/view/View;Landroid/widget/ImageView;)V
 
-    .line 453
+    .line 447
     invoke-direct {v0}, Lcom/movievn/tv/TvSectionDrawer;->refreshUpdateBadge()V
 
-    .line 454
+    .line 448
     return-void
 
     .line 353
-    :cond_10
+    :cond_f
     :goto_3
     const/4 v1, 0x0
 
@@ -2254,7 +2214,7 @@
 .method private static findFocusable(Landroid/view/View;)Landroid/view/View;
     .locals 4
 
-    .line 783
+    .line 779
     const/4 v0, 0x0
 
     if-eqz p0, :cond_4
@@ -2267,18 +2227,18 @@
 
     goto :goto_2
 
-    .line 784
+    .line 780
     :cond_0
     instance-of v1, p0, Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_2
 
-    .line 785
+    .line 781
     move-object v1, p0
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 786
+    .line 782
     const/4 v2, 0x0
 
     :goto_0
@@ -2288,7 +2248,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 787
+    .line 783
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -2297,18 +2257,18 @@
 
     move-result-object v3
 
-    .line 788
+    .line 784
     if-eqz v3, :cond_1
 
     return-object v3
 
-    .line 786
+    .line 782
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 791
+    .line 787
     :cond_2
     invoke-virtual {p0}, Landroid/view/View;->isFocusable()Z
 
@@ -2330,7 +2290,7 @@
     :goto_1
     return-object p0
 
-    .line 783
+    .line 779
     :cond_4
     :goto_2
     return-object v0
@@ -2339,7 +2299,7 @@
 .method private static findText(Landroid/view/View;)Landroid/widget/TextView;
     .locals 2
 
-    .line 588
+    .line 584
     instance-of v0, p0, Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -2348,16 +2308,16 @@
 
     return-object p0
 
-    .line 589
+    .line 585
     :cond_0
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_2
 
-    .line 590
+    .line 586
     check-cast p0, Landroid/view/ViewGroup;
 
-    .line 591
+    .line 587
     const/4 v0, 0x0
 
     :goto_0
@@ -2367,7 +2327,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 592
+    .line 588
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -2376,18 +2336,18 @@
 
     move-result-object v1
 
-    .line 593
+    .line 589
     if-eqz v1, :cond_1
 
     return-object v1
 
-    .line 591
+    .line 587
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 596
+    .line 592
     :cond_2
     const/4 p0, 0x0
 
@@ -2397,18 +2357,18 @@
 .method private focusSelected()V
     .locals 4
 
-    .line 724
+    .line 720
     iget-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 725
+    .line 721
     :cond_0
     nop
 
-    .line 726
+    .line 722
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2428,28 +2388,28 @@
 
     check-cast v1, Lcom/movievn/tv/TvSectionDrawer$Item;
 
-    .line 727
+    .line 723
     iget v2, v1, Lcom/movievn/tv/TvSectionDrawer$Item;->index:I
 
     iget v3, p0, Lcom/movievn/tv/TvSectionDrawer;->selectedTab:I
 
     if-ne v2, v3, :cond_1
 
-    .line 728
+    .line 724
     nop
 
-    .line 729
+    .line 725
     goto :goto_1
 
-    .line 731
+    .line 727
     :cond_1
     goto :goto_0
 
-    .line 726
+    .line 722
     :cond_2
     const/4 v1, 0x0
 
-    .line 732
+    .line 728
     :goto_1
     if-nez v1, :cond_3
 
@@ -2473,7 +2433,7 @@
 
     check-cast v1, Lcom/movievn/tv/TvSectionDrawer$Item;
 
-    .line 733
+    .line 729
     :cond_3
     if-eqz v1, :cond_4
 
@@ -2481,7 +2441,7 @@
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestFocus()Z
 
-    .line 734
+    .line 730
     :cond_4
     return-void
 .end method
@@ -2553,54 +2513,54 @@
 .method private iconFor(I)I
     .locals 2
 
-    .line 601
+    .line 597
     const-string v0, "ic_section_generic"
 
     if-nez p1, :cond_0
 
-    .line 602
+    .line 598
     const-string p1, "ic_section_home"
 
     goto :goto_0
 
-    .line 603
+    .line 599
     :cond_0
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 604
+    .line 600
     const-string p1, "ic_section_list"
 
     goto :goto_0
 
-    .line 605
+    .line 601
     :cond_1
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_2
 
-    .line 606
+    .line 602
     const-string p1, "ic_section_grid"
 
     goto :goto_0
 
-    .line 607
+    .line 603
     :cond_2
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_3
 
-    .line 608
+    .line 604
     const-string p1, "ic_section_mine"
 
     goto :goto_0
 
-    .line 610
+    .line 606
     :cond_3
     move-object p1, v0
 
-    .line 612
+    .line 608
     :goto_0
     const-string v1, "drawable"
 
@@ -2608,14 +2568,14 @@
 
     move-result p1
 
-    .line 613
+    .line 609
     if-nez p1, :cond_4
 
     invoke-direct {p0, v1, v0}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
-    .line 614
+    .line 610
     :cond_4
     return p1
 .end method
@@ -2623,27 +2583,27 @@
 .method private static isDescendant(Landroid/view/View;Landroid/view/View;)Z
     .locals 1
 
-    .line 773
+    .line 769
     nop
 
-    .line 774
+    .line 770
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 775
+    .line 771
     if-ne p1, p0, :cond_0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 776
+    .line 772
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
-    .line 777
+    .line 773
     instance-of v0, p1, Landroid/view/View;
 
     if-eqz v0, :cond_1
@@ -2655,11 +2615,11 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 778
+    .line 774
     :goto_1
     goto :goto_0
 
-    .line 779
+    .line 775
     :cond_2
     const/4 p0, 0x0
 
@@ -2669,7 +2629,7 @@
 .method private isInPanel(Landroid/view/View;)Z
     .locals 1
 
-    .line 769
+    .line 765
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->panel:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_0
@@ -2698,12 +2658,12 @@
 .method private static isPromotion(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1043
+    .line 1039
     invoke-static {p0}, Lcom/movievn/tv/TvSectionDrawer;->normalize(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1044
+    .line 1040
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2714,7 +2674,7 @@
 
     return v1
 
-    .line 1045
+    .line 1041
     :cond_0
     const-string v0, "promo"
 
@@ -2732,7 +2692,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1046
+    .line 1042
     const-string v0, "khuyen mai"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -2749,7 +2709,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1047
+    .line 1043
     const-string v0, "spiel"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -2766,7 +2726,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1048
+    .line 1044
     const-string v0, "recarga"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -2786,7 +2746,7 @@
     :cond_1
     const/4 v1, 0x1
 
-    .line 1045
+    .line 1041
     :cond_2
     return v1
 .end method
@@ -2826,7 +2786,7 @@
 .method private move(Lcom/movievn/tv/TvSectionDrawer$Item;I)V
     .locals 1
 
-    .line 677
+    .line 673
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -2837,7 +2797,7 @@
 
     return-void
 
-    .line 678
+    .line 674
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
@@ -2845,12 +2805,12 @@
 
     move-result p1
 
-    .line 679
+    .line 675
     if-gez p1, :cond_1
 
     return-void
 
-    .line 680
+    .line 676
     :cond_1
     add-int/2addr p1, p2
 
@@ -2870,7 +2830,7 @@
 
     rem-int/2addr p1, p2
 
-    .line 681
+    .line 677
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2883,21 +2843,21 @@
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->requestFocus()Z
 
-    .line 682
+    .line 678
     return-void
 .end method
 
 .method private static normalize(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 1053
+    .line 1049
     if-nez p0, :cond_0
 
     const-string p0, ""
 
     return-object p0
 
-    .line 1054
+    .line 1050
     :cond_0
     sget-object v0, Ljava/text/Normalizer$Form;->NFD:Ljava/text/Normalizer$Form;
 
@@ -2905,7 +2865,7 @@
 
     move-result-object p0
 
-    .line 1055
+    .line 1051
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -2914,7 +2874,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1056
+    .line 1052
     const/4 v1, 0x0
 
     :goto_0
@@ -2924,12 +2884,12 @@
 
     if-ge v1, v2, :cond_4
 
-    .line 1057
+    .line 1053
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 1058
+    .line 1054
     const/16 v3, 0x300
 
     if-lt v2, v3, :cond_1
@@ -2940,7 +2900,7 @@
 
     goto :goto_2
 
-    .line 1059
+    .line 1055
     :cond_1
     const/16 v3, 0x111
 
@@ -2952,26 +2912,26 @@
 
     goto :goto_1
 
-    .line 1062
+    .line 1058
     :cond_2
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 1060
+    .line 1056
     :cond_3
     :goto_1
     const/16 v2, 0x64
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1056
+    .line 1052
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1065
+    .line 1061
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3068,7 +3028,7 @@
 .method private openDrawer()V
     .locals 6
 
-    .line 695
+    .line 691
     iget-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->ready:Z
 
     if-eqz v0, :cond_1
@@ -3083,7 +3043,7 @@
 
     goto/16 :goto_0
 
-    .line 696
+    .line 692
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->currentTab()I
 
@@ -3091,29 +3051,29 @@
 
     iput v0, p0, Lcom/movievn/tv/TvSectionDrawer;->selectedTab:I
 
-    .line 697
+    .line 693
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->applySelection()V
 
-    .line 698
+    .line 694
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
-    .line 699
+    .line 695
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->scrim:Landroid/view/View;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 700
+    .line 696
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->scrim:Landroid/view/View;
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 701
+    .line 697
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->scrim:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -3134,12 +3094,12 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 702
+    .line 698
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->panel:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 703
+    .line 699
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->panel:Landroid/widget/LinearLayout;
 
     iget v2, p0, Lcom/movievn/tv/TvSectionDrawer;->panelWidth:I
@@ -3148,7 +3108,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setTranslationX(F)V
 
-    .line 704
+    .line 700
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->panel:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -3167,17 +3127,17 @@
 
     invoke-direct {v2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 705
+    .line 701
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 706
+    .line 702
     invoke-direct {p0, v0}, Lcom/movievn/tv/TvSectionDrawer;->blockContent(Z)V
 
-    .line 707
+    .line 703
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/movievn/tv/TvSectionDrawer$FocusSelected;
@@ -3188,7 +3148,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 708
+    .line 704
     iget v0, p0, Lcom/movievn/tv/TvSectionDrawer;->selectedTab:I
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3219,10 +3179,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
+    .line 705
     return-void
 
-    .line 695
+    .line 691
     :cond_1
     :goto_0
     return-void
@@ -3231,7 +3191,7 @@
 .method private rebuildItems()V
     .locals 5
 
-    .line 506
+    .line 502
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->listView:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_4
@@ -3242,25 +3202,25 @@
 
     goto/16 :goto_3
 
-    .line 507
+    .line 503
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->listView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 508
+    .line 504
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 509
+    .line 505
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->tabsView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 510
+    .line 506
     const/4 v1, 0x0
 
     :goto_0
@@ -3268,19 +3228,19 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 511
+    .line 507
     iget-object v3, p0, Lcom/movievn/tv/TvSectionDrawer;->tabsView:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 512
+    .line 508
     invoke-direct {p0, v3}, Lcom/movievn/tv/TvSectionDrawer;->tabTitle(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 513
+    .line 509
     const/4 v4, 0x3
 
     if-eq v1, v4, :cond_2
@@ -3293,13 +3253,13 @@
 
     goto :goto_1
 
-    .line 517
+    .line 513
     :cond_1
     invoke-direct {p0, v1, v3}, Lcom/movievn/tv/TvSectionDrawer;->addItem(ILjava/lang/String;)V
 
     goto :goto_2
 
-    .line 514
+    .line 510
     :cond_2
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3328,16 +3288,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
+    .line 511
     nop
 
-    .line 510
+    .line 506
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 522
+    .line 518
     :cond_3
     const/4 v1, -0x1
 
@@ -3345,7 +3305,7 @@
 
     invoke-direct {p0, v1, v3}, Lcom/movievn/tv/TvSectionDrawer;->addItem(ILjava/lang/String;)V
 
-    .line 523
+    .line 519
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->items:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -3388,10 +3348,10 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
+    .line 520
     return-void
 
-    .line 506
+    .line 502
     :cond_4
     :goto_3
     return-void
@@ -3400,12 +3360,12 @@
 .method private refreshUpdateBadge()V
     .locals 2
 
-    .line 648
+    .line 644
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->updateTopBadge:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 649
+    .line 645
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->updateTopBadge:Landroid/view/View;
 
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
@@ -3426,7 +3386,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 651
+    .line 647
     :cond_1
     return-void
 .end method
@@ -3434,7 +3394,7 @@
 .method private resId(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 1020
+    .line 1016
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -3457,18 +3417,18 @@
 .method private restoreFocus()V
     .locals 2
 
-    .line 737
+    .line 733
     iget-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
     if-eqz v0, :cond_0
 
-    .line 738
+    .line 734
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->focusSelected()V
 
-    .line 739
+    .line 735
     return-void
 
-    .line 741
+    .line 737
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
@@ -3480,7 +3440,7 @@
 
     move-result-object v0
 
-    .line 742
+    .line 738
     iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_1
@@ -3501,7 +3461,7 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 743
+    .line 739
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->requestFocus()Z
@@ -3512,7 +3472,7 @@
 
     return-void
 
-    .line 745
+    .line 741
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->fallbackButton:Landroid/widget/ImageView;
 
@@ -3528,17 +3488,17 @@
 
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->fallbackButton:Landroid/widget/ImageView;
 
-    .line 746
+    .line 742
     invoke-virtual {v0}, Landroid/widget/ImageView;->requestFocus()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 747
+    .line 743
     return-void
 
-    .line 749
+    .line 745
     :cond_2
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->container:Landroid/view/ViewGroup;
 
@@ -3546,12 +3506,12 @@
 
     move-result-object v0
 
-    .line 750
+    .line 746
     if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 751
+    .line 747
     :cond_3
     return-void
 .end method
@@ -3577,24 +3537,24 @@
 .method private select(Lcom/movievn/tv/TvSectionDrawer$Item;)V
     .locals 4
 
-    .line 654
+    .line 650
     iget p1, p1, Lcom/movievn/tv/TvSectionDrawer$Item;->index:I
 
-    .line 655
+    .line 651
     if-gez p1, :cond_0
 
-    .line 657
+    .line 653
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->activity:Landroid/app/Activity;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->show(Landroid/app/Activity;)V
 
-    .line 658
+    .line 654
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->close()V
 
-    .line 659
+    .line 655
     return-void
 
-    .line 661
+    .line 657
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->currentTab()I
 
@@ -3604,13 +3564,13 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 663
+    .line 659
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->tabs:Lcom/mgs/carparking/widgets/tab/TabLayout;
 
     invoke-virtual {v0, p1}, Lcom/mgs/carparking/widgets/tab/TabLayout;->setCurrentTab(I)V
 
-    .line 664
+    .line 660
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->tabsView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -3661,11 +3621,11 @@
 
     goto :goto_0
 
-    .line 665
+    .line 661
     :catchall_0
     move-exception v0
 
-    .line 666
+    .line 662
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -3690,11 +3650,11 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
+    .line 663
     :goto_0
     goto :goto_1
 
-    .line 669
+    .line 665
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3722,17 +3682,17 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
+    .line 667
     :goto_1
     iput p1, p0, Lcom/movievn/tv/TvSectionDrawer;->selectedTab:I
 
-    .line 672
+    .line 668
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->applySelection()V
 
-    .line 673
+    .line 669
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->close()V
 
-    .line 674
+    .line 670
     return-void
 .end method
 
@@ -4050,25 +4010,25 @@
 .method private tabTitle(Landroid/view/View;)Ljava/lang/String;
     .locals 1
 
-    .line 581
+    .line 577
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->findText(Landroid/view/View;)Landroid/widget/TextView;
 
     move-result-object p1
 
-    .line 582
+    .line 578
     const-string v0, ""
 
     if-nez p1, :cond_0
 
     return-object v0
 
-    .line 583
+    .line 579
     :cond_0
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    .line 584
+    .line 580
     if-nez p1, :cond_1
 
     goto :goto_0
@@ -4089,21 +4049,21 @@
 .method private toggle()V
     .locals 1
 
-    .line 687
+    .line 683
     iget-boolean v0, p0, Lcom/movievn/tv/TvSectionDrawer;->open:Z
 
     if-eqz v0, :cond_0
 
-    .line 688
+    .line 684
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->close()V
 
     goto :goto_0
 
-    .line 690
+    .line 686
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvSectionDrawer;->openDrawer()V
 
-    .line 692
+    .line 688
     :goto_0
     return-void
 .end method
@@ -4111,14 +4071,14 @@
 .method private updateFallback()V
     .locals 3
 
-    .line 498
+    .line 494
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->fallbackButton:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 499
+    .line 495
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer;->moreButton:Landroid/widget/ImageView;
 
@@ -4141,7 +4101,7 @@
     :cond_1
     move v0, v1
 
-    .line 500
+    .line 496
     :goto_0
     iget-object v2, p0, Lcom/movievn/tv/TvSectionDrawer;->fallbackButton:Landroid/widget/ImageView;
 
@@ -4152,14 +4112,14 @@
     :cond_2
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 501
+    .line 497
     return-void
 .end method
 
 .method private wireTopFocus(Landroid/view/ViewGroup;Landroid/view/View;Landroid/widget/ImageView;)V
     .locals 5
 
-    .line 461
+    .line 455
     const-string v0, "rl_home_top_search"
 
     const-string v1, "id"
@@ -4168,21 +4128,21 @@
 
     move-result v0
 
-    .line 462
+    .line 456
     const-string v2, "btn_home_refresh"
 
     invoke-direct {p0, v1, v2}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 463
+    .line 457
     const-string v3, "iv_download"
 
     invoke-direct {p0, v1, v3}, Lcom/movievn/tv/TvSectionDrawer;->resId(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 465
+    .line 459
     const/4 v3, 0x0
 
     if-eqz v0, :cond_0
@@ -4196,7 +4156,7 @@
     :cond_0
     move-object v0, v3
 
-    .line 466
+    .line 460
     :goto_0
     if-eqz v2, :cond_1
 
@@ -4209,7 +4169,7 @@
     :cond_1
     move-object v2, v3
 
-    .line 467
+    .line 461
     :goto_1
     if-eqz v1, :cond_2
 
@@ -4217,11 +4177,11 @@
 
     move-result-object v3
 
-    .line 469
+    .line 463
     :cond_2
     if-eqz v0, :cond_4
 
-    .line 470
+    .line 464
     if-eqz v2, :cond_3
 
     invoke-virtual {v2}, Landroid/view/View;->getId()I
@@ -4238,7 +4198,7 @@
     :goto_2
     invoke-virtual {v0, p1}, Landroid/view/View;->setNextFocusRightId(I)V
 
-    .line 472
+    .line 466
     :cond_4
     const/4 p1, -0x1
 
@@ -4246,17 +4206,17 @@
 
     if-eqz v2, :cond_6
 
-    .line 473
+    .line 467
     invoke-virtual {v2, v1}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 474
+    .line 468
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result v4
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setNextFocusRightId(I)V
 
-    .line 475
+    .line 469
     if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Landroid/view/View;->getId()I
@@ -4271,74 +4231,87 @@
     :goto_3
     invoke-virtual {v2, v4}, Landroid/view/View;->setNextFocusLeftId(I)V
 
-    .line 477
+    .line 471
     :cond_6
     invoke-virtual {p2, v1}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 478
+    .line 472
     if-eqz v2, :cond_7
 
     invoke-virtual {v2}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result v2
 
     goto :goto_4
 
-    .line 479
+    .line 473
     :cond_7
     if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result v2
 
-    .line 478
+    goto :goto_4
+
     :cond_8
-    :goto_4
-    invoke-virtual {p2, p1}, Landroid/view/View;->setNextFocusLeftId(I)V
+    move v2, p1
 
-    .line 480
+    .line 472
+    :goto_4
+    invoke-virtual {p2, v2}, Landroid/view/View;->setNextFocusLeftId(I)V
+
+    .line 474
     if-eqz v3, :cond_9
 
     invoke-virtual {v3}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result v2
 
     goto :goto_5
 
-    .line 481
+    .line 475
     :cond_9
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
 
-    if-eqz p1, :cond_a
+    if-eqz v2, :cond_a
 
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getId()I
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getId()I
 
-    move-result p1
+    move-result v2
 
     goto :goto_5
 
     :cond_a
     invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
 
-    move-result p1
+    move-result v2
 
-    .line 480
+    .line 474
     :goto_5
-    invoke-virtual {p2, p1}, Landroid/view/View;->setNextFocusRightId(I)V
+    invoke-virtual {p2, v2}, Landroid/view/View;->setNextFocusRightId(I)V
 
-    .line 482
-    if-eqz v3, :cond_c
+    .line 476
+    if-eqz v3, :cond_d
 
-    .line 483
+    .line 477
     invoke-virtual {v3, v1}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 484
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+    .line 478
+    if-eqz p3, :cond_b
 
-    if-eqz p1, :cond_b
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
+
+    move-result p1
+
+    goto :goto_6
+
+    :cond_b
+    iget-object v2, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
+    if-eqz v2, :cond_c
 
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
 
@@ -4346,64 +4319,42 @@
 
     move-result p1
 
-    goto :goto_6
-
-    :cond_b
-    invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
-
-    move-result p1
-
+    :cond_c
     :goto_6
     invoke-virtual {v3, p1}, Landroid/view/View;->setNextFocusRightId(I)V
 
-    .line 485
+    .line 479
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result p1
 
     invoke-virtual {v3, p1}, Landroid/view/View;->setNextFocusLeftId(I)V
 
-    .line 487
-    :cond_c
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+    .line 481
+    :cond_d
+    if-eqz p3, :cond_10
 
-    if-eqz p1, :cond_e
+    .line 482
+    invoke-virtual {p3, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 488
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
-
-    .line 489
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
-
-    invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setNextFocusRightId(I)V
-
-    .line 490
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
-
-    if-eqz v3, :cond_d
+    .line 483
+    if-eqz v3, :cond_e
 
     invoke-virtual {v3}, Landroid/view/View;->getId()I
 
-    move-result v1
+    move-result p1
 
     goto :goto_7
 
-    :cond_d
+    :cond_e
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
-    move-result v1
+    move-result p1
 
     :goto_7
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setNextFocusLeftId(I)V
+    invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setNextFocusLeftId(I)V
 
-    .line 492
-    :cond_e
+    .line 484
     if-eqz v0, :cond_f
 
     invoke-virtual {v0}, Landroid/view/View;->getId()I
@@ -4420,38 +4371,65 @@
     :goto_8
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setNextFocusRightId(I)V
 
-    .line 493
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_10
-
-    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
-
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getId()I
-
-    move-result p1
-
-    goto :goto_9
-
-    .line 494
+    .line 486
     :cond_10
+    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_14
+
+    .line 487
+    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
+
+    .line 488
+    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
     if-eqz v3, :cond_11
 
     invoke-virtual {v3}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result v1
 
     goto :goto_9
 
     :cond_11
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
-    move-result p1
+    move-result v1
 
-    .line 493
     :goto_9
-    invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setNextFocusLeftId(I)V
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setNextFocusLeftId(I)V
 
-    .line 495
+    .line 489
+    iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer;->updateButton:Landroid/widget/ImageView;
+
+    if-eqz p3, :cond_12
+
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getId()I
+
+    move-result p2
+
+    goto :goto_a
+
+    :cond_12
+    if-eqz v0, :cond_13
+
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result p2
+
+    goto :goto_a
+
+    :cond_13
+    invoke-virtual {p2}, Landroid/view/View;->getId()I
+
+    move-result p2
+
+    :goto_a
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setNextFocusRightId(I)V
+
+    .line 491
+    :cond_14
     return-void
 .end method

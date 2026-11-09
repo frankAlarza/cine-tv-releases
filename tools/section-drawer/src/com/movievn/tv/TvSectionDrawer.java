@@ -404,7 +404,7 @@ public final class TvSectionDrawer {
                 int ring = resId("drawable", "bg_focused");
                 if (ring != 0) ub.setForeground(activity.getResources().getDrawable(ring));
                 int size = dimen("tv_top_icon", 38);
-                ub.setPadding(dp(7), dp(7), dp(7), dp(7));
+                ub.setPadding(dp(4), dp(4), dp(4), dp(4));
                 ub.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ub.setFocusable(true);
                 ub.setFocusableInTouchMode(false);
@@ -416,6 +416,7 @@ public final class TvSectionDrawer {
                 RelativeLayout.LayoutParams ulp = new RelativeLayout.LayoutParams(size, size);
                 ulp.addRule(RelativeLayout.RIGHT_OF, downloadId);
                 ulp.addRule(RelativeLayout.CENTER_VERTICAL);
+                ulp.leftMargin = dp(8);
                 top.addView(ub, ulp);
                 Log.i(TAG, "boton de actualizacion creado en la barra superior");
             }
@@ -440,13 +441,6 @@ public final class TvSectionDrawer {
                 top.addView(badge, blp);
                 updateTopBadge = badge;
             }
-        }
-        if (ub != null && moreButton != null && moreButton.getParent() == top) {
-            RelativeLayout.LayoutParams mlp = (RelativeLayout.LayoutParams) moreButton.getLayoutParams();
-            mlp.removeRule(RelativeLayout.RIGHT_OF);
-            mlp.removeRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-            mlp.addRule(RelativeLayout.RIGHT_OF, ub.getId());
-            moreButton.setLayoutParams(mlp);
         }
         updateButton = ub;
         wireTopFocus(top, look, moreButton);
@@ -481,17 +475,19 @@ public final class TvSectionDrawer {
                 : (updateButton != null ? updateButton.getId() : more.getId()));
         if (download != null) {
             download.setFocusable(true);
-            download.setNextFocusRightId(updateButton != null ? updateButton.getId() : more.getId());
+            download.setNextFocusRightId(more != null ? more.getId() : (updateButton != null ? updateButton.getId() : View.NO_ID));
             download.setNextFocusLeftId(look.getId());
+        }
+        if (more != null) {
+            more.setFocusable(true);
+            more.setNextFocusLeftId(download != null ? download.getId() : look.getId());
+            more.setNextFocusRightId(search != null ? search.getId() : look.getId());
         }
         if (updateButton != null) {
             updateButton.setFocusable(true);
-            updateButton.setNextFocusRightId(more.getId());
             updateButton.setNextFocusLeftId(download != null ? download.getId() : look.getId());
+            updateButton.setNextFocusRightId(more != null ? more.getId() : (search != null ? search.getId() : look.getId()));
         }
-        more.setNextFocusRightId(search != null ? search.getId() : look.getId());
-        more.setNextFocusLeftId(updateButton != null ? updateButton.getId()
-                : (download != null ? download.getId() : look.getId()));
     }
 
     private void updateFallback() {
