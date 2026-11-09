@@ -451,3 +451,20 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 ## TvSubtitleSearch candidatos
 - Implementacion.
 
+## Fullscreen manual real: smali desincronizado (v222)
+
+- Sintoma: en pantalla completa no aparecian ni la barra ni el boton; el logcat seguia
+  diciendo `pantalla completa ON (lib)` aunque el Java ya era manual desde v215.
+- Causa: `apktool b` reempaqueta el smali existente. `tools/build_tv_detail.ps1` no se
+  volvio a ejecutar tras revertir `TvDetail.java`, asi que el APK llevaba el smali de v214
+  (fullscreen de la libreria) en v215-v221. El `-Project` del script apunta por defecto al
+  repo antiguo.
+- Fix: regenerar smali con `-Project` real; en `enterFullscreen()` visibilidad explicita +
+  `button.bringToFront()` + `TvPlayerBar.showFloatingControls()`; idem al salir. Logs de
+  diagnostico (clases, hijos, bounds) y `LogBoundsTask`. Revertidos dos parches sueltos de
+  `VideoPlayerView*.smali` (residuo del intento con libreria).
+- Version v222 (versionCode 40025), instalada en emulator-5554.
+- Verificado: overlay visible al entrar (`build/v222-04-fullscreen.png`), auto-ocultado a
+  los 4 s, D-pad lo recupera (`v222-06-dpad-show.png`), BACK restaura la ficha
+  (`v222-07-back1.png`).
+- Detalle: [sesion 41](docs/sesiones/sesion-41-fullscreen-smali-desincronizado.md).

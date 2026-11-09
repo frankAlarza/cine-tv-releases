@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvDetail;)V
     .locals 0
 
-    .line 324
+    .line 345
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 325
+    .line 346
     iput-object p1, p0, Lcom/movievn/tv/TvDetail$KeyHandler;->owner:Lcom/movievn/tv/TvDetail;
 
-    .line 326
+    .line 347
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 330
+    .line 351
     const/4 p1, 0x4
 
     const/4 v0, 0x1
@@ -53,7 +53,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 331
+    .line 352
     iget-object p1, p0, Lcom/movievn/tv/TvDetail$KeyHandler;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {p1}, Lcom/movievn/tv/TvDetail;->-$$Nest$fgetfullscreen(Lcom/movievn/tv/TvDetail;)Z
@@ -62,7 +62,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 332
+    .line 353
     iget-object p1, p0, Lcom/movievn/tv/TvDetail$KeyHandler;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {p1}, Lcom/movievn/tv/TvDetail;->-$$Nest$mhandleBack(Lcom/movievn/tv/TvDetail;)Z
@@ -71,13 +71,13 @@
 
     return p1
 
-    .line 337
+    .line 358
     :cond_0
     const/16 p1, 0x14
 
     if-ne p2, p1, :cond_1
 
-    .line 340
+    .line 361
     iget-object p1, p0, Lcom/movievn/tv/TvDetail$KeyHandler;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {p1}, Lcom/movievn/tv/TvDetail;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvDetail;)Landroid/app/Activity;
@@ -92,7 +92,7 @@
 
     return v0
 
-    .line 342
+    .line 363
     :cond_1
     const/4 p1, 0x0
 

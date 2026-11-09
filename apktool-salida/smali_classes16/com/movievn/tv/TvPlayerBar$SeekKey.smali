@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1937
+    .line 1964
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1938
+    .line 1965
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1939
+    .line 1966
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 7
 
-    .line 1943
+    .line 1970
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, p2, p3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhandleMediaKey(Lcom/movievn/tv/TvPlayerBar;ILandroid/view/KeyEvent;)Z
@@ -53,7 +53,7 @@
 
     return p3
 
-    .line 1945
+    .line 1972
     :cond_0
     const/16 p1, 0x15
 
@@ -65,13 +65,13 @@
 
     goto :goto_0
 
-    .line 1960
+    .line 1987
     :cond_1
     const/16 p1, 0x13
 
     if-ne p2, p1, :cond_2
 
-    .line 1961
+    .line 1988
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbtnFast(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/ImageView;
@@ -80,23 +80,23 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 1962
+    .line 1989
     return p3
 
-    .line 1964
+    .line 1991
     :cond_2
     const/4 p1, 0x0
 
     return p1
 
-    .line 1946
+    .line 1973
     :cond_3
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1947
+    .line 1974
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetlastMove(Lcom/movievn/tv/TvPlayerBar;)J
@@ -113,23 +113,23 @@
 
     return p3
 
-    .line 1948
+    .line 1975
     :cond_4
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v2, v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputlastMove(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 1949
+    .line 1976
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mscrubStep(Lcom/movievn/tv/TvPlayerBar;)J
 
     move-result-wide v0
 
-    .line 1950
+    .line 1977
     nop
 
-    .line 1952
+    .line 1979
     const-wide/16 v2, 0x0
 
     :try_start_0
@@ -153,15 +153,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1955
+    .line 1982
     :cond_5
     goto :goto_1
 
-    .line 1953
+    .line 1980
     :catchall_0
     move-exception v4
 
-    .line 1954
+    .line 1981
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -188,7 +188,7 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1956
+    .line 1983
     :goto_1
     if-ne p2, p1, :cond_6
 
@@ -199,12 +199,12 @@
     :cond_6
     add-long/2addr v2, v0
 
-    .line 1957
+    .line 1984
     :goto_2
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SeekKey;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v2, v3}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mseekTo(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 1958
+    .line 1985
     return p3
 .end method

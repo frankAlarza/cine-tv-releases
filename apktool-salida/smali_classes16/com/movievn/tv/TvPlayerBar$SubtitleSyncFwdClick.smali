@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 2279
+    .line 2306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncFwdClick;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -38,20 +38,20 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 2282
+    .line 2309
     const-string p1, "TvPlayerBar"
 
     const-string v0, "SubtitleSyncFwdClick pressed"
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2283
+    .line 2310
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncFwdClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const-wide/16 v0, 0x1f4
 
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$madjustOffset(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 2284
+    .line 2311
     return-void
 .end method

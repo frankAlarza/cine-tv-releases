@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvDetail;I)V
     .locals 0
 
-    .line 294
+    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 295
+    .line 316
     iput-object p1, p0, Lcom/movievn/tv/TvDetail$SetupTask;->owner:Lcom/movievn/tv/TvDetail;
 
-    .line 296
+    .line 317
     iput p2, p0, Lcom/movievn/tv/TvDetail$SetupTask;->attempt:I
 
-    .line 297
+    .line 318
     return-void
 .end method
 
@@ -45,14 +45,14 @@
 .method public run()V
     .locals 2
 
-    .line 301
+    .line 322
     iget-object v0, p0, Lcom/movievn/tv/TvDetail$SetupTask;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {v0}, Lcom/movievn/tv/TvDetail;->-$$Nest$msetup(Lcom/movievn/tv/TvDetail;)Z
 
     move-result v0
 
-    .line 302
+    .line 323
     if-nez v0, :cond_0
 
     iget v0, p0, Lcom/movievn/tv/TvDetail$SetupTask;->attempt:I
@@ -61,7 +61,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 303
+    .line 324
     iget-object v0, p0, Lcom/movievn/tv/TvDetail$SetupTask;->owner:Lcom/movievn/tv/TvDetail;
 
     iget v1, p0, Lcom/movievn/tv/TvDetail$SetupTask;->attempt:I
@@ -70,7 +70,7 @@
 
     invoke-static {v0, v1}, Lcom/movievn/tv/TvDetail;->-$$Nest$mschedule(Lcom/movievn/tv/TvDetail;I)V
 
-    .line 305
+    .line 326
     :cond_0
     return-void
 .end method

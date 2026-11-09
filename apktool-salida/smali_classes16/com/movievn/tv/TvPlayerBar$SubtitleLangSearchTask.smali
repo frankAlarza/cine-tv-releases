@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
     .locals 0
 
-    .line 2111
+    .line 2138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2112
+    .line 2139
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2113
+    .line 2140
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
-    .line 2114
+    .line 2141
     return-void
 .end method
 
@@ -45,12 +45,12 @@
 .method public run()V
     .locals 9
 
-    .line 2118
+    .line 2145
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2120
+    .line 2147
     :try_start_0
     new-instance v1, Lcom/movievn/tv/TvSubtitleSearch;
 
@@ -62,7 +62,7 @@
 
     invoke-direct {v1, v2}, Lcom/movievn/tv/TvSubtitleSearch;-><init>(Landroid/content/Context;)V
 
-    .line 2121
+    .line 2148
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
     if-eqz v2, :cond_0
@@ -74,7 +74,7 @@
     :cond_0
     const-string v2, ""
 
-    .line 2122
+    .line 2149
     :goto_0
     const-string v3, " - "
 
@@ -82,7 +82,7 @@
 
     move-result v3
 
-    .line 2123
+    .line 2150
     const/4 v4, 0x0
 
     if-lez v3, :cond_1
@@ -95,7 +95,7 @@
 
     move-result-object v2
 
-    .line 2124
+    .line 2151
     :cond_1
     const-string v3, ":"
 
@@ -103,7 +103,7 @@
 
     move-result v3
 
-    .line 2125
+    .line 2152
     if-lez v3, :cond_2
 
     invoke-virtual {v2, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -114,7 +114,7 @@
 
     move-result-object v2
 
-    .line 2126
+    .line 2153
     :cond_2
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
@@ -134,7 +134,7 @@
 
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
-    .line 2127
+    .line 2154
     :cond_3
     const/4 v3, 0x2
 
@@ -142,10 +142,10 @@
 
     fill-array-data v5, :array_0
 
-    .line 2128
+    .line 2155
     nop
 
-    .line 2129
+    .line 2156
     const/4 v6, 0x0
 
     move v7, v4
@@ -161,7 +161,7 @@
 
     if-eqz v8, :cond_5
 
-    .line 2130
+    .line 2157
     :cond_4
     aget-boolean v6, v5, v7
 
@@ -169,16 +169,16 @@
 
     move-result-object v6
 
-    .line 2129
+    .line 2156
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 2132
+    .line 2159
     :cond_5
     if-eqz v6, :cond_8
 
-    .line 2133
+    .line 2160
     nop
 
     :goto_2
@@ -188,21 +188,21 @@
 
     if-ge v4, v1, :cond_8
 
-    .line 2134
+    .line 2161
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;
 
-    .line 2135
+    .line 2162
     iget-object v2, v1, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->language:Ljava/lang/String;
 
     if-nez v2, :cond_6
 
     goto :goto_3
 
-    .line 2136
+    .line 2163
     :cond_6
     iget-object v1, v1, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->language:Ljava/lang/String;
 
@@ -210,7 +210,7 @@
 
     move-result-object v1
 
-    .line 2137
+    .line 2164
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -221,22 +221,22 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2133
+    .line 2160
     :cond_7
     :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 2142
+    .line 2169
     :cond_8
     goto :goto_4
 
-    .line 2140
+    .line 2167
     :catchall_0
     move-exception v1
 
-    .line 2141
+    .line 2168
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -263,11 +263,11 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2143
+    .line 2170
     :goto_4
     nop
 
-    .line 2145
+    .line 2172
     :try_start_1
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -287,14 +287,14 @@
 
     goto :goto_5
 
-    .line 2146
+    .line 2173
     :catchall_1
     move-exception v0
 
     :goto_5
     nop
 
-    .line 2147
+    .line 2174
     return-void
 
     nop

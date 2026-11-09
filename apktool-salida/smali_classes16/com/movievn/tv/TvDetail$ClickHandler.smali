@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvDetail;)V
     .locals 0
 
-    .line 311
+    .line 332
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 312
+    .line 333
     iput-object p1, p0, Lcom/movievn/tv/TvDetail$ClickHandler;->owner:Lcom/movievn/tv/TvDetail;
 
-    .line 313
+    .line 334
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 317
+    .line 338
     iget-object p1, p0, Lcom/movievn/tv/TvDetail$ClickHandler;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {p1}, Lcom/movievn/tv/TvDetail;->-$$Nest$mtoggle(Lcom/movievn/tv/TvDetail;)V
 
-    .line 318
+    .line 339
     return-void
 .end method

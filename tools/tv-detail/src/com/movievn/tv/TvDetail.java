@@ -227,10 +227,22 @@ public class TvDetail {
         if (icon != 0 && button != null) button.setImageResource(icon);
         if (button != null) {
             button.setContentDescription("Salir de pantalla completa");
+            // El player pasa a MATCH_PARENT: el boton debe quedar por encima.
+            button.setVisibility(View.VISIBLE);
+            button.bringToFront();
             button.requestFocus();
         }
         if (backArrow != null) backArrow.setVisibility(View.GONE);
-        Log.i(TAG, "pantalla completa ON");
+        // La barra tambien es parte del overlay: se fuerza visible al entrar.
+        TvPlayerBar.showFloatingControls();
+        Log.i(TAG, "pantalla completa ON root=" + root.getClass().getSimpleName()
+                + " box=" + box.getClass().getSimpleName()
+                + " rootHijos=" + root.getChildCount()
+                + " boxHijos=" + box.getChildCount()
+                + " boton=" + (button == null ? "null"
+                    : button.getVisibility() + " bounds=" + button.getLeft() + "," + button.getTop()
+                      + "," + button.getRight() + "," + button.getBottom()));
+        if (button != null) button.post(new LogBoundsTask(this));
     }
 
     private void exitFullscreen() {
@@ -259,6 +271,8 @@ public class TvDetail {
         if (button != null) button.setContentDescription("Pantalla completa");
         if (backArrow != null) backArrow.setVisibility(View.VISIBLE);
         if (previousFocus != null) previousFocus.requestFocus();
+        // Al salir se repone el overlay (en pantalla completa pudo ocultarse).
+        TvPlayerBar.showFloatingControls();
         Log.i(TAG, "pantalla completa OFF");
     }
 
@@ -347,6 +361,25 @@ public class TvDetail {
                 if (TvPlayerBar.focusBar(owner.activity)) return true;
             }
             return false;
+        }
+    }
+
+    /** Diagnostico: bounds reales del boton una vez medido en pantalla completa. */
+    static class LogBoundsTask implements Runnable {
+        private final TvDetail owner;
+
+        LogBoundsTask(TvDetail owner) {
+            this.owner = owner;
+        }
+
+        @Override
+        public void run() {
+            if (owner.button == null) return;
+            Log.i(TAG, "boton fullscreen medido: vis=" + owner.button.getVisibility()
+                    + " shown=" + owner.button.isShown()
+                    + " w=" + owner.button.getWidth() + " h=" + owner.button.getHeight()
+                    + " bounds=" + owner.button.getLeft() + "," + owner.button.getTop()
+                    + "," + owner.button.getRight() + "," + owner.button.getBottom());
         }
     }
 

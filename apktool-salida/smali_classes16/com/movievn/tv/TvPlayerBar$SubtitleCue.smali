@@ -26,18 +26,18 @@
 .method public constructor <init>(JJLjava/lang/String;)V
     .locals 0
 
-    .line 2309
+    .line 2336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2310
+    .line 2337
     iput-wide p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;->startMs:J
 
-    .line 2311
+    .line 2338
     iput-wide p3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;->endMs:J
 
-    .line 2312
+    .line 2339
     iput-object p5, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;->text:Ljava/lang/String;
 
-    .line 2313
+    .line 2340
     return-void
 .end method
