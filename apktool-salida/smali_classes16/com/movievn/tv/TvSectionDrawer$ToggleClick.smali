@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 746
+    .line 775
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 747
+    .line 776
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ToggleClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 748
+    .line 777
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 752
+    .line 781
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ToggleClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mtoggle(Lcom/movievn/tv/TvSectionDrawer;)V
 
-    .line 753
+    .line 782
     return-void
 .end method

@@ -117,6 +117,7 @@ public final class TvSectionDrawer {
     private boolean redirecting;
     private boolean contentBlocked;
     private View lastItemFocus;
+    private View updateBadge;
 
     private static final class Item {
         final int index;
@@ -148,6 +149,7 @@ public final class TvSectionDrawer {
         TvSectionDrawer d = new TvSectionDrawer(activity);
         sActive = d;
         d.schedule(1);
+        TvGithubUpdate.initDailyCheck(activity);
     }
 
     /**
@@ -498,6 +500,21 @@ public final class TvSectionDrawer {
         labelLp.rightMargin = dp(12);
         row.addView(label, labelLp);
 
+        if (index == -2) {
+            View badge = new View(activity);
+            GradientDrawable badgeBg = new GradientDrawable();
+            badgeBg.setShape(GradientDrawable.OVAL);
+            badgeBg.setColor(0xFFE50914);
+            badge.setBackground(badgeBg);
+            int bsz = dp(12);
+            LinearLayout.LayoutParams badgeLp = new LinearLayout.LayoutParams(bsz, bsz);
+            badgeLp.rightMargin = dp(16);
+            badgeLp.gravity = Gravity.CENTER_VERTICAL;
+            badge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
+            row.addView(badge, badgeLp);
+            updateBadge = badge;
+        }
+
         listView.addView(row, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, itemHeight));
 
@@ -577,8 +594,19 @@ public final class TvSectionDrawer {
         }
     }
 
+    private void refreshUpdateBadge() {
+        if (updateBadge != null) {
+            updateBadge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
+        }
+    }
+
     private void select(Item item) {
         int index = item.index;
+        if (index == -2) {
+            TvGithubUpdate.start(activity);
+            close();
+            return;
+        }
         if (index < 0) {
             // Item personalizado: no es una pestana real.
             TvSubtitleStyleDialog.show(activity);
@@ -622,6 +650,7 @@ public final class TvSectionDrawer {
         if (!ready || open || panel == null) return;
         selectedTab = currentTab();
         applySelection();
+        refreshUpdateBadge();
         open = true;
         scrim.setVisibility(View.VISIBLE);
         scrim.setAlpha(0f);
@@ -889,6 +918,7 @@ public final class TvSectionDrawer {
             }
             drawer.ensureButton();
             drawer.updateFallback();
+            drawer.refreshUpdateBadge();
         }
     }
 

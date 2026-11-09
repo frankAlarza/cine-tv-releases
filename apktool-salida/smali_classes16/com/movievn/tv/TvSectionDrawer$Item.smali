@@ -30,24 +30,24 @@
 .method constructor <init>(ILandroid/widget/LinearLayout;Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/view/View;)V
     .locals 0
 
-    .line 128
+    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
+    .line 130
     iput p1, p0, Lcom/movievn/tv/TvSectionDrawer$Item;->index:I
 
-    .line 130
+    .line 131
     iput-object p2, p0, Lcom/movievn/tv/TvSectionDrawer$Item;->row:Landroid/widget/LinearLayout;
 
-    .line 131
+    .line 132
     iput-object p3, p0, Lcom/movievn/tv/TvSectionDrawer$Item;->icon:Landroid/widget/ImageView;
 
-    .line 132
+    .line 133
     iput-object p4, p0, Lcom/movievn/tv/TvSectionDrawer$Item;->label:Landroid/widget/TextView;
 
-    .line 133
+    .line 134
     iput-object p5, p0, Lcom/movievn/tv/TvSectionDrawer$Item;->marker:Landroid/view/View;
 
-    .line 134
+    .line 135
     return-void
 .end method

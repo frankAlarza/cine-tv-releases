@@ -408,12 +408,42 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - 🔲 Borrar del repo `tools/update-modal/scripts/upload-release.sh` y `upload-v172.sh`
   (ya fallan con aviso; quedan como trampas en el árbol).
 
+## Update diario + badge + popup (v206)
+
+- `TvGithubUpdate` gana gate diario (`initDailyCheck` con SharedPreferences `tv_update`,
+  clave `last_check_date`) para comprobar como maximo una vez por dia.
+- Si hay release remota mayor (tag != versionName actual): activa badge rojo en el item
+  "Actualizar aplicacion" del cajon derecho y, la primera vez por version, muestra modal
+  "Nueva version disponible" con botones Aceptar (foco) / Cancelar.
+- Cancelar guarda `dismissed_version` y mantiene el badge; no repite el modal para la misma version.
+- `TvSectionDrawer` refresca la visibilidad del badge al abrir el cajon y en `LayoutWatcher`.
+- Corregidas rutas obsoletas `app-android-cine-tv` en `AGENTS.md` (ahora `app-cine-new-design`).
+- Build scripts requieren `-Project` con la ruta real (evita generar smali en el arbol antiguo).
+- Version incrementada a v206 (versionCode 40009); release publicado en GitHub
+  (tag v206, asset `cine-tv.apk`, digest SHA-256 verificado).
+
+## Fullscreen BACK hides floating controls (v208)
+
+- En modo pantalla completa, ahora el primer `BACK` oculta los botones flotantes (barra
+  de control + boton de pantalla completa) si están visibles; solo al segundo `BACK`
+  (con los botones ya ocultos) se sale de la pantalla completa.
+- `TvDetail.handleBack()` y `TvDetail.KeyHandler` coordinados con `TvPlayerBar`
+  (`areFloatingControlsVisible()` / `hideFloatingControls()`); al ocultar se mueve el
+  foco a la caja del video para no dejarlo en un control invisible.
+- Corregido: el botón de subtítulos (`btnSubtitle`) ahora se oculta junto con el resto
+  del overlay flotante (anteriormente quedaba siempre visible).
+- Icono del botón de subtítulos cambiado de `ic_detail_language` (letra "A") a
+  `exo_ic_subtitle_on` (rectángulo con rallitas clásico de subtítulos).
+- Version incrementada a v208 (versionCode 40011); release publicado en GitHub
+  (tag v208, asset `cine-tv.apk`, digest SHA-256 verificado).
+- APK instalado en emulator-5554.
+
 ## Streaming block hide (v205)
 
 - Nueva clase `TvStreamHide` (smali_classes16) que:
-  - Oculta en runtime el bloque "Streaming" del Home (RecyclerView FeedRoot) y colapsa su espacio (height/m�rgenes 0).
-  - Toggle reversible v�a SharedPreferences (`tv_stream_hide` / `hide_streaming_block`, default true).
+  - Oculta en runtime el bloque "Streaming" del Home (RecyclerView FeedRoot) y colapsa su espacio (height/m�rgenes 0).
+  - Toggle reversible v�a SharedPreferences (`tv_stream_hide` / `hide_streaming_block`, default true).
   - Overlay de carga estilo cine durante el arranque para enmascarar el flash.
-- Invocado por `TvSectionDrawer.attach()` durante `setup()` (reflexi�n, sin acoplar compile-time).
+- Invocado por `TvSectionDrawer.attach()` durante `setup()` (reflexi�n, sin acoplar compile-time).
 - Repite el escaneo con cadencia decreciente + `OnLayoutChangeListener` sobre FeedRootRecyclerView.
-- Versi�n incrementada a v205 (versionCode 40008) y APK instalado en emulator-5554.
+- Versi�n incrementada a v205 (versionCode 40008) y APK instalado en emulator-5554.

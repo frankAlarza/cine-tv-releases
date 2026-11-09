@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvDetail;)V
     .locals 0
 
-    .line 344
+    .line 350
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 345
+    .line 351
     iput-object p1, p0, Lcom/movievn/tv/TvDetail$LayoutWatcher;->owner:Lcom/movievn/tv/TvDetail;
 
-    .line 346
+    .line 352
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public onGlobalLayout()V
     .locals 3
 
-    .line 350
+    .line 356
     iget-object v0, p0, Lcom/movievn/tv/TvDetail$LayoutWatcher;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {v0}, Lcom/movievn/tv/TvDetail;->-$$Nest$fgetfullscreen(Lcom/movievn/tv/TvDetail;)Z
@@ -67,7 +67,7 @@
 
     goto :goto_2
 
-    .line 351
+    .line 357
     :cond_0
     const/4 v0, 0x0
 
@@ -84,7 +84,7 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 352
+    .line 358
     iget-object v1, p0, Lcom/movievn/tv/TvDetail$LayoutWatcher;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {v1}, Lcom/movievn/tv/TvDetail;->-$$Nest$fgetroot(Lcom/movievn/tv/TvDetail;)Landroid/view/ViewGroup;
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    .line 353
+    .line 359
     iget-object v2, p0, Lcom/movievn/tv/TvDetail$LayoutWatcher;->owner:Lcom/movievn/tv/TvDetail;
 
     invoke-static {v2}, Lcom/movievn/tv/TvDetail;->-$$Nest$fgetbox(Lcom/movievn/tv/TvDetail;)Landroid/view/ViewGroup;
@@ -106,7 +106,7 @@
 
     goto :goto_1
 
-    .line 354
+    .line 360
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -118,18 +118,18 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 351
+    .line 357
     :cond_2
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 356
+    .line 362
     :cond_3
     return-void
 
-    .line 350
+    .line 356
     :cond_4
     :goto_2
     return-void

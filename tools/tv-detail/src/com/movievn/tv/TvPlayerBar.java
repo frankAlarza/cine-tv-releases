@@ -192,6 +192,31 @@ public class TvPlayerBar {
         return ok;
     }
 
+    /** ¿Estan visibles ahora los botones flotantes (barra + boton de pantalla completa)? */
+    public static boolean areFloatingControlsVisible() {
+        TvPlayerBar b = sActive;
+        return b != null && b.barVisible;
+    }
+
+    /** Oculta los botones flotantes (barra + boton de pantalla completa) si estan visibles. */
+    public static void hideFloatingControls() {
+        TvPlayerBar b = sActive;
+        if (b == null) return;
+        b.hideBarNow();
+        try {
+            View f = b.activity.getCurrentFocus();
+            boolean onControls = (f != null) && (
+                    (b.bar != null && isInside(f, b.bar))
+                    || (f.getContentDescription() != null
+                        && f.getContentDescription().toString().toLowerCase().contains("pantalla completa")));
+            if (onControls && b.box != null) {
+                b.box.requestFocus();
+            }
+        } catch (Throwable t) {
+            Log.w(TAG, "hideFloatingControls focus: " + t);
+        }
+    }
+
     private static boolean isTv(Context ctx) {
         int mode = ctx.getResources().getConfiguration().uiMode & Configuration.UI_MODE_TYPE_MASK;
         if (mode == Configuration.UI_MODE_TYPE_TELEVISION) return true;
@@ -593,6 +618,8 @@ public class TvPlayerBar {
         barVisible = false;
         View fs = findFullscreenButton(box);
         if (fs != null) fs.setVisibility(View.GONE);
+        // El boton de subtitulos tambien es parte del overlay flotante.
+        if (btnSubtitle != null) btnSubtitle.setVisibility(View.GONE);
         // El boton flotante de subtitulos debe permanecer visible siempre.
         if (btnSubtitleBack != null) btnSubtitleBack.setVisibility(View.GONE);
         if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.GONE);
@@ -766,7 +793,9 @@ public class TvPlayerBar {
 
     private void createSubtitleButton() {
         ImageView b = new ImageView(activity);
-        int icon = resId("drawable", "ic_detail_language");
+        // Icono clasico de subtitulos (rectangulo con rallitas), no la "A" del idioma.
+        int icon = resId("drawable", "exo_ic_subtitle_on");
+        if (icon == 0) icon = resId("drawable", "ic_detail_language");
         if (icon != 0) b.setImageResource(icon);
         b.setFocusable(true);
         b.setClickable(true);

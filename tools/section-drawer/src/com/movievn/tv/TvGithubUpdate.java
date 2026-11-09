@@ -2,12 +2,17 @@ package com.movievn.tv;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 // androidx.core.content.FileProvider resolved at runtime via reflection (not in compile classpath)
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import android.os.StrictMode;
 import android.util.Log;
 import android.widget.TextView;
@@ -87,6 +92,148 @@ public final class TvGithubUpdate {
     /** Alias para start(), compatible con la convencion de TvSectionDrawer. */
     public static void attach(android.app.Activity activity) {
         start(activity);
+    }
+
+    private static final String PREFS = "tv_update";
+    private static final String KEY_LAST_CHECK = "last_check_date";
+    private static final String KEY_UPDATE_AVAILABLE = "update_available";
+    private static final String KEY_LATEST_REMOTE = "latest_remote";
+    private static final String KEY_DISMISSED = "dismissed_version";
+
+    private static SharedPreferences prefs(Context ctx) {
+        return ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+    }
+
+    public static boolean hasUpdate(Context ctx) {
+        if (ctx == null) return false;
+        return prefs(ctx).getBoolean(KEY_UPDATE_AVAILABLE, false);
+    }
+
+    public static void clearUpdateAvailable(Context ctx) {
+        if (ctx == null) return;
+        prefs(ctx).edit().putBoolean(KEY_UPDATE_AVAILABLE, false).apply();
+    }
+
+    public static void setUpdateAvailable(Context ctx, boolean value, String remote) {
+        if (ctx == null) return;
+        SharedPreferences.Editor e = prefs(ctx).edit();
+        e.putBoolean(KEY_UPDATE_AVAILABLE, value);
+        if (remote != null) e.putString(KEY_LATEST_REMOTE, remote);
+        if (!value) e.remove(KEY_LATEST_REMOTE);
+        e.apply();
+    }
+
+    private static String today() {
+        return new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Calendar.getInstance().getTime());
+    }
+
+    /** Comprobacion diaria: a lo sumo una vez por dia. */
+    public static void initDailyCheck(final android.app.Activity activity) {
+        if (activity == null) return;
+        final Context appCtx = activity.getApplicationContext();
+        final SharedPreferences p = prefs(appCtx);
+        String last = p.getString(KEY_LAST_CHECK, null);
+        if (today().equals(last)) {
+            Log.i(TAG, "initDailyCheck: ya comprobado hoy");
+            return;
+        }
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                TvGithubUpdate updater = new TvGithubUpdate(activity);
+                String[] info = updater.fetchReleaseInfo();
+                String current = updater.getCurrentVersion();
+                Log.i(TAG, "initDailyCheck: info=" + (info == null ? "null" : info[0]) + " current=" + current);
+                String remote = (info == null) ? null : info[0];
+                String digest = (info == null) ? null : info[1];
+                boolean newer = (remote != null) && isNewer(remote, current);
+                SharedPreferences.Editor ed = p.edit();
+                ed.putString(KEY_LAST_CHECK, today());
+                if (newer && digest != null) {
+                    ed.putBoolean(KEY_UPDATE_AVAILABLE, true);
+                    ed.putString(KEY_LATEST_REMOTE, remote);
+                    String dismissed = p.getString(KEY_DISMISSED, null);
+                    boolean showModal = (dismissed == null || !dismissed.equals(remote));
+                    ed.apply();
+                    if (showModal) {
+                        updater.expectedDigest = digest;
+                        activity.runOnUiThread(new ConfirmUpdateAction(activity, updater, remote));
+                    }
+                } else {
+                    // Solo limpiar si la version local ya alcanzo la remota.
+                    String latestStored = p.getString(KEY_LATEST_REMOTE, null);
+                    if (latestStored != null && remote != null && !isNewer(remote, current) && remote.equals(latestStored)) {
+                        ed.putBoolean(KEY_UPDATE_AVAILABLE, false);
+                        ed.remove(KEY_LATEST_REMOTE);
+                    }
+                    ed.apply();
+                }
+            }
+        }).start();
+    }
+
+    private static final class ConfirmUpdateAction implements Runnable {
+        private final android.app.Activity activity;
+        private final TvGithubUpdate updater;
+        private final String remote;
+
+        ConfirmUpdateAction(android.app.Activity activity, TvGithubUpdate updater, String remote) {
+            this.activity = activity;
+            this.updater = updater;
+            this.remote = remote;
+        }
+
+        @Override
+        public void run() {
+            try {
+                AlertDialog d = new AlertDialog.Builder(activity)
+                        .setTitle("Nueva version disponible")
+                        .setMessage("Hay una nueva version (" + remote + "). Deseas actualizar ahora?")
+                        .setPositiveButton("Aceptar", new ConfirmOkListener(updater))
+                        .setNegativeButton("Cancelar", new ConfirmCancelListener(activity, remote))
+                        .setCancelable(true)
+                        .create();
+                d.show();
+                android.widget.Button pos = d.getButton(AlertDialog.BUTTON_POSITIVE);
+                if (pos != null) pos.requestFocus();
+            } catch (Exception e) {
+                Log.w(TAG, "modal de confirmacion fallo: " + e);
+            }
+        }
+    }
+
+    private static final class ConfirmOkListener implements DialogInterface.OnClickListener {
+        private final TvGithubUpdate updater;
+
+        ConfirmOkListener(TvGithubUpdate updater) {
+            this.updater = updater;
+        }
+
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            try { dialog.dismiss(); } catch (Exception ignored) {}
+            // Reusar el flujo completo existente.
+            new Thread(new VersionCheckTask(updater)).start();
+        }
+    }
+
+    private static final class ConfirmCancelListener implements DialogInterface.OnClickListener {
+        private final android.app.Activity activity;
+        private final String remote;
+
+        ConfirmCancelListener(android.app.Activity activity, String remote) {
+            this.activity = activity;
+            this.remote = remote;
+        }
+
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            try { dialog.dismiss(); } catch (Exception ignored) {}
+            if (activity != null) {
+                prefs(activity.getApplicationContext()).edit()
+                        .putString(KEY_DISMISSED, remote).apply();
+            }
+        }
     }
 
     public TvGithubUpdate(Context ctx) {

@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1754
+    .line 1783
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1755
+    .line 1784
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1756
+    .line 1785
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public run()V
     .locals 2
 
-    .line 1760
+    .line 1789
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetbar(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/LinearLayout;
@@ -59,7 +59,7 @@
 
     goto :goto_0
 
-    .line 1761
+    .line 1790
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    .line 1762
+    .line 1791
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -84,7 +84,7 @@
 
     return-void
 
-    .line 1763
+    .line 1792
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    .line 1764
+    .line 1793
     if-nez v0, :cond_2
 
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$FocusBar;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -101,17 +101,17 @@
 
     move-result-object v0
 
-    .line 1765
+    .line 1794
     :cond_2
     if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 1766
+    .line 1795
     :cond_3
     return-void
 
-    .line 1760
+    .line 1789
     :cond_4
     :goto_0
     return-void

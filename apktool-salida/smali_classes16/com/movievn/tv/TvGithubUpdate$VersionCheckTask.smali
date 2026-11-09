@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvGithubUpdate;)V
     .locals 0
 
-    .line 249
+    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 250
+    .line 397
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 251
+    .line 398
     return-void
 .end method
 
@@ -40,21 +40,21 @@
 .method public run()V
     .locals 7
 
-    .line 255
+    .line 402
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-virtual {v0}, Lcom/movievn/tv/TvGithubUpdate;->fetchReleaseInfo()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 256
+    .line 403
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-virtual {v1}, Lcom/movievn/tv/TvGithubUpdate;->getCurrentVersion()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 257
+    .line 404
     const/4 v2, 0x1
 
     const/4 v3, 0x0
@@ -135,34 +135,34 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
+    .line 405
     if-nez v0, :cond_2
 
-    .line 259
+    .line 406
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v1, "No se pudo comprobar la version (sin conexion?)"
 
     invoke-virtual {v0, v1}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
 
-    .line 260
+    .line 407
     return-void
 
-    .line 262
+    .line 409
     :cond_2
     aget-object v3, v0, v3
 
-    .line 263
+    .line 410
     aget-object v0, v0, v2
 
-    .line 264
+    .line 411
     invoke-static {v3, v1}, Lcom/movievn/tv/TvGithubUpdate;->isNewer(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 265
+    .line 412
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     iget-object v0, v0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
@@ -201,30 +201,30 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 267
+    .line 414
     return-void
 
-    .line 269
+    .line 416
     :cond_3
     if-nez v0, :cond_4
 
-    .line 270
+    .line 417
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v1, "El release no publica digest SHA-256. No se instala por seguridad."
 
     invoke-virtual {v0, v1}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
 
-    .line 271
+    .line 418
     return-void
 
-    .line 273
+    .line 420
     :cond_4
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     iput-object v0, v1, Lcom/movievn/tv/TvGithubUpdate;->expectedDigest:Ljava/lang/String;
 
-    .line 274
+    .line 421
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$VersionCheckTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     iget-object v0, v0, Lcom/movievn/tv/TvGithubUpdate;->handler:Landroid/os/Handler;
@@ -237,6 +237,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 275
+    .line 422
     return-void
 .end method

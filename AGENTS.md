@@ -10,7 +10,7 @@ v4.0.0 (MovieVN): sin "Expired App", sin Telegram del modder, sin actualización
 
 - **No hay código fuente ni Gradle.** Se edita **smali + recursos XML** y se recompila con apktool.
 - **Regla de oro:** el proyecto `C:\Users\UsuarioLocal\Documents\app-android-cine` es el
-  origen y **NO se toca**. Todo va en `app-android-cine-tv`.
+  origen y **NO se toca**. Todo va en `app-cine-new-design`.
 - **Estado documentado:** `build/cine-new-nd44-signed.apk` (rediseño Apple TV nd1-nd44: tokens,
   componentes, Home, hero, ficha, player bar + **estilo configurable de subtítulos** nd44).
   UI main-line intacta.
@@ -57,10 +57,10 @@ Rules:
 
 | Qué | Ruta |
 |---|---|
-| Proyecto TV (aquí) | `C:\Users\UsuarioLocal\Documents\app-android-cine-tv` |
-| Proyecto apktool | `...\app-android-cine-tv\apktool-salida\` |
-| APK base (referencia) | `...\app-android-cine-tv\base\base.apk` |
-| APKs + capturas | `...\app-android-cine-tv\build\` |
+| Proyecto TV (aquí) | `C:\Users\UsuarioLocal\Documents\app-cine-new-design` |
+| Proyecto apktool | `...\app-cine-new-design\apktool-salida\` |
+| APK base (referencia) | `...\app-cine-new-design\base\base.apk` |
+| APKs + capturas | `...\app-cine-new-design\build\` |
 | adb | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe` |
 | apktool | `C:\herramientas\apktool\apktool.bat` |
 | zipalign / apksigner | `C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0\` |
@@ -73,7 +73,7 @@ Rules:
 ## 2. Ciclo completo (copiar y pegar)
 
 ```powershell
-$pr  = 'C:\Users\UsuarioLocal\Documents\app-android-cine-tv'
+$pr  = 'C:\Users\UsuarioLocal\Documents\app-cine-new-design'
 $v   = 'v33'   # incrementar en cada cambio
 $bt  = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\build-tools\36.0.0'
 $adb = 'C:\Users\UsuarioLocal\AppData\Local\Android\Sdk\platform-tools\adb.exe'
@@ -110,7 +110,7 @@ build falla**): [`docs/guias/build-firma-instalacion.md`](docs/guias/build-firma
 
 > Versión larga y comentada: [`docs/reglas/reglas-innegociables.md`](docs/reglas/reglas-innegociables.md).
 
-1. **`app-android-cine` intacto.** Todo va en `app-android-cine-tv`.
+1. **`app-android-cine` intacto.** Todo va en `app-cine-new-design`.
 2. **No borrar ni reordenar** hijos con `android:tag="binding_N"` (data-binding).
 3. **Nunca un `foreground` opaco.** El foco se dibuja con `@drawable/bg_focused`
    (transparente en reposo). Si es opaco, tapa la imagen.
@@ -351,7 +351,7 @@ Diagnóstico por síntoma (letterbox, foco perdido, reproductor mudo, crashes, e
 
 ```text
 Lee AGENTS.md (guía operativa) y docs/00-INDICE.md (mapa de la documentación).
-Trabaja SOLO en C:\Users\UsuarioLocal\Documents\app-android-cine-tv;
+Trabaja SOLO en C:\Users\UsuarioLocal\Documents\app-cine-new-design;
 NO modifiques C:\Users\UsuarioLocal\Documents\app-android-cine.
 Antes de editar, revisa AGENTS.md §3 (reglas) y §4 (trampas ya resueltas).
 Lee solo los documentos que te indiquen en §7 (Lee solo lo que necesitas).

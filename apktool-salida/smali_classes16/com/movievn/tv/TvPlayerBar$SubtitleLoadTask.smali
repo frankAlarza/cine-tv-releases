@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Ljava/io/File;)V
     .locals 0
 
-    .line 2208
+    .line 2237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2209
+    .line 2238
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2210
+    .line 2239
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->file:Ljava/io/File;
 
-    .line 2211
+    .line 2240
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 2
 
-    .line 2215
+    .line 2244
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -56,10 +56,10 @@
 
     move-result-object v0
 
-    .line 2216
+    .line 2245
     nop
 
-    .line 2217
+    .line 2246
     const-string v1, "_es.srt"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -78,7 +78,7 @@
 
     goto :goto_1
 
-    .line 2218
+    .line 2247
     :cond_0
     const-string v1, "_en.srt"
 
@@ -109,29 +109,29 @@
 
     goto :goto_2
 
-    .line 2217
+    .line 2246
     :cond_3
     :goto_1
     const-string v0, "ES"
 
-    .line 2219
+    .line 2248
     :goto_2
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleLoadedLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2220
+    .line 2249
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->file:Ljava/io/File;
 
     invoke-static {v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mloadSubtitle(Lcom/movievn/tv/TvPlayerBar;Ljava/io/File;)V
 
-    .line 2221
+    .line 2250
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLoadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mupdateLangDisplay(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2222
+    .line 2251
     return-void
 .end method

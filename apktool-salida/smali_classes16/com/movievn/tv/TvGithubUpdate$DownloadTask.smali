@@ -25,20 +25,20 @@
 .method constructor <init>(Lcom/movievn/tv/TvGithubUpdate;)V
     .locals 0
 
-    .line 325
+    .line 472
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 326
+    .line 473
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 327
+    .line 474
     return-void
 .end method
 
 .method private formatFileSize(J)Ljava/lang/String;
     .locals 2
 
-    .line 429
+    .line 576
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -49,7 +49,7 @@
 
     return-object p1
 
-    .line 430
+    .line 577
     :cond_0
     long-to-double p1, p1
 
@@ -57,7 +57,7 @@
 
     div-double/2addr p1, v0
 
-    .line 431
+    .line 578
     invoke-static {p1, p2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
@@ -78,17 +78,17 @@
 .method private purgeOldDownloads(Ljava/io/File;Ljava/io/File;)V
     .locals 3
 
-    .line 417
+    .line 564
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p1
 
-    .line 418
+    .line 565
     if-nez p1, :cond_0
 
     return-void
 
-    .line 419
+    .line 566
     :cond_0
     const/4 v0, 0x0
 
@@ -97,10 +97,10 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 420
+    .line 567
     aget-object v1, p1, v0
 
-    .line 421
+    .line 568
     invoke-virtual {v1}, Ljava/io/File;->isFile()Z
 
     move-result v2
@@ -113,16 +113,16 @@
 
     if-nez v2, :cond_1
 
-    .line 422
+    .line 569
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 419
+    .line 566
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 425
+    .line 572
     :cond_2
     invoke-virtual {p2}, Ljava/io/File;->exists()Z
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {p2}, Ljava/io/File;->delete()Z
 
-    .line 426
+    .line 573
     :cond_3
     return-void
 .end method
@@ -142,23 +142,23 @@
 .method public run()V
     .locals 9
 
-    .line 331
+    .line 478
     const-string v0, "TvGithubUpdate"
 
     const-string v1, "DownloadTask: begin"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
+    .line 479
     nop
 
-    .line 333
+    .line 480
     nop
 
-    .line 334
+    .line 481
     nop
 
-    .line 338
+    .line 485
     const/4 v0, 0x0
 
     :try_start_0
@@ -166,26 +166,26 @@
 
     iget-object v1, v1, Lcom/movievn/tv/TvGithubUpdate;->expectedDigest:Ljava/lang/String;
 
-    .line 339
+    .line 486
     if-nez v1, :cond_0
 
-    .line 340
+    .line 487
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v2, "Falta el digest del release. No se instala."
 
     invoke-virtual {v1, v2}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
 
-    .line 410
+    .line 557
     nop
 
-    .line 411
+    .line 558
     nop
 
-    .line 341
+    .line 488
     return-void
 
-    .line 345
+    .line 492
     :cond_0
     iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
@@ -199,7 +199,7 @@
 
     move-result-object v2
 
-    .line 346
+    .line 493
     new-instance v3, Ljava/io/File;
 
     const-string v5, "cine-tv-update.apk"
@@ -209,59 +209,59 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_8
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 347
+    .line 494
     :try_start_1
     invoke-direct {p0, v2, v3}, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->purgeOldDownloads(Ljava/io/File;Ljava/io/File;)V
 
-    .line 349
+    .line 496
     iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v5, "Descargando APK desde GitHub..."
 
     invoke-virtual {v2, v5}, Lcom/movievn/tv/TvGithubUpdate;->updateStatus(Ljava/lang/String;)V
 
-    .line 350
+    .line 497
     new-instance v2, Ljava/net/URL;
 
     const-string v5, "https://github.com/frankAlarza/cine-tv-releases/releases/latest/download/cine-tv.apk"
 
     invoke-direct {v2, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 351
+    .line 498
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v2
 
     check-cast v2, Ljava/net/HttpURLConnection;
 
-    .line 352
+    .line 499
     const/16 v5, 0x7530
 
     invoke-virtual {v2, v5}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 353
+    .line 500
     const v5, 0xea60
 
     invoke-virtual {v2, v5}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 354
+    .line 501
     const-string v5, "User-Agent"
 
     const-string v6, "CineTV-Updater/1.0 (Android TV)"
 
     invoke-virtual {v2, v5, v6}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 356
+    .line 503
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v5
 
-    .line 357
+    .line 504
     const/16 v6, 0xc8
 
     if-eq v5, v6, :cond_1
 
-    .line 358
+    .line 505
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -284,16 +284,16 @@
 
     invoke-virtual {v1, v2}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
 
-    .line 410
+    .line 557
     nop
 
-    .line 411
+    .line 558
     nop
 
-    .line 359
+    .line 506
     return-void
 
-    .line 362
+    .line 509
     :cond_1
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getContentLength()I
 
@@ -301,7 +301,7 @@
 
     int-to-long v5, v5
 
-    .line 363
+    .line 510
     iget-object v7, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-direct {p0, v5, v6}, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->formatFileSize(J)Ljava/lang/String;
@@ -334,7 +334,7 @@
 
     invoke-virtual {v7, v5}, Lcom/movievn/tv/TvGithubUpdate;->updateStatus(Ljava/lang/String;)V
 
-    .line 365
+    .line 512
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v2
@@ -342,7 +342,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_7
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 366
+    .line 513
     :try_start_2
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -351,13 +351,13 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 368
+    .line 515
     const/16 v6, 0x2000
 
     :try_start_3
     new-array v6, v6, [B
 
-    .line 370
+    .line 517
     :goto_0
     invoke-virtual {v2, v6}, Ljava/io/InputStream;->read([B)I
 
@@ -367,7 +367,7 @@
 
     if-eq v7, v8, :cond_3
 
-    .line 371
+    .line 518
     iget-object v8, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     iget-boolean v8, v8, Lcom/movievn/tv/TvGithubUpdate;->cancelled:Z
@@ -376,27 +376,27 @@
 
     goto :goto_1
 
-    .line 372
+    .line 519
     :cond_2
     invoke-virtual {v5, v6, v4, v7}, Ljava/io/FileOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 374
+    .line 521
     :cond_3
     :goto_1
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 375
+    .line 522
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 376
+    .line 523
     nop
 
-    .line 378
+    .line 525
     :try_start_4
     iget-object v4, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
@@ -404,13 +404,13 @@
 
     if-eqz v4, :cond_5
 
-    .line 379
+    .line 526
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_6
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 410
+    .line 557
     if-eqz v2, :cond_4
 
     :try_start_5
@@ -423,15 +423,15 @@
     :catch_0
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_4
     :goto_2
     nop
 
-    .line 380
+    .line 527
     return-void
 
-    .line 382
+    .line 529
     :cond_5
     :try_start_6
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
@@ -452,7 +452,7 @@
 
     goto :goto_6
 
-    .line 388
+    .line 535
     :cond_6
     iget-object v4, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
@@ -460,18 +460,18 @@
 
     invoke-virtual {v4, v5}, Lcom/movievn/tv/TvGithubUpdate;->updateStatus(Ljava/lang/String;)V
 
-    .line 389
+    .line 536
     invoke-static {v3}, Lcom/movievn/tv/TvGithubUpdate;->sha256Hex(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 390
+    .line 537
     if-nez v4, :cond_8
 
-    .line 391
+    .line 538
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 392
+    .line 539
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v4, "No se pudo calcular el checksum del archivo"
@@ -481,7 +481,7 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 410
+    .line 557
     if-eqz v2, :cond_7
 
     :try_start_7
@@ -494,15 +494,15 @@
     :catch_1
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_7
     :goto_3
     nop
 
-    .line 393
+    .line 540
     return-void
 
-    .line 395
+    .line 542
     :cond_8
     :try_start_8
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -511,10 +511,10 @@
 
     if-nez v1, :cond_a
 
-    .line 396
+    .line 543
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 397
+    .line 544
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     const-string v4, "Checksum NO coincide. Descarta la instalacion."
@@ -524,7 +524,7 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_6
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 410
+    .line 557
     if-eqz v2, :cond_9
 
     :try_start_9
@@ -537,15 +537,15 @@
     :catch_2
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_9
     :goto_4
     nop
 
-    .line 398
+    .line 545
     return-void
 
-    .line 401
+    .line 548
     :cond_a
     :try_start_a
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
@@ -554,7 +554,7 @@
 
     invoke-virtual {v1, v4}, Lcom/movievn/tv/TvGithubUpdate;->updateStatus(Ljava/lang/String;)V
 
-    .line 402
+    .line 549
     iget-object v1, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-virtual {v1, v3}, Lcom/movievn/tv/TvGithubUpdate;->showInstallPrompt(Ljava/io/File;)V
@@ -562,7 +562,7 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 410
+    .line 557
     if-eqz v2, :cond_b
 
     :try_start_b
@@ -575,12 +575,12 @@
     :catch_3
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_b
     :goto_5
     goto/16 :goto_c
 
-    .line 383
+    .line 530
     :cond_c
     :goto_6
     :try_start_c
@@ -593,7 +593,7 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_6
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 410
+    .line 557
     if-eqz v2, :cond_d
 
     :try_start_d
@@ -606,27 +606,27 @@
     :catch_4
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_d
     :goto_7
     nop
 
-    .line 384
+    .line 531
     return-void
 
-    .line 410
+    .line 557
     :catchall_0
     move-exception v1
 
     goto :goto_8
 
-    .line 404
+    .line 551
     :catch_5
     move-exception v1
 
     goto :goto_9
 
-    .line 410
+    .line 557
     :catchall_1
     move-exception v1
 
@@ -637,7 +637,7 @@
 
     goto :goto_d
 
-    .line 404
+    .line 551
     :catch_6
     move-exception v1
 
@@ -655,7 +655,7 @@
 
     goto :goto_a
 
-    .line 410
+    .line 557
     :catchall_2
     move-exception v1
 
@@ -663,7 +663,7 @@
 
     goto :goto_d
 
-    .line 404
+    .line 551
     :catch_8
     move-exception v1
 
@@ -671,7 +671,7 @@
 
     move-object v5, v3
 
-    .line 405
+    .line 552
     :goto_a
     :try_start_e
     iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
@@ -680,7 +680,7 @@
 
     if-nez v2, :cond_e
 
-    .line 406
+    .line 553
     iget-object v2, p0, Lcom/movievn/tv/TvGithubUpdate$DownloadTask;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -711,7 +711,7 @@
 
     invoke-virtual {v2, v1}, Lcom/movievn/tv/TvGithubUpdate;->showError(Ljava/lang/String;)V
 
-    .line 408
+    .line 555
     :cond_e
     if-eqz v3, :cond_f
 
@@ -719,7 +719,7 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_3
 
-    .line 410
+    .line 557
     :cond_f
     if-eqz v0, :cond_10
 
@@ -733,7 +733,7 @@
     :catch_9
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_10
     :goto_b
     if-eqz v5, :cond_11
@@ -748,15 +748,15 @@
     :catch_a
     move-exception v0
 
-    .line 412
+    .line 559
     nop
 
-    .line 413
+    .line 560
     :cond_11
     :goto_c
     return-void
 
-    .line 410
+    .line 557
     :catchall_3
     move-exception v1
 
@@ -773,7 +773,7 @@
     :catch_b
     move-exception v0
 
-    .line 411
+    .line 558
     :cond_12
     :goto_e
     if-eqz v5, :cond_13
@@ -788,7 +788,7 @@
     :catch_c
     move-exception v0
 
-    .line 412
+    .line 559
     :cond_13
     :goto_f
     throw v1

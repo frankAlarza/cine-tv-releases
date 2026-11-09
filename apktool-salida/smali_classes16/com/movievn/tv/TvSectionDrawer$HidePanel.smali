@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 924
+    .line 954
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 925
+    .line 955
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$HidePanel;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 926
+    .line 956
     return-void
 .end method
 
@@ -40,7 +40,7 @@
 .method public run()V
     .locals 2
 
-    .line 930
+    .line 960
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$HidePanel;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fgetopen(Lcom/movievn/tv/TvSectionDrawer;)Z
@@ -51,7 +51,7 @@
 
     return-void
 
-    .line 931
+    .line 961
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$HidePanel;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 932
+    .line 962
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$HidePanel;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 933
+    .line 963
     :cond_2
     return-void
 .end method

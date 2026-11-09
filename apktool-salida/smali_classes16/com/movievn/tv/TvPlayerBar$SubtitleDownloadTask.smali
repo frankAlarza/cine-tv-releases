@@ -31,22 +31,22 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 1986
+    .line 2015
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1987
+    .line 2016
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1988
+    .line 2017
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
 
-    .line 1989
+    .line 2018
     iput-object p3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->lang:Ljava/lang/String;
 
-    .line 1990
+    .line 2019
     iput-boolean p4, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->isTv:Z
 
-    .line 1991
+    .line 2020
     return-void
 .end method
 
@@ -55,7 +55,7 @@
 .method public run()V
     .locals 11
 
-    .line 1996
+    .line 2025
     const-string v0, "TvPlayerBar"
 
     :try_start_0
@@ -69,7 +69,7 @@
 
     invoke-direct {v1, v2}, Lcom/movievn/tv/TvSubtitleSearch;-><init>(Landroid/content/Context;)V
 
-    .line 1998
+    .line 2027
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
 
     if-eqz v2, :cond_0
@@ -89,7 +89,7 @@
     :cond_0
     const-string v2, ""
 
-    .line 1999
+    .line 2028
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -105,7 +105,7 @@
 
     move-result-object v2
 
-    .line 2000
+    .line 2029
     :cond_1
     new-instance v3, Ljava/io/File;
 
@@ -123,17 +123,17 @@
 
     invoke-direct {v3, v4, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2001
+    .line 2030
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->lang:Ljava/lang/String;
 
     invoke-static {v3, v2, v4}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$smfindCachedSubtitle(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 2002
+    .line 2031
     if-eqz v2, :cond_2
 
-    .line 2003
+    .line 2032
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -158,7 +158,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2004
+    .line 2033
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -173,7 +173,7 @@
 
     invoke-virtual {v1, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2005
+    .line 2034
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -188,31 +188,31 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2006
+    .line 2035
     return-void
 
-    .line 2009
+    .line 2038
     :cond_2
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2010
+    .line 2039
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2012
+    .line 2041
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
 
-    .line 2013
+    .line 2042
     const-string v4, " - "
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 2014
+    .line 2043
     if-lez v4, :cond_3
 
     invoke-virtual {v3, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -223,7 +223,7 @@
 
     move-result-object v3
 
-    .line 2015
+    .line 2044
     :cond_3
     const-string v4, ":"
 
@@ -231,7 +231,7 @@
 
     move-result v4
 
-    .line 2016
+    .line 2045
     if-lez v4, :cond_4
 
     invoke-virtual {v3, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -242,7 +242,7 @@
 
     move-result-object v3
 
-    .line 2017
+    .line 2046
     :cond_4
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
 
@@ -260,7 +260,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2019
+    .line 2048
     :cond_5
     const/4 v3, 0x2
 
@@ -268,10 +268,10 @@
 
     fill-array-data v4, :array_0
 
-    .line 2020
+    .line 2049
     nop
 
-    .line 2021
+    .line 2050
     const/4 v6, 0x0
 
     move v7, v5
@@ -293,7 +293,7 @@
 
     if-eqz v9, :cond_9
 
-    .line 2022
+    .line 2051
     :cond_6
     move v9, v5
 
@@ -308,7 +308,7 @@
 
     if-eqz v10, :cond_8
 
-    .line 2023
+    .line 2052
     :cond_7
     invoke-interface {v2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -322,18 +322,18 @@
 
     move-result-object v8
 
-    .line 2022
+    .line 2051
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 2021
+    .line 2050
     :cond_8
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 2026
+    .line 2055
     :cond_9
     if-eqz v8, :cond_17
 
@@ -345,7 +345,7 @@
 
     goto/16 :goto_a
 
-    .line 2031
+    .line 2060
     :cond_a
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -383,13 +383,13 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2032
+    .line 2061
     nop
 
-    .line 2033
+    .line 2062
     nop
 
-    .line 2034
+    .line 2063
     move v2, v5
 
     move-object v3, v6
@@ -403,14 +403,14 @@
 
     if-ge v2, v4, :cond_11
 
-    .line 2035
+    .line 2064
     invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;
 
-    .line 2036
+    .line 2065
     iget-object v9, v4, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->language:Ljava/lang/String;
 
     if-eqz v9, :cond_10
@@ -427,7 +427,7 @@
 
     goto :goto_6
 
-    .line 2039
+    .line 2068
     :cond_b
     iget v9, v4, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->size:I
 
@@ -437,7 +437,7 @@
 
     goto :goto_6
 
-    .line 2040
+    .line 2069
     :cond_c
     const-string v9, "srt"
 
@@ -470,32 +470,32 @@
     :goto_4
     move v9, v7
 
-    .line 2041
+    .line 2070
     :goto_5
     if-eqz v9, :cond_f
 
-    .line 2042
+    .line 2071
     nop
 
-    .line 2043
+    .line 2072
     move-object v6, v4
 
     goto :goto_7
 
-    .line 2045
+    .line 2074
     :cond_f
     if-nez v3, :cond_10
 
     move-object v3, v4
 
-    .line 2034
+    .line 2063
     :cond_10
     :goto_6
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 2047
+    .line 2076
     :cond_11
     :goto_7
     if-nez v6, :cond_12
@@ -505,11 +505,11 @@
     :cond_12
     move-object v3, v6
 
-    .line 2048
+    .line 2077
     :goto_8
     nop
 
-    .line 2049
+    .line 2078
     if-nez v3, :cond_13
 
     invoke-interface {v8}, Ljava/util/List;->isEmpty()Z
@@ -518,7 +518,7 @@
 
     if-nez v2, :cond_13
 
-    .line 2052
+    .line 2081
     invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -527,10 +527,10 @@
 
     check-cast v3, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;
 
-    .line 2053
+    .line 2082
     nop
 
-    .line 2054
+    .line 2083
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->lang:Ljava/lang/String;
 
     iget-object v4, v3, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->language:Ljava/lang/String;
@@ -567,11 +567,11 @@
 
     move v5, v7
 
-    .line 2056
+    .line 2085
     :cond_13
     if-nez v3, :cond_14
 
-    .line 2057
+    .line 2086
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->lang:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -594,7 +594,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2058
+    .line 2087
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -611,10 +611,10 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2059
+    .line 2088
     return-void
 
-    .line 2061
+    .line 2090
     :cond_14
     iget-object v2, v3, Lcom/movievn/tv/TvSubtitleSearch$SubtitleResult;->url:Ljava/lang/String;
 
@@ -628,7 +628,7 @@
 
     move-result-object v1
 
-    .line 2062
+    .line 2091
     if-eqz v1, :cond_15
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -637,7 +637,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 2063
+    .line 2092
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -652,7 +652,7 @@
 
     invoke-virtual {v2, v4}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2064
+    .line 2093
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -667,10 +667,10 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2065
+    .line 2094
     if-eqz v5, :cond_16
 
-    .line 2066
+    .line 2095
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -707,7 +707,7 @@
 
     goto :goto_9
 
-    .line 2069
+    .line 2098
     :cond_15
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -725,12 +725,12 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2074
+    .line 2103
     :cond_16
     :goto_9
     goto :goto_b
 
-    .line 2027
+    .line 2056
     :cond_17
     :goto_a
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
@@ -755,7 +755,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2028
+    .line 2057
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -774,14 +774,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2029
+    .line 2058
     return-void
 
-    .line 2071
+    .line 2100
     :catch_0
     move-exception v1
 
-    .line 2072
+    .line 2101
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -806,7 +806,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2073
+    .line 2102
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -823,7 +823,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2075
+    .line 2104
     :goto_b
     return-void
 

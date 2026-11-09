@@ -181,6 +181,13 @@ public class TvDetail {
 
     private boolean handleBack() {
         if (!fullscreen) return false;
+        // Si los botones flotantes (barra + boton de pantalla completa) estan
+        // visibles, primero se ocultan; solo al segundo BACK se sale de la
+        // pantalla completa.
+        if (TvPlayerBar.areFloatingControlsVisible()) {
+            TvPlayerBar.hideFloatingControls();
+            return true;
+        }
         exitFullscreen();
         return true;
     }
@@ -322,8 +329,7 @@ public class TvDetail {
         public boolean onKey(View v, int keyCode, KeyEvent event) {
             if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
                 if (owner.fullscreen) {
-                    owner.exitFullscreen();
-                    return true;
+                    return owner.handleBack();
                 }
             }
             // OJO: la accion DOWN de las flechas se la queda el reproductor

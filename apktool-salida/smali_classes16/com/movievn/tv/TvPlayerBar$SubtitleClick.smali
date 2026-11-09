@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 2314
+    .line 2343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2315
+    .line 2344
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2316
+    .line 2345
     return-void
 .end method
 
@@ -40,19 +40,19 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 2320
+    .line 2349
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mshowSubtitlePopup(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2321
+    .line 2350
     return-void
 .end method
 
 .method public onClickOld(Landroid/view/View;)V
     .locals 6
 
-    .line 2325
+    .line 2354
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleAvailable(Lcom/movievn/tv/TvPlayerBar;)Z
@@ -65,24 +65,24 @@
 
     if-nez p1, :cond_2
 
-    .line 2327
+    .line 2356
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const/4 v2, 0x1
 
     invoke-static {p1, v2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleAvailable(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2328
+    .line 2357
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2329
+    .line 2358
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mstopSubtitleSync(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2330
+    .line 2359
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2331
+    .line 2360
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -102,7 +102,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2332
+    .line 2361
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -111,7 +111,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2334
+    .line 2363
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -119,7 +119,7 @@
 
     move-result-object p1
 
-    .line 2335
+    .line 2364
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -128,7 +128,7 @@
 
     if-nez v2, :cond_1
 
-    .line 2336
+    .line 2365
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -139,7 +139,7 @@
 
     move-result v1
 
-    .line 2337
+    .line 2366
     new-instance v2, Ljava/lang/Thread;
 
     new-instance v3, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;
@@ -150,13 +150,13 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2338
+    .line 2367
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 2339
+    .line 2368
     goto :goto_0
 
-    .line 2340
+    .line 2369
     :cond_1
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -164,11 +164,11 @@
 
     invoke-static {p1, v1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$msetSubtitleAvailable(Lcom/movievn/tv/TvPlayerBar;ZLjava/lang/String;)V
 
-    .line 2342
+    .line 2371
     :goto_0
     return-void
 
-    .line 2344
+    .line 2373
     :cond_2
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -198,7 +198,7 @@
 
     goto :goto_1
 
-    .line 2356
+    .line 2385
     :cond_3
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -212,31 +212,31 @@
 
     if-eqz p1, :cond_5
 
-    .line 2357
+    .line 2386
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const-string v0, "en"
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputcurrentSubtitleLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2358
+    .line 2387
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2359
+    .line 2388
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mstopSubtitleSync(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2360
+    .line 2389
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mfindTitle(Lcom/movievn/tv/TvPlayerBar;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2361
+    .line 2390
     if-eqz p1, :cond_4
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -245,7 +245,7 @@
 
     if-nez v0, :cond_4
 
-    .line 2362
+    .line 2391
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -256,7 +256,7 @@
 
     move-result v0
 
-    .line 2363
+    .line 2392
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;
@@ -269,78 +269,78 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2364
+    .line 2393
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 2366
+    .line 2395
     :cond_4
     goto :goto_3
 
-    .line 2367
+    .line 2396
     :cond_5
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v4}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputcurrentSubtitleLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2368
+    .line 2397
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2369
+    .line 2398
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleLoadedLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2370
+    .line 2399
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mstopSubtitleSync(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2371
+    .line 2400
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhideSubtitleSyncControls(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2372
+    .line 2401
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mupdateLangDisplay(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2373
+    .line 2402
     const-string p1, "Subtitulos desactivados"
 
     invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 2345
+    .line 2374
     :cond_6
     :goto_1
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputcurrentSubtitleLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2346
+    .line 2375
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2347
+    .line 2376
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mstopSubtitleSync(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2348
+    .line 2377
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mfindTitle(Lcom/movievn/tv/TvPlayerBar;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2349
+    .line 2378
     if-eqz p1, :cond_7
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -349,7 +349,7 @@
 
     if-nez v1, :cond_7
 
-    .line 2350
+    .line 2379
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvPlayerBar;)Landroid/app/Activity;
@@ -360,7 +360,7 @@
 
     move-result v1
 
-    .line 2351
+    .line 2380
     new-instance v2, Ljava/lang/Thread;
 
     new-instance v4, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;
@@ -371,23 +371,23 @@
 
     invoke-direct {v2, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2352
+    .line 2381
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 2353
+    .line 2382
     goto :goto_2
 
-    .line 2354
+    .line 2383
     :cond_7
     const-string p1, "SubtitleClick: no se pudo obtener el titulo"
 
     invoke-static {v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2356
+    .line 2385
     :goto_2
     nop
 
-    .line 2375
+    .line 2404
     :goto_3
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -415,6 +415,6 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2376
+    .line 2405
     return-void
 .end method

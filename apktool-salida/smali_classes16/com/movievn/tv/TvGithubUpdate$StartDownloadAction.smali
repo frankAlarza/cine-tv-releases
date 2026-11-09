@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvGithubUpdate;)V
     .locals 0
 
-    .line 281
+    .line 428
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
+    .line 429
     iput-object p1, p0, Lcom/movievn/tv/TvGithubUpdate$StartDownloadAction;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
-    .line 283
+    .line 430
     return-void
 .end method
 
@@ -40,11 +40,11 @@
 .method public run()V
     .locals 1
 
-    .line 287
+    .line 434
     iget-object v0, p0, Lcom/movievn/tv/TvGithubUpdate$StartDownloadAction;->owner:Lcom/movievn/tv/TvGithubUpdate;
 
     invoke-static {v0}, Lcom/movievn/tv/TvGithubUpdate;->-$$Nest$mstartDownload(Lcom/movievn/tv/TvGithubUpdate;)V
 
-    .line 288
+    .line 435
     return-void
 .end method

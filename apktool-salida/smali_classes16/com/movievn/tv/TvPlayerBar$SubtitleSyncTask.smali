@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 2172
+    .line 2201
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncTask;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -38,12 +38,12 @@
 .method public run()V
     .locals 3
 
-    .line 2175
+    .line 2204
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mupdateSubtitle(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2176
+    .line 2205
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;)Z
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2177
+    .line 2206
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleSyncTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgethandler(Lcom/movievn/tv/TvPlayerBar;)Landroid/os/Handler;
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2179
+    .line 2208
     :cond_0
     return-void
 .end method

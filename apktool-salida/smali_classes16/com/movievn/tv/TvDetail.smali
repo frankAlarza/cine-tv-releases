@@ -93,12 +93,14 @@
     return-object p0
 .end method
 
-.method static bridge synthetic -$$Nest$mexitFullscreen(Lcom/movievn/tv/TvDetail;)V
+.method static bridge synthetic -$$Nest$mhandleBack(Lcom/movievn/tv/TvDetail;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/movievn/tv/TvDetail;->exitFullscreen()V
+    invoke-direct {p0}, Lcom/movievn/tv/TvDetail;->handleBack()Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
 .method static bridge synthetic -$$Nest$mschedule(Lcom/movievn/tv/TvDetail;I)V
@@ -464,14 +466,14 @@
 .method private dp(F)I
     .locals 2
 
-    .line 275
+    .line 282
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 276
+    .line 283
     const/4 v1, 0x1
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
@@ -490,7 +492,7 @@
 .method private enterFullscreen()V
     .locals 4
 
-    .line 197
+    .line 204
     iget-boolean v0, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
 
     if-nez v0, :cond_7
@@ -505,13 +507,13 @@
 
     goto/16 :goto_2
 
-    .line 198
+    .line 205
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
 
-    .line 199
+    .line 206
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
@@ -520,7 +522,7 @@
 
     iput-object v0, p0, Lcom/movievn/tv/TvDetail;->previousFocus:Landroid/view/View;
 
-    .line 204
+    .line 211
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->box:Landroid/view/ViewGroup;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -531,7 +533,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 206
+    .line 213
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->player:Landroid/view/View;
 
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
@@ -540,12 +542,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 210
+    .line 217
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->hidden:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 211
+    .line 218
     const/4 v0, 0x0
 
     :goto_0
@@ -559,21 +561,21 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 212
+    .line 219
     iget-object v1, p0, Lcom/movievn/tv/TvDetail;->root:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 213
+    .line 220
     iget-object v3, p0, Lcom/movievn/tv/TvDetail;->box:Landroid/view/ViewGroup;
 
     if-ne v1, v3, :cond_1
 
     goto :goto_1
 
-    .line 214
+    .line 221
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -581,22 +583,22 @@
 
     if-nez v3, :cond_2
 
-    .line 215
+    .line 222
     iget-object v3, p0, Lcom/movievn/tv/TvDetail;->hidden:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 216
+    .line 223
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 211
+    .line 218
     :cond_2
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 219
+    .line 226
     :cond_3
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->root:Landroid/view/ViewGroup;
 
@@ -610,7 +612,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 221
+    .line 228
     const-string v0, "drawable"
 
     const-string v1, "ic_fullscreen_exit_white"
@@ -619,7 +621,7 @@
 
     move-result v0
 
-    .line 222
+    .line 229
     if-eqz v0, :cond_4
 
     iget-object v1, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
@@ -630,25 +632,25 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 223
+    .line 230
     :cond_4
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_5
 
-    .line 224
+    .line 231
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
     const-string v1, "Salir de pantalla completa"
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 225
+    .line 232
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->requestFocus()Z
 
-    .line 228
+    .line 235
     :cond_5
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->backArrow:Landroid/view/View;
 
@@ -658,7 +660,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 229
+    .line 236
     :cond_6
     const-string v0, "TvDetail"
 
@@ -666,10 +668,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
+    .line 237
     return-void
 
-    .line 197
+    .line 204
     :cond_7
     :goto_2
     return-void
@@ -678,7 +680,7 @@
 .method private exitFullscreen()V
     .locals 5
 
-    .line 233
+    .line 240
     const-string v0, "TvDetail"
 
     iget-boolean v1, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
@@ -687,19 +689,19 @@
 
     return-void
 
-    .line 234
+    .line 241
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
 
-    .line 237
+    .line 244
     :try_start_0
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->watcher:Lcom/movievn/tv/TvDetail$LayoutWatcher;
 
     if-eqz v2, :cond_1
 
-    .line 238
+    .line 245
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->root:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -710,22 +712,22 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 239
+    .line 246
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/movievn/tv/TvDetail;->watcher:Lcom/movievn/tv/TvDetail$LayoutWatcher;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 243
+    .line 250
     :cond_1
     goto :goto_0
 
-    .line 241
+    .line 248
     :catchall_0
     move-exception v2
 
-    .line 242
+    .line 249
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -750,7 +752,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
+    .line 252
     :goto_0
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->boxLp:Landroid/view/ViewGroup$LayoutParams;
 
@@ -762,7 +764,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 246
+    .line 253
     :cond_2
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->playerLp:Landroid/view/ViewGroup$LayoutParams;
 
@@ -774,7 +776,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 247
+    .line 254
     :cond_3
     move v2, v1
 
@@ -787,7 +789,7 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 248
+    .line 255
     iget-object v3, p0, Lcom/movievn/tv/TvDetail;->hidden:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -796,24 +798,24 @@
 
     check-cast v3, Landroid/view/View;
 
-    .line 249
+    .line 256
     if-eqz v3, :cond_4
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 247
+    .line 254
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 251
+    .line 258
     :cond_5
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->hidden:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 253
+    .line 260
     const-string v2, "drawable"
 
     const-string v3, "ic_fullscreen_white"
@@ -822,7 +824,7 @@
 
     move-result v2
 
-    .line 254
+    .line 261
     if-eqz v2, :cond_6
 
     iget-object v3, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
@@ -833,7 +835,7 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 255
+    .line 262
     :cond_6
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
@@ -845,7 +847,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 256
+    .line 263
     :cond_7
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->backArrow:Landroid/view/View;
 
@@ -855,7 +857,7 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 257
+    .line 264
     :cond_8
     iget-object v1, p0, Lcom/movievn/tv/TvDetail;->previousFocus:Landroid/view/View;
 
@@ -865,18 +867,18 @@
 
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
-    .line 258
+    .line 265
     :cond_9
     const-string v1, "pantalla completa OFF"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
+    .line 266
     return-void
 .end method
 
 .method private handleBack()Z
-    .locals 1
+    .locals 2
 
     .line 183
     iget-boolean v0, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
@@ -887,14 +889,28 @@
 
     return v0
 
-    .line 184
+    .line 187
     :cond_0
+    invoke-static {}, Lcom/movievn/tv/TvPlayerBar;->areFloatingControlsVisible()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    .line 188
+    invoke-static {}, Lcom/movievn/tv/TvPlayerBar;->hideFloatingControls()V
+
+    .line 189
+    return v1
+
+    .line 191
+    :cond_1
     invoke-direct {p0}, Lcom/movievn/tv/TvDetail;->exitFullscreen()V
 
-    .line 185
-    const/4 v0, 0x1
-
-    return v0
+    .line 192
+    return v1
 .end method
 
 .method public static isFullscreen()Z
@@ -1009,7 +1025,7 @@
 .method private resId(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 268
+    .line 275
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->activity:Landroid/app/Activity;
 
@@ -1027,11 +1043,11 @@
 
     return p1
 
-    .line 269
+    .line 276
     :catchall_0
     move-exception p1
 
-    .line 270
+    .line 277
     const/4 p1, 0x0
 
     return p1
@@ -1217,21 +1233,21 @@
 .method private toggle()V
     .locals 1
 
-    .line 189
+    .line 196
     iget-boolean v0, p0, Lcom/movievn/tv/TvDetail;->fullscreen:Z
 
     if-eqz v0, :cond_0
 
-    .line 190
+    .line 197
     invoke-direct {p0}, Lcom/movievn/tv/TvDetail;->exitFullscreen()V
 
     goto :goto_0
 
-    .line 192
+    .line 199
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvDetail;->enterFullscreen()V
 
-    .line 194
+    .line 201
     :goto_0
     return-void
 .end method
@@ -1239,7 +1255,7 @@
 .method private watcher()Lcom/movievn/tv/TvDetail$LayoutWatcher;
     .locals 1
 
-    .line 262
+    .line 269
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->watcher:Lcom/movievn/tv/TvDetail$LayoutWatcher;
 
     if-nez v0, :cond_0
@@ -1250,7 +1266,7 @@
 
     iput-object v0, p0, Lcom/movievn/tv/TvDetail;->watcher:Lcom/movievn/tv/TvDetail$LayoutWatcher;
 
-    .line 263
+    .line 270
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->watcher:Lcom/movievn/tv/TvDetail$LayoutWatcher;
 
