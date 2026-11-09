@@ -407,3 +407,13 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - ðŸ”² (Opcional, bajo riesgo ahora) purgar el PAT del historial con `git filter-repo`.
 - ðŸ”² Borrar del repo `tools/update-modal/scripts/upload-release.sh` y `upload-v172.sh`
   (ya fallan con aviso; quedan como trampas en el Ã¡rbol).
+
+## Streaming block hide (v205)
+
+- Nueva clase `TvStreamHide` (smali_classes16) que:
+  - Oculta en runtime el bloque "Streaming" del Home (RecyclerView FeedRoot) y colapsa su espacio (height/márgenes 0).
+  - Toggle reversible vía SharedPreferences (`tv_stream_hide` / `hide_streaming_block`, default true).
+  - Overlay de carga estilo cine durante el arranque para enmascarar el flash.
+- Invocado por `TvSectionDrawer.attach()` durante `setup()` (reflexión, sin acoplar compile-time).
+- Repite el escaneo con cadencia decreciente + `OnLayoutChangeListener` sobre FeedRootRecyclerView.
+- Versión incrementada a v205 (versionCode 40008) y APK instalado en emulator-5554.

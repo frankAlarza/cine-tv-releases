@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;I)V
     .locals 0
 
-    .line 723
+    .line 727
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 724
+    .line 728
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 725
+    .line 729
     iput p2, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->attempt:I
 
-    .line 726
+    .line 730
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 2
 
-    .line 730
+    .line 734
     iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$msetup(Lcom/movievn/tv/TvSectionDrawer;)Z
@@ -56,7 +56,7 @@
 
     return-void
 
-    .line 731
+    .line 735
     :cond_0
     iget v0, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->attempt:I
 
@@ -64,16 +64,18 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 732
-    iget-object v1, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
+    .line 736
+    iget-object v0, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    add-int/lit8 v0, v0, 0x1
+    iget v1, p0, Lcom/movievn/tv/TvSectionDrawer$SetupTask;->attempt:I
 
-    invoke-static {v1, v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mschedule(Lcom/movievn/tv/TvSectionDrawer;I)V
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mschedule(Lcom/movievn/tv/TvSectionDrawer;I)V
 
     goto :goto_0
 
-    .line 734
+    .line 738
     :cond_1
     const-string v0, "TvSectionDrawer"
 
@@ -81,7 +83,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
+    .line 740
     :goto_0
     return-void
 .end method

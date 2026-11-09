@@ -67,6 +67,8 @@
 
     if-eqz v2, :cond_0
 
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
+
     goto :goto_0
 
     :cond_0
@@ -117,6 +119,8 @@
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
     if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;->title:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 

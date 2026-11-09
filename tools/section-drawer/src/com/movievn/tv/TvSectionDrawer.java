@@ -218,6 +218,10 @@ public final class TvSectionDrawer {
         ensureButton();
         updateFallback();
         ready = true;
+        try {
+            Class<?> hideCls = Class.forName("com.movievn.tv.TvStreamHide");
+            hideCls.getMethod("attach", Activity.class).invoke(null, activity);
+        } catch (Throwable ignored) { }
         Log.i(TAG, "cajon de secciones listo (" + items.size() + " items, seccion "
                 + selectedTab + ")");
         return true;

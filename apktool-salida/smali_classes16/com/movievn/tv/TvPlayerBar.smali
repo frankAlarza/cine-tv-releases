@@ -804,13 +804,15 @@
     iput-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
     .line 1482
-    const-wide/16 p1, 0x1388
+    iget-wide p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
-    cmp-long v0, v0, p1
+    const-wide/16 v0, 0x1388
 
-    if-lez v0, :cond_0
+    cmp-long p1, p1, v0
 
-    iput-wide p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
+    if-lez p1, :cond_0
+
+    iput-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
     .line 1483
     :cond_0
@@ -867,6 +869,8 @@
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -1133,6 +1137,8 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
+
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
 
     move-result v0
@@ -1233,6 +1239,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->bar:Landroid/widget/LinearLayout;
 
     .line 267
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->bar:Landroid/widget/LinearLayout;
+
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
@@ -1361,6 +1369,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->row:Landroid/widget/LinearLayout;
 
     .line 284
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->row:Landroid/widget/LinearLayout;
+
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setOrientation(I)V
@@ -1448,6 +1458,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->clock:Landroid/widget/TextView;
 
     .line 295
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->clock:Landroid/widget/TextView;
+
     const/4 v7, -0x1
 
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setTextColor(I)V
@@ -1525,6 +1537,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     .line 309
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
+
     const/16 v8, 0x3e8
 
     invoke-virtual {v1, v8}, Landroid/widget/SeekBar;->setMax(I)V
@@ -1996,11 +2010,13 @@
     .line 385
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+    instance-of v0, v0, Landroid/view/ViewGroup;
 
-    if-eqz v1, :cond_9
+    if-eqz v0, :cond_9
 
     .line 386
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
+
     check-cast v0, Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
@@ -2021,6 +2037,8 @@
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     if-eqz v1, :cond_a
+
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getId()I
 
@@ -2402,6 +2420,8 @@
 
     if-eqz v1, :cond_6
 
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
+
     invoke-virtual {v1}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -2417,7 +2437,7 @@
 
     move-result v1
 
-    const/16 v3, 0x10
+    const/16 v3, 0x8
 
     invoke-virtual {v2, v3, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
@@ -2460,11 +2480,15 @@
     iput-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
 
     .line 818
-    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
 
-    if-eqz v1, :cond_7
+    if-eqz v0, :cond_7
 
     .line 819
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
+
     invoke-virtual {v1}, Landroid/widget/ImageView;->getId()I
 
     move-result v1
@@ -2507,6 +2531,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->box:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->box:Landroid/view/ViewGroup;
 
     goto :goto_0
 
@@ -2586,6 +2612,8 @@
     iput-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     .line 1365
+    iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
+
     invoke-virtual {v5, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     .line 1366
@@ -2608,6 +2636,8 @@
     iput-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
 
     .line 1370
+    iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
+
     const-string v5, "Cargando subtitulos..."
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -2682,7 +2712,9 @@
     iput-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
 
     .line 1380
-    invoke-virtual {v3, v1}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setFocusable(Z)V
 
     .line 1381
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
@@ -2735,6 +2767,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     .line 1231
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
+
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setFocusable(Z)V
@@ -2936,6 +2970,8 @@
 
     if-eqz v7, :cond_3
 
+    iget-object v7, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
+
     invoke-virtual {v7}, Landroid/view/View;->getId()I
 
     move-result v7
@@ -3003,6 +3039,8 @@
     iput-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     .line 1266
+    iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
+
     invoke-virtual {v5, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 1267
@@ -3051,6 +3089,8 @@
     iget-object v13, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     if-eqz v13, :cond_4
+
+    iget-object v13, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     invoke-virtual {v13}, Landroid/view/View;->getId()I
 
@@ -3117,6 +3157,8 @@
     iput-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
     .line 1286
+    iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
+
     invoke-virtual {v5, v2}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 1287
@@ -3283,6 +3325,8 @@
 
     if-eqz v2, :cond_8
 
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
+
     invoke-virtual {v2}, Landroid/view/View;->getId()I
 
     move-result v2
@@ -3348,6 +3392,8 @@
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     .line 1318
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
+
     invoke-virtual {v1, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 1319
@@ -3392,6 +3438,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getId()I
 
@@ -3454,6 +3502,8 @@
     if-eqz v0, :cond_a
 
     .line 1338
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
+
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getId()I
@@ -3502,13 +3552,15 @@
     if-eqz v0, :cond_b
 
     .line 1344
-    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getId()I
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getId()I
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setNextFocusRightId(I)V
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setNextFocusRightId(I)V
 
     .line 1345
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
@@ -3628,6 +3680,8 @@
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     if-eqz v4, :cond_1
+
+    iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->video:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getId()I
 
@@ -4657,7 +4711,7 @@
     .line 566
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->bar:Landroid/widget/LinearLayout;
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_b
 
     iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->barVisible:Z
 
@@ -4849,56 +4903,58 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 596
+    .line 597
     :cond_5
-    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 597
-    :cond_6
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
-
-    if-eqz v0, :cond_7
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 598
-    :cond_7
+    :cond_6
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 599
-    :cond_8
+    :cond_7
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 600
-    :cond_9
+    :cond_8
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 601
-    :cond_a
+    :cond_9
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 602
-    :cond_b
+    :cond_a
     const-string v0, "barra oculta"
 
     invoke-static {v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -4907,7 +4963,7 @@
     return-void
 
     .line 566
-    :cond_c
+    :cond_b
     :goto_2
     return-void
 .end method
@@ -4922,6 +4978,8 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
+
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1457
@@ -4929,6 +4987,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -4938,6 +4998,8 @@
 
     if-eqz v0, :cond_2
 
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
+
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1459
@@ -4945,6 +5007,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -4989,14 +5053,14 @@
 .end method
 
 .method private isInController(Landroid/view/View;)Z
-    .locals 2
+    .locals 1
 
     .line 459
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+    instance-of v0, v0, Landroid/view/ViewGroup;
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
@@ -5004,6 +5068,8 @@
 
     .line 460
     :cond_0
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
+
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->isInside(Landroid/view/View;Landroid/view/View;)Z
 
     move-result p1
@@ -5312,6 +5378,8 @@
 
     if-eqz p1, :cond_3
 
+    iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
+
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -5432,6 +5500,8 @@
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -5744,6 +5814,8 @@
 
     if-eqz v3, :cond_0
 
+    iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v3}, Lf4/n0;->getCurrentPosition()J
 
     move-result-wide v3
@@ -5816,9 +5888,11 @@
     if-gez v1, :cond_2
 
     .line 1541
-    long-to-int v1, p2
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
-    invoke-virtual {v5, v1}, Landroid/widget/SeekBar;->setMax(I)V
+    long-to-int v2, p2
+
+    invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 1543
     :cond_2
@@ -5835,6 +5909,8 @@
     if-eqz v1, :cond_4
 
     .line 1546
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1}, Lf4/n0;->getPlayWhenReady()Z
 
     move-result v1
@@ -5908,9 +5984,9 @@
 
     .line 608
     :cond_0
-    iget-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->suppressShow:Z
+    iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->suppressShow:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     .line 611
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->scheduleHide()V
@@ -5920,6 +5996,8 @@
 
     .line 614
     :cond_1
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->bar:Landroid/widget/LinearLayout;
+
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->isInside(Landroid/view/View;Landroid/view/View;)Z
 
     move-result v0
@@ -6291,13 +6369,11 @@
     if-lez v3, :cond_6
 
     .line 1110
-    new-instance v3, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;
-
-    move-object v5, v3
+    new-instance v5, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;
 
     invoke-direct/range {v5 .. v10}, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;-><init>(JJLjava/lang/String;)V
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1091
     :cond_6
@@ -6765,13 +6841,11 @@
     if-lez v4, :cond_8
 
     .line 1036
-    new-instance v4, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;
-
-    move-object v8, v4
+    new-instance v8, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;
 
     invoke-direct/range {v8 .. v13}, Lcom/movievn/tv/TvPlayerBar$SubtitleCue;-><init>(JJLjava/lang/String;)V
 
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1011
     :cond_8
@@ -7022,12 +7096,16 @@
 
     .line 1404
     :cond_0
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
+
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     .line 1405
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -7314,6 +7392,8 @@
 
     if-eqz v2, :cond_0
 
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v2}, Lf4/n0;->getDuration()J
 
     move-result-wide v2
@@ -7418,6 +7498,8 @@
     .line 675
     :cond_0
     :try_start_0
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1}, Lf4/n0;->getCurrentPosition()J
 
     move-result-wide v1
@@ -7460,7 +7542,9 @@
     :goto_0
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
-    invoke-interface {p1}, Lf4/n0;->getCurrentWindowIndex()I
+    iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
+    invoke-interface {p2}, Lf4/n0;->getCurrentWindowIndex()I
 
     move-result p2
 
@@ -7554,6 +7638,8 @@
     .line 692
     :cond_0
     :try_start_0
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1}, Lf4/n0;->getDuration()J
 
     move-result-wide v1
@@ -7596,7 +7682,9 @@
     .line 697
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
-    invoke-interface {v3}, Lf4/n0;->getCurrentWindowIndex()I
+    iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
+    invoke-interface {v4}, Lf4/n0;->getCurrentWindowIndex()I
 
     move-result v4
 
@@ -7690,6 +7778,8 @@
     .line 661
     :cond_0
     :try_start_0
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1, p1}, Lf4/n0;->setPlayWhenReady(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -7798,6 +7888,8 @@
     if-eqz v0, :cond_1
 
     .line 932
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
+
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
@@ -7850,6 +7942,8 @@
     if-eqz p1, :cond_2
 
     .line 945
+    iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
+
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 946
@@ -7874,11 +7968,13 @@
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->hideSubtitleMessage:Lcom/movievn/tv/TvPlayerBar$HideSubtitleMessage;
 
     .line 950
-    iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar;->handler:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->handler:Landroid/os/Handler;
+
+    iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar;->hideSubtitleMessage:Lcom/movievn/tv/TvPlayerBar$HideSubtitleMessage;
 
     const-wide/16 v0, 0xbb8
 
-    invoke-virtual {p2, p1, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 952
     :cond_2
@@ -7979,6 +8075,8 @@
     iput-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     .line 221
+    iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     if-nez v4, :cond_4
 
     .line 223
@@ -7993,10 +8091,14 @@
     iput-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
     .line 232
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
+
     if-eqz v2, :cond_5
 
     .line 233
-    const/16 v3, 0x10
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
+
+    const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -8107,14 +8209,16 @@
 
     .line 519
     :cond_0
-    iget-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->barVisible:Z
+    iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->barVisible:Z
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     .line 520
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->bar:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 521
     const/4 v0, 0x1
@@ -8124,9 +8228,9 @@
     .line 522
     const-string v0, "TvPlayerBar"
 
-    const-string v1, "barra visible"
+    const-string v2, "barra visible"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 526
     :cond_1
@@ -8141,18 +8245,20 @@
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
     .line 528
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 530
     :cond_2
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
 
@@ -8165,9 +8271,11 @@
 
     if-eqz v0, :cond_5
 
-    iget-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
+    iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
 
-    if-eqz v1, :cond_5
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
 
@@ -8178,14 +8286,16 @@
     .line 532
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 533
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 534
     :cond_3
@@ -8193,7 +8303,9 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 535
     :cond_4
@@ -8201,7 +8313,9 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 537
     :cond_5
@@ -8209,9 +8323,11 @@
 
     if-eqz v0, :cond_6
 
-    iget-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
+    iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
 
-    if-eqz v1, :cond_6
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
 
@@ -8222,35 +8338,37 @@
     .line 538
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 539
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 540
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 542
     :cond_6
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitle:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 543
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_7
 
-    iget-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
+    iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
 
-    if-eqz v1, :cond_7
+    if-eqz v0, :cond_7
 
     .line 544
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 547
     :cond_7
@@ -8305,6 +8423,8 @@
     if-eqz v0, :cond_2
 
     .line 1392
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
+
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 1393
@@ -8402,6 +8522,8 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
+
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1448
@@ -8409,6 +8531,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -8418,6 +8542,8 @@
 
     if-eqz v0, :cond_2
 
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
+
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1450
@@ -8425,6 +8551,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -8450,6 +8578,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -8508,9 +8638,11 @@
     if-eqz v0, :cond_0
 
     .line 920
-    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->handler:Landroid/os/Handler;
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleSyncTask:Lcom/movievn/tv/TvPlayerBar$SubtitleSyncTask;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 921
     const/4 v0, 0x0
@@ -8524,6 +8656,8 @@
     if-eqz v0, :cond_1
 
     .line 924
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleText:Landroid/widget/TextView;
+
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -8548,6 +8682,8 @@
     .line 647
     :cond_0
     :try_start_0
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1}, Lf4/n0;->getPlayWhenReady()Z
 
     move-result v1
@@ -8664,6 +8800,8 @@
 
     .line 1562
     :try_start_0
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v1}, Lf4/n0;->getCurrentPosition()J
 
     move-result-wide v1
@@ -8706,6 +8844,8 @@
 
     if-ltz v8, :cond_4
 
+    iget v8, p0, Lcom/movievn/tv/TvPlayerBar;->lastWindow:I
+
     if-ne v5, v8, :cond_3
 
     iget-wide v11, p0, Lcom/movievn/tv/TvPlayerBar;->lastDuration:J
@@ -8742,6 +8882,8 @@
 
     if-ltz v5, :cond_6
 
+    iget-wide v11, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
+
     sub-long v11, v1, v11
 
     invoke-static {v11, v12}, Ljava/lang/Math;->abs(J)J
@@ -8766,7 +8908,7 @@
 
     if-ltz v5, :cond_7
 
-    move-wide v1, v11
+    iget-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
     .line 1583
     :cond_7
@@ -8818,15 +8960,17 @@
     if-eqz v5, :cond_a
 
     .line 1588
-    cmp-long v6, v3, v6
+    cmp-long v5, v3, v6
 
-    if-lez v6, :cond_9
+    if-lez v5, :cond_9
 
-    const-wide/32 v6, 0x7fffffff
+    const-wide/32 v5, 0x7fffffff
 
-    cmp-long v6, v3, v6
+    cmp-long v5, v3, v5
 
-    if-gez v6, :cond_9
+    if-gez v5, :cond_9
+
+    iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     invoke-virtual {v5}, Landroid/widget/SeekBar;->getMax()I
 
@@ -9020,16 +9164,20 @@
     :cond_f
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+    instance-of v0, v0, Landroid/view/ViewGroup;
 
-    if-eqz v1, :cond_10
+    if-eqz v0, :cond_10
 
-    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
 
-    if-eqz v1, :cond_10
+    if-eqz v0, :cond_10
 
     .line 1616
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
+
     check-cast v0, Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnRetreat:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getId()I
 
@@ -9196,69 +9344,71 @@
 
     .line 1475
     :cond_0
-    iget-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
+    iget-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
-    long-to-double v1, v1
+    long-to-double v0, v0
 
-    const-wide v3, 0x408f400000000000L    # 1000.0
+    const-wide v2, 0x408f400000000000L    # 1000.0
 
-    div-double/2addr v1, v3
+    div-double/2addr v0, v2
 
     .line 1476
-    const-wide/16 v3, 0x0
+    const-wide/16 v2, 0x0
 
-    cmpl-double v3, v1, v3
+    cmpl-double v2, v0, v2
 
-    if-ltz v3, :cond_1
+    if-ltz v2, :cond_1
 
-    const-string v3, "+"
+    const-string v2, "+"
 
     goto :goto_0
 
     :cond_1
-    const-string v3, ""
+    const-string v2, ""
 
     .line 1477
     :goto_0
+    iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
+
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    move-result-object v1
+    move-result-object v0
 
-    filled-new-array {v1}, [Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "%.1f"
+    const-string v1, "%.1f"
 
-    invoke-static {v4, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "s"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const-string v1, "s"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 1478
     return-void
@@ -9275,6 +9425,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleCues:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -9298,6 +9450,8 @@
 
     .line 883
     :try_start_0
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
+
     invoke-interface {v0}, Lf4/n0;->getCurrentPosition()J
 
     move-result-wide v0

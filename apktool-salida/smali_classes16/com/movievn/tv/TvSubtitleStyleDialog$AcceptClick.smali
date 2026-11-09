@@ -148,6 +148,10 @@
 
     if-eqz p1, :cond_0
 
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->dialogHolder:[Landroid/app/AlertDialog;
+
+    aget-object p1, p1, v1
+
     invoke-virtual {p1}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 279

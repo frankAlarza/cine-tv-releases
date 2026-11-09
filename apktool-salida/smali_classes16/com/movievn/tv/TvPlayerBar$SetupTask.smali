@@ -62,11 +62,13 @@
     if-ge v0, v1, :cond_0
 
     .line 1660
-    iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->owner:Lcom/movievn/tv/TvPlayerBar;
+    iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    add-int/lit8 v0, v0, 0x1
+    iget v1, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->attempt:I
 
-    invoke-static {v1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mschedule(Lcom/movievn/tv/TvPlayerBar;I)V
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mschedule(Lcom/movievn/tv/TvPlayerBar;I)V
 
     .line 1662
     :cond_0

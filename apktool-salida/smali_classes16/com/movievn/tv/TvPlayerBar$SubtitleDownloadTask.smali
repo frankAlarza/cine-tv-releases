@@ -74,6 +74,8 @@
 
     if-eqz v2, :cond_0
 
+    iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;->title:Ljava/lang/String;
+
     const-string v3, "[^a-zA-Z0-9]"
 
     const-string v4, "_"

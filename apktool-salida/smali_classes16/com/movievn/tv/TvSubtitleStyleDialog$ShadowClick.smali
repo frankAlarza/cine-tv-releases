@@ -47,22 +47,32 @@
     .line 212
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
 
-    aget-boolean v1, p1, v0
+    const/4 v1, 0x0
 
-    xor-int/lit8 v1, v1, 0x1
+    aget-boolean v0, v0, v1
 
-    aput-boolean v1, p1, v0
+    xor-int/lit8 v0, v0, 0x1
+
+    aput-boolean v0, p1, v1
 
     .line 213
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->valH:[Landroid/widget/TextView;
 
-    aget-object p1, p1, v0
+    aget-object p1, p1, v1
 
     if-eqz p1, :cond_1
 
-    if-eqz v1, :cond_0
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->valH:[Landroid/widget/TextView;
+
+    aget-object p1, p1, v1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
+
+    aget-boolean v0, v0, v1
+
+    if-eqz v0, :cond_0
 
     const-string v0, "ON"
 

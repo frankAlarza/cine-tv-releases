@@ -593,7 +593,7 @@ public class TvPlayerBar {
         barVisible = false;
         View fs = findFullscreenButton(box);
         if (fs != null) fs.setVisibility(View.GONE);
-        if (btnSubtitle != null) btnSubtitle.setVisibility(View.GONE);
+        // El boton flotante de subtitulos debe permanecer visible siempre.
         if (btnSubtitleBack != null) btnSubtitleBack.setVisibility(View.GONE);
         if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.GONE);
         if (btnSubtitleFwd != null) btnSubtitleFwd.setVisibility(View.GONE);

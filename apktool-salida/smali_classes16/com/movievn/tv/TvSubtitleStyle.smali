@@ -124,35 +124,43 @@
     iput p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
 
     .line 35
-    iget v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
 
-    if-ltz v1, :cond_1
+    if-ltz p0, :cond_1
 
-    const/4 v4, 0x4
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
 
-    if-le v1, v4, :cond_2
+    const/4 v1, 0x4
+
+    if-le p0, v1, :cond_2
 
     :cond_1
     iput v2, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
 
     .line 36
     :cond_2
-    iget v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
 
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    if-ltz v1, :cond_3
+    if-ltz p0, :cond_3
 
-    if-le v1, v2, :cond_4
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
+
+    if-le p0, v1, :cond_4
 
     :cond_3
     iput v3, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
 
     .line 37
     :cond_4
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
+
     if-ltz p0, :cond_5
 
-    if-le p0, v2, :cond_6
+    iget p0, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
+
+    if-le p0, v1, :cond_6
 
     :cond_5
     iput v3, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
@@ -195,12 +203,20 @@
 .end method
 
 .method public getShadowDx()F
-    .locals 1
+    .locals 2
 
     .line 84
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
 
-    return v0
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 85
+    :cond_0
+    return v1
 .end method
 
 .method public getShadowDy()F

@@ -379,6 +379,8 @@
 
     if-eqz v1, :cond_5
 
+    iget-object v1, p0, Lcom/movievn/tv/TvDetail;->player:Landroid/view/View;
+
     invoke-virtual {v1}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -624,6 +626,8 @@
 
     if-eqz v1, :cond_4
 
+    iget-object v1, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
+
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 223
@@ -633,6 +637,8 @@
     if-eqz v0, :cond_5
 
     .line 224
+    iget-object v0, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
+
     const-string v1, "Salir de pantalla completa"
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
@@ -647,6 +653,8 @@
     iget-object v0, p0, Lcom/movievn/tv/TvDetail;->backArrow:Landroid/view/View;
 
     if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/movievn/tv/TvDetail;->backArrow:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -748,9 +756,11 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v3, p0, Lcom/movievn/tv/TvDetail;->box:Landroid/view/ViewGroup;
+    iget-object v2, p0, Lcom/movievn/tv/TvDetail;->box:Landroid/view/ViewGroup;
 
-    invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v3, p0, Lcom/movievn/tv/TvDetail;->boxLp:Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 246
     :cond_2
@@ -758,9 +768,11 @@
 
     if-eqz v2, :cond_3
 
-    iget-object v3, p0, Lcom/movievn/tv/TvDetail;->player:Landroid/view/View;
+    iget-object v2, p0, Lcom/movievn/tv/TvDetail;->player:Landroid/view/View;
 
-    invoke-virtual {v3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v3, p0, Lcom/movievn/tv/TvDetail;->playerLp:Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 247
     :cond_3
@@ -817,6 +829,8 @@
 
     if-eqz v3, :cond_6
 
+    iget-object v3, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
+
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 255
@@ -824,6 +838,8 @@
     iget-object v2, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
     if-eqz v2, :cond_7
+
+    iget-object v2, p0, Lcom/movievn/tv/TvDetail;->button:Landroid/widget/ImageView;
 
     const-string v3, "Pantalla completa"
 
@@ -835,6 +851,8 @@
 
     if-eqz v2, :cond_8
 
+    iget-object v2, p0, Lcom/movievn/tv/TvDetail;->backArrow:Landroid/view/View;
+
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 257
@@ -842,6 +860,8 @@
     iget-object v1, p0, Lcom/movievn/tv/TvDetail;->previousFocus:Landroid/view/View;
 
     if-eqz v1, :cond_9
+
+    iget-object v1, p0, Lcom/movievn/tv/TvDetail;->previousFocus:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
@@ -1144,7 +1164,9 @@
     iput-object v5, p0, Lcom/movievn/tv/TvDetail;->root:Landroid/view/ViewGroup;
 
     .line 120
-    invoke-virtual {v4}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v1, p0, Lcom/movievn/tv/TvDetail;->box:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 

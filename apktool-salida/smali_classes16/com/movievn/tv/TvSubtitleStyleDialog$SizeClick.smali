@@ -46,33 +46,45 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 4
+    .locals 3
 
     .line 199
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->size:[I
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->size:[I
 
-    aget v1, p1, v0
+    const/4 v1, 0x0
 
-    add-int/lit8 v1, v1, 0x1
+    aget v0, v0, v1
+
+    add-int/lit8 v0, v0, 0x1
 
     iget-object v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->names:[Ljava/lang/String;
 
-    array-length v3, v2
+    array-length v2, v2
 
-    rem-int/2addr v1, v3
+    rem-int/2addr v0, v2
 
-    aput v1, p1, v0
+    aput v0, p1, v1
 
     .line 200
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->valH:[Landroid/widget/TextView;
 
-    aget-object p1, p1, v0
+    aget-object p1, p1, v1
 
     if-eqz p1, :cond_0
 
-    aget-object v0, v2, v1
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->valH:[Landroid/widget/TextView;
+
+    aget-object p1, p1, v1
+
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->names:[Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->size:[I
+
+    aget v1, v2, v1
+
+    aget-object v0, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
