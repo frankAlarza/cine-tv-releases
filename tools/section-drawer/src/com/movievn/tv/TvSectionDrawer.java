@@ -407,9 +407,10 @@ public final class TvSectionDrawer {
                 ub.setPadding(dp(4), dp(4), dp(4), dp(4));
                 ub.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ub.setFocusable(true);
-                ub.setFocusableInTouchMode(false);
+                ub.setFocusableInTouchMode(true);
                 ub.setClickable(true);
-                ub.setId(View.generateViewId());
+                int uid = resId("id", "tv_update_button");
+                ub.setId(uid != 0 ? uid : View.generateViewId());
                 ub.setTag("tv_update_button");
                 ub.setContentDescription("Actualizar");
                 int downloadId = resId("id", "iv_download");
@@ -475,18 +476,22 @@ public final class TvSectionDrawer {
                 : (updateButton != null ? updateButton.getId() : more.getId()));
         if (download != null) {
             download.setFocusable(true);
-            download.setNextFocusRightId(more != null ? more.getId() : (updateButton != null ? updateButton.getId() : View.NO_ID));
+            download.setNextFocusRightId(updateButton != null ? updateButton.getId()
+                    : (more != null ? more.getId() : View.NO_ID));
             download.setNextFocusLeftId(look.getId());
-        }
-        if (more != null) {
-            more.setFocusable(true);
-            more.setNextFocusLeftId(download != null ? download.getId() : look.getId());
-            more.setNextFocusRightId(search != null ? search.getId() : look.getId());
         }
         if (updateButton != null) {
             updateButton.setFocusable(true);
+            updateButton.setFocusableInTouchMode(true);
             updateButton.setNextFocusLeftId(download != null ? download.getId() : look.getId());
-            updateButton.setNextFocusRightId(more != null ? more.getId() : (search != null ? search.getId() : look.getId()));
+            updateButton.setNextFocusRightId(more != null ? more.getId()
+                    : (search != null ? search.getId() : look.getId()));
+        }
+        if (more != null) {
+            more.setFocusable(true);
+            more.setNextFocusLeftId(updateButton != null ? updateButton.getId()
+                    : (download != null ? download.getId() : look.getId()));
+            more.setNextFocusRightId(search != null ? search.getId() : look.getId());
         }
     }
 

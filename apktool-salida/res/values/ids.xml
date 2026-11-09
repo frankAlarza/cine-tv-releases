@@ -2055,4 +2055,5 @@
     <id name="subtitle_en" />
     <id name="subtitle_es" />
     <id name="subtitle_none" />
+    <id name="tv_update_button" />
 </resources>
