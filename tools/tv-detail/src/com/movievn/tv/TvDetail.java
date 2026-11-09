@@ -201,14 +201,28 @@ public class TvDetail {
     }
 
     private void enterFullscreen() {
-        if (fullscreen || player == null) return;
+        if (fullscreen || root == null || box == null) return;
         fullscreen = true;
         previousFocus = activity.getCurrentFocus();
-        invokeLibFullscreen(true);
-        // La libreria de pantalla completa (O(true)) puede ocultar el overlay de la app.
-        // Reponemos los botones flotantes (barra + boton de pantalla completa) para que
-        // sigan accesibles en modo TV.
-        TvPlayerBar.showFloatingControls();
+
+        // La caja del reproductor y el propio reproductor ocupan toda la pantalla.
+        box.setLayoutParams(new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        player.setLayoutParams(new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        // Se oculta el resto del contenido de la ficha.
+        hidden.clear();
+        for (int i = 0; i < root.getChildCount(); i++) {
+            View c = root.getChildAt(i);
+            if (c == box) continue;
+            if (c.getVisibility() == View.VISIBLE) {
+                hidden.add(c);
+                c.setVisibility(View.GONE);
+            }
+        }
+        root.getViewTreeObserver().addOnGlobalLayoutListener(watcher());
+
         int icon = resId("drawable", "ic_fullscreen_exit_white");
         if (icon != 0 && button != null) button.setImageResource(icon);
         if (button != null) {
@@ -216,20 +230,36 @@ public class TvDetail {
             button.requestFocus();
         }
         if (backArrow != null) backArrow.setVisibility(View.GONE);
-        Log.i(TAG, "pantalla completa ON (lib)");
+        Log.i(TAG, "pantalla completa ON");
     }
 
     private void exitFullscreen() {
         if (!fullscreen) return;
         fullscreen = false;
-        invokeLibFullscreen(false);
+
+        try {
+            if (watcher != null) {
+                root.getViewTreeObserver().removeOnGlobalLayoutListener(watcher);
+                watcher = null;
+            }
+        } catch (Throwable t) {
+            Log.w(TAG, "removeOnGlobalLayoutListener: " + t);
+        }
+
+        if (boxLp != null) box.setLayoutParams(boxLp);
+        if (playerLp != null) player.setLayoutParams(playerLp);
+        for (int i = 0; i < hidden.size(); i++) {
+            View v = hidden.get(i);
+            if (v != null) v.setVisibility(View.VISIBLE);
+        }
+        hidden.clear();
+
         int icon = resId("drawable", "ic_fullscreen_white");
         if (icon != 0 && button != null) button.setImageResource(icon);
         if (button != null) button.setContentDescription("Pantalla completa");
         if (backArrow != null) backArrow.setVisibility(View.VISIBLE);
-        TvPlayerBar.showFloatingControls();
         if (previousFocus != null) previousFocus.requestFocus();
-        Log.i(TAG, "pantalla completa OFF (lib)");
+        Log.i(TAG, "pantalla completa OFF");
     }
 
     private void invokeLibFullscreen(boolean full) {
