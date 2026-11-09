@@ -670,14 +670,14 @@
 .method private addSubtitlePopupItem(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .line 1451
+    .line 1454
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1452
+    .line 1455
     :cond_0
     new-instance v0, Landroid/widget/TextView;
 
@@ -685,20 +685,20 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 1453
+    .line 1456
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1454
+    .line 1457
     const/4 p2, -0x1
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1455
+    .line 1458
     const/high16 v1, 0x41600000    # 14.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1456
+    .line 1459
     const/high16 v1, 0x41400000    # 12.0f
 
     invoke-direct {p0, v1}, Lcom/movievn/tv/TvPlayerBar;->dp(F)I
@@ -721,15 +721,15 @@
 
     invoke-virtual {v0, v2, v4, v1, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 1457
+    .line 1460
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setFocusable(Z)V
 
-    .line 1458
+    .line 1461
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
 
-    .line 1459
+    .line 1462
     const-string v1, "drawable"
 
     const-string v2, "bg_focused_rect"
@@ -738,10 +738,10 @@
 
     move-result v1
 
-    .line 1460
+    .line 1463
     if-eqz v1, :cond_1
 
-    .line 1461
+    .line 1464
     :try_start_0
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->activity:Landroid/app/Activity;
 
@@ -768,7 +768,7 @@
     :catchall_0
     move-exception v1
 
-    .line 1463
+    .line 1466
     :cond_1
     :goto_0
     new-instance v1, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;
@@ -777,33 +777,33 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1464
+    .line 1467
     new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x2
 
     invoke-direct {p1, p2, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 1466
+    .line 1469
     iget-object p2, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     invoke-virtual {p2, v0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1467
+    .line 1470
     return-void
 .end method
 
 .method private adjustOffset(J)V
     .locals 2
 
-    .line 1510
+    .line 1513
     iget-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
     add-long/2addr v0, p1
 
     iput-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
-    .line 1511
+    .line 1514
     iget-wide p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
     const-wide/16 v0, 0x1388
@@ -814,7 +814,7 @@
 
     iput-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
-    .line 1512
+    .line 1515
     :cond_0
     iget-wide p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
@@ -826,7 +826,7 @@
 
     iput-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
-    .line 1513
+    .line 1516
     :cond_1
     iget-wide p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
@@ -858,10 +858,10 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1514
+    .line 1517
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->updateOffsetDisplay()V
 
-    .line 1515
+    .line 1518
     iget-boolean p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleEnabled:Z
 
     if-eqz p1, :cond_2
@@ -878,10 +878,10 @@
 
     if-nez p1, :cond_2
 
-    .line 1516
+    .line 1519
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->startSubtitleSync()V
 
-    .line 1518
+    .line 1521
     :cond_2
     return-void
 .end method
@@ -1156,7 +1156,7 @@
 .method private closeSubtitlePopup()V
     .locals 1
 
-    .line 1470
+    .line 1473
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
 
     if-eqz v0, :cond_0
@@ -1169,7 +1169,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1471
+    .line 1474
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
 
@@ -1182,7 +1182,7 @@
     :catchall_0
     move-exception v0
 
-    .line 1473
+    .line 1476
     :cond_0
     :goto_0
     return-void
@@ -3835,14 +3835,14 @@
 .method private dp(F)I
     .locals 2
 
-    .line 1668
+    .line 1671
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 1669
+    .line 1672
     const/4 v1, 0x1
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
@@ -3861,7 +3861,7 @@
 .method private static findCachedSubtitle(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 6
 
-    .line 1994
+    .line 1997
     const/4 v0, 0x0
 
     if-eqz p0, :cond_8
@@ -3880,18 +3880,18 @@
 
     goto/16 :goto_4
 
-    .line 1995
+    .line 1998
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
 
-    .line 1996
+    .line 1999
     if-nez p0, :cond_1
 
     return-object v0
 
-    .line 1997
+    .line 2000
     :cond_1
     if-eqz p2, :cond_2
 
@@ -3904,7 +3904,7 @@
     :cond_2
     const-string p2, "es"
 
-    .line 1998
+    .line 2001
     :goto_0
     const/4 v1, 0x0
 
@@ -3913,7 +3913,7 @@
 
     if-ge v1, v2, :cond_7
 
-    .line 1999
+    .line 2002
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -3924,7 +3924,7 @@
 
     move-result-object v2
 
-    .line 2000
+    .line 2003
     const-string v3, ".srt"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -3943,7 +3943,7 @@
 
     goto :goto_2
 
-    .line 2001
+    .line 2004
     :cond_3
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
@@ -3963,7 +3963,7 @@
 
     goto :goto_2
 
-    .line 2002
+    .line 2005
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -4023,25 +4023,25 @@
 
     goto :goto_3
 
-    .line 1998
+    .line 2001
     :cond_5
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2003
+    .line 2006
     :cond_6
     :goto_3
     aget-object p0, p0, v1
 
     return-object p0
 
-    .line 2006
+    .line 2009
     :cond_7
     return-object v0
 
-    .line 1994
+    .line 1997
     :cond_8
     :goto_4
     return-object v0
@@ -4525,7 +4525,7 @@
 .method private static format(J)Ljava/lang/String;
     .locals 8
 
-    .line 1650
+    .line 1653
     const-wide/16 v0, 0x0
 
     cmp-long v2, p0, v0
@@ -4534,28 +4534,28 @@
 
     move-wide p0, v0
 
-    .line 1651
+    .line 1654
     :cond_0
     const-wide/16 v2, 0x3e8
 
     div-long/2addr p0, v2
 
-    .line 1652
+    .line 1655
     const-wide/16 v2, 0xe10
 
     div-long v4, p0, v2
 
-    .line 1653
+    .line 1656
     rem-long v2, p0, v2
 
     const-wide/16 v6, 0x3c
 
     div-long/2addr v2, v6
 
-    .line 1654
+    .line 1657
     rem-long/2addr p0, v6
 
-    .line 1655
+    .line 1658
     cmp-long v0, v4, v0
 
     if-lez v0, :cond_1
@@ -4584,7 +4584,7 @@
 
     return-object p0
 
-    .line 1656
+    .line 1659
     :cond_1
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -5146,7 +5146,7 @@
 .method private hideSubtitleSyncControls()V
     .locals 2
 
-    .line 1485
+    .line 1488
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
@@ -5157,7 +5157,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1486
+    .line 1489
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
@@ -5167,7 +5167,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1487
+    .line 1490
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
@@ -5177,7 +5177,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1488
+    .line 1491
     :cond_2
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
@@ -5187,7 +5187,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1489
+    .line 1492
     :cond_3
     return-void
 .end method
@@ -5971,17 +5971,17 @@
 .method private onContentChanged(IJ)V
     .locals 6
 
-    .line 1560
+    .line 1563
     const-string v0, "TvPlayerBar"
 
     const-wide/16 v1, -0x1
 
     iput-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
-    .line 1561
+    .line 1564
     nop
 
-    .line 1563
+    .line 1566
     const-wide/16 v1, 0x0
 
     :try_start_0
@@ -6002,15 +6002,15 @@
     :cond_0
     move-wide v3, v1
 
-    .line 1566
+    .line 1569
     :goto_0
     goto :goto_1
 
-    .line 1564
+    .line 1567
     :catchall_0
     move-exception v3
 
-    .line 1565
+    .line 1568
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -6037,7 +6037,7 @@
 
     move-wide v3, v1
 
-    .line 1567
+    .line 1570
     :goto_1
     cmp-long v5, v3, v1
 
@@ -6045,13 +6045,13 @@
 
     move-wide v3, v1
 
-    .line 1568
+    .line 1571
     :cond_1
     iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     if-eqz v5, :cond_3
 
-    .line 1569
+    .line 1572
     cmp-long v1, p2, v1
 
     if-lez v1, :cond_2
@@ -6062,14 +6062,14 @@
 
     if-gez v1, :cond_2
 
-    .line 1570
+    .line 1573
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     long-to-int v2, p2
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 1572
+    .line 1575
     :cond_2
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
@@ -6077,13 +6077,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 1574
+    .line 1577
     :cond_3
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     if-eqz v1, :cond_4
 
-    .line 1575
+    .line 1578
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     invoke-interface {v1}, Lf4/n0;->getPlayWhenReady()Z
@@ -6092,11 +6092,11 @@
 
     iput-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->playing:Z
 
-    .line 1577
+    .line 1580
     :cond_4
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->updateIcon()V
 
-    .line 1578
+    .line 1581
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6143,7 +6143,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1580
+    .line 1583
     return-void
 .end method
 
@@ -7262,20 +7262,20 @@
         }
     .end annotation
 
-    .line 1432
+    .line 1435
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1433
+    .line 1436
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 1434
+    .line 1437
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupLoading:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
@@ -7286,13 +7286,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1436
+    .line 1439
     :cond_1
     const/4 v0, 0x0
 
     if-eqz p1, :cond_2
 
-    .line 1437
+    .line 1440
     move v1, v0
 
     :goto_0
@@ -7302,26 +7302,26 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 1438
+    .line 1441
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1439
+    .line 1442
     invoke-virtual {v2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {p0, v2, v3}, Lcom/movievn/tv/TvPlayerBar;->addSubtitlePopupItem(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1437
+    .line 1440
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1443
+    .line 1446
     :cond_2
     const-string p1, "off"
 
@@ -7329,7 +7329,7 @@
 
     invoke-direct {p0, p1, v1}, Lcom/movievn/tv/TvPlayerBar;->addSubtitlePopupItem(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1445
+    .line 1448
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -7338,7 +7338,7 @@
 
     if-lez p1, :cond_3
 
-    .line 1446
+    .line 1449
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopupList:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -7347,7 +7347,7 @@
 
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    .line 1448
+    .line 1451
     :cond_3
     return-void
 .end method
@@ -7355,7 +7355,7 @@
 .method private refreshPlayer()V
     .locals 4
 
-    .line 1536
+    .line 1539
     const-string v0, "TvPlayerBar"
 
     :try_start_0
@@ -7369,7 +7369,7 @@
 
     move-result-object v1
 
-    .line 1537
+    .line 1540
     const-string v2, "id"
 
     const-string v3, "exo_play_context_id"
@@ -7378,29 +7378,29 @@
 
     move-result v2
 
-    .line 1538
+    .line 1541
     if-nez v2, :cond_0
 
     return-void
 
-    .line 1539
+    .line 1542
     :cond_0
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1540
+    .line 1543
     instance-of v2, v1, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;
 
     if-nez v2, :cond_1
 
     return-void
 
-    .line 1541
+    .line 1544
     :cond_1
     check-cast v1, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;
 
-    .line 1542
+    .line 1545
     invoke-virtual {v1}, Lchuangyuan/ycj/videolibrary/widget/VideoPlayerView;->getPlayerView()Lcom/google/android/exoplayer/ui/PlayerView;
 
     move-result-object v1
@@ -7409,49 +7409,49 @@
 
     move-result-object v1
 
-    .line 1543
+    .line 1546
     if-nez v1, :cond_2
 
     return-void
 
-    .line 1544
+    .line 1547
     :cond_2
     iget-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     if-eq v1, v2, :cond_3
 
-    .line 1545
+    .line 1548
     iput-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
-    .line 1546
+    .line 1549
     const-wide/16 v1, -0x1
 
     iput-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->lastDuration:J
 
-    .line 1547
+    .line 1550
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/movievn/tv/TvPlayerBar;->lastWindow:I
 
-    .line 1550
+    .line 1553
     iput-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
-    .line 1551
+    .line 1554
     const-string v1, "reproductor nuevo: la barra se reinicia"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1555
+    .line 1558
     :cond_3
     goto :goto_0
 
-    .line 1553
+    .line 1556
     :catchall_0
     move-exception v1
 
-    .line 1554
+    .line 1557
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -7476,7 +7476,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1556
+    .line 1559
     :goto_0
     return-void
 .end method
@@ -7484,7 +7484,7 @@
 .method private resId(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 1661
+    .line 1664
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->activity:Landroid/app/Activity;
 
@@ -7502,11 +7502,11 @@
 
     return p1
 
-    .line 1662
+    .line 1665
     :catchall_0
     move-exception p1
 
-    .line 1663
+    .line 1666
     const/4 p1, 0x0
 
     return p1
@@ -8567,7 +8567,7 @@
 .end method
 
 .method private showSubtitlePopup()V
-    .locals 4
+    .locals 5
 
     .line 1416
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
@@ -8617,7 +8617,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 1424
+    .line 1427
     :cond_2
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitlePopup:Landroid/widget/PopupWindow;
@@ -8630,16 +8630,18 @@
 
     move-result v3
 
-    invoke-virtual {v0, v2, v1, v3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
+    const v4, 0x800053
+
+    invoke-virtual {v0, v2, v1, v3, v4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1426
+    .line 1429
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->findTitle()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1427
+    .line 1430
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/movievn/tv/TvPlayerBar$SubtitleLangSearchTask;
@@ -8648,13 +8650,13 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1428
+    .line 1431
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 1429
+    .line 1432
     return-void
 
-    .line 1424
+    .line 1427
     :catchall_0
     move-exception v0
 
@@ -8690,7 +8692,7 @@
 .method private showSubtitleSyncControls()V
     .locals 2
 
-    .line 1476
+    .line 1479
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleBack:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
@@ -8701,7 +8703,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1477
+    .line 1480
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
@@ -8711,7 +8713,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1478
+    .line 1481
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnSubtitleFwd:Landroid/widget/ImageView;
 
@@ -8721,7 +8723,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1479
+    .line 1482
     :cond_2
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
@@ -8731,14 +8733,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1480
+    .line 1483
     :cond_3
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->updateOffsetDisplay()V
 
-    .line 1481
+    .line 1484
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->updateLangDisplay()V
 
-    .line 1482
+    .line 1485
     return-void
 .end method
 
@@ -8949,7 +8951,7 @@
 .method private updateClock()V
     .locals 15
 
-    .line 1583
+    .line 1586
     const-string v0, "TvPlayerBar"
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->clock:Landroid/widget/TextView;
@@ -8958,22 +8960,22 @@
 
     return-void
 
-    .line 1585
+    .line 1588
     :cond_0
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->refreshPlayer()V
 
-    .line 1586
+    .line 1589
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     if-nez v1, :cond_1
 
     return-void
 
-    .line 1589
+    .line 1592
     :cond_1
     nop
 
-    .line 1591
+    .line 1594
     :try_start_0
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
@@ -8981,14 +8983,14 @@
 
     move-result-wide v1
 
-    .line 1592
+    .line 1595
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     invoke-interface {v3}, Lf4/n0;->getDuration()J
 
     move-result-wide v3
 
-    .line 1593
+    .line 1596
     iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     invoke-interface {v5}, Lf4/n0;->getCurrentWindowIndex()I
@@ -8997,10 +8999,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1598
+    .line 1601
     nop
 
-    .line 1599
+    .line 1602
     const-wide/16 v6, 0x0
 
     cmp-long v8, v3, v6
@@ -9009,7 +9011,7 @@
 
     move-wide v3, v6
 
-    .line 1603
+    .line 1606
     :cond_2
     iget v8, p0, Lcom/movievn/tv/TvPlayerBar;->lastWindow:I
 
@@ -9037,19 +9039,19 @@
     :cond_4
     move v8, v10
 
-    .line 1605
+    .line 1608
     :goto_0
     iput v5, p0, Lcom/movievn/tv/TvPlayerBar;->lastWindow:I
 
-    .line 1606
+    .line 1609
     iput-wide v3, p0, Lcom/movievn/tv/TvPlayerBar;->lastDuration:J
 
-    .line 1607
+    .line 1610
     if-eqz v8, :cond_5
 
     invoke-direct {p0, v5, v3, v4}, Lcom/movievn/tv/TvPlayerBar;->onContentChanged(IJ)V
 
-    .line 1610
+    .line 1613
     :cond_5
     iget-wide v11, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
@@ -9075,7 +9077,7 @@
 
     iput-wide v11, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
-    .line 1611
+    .line 1614
     :cond_6
     iget-wide v11, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
@@ -9085,7 +9087,7 @@
 
     iget-wide v1, p0, Lcom/movievn/tv/TvPlayerBar;->scrubPos:J
 
-    .line 1612
+    .line 1615
     :cond_7
     cmp-long v5, v1, v6
 
@@ -9093,7 +9095,7 @@
 
     move-wide v1, v6
 
-    .line 1614
+    .line 1617
     :cond_8
     iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->clock:Landroid/widget/TextView;
 
@@ -9129,12 +9131,12 @@
 
     invoke-virtual {v5, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1616
+    .line 1619
     iget-object v5, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     if-eqz v5, :cond_a
 
-    .line 1617
+    .line 1620
     cmp-long v5, v3, v6
 
     if-lez v5, :cond_9
@@ -9155,12 +9157,12 @@
 
     if-eq v5, v3, :cond_9
 
-    .line 1618
+    .line 1621
     iget-object v4, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
     invoke-virtual {v4, v3}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 1620
+    .line 1623
     :cond_9
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->seek:Landroid/widget/SeekBar;
 
@@ -9168,7 +9170,7 @@
 
     invoke-virtual {v3, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 1624
+    .line 1627
     :cond_a
     :try_start_1
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
@@ -9181,7 +9183,7 @@
 
     if-eq v1, v2, :cond_b
 
-    .line 1625
+    .line 1628
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->player:Lf4/n0;
 
     invoke-interface {v1}, Lf4/n0;->getPlayWhenReady()Z
@@ -9190,20 +9192,20 @@
 
     iput-boolean v1, p0, Lcom/movievn/tv/TvPlayerBar;->playing:Z
 
-    .line 1626
+    .line 1629
     invoke-direct {p0}, Lcom/movievn/tv/TvPlayerBar;->updateIcon()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1630
+    .line 1633
     :cond_b
     goto :goto_1
 
-    .line 1628
+    .line 1631
     :catchall_0
     move-exception v1
 
-    .line 1629
+    .line 1632
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -9228,7 +9230,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1632
+    .line 1635
     :goto_1
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->activity:Landroid/app/Activity;
 
@@ -9236,18 +9238,18 @@
 
     move-result-object v1
 
-    .line 1633
+    .line 1636
     nop
 
-    .line 1634
+    .line 1637
     if-eqz v1, :cond_d
 
-    .line 1635
+    .line 1638
     invoke-virtual {v1}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 1636
+    .line 1639
     if-eqz v2, :cond_c
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
@@ -9273,11 +9275,11 @@
 
     goto :goto_2
 
-    .line 1634
+    .line 1637
     :cond_d
     const-string v2, "-"
 
-    .line 1638
+    .line 1641
     :goto_2
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->lastFocus:Ljava/lang/String;
 
@@ -9287,10 +9289,10 @@
 
     if-nez v3, :cond_f
 
-    .line 1639
+    .line 1642
     iput-object v2, p0, Lcom/movievn/tv/TvPlayerBar;->lastFocus:Ljava/lang/String;
 
-    .line 1640
+    .line 1643
     if-eqz v1, :cond_e
 
     invoke-direct {p0, v1}, Lcom/movievn/tv/TvPlayerBar;->isInController(Landroid/view/View;)Z
@@ -9335,7 +9337,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1644
+    .line 1647
     :cond_f
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
@@ -9347,7 +9349,7 @@
 
     if-eqz v0, :cond_10
 
-    .line 1645
+    .line 1648
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->controller:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
@@ -9360,15 +9362,15 @@
 
     invoke-direct {p0, v0, v1}, Lcom/movievn/tv/TvPlayerBar;->linkController(Landroid/view/ViewGroup;I)V
 
-    .line 1647
+    .line 1650
     :cond_10
     return-void
 
-    .line 1594
+    .line 1597
     :catchall_1
     move-exception v1
 
-    .line 1596
+    .line 1599
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -9393,21 +9395,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1597
+    .line 1600
     return-void
 .end method
 
 .method private updateIcon()V
     .locals 2
 
-    .line 1520
+    .line 1523
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnPlayPause:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1523
+    .line 1526
     :cond_0
     iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar;->playing:Z
 
@@ -9427,14 +9429,14 @@
 
     move-result v0
 
-    .line 1524
+    .line 1527
     if-eqz v0, :cond_2
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->btnPlayPause:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1525
+    .line 1528
     :cond_2
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->btnPlayPause:Landroid/widget/ImageView;
 
@@ -9452,25 +9454,25 @@
     :goto_1
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1526
+    .line 1529
     return-void
 .end method
 
 .method private updateLangDisplay()V
     .locals 2
 
-    .line 1493
+    .line 1496
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1494
+    .line 1497
     :cond_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLoadedLang:Ljava/lang/String;
 
-    .line 1495
+    .line 1498
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -9481,7 +9483,7 @@
 
     goto :goto_0
 
-    .line 1498
+    .line 1501
     :cond_1
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
 
@@ -9493,7 +9495,7 @@
 
     goto :goto_1
 
-    .line 1496
+    .line 1499
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleLangText:Landroid/widget/TextView;
@@ -9502,7 +9504,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1500
+    .line 1503
     :goto_1
     return-void
 .end method
@@ -9510,14 +9512,14 @@
 .method private updateOffsetDisplay()V
     .locals 5
 
-    .line 1503
+    .line 1506
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1504
+    .line 1507
     :cond_0
     iget-wide v0, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetMs:J
 
@@ -9527,7 +9529,7 @@
 
     div-double/2addr v0, v2
 
-    .line 1505
+    .line 1508
     const-wide/16 v2, 0x0
 
     cmpl-double v2, v0, v2
@@ -9541,7 +9543,7 @@
     :cond_1
     const-string v2, ""
 
-    .line 1506
+    .line 1509
     :goto_0
     iget-object v3, p0, Lcom/movievn/tv/TvPlayerBar;->subtitleOffsetText:Landroid/widget/TextView;
 
@@ -9585,7 +9587,7 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1507
+    .line 1510
     return-void
 .end method
 

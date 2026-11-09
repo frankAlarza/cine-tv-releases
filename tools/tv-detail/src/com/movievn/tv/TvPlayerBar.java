@@ -1421,7 +1421,10 @@ public class TvPlayerBar {
             subtitlePopupLoading.setVisibility(View.VISIBLE);
             if (subtitlePopupLoading.getParent() == null) subtitlePopupList.addView(subtitlePopupLoading);
         }
-        try { subtitlePopup.showAsDropDown(btnSubtitle, 0, dp(4)); } catch (Throwable t) { Log.w(TAG, "showSubtitlePopup: " + t); return; }
+        // Abrir hacia ARRIBA del boton: en pantalla completa la zona inferior esta
+        // ocupada y el desplegable que cuelga hacia abajo quedaba fuera de vista.
+        // Gravity.BOTTOM indica a PopupWindow que se ancle por encima del anchor.
+        try { subtitlePopup.showAsDropDown(btnSubtitle, 0, dp(4), Gravity.BOTTOM | Gravity.START); } catch (Throwable t) { Log.w(TAG, "showSubtitlePopup: " + t); return; }
         // Buscar idiomas disponibles en hilo secundario
         final String title = findTitle();
         Thread t = new Thread(new SubtitleLangSearchTask(this, title));
