@@ -2136,6 +2136,19 @@
 .method public t()V
     .locals 3
 
+    # TV: no cargar anuncios chitu (com.yk.e) -> jank del hilo principal
+    iget-object v0, p0, Lj/k;->a:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
     .line 1
     .line 2
     .line 3

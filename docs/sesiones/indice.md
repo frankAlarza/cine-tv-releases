@@ -28,3 +28,4 @@
 
 | **42** | **v223** | **Restaurado el fix de orientacion del fullscreen de la libreria en tablet (parches de VideoPlayerView que vivian sin commitear y se perdieron en v222)** | **[sesion-42-restauracion-fix-orientacion-tablet.md](sesion-42-restauracion-fix-orientacion-tablet.md)** |
 | **43** | **v224** | **Overlay flotante unico en el reproductor: subtitulos (+/-0.5 s), offset e idioma ya no se quedan en pantalla; regla `applyOverlayVisibility`** | **[sesion-43-overlay-flotante-subtitulos.md](sesion-43-overlay-flotante-subtitulos.md)** |
+| **44** | **v232** | **Jank de `chitu_sdk` (`com.yk.e`): desactivado en TV con guards `isTv` (float ad de `MainActivity`, loader base `j/k.t()`, 11 `MainSDK.req*`). Provocado por provider en manifest (R4) que impide borrar el paquete. 1.211 lineas de log / 2,5 s de trazas en el hilo principal -> 0** | **[sesion-44-chitu-jank-tv.md](sesion-44-chitu-jank-tv.md)** |

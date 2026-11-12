@@ -512,7 +512,28 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   verificado contra el local).
 - Detalle: [sesion 43](docs/sesiones/sesion-43-overlay-flotante-subtitulos.md).
 
-## v231 — Evitar aviso 'pasted from clipboard' en TV
+## v231 - Evitar aviso 'pasted from clipboard' en TV
 - Causa: `ClipBoardUtil.a()` (tc/i) leia y sobrescribia el portapapeles sin guard de TV; llamado desde `MAINVIEWMODEL$a` al cargar el Home, disparando el aviso de Android 12+ 'Movie pasted from your clipboard'.
 - Fix: guard `TvUtils.isTv()` en `tc/i.a()` y `tc/i.b()` para que en TV no toquen el portapapeles.
 - Release: v231 (versionCode 40034) publicada en GitHub con digest verificado.
+
+## v232 - Jank de chitu_sdk en TV (guards isTv)
+- Sintoma: `Choreographer: Skipped 42/67/30/41 frames` con un burst de **1.211 lineas** de trazas
+  `chitu_sdk` durante **2,5 s** en el hilo principal (float ad de `MainActivity`, banner del Home
+  y del feed, todo dentro de callbacks de `Choreographer`).
+- Por que no se borro el SDK: `com.yk.e` tiene `ContentProvider` en el manifest
+  (`com.yk.e.provider.MainProvider`, R4) -> se aplico la Opcion 1 (guards `isTv`), reversible.
+- Fix: guard `TvUtils.isTv(...)` + `return-void` en `MainActivity.loadAdFloatViewAd()`,
+  `MainActivity.loadFloatAdWX(...)`, el `MainSDK.getInstance()` de `MainActivity.onCreate`, el
+  loader base `Lj/k;->t()` y los 11 `MainSDK.req*` (banner, float, splash, interstitial, native,
+  mrec, reward, third banner, world native...). En no-TV el comportamiento es identico.
+- Trampa nueva: `invoke-static {p0}` falla si `p0` > v15 (`.locals 53/54`) y apktool solo dice
+  `Could not smali file`; usar `invoke-static/range {p0 .. p0}`.
+- Verificado en emulator-5556: **0 lineas de `chitu_sdk`** (antes 1.211), sin cadenas de anuncios
+  en las trazas, Home completo, ENTER abre ficha y el video reproduce, logcat sin
+  `FATAL EXCEPTION`/`VerifyError`/`ANR`. Capturas `build/v232-*.png`.
+- Backup pre-cambio: `docs/auditoria/backup/fase6/chitu-guards-v232-pre-change.zip`.
+- Pendiente detectado (otra sesion): el jank restante del Home viene de `TvStreamHide` (barridos
+  repetidos de la jerarquia con decenas de logs) y de la inicializacion de `TvSectionDrawer` /
+  `TvHeroImage`, no de anuncios.
+- Detalle: [sesion 44](docs/sesiones/sesion-44-chitu-jank-tv.md).

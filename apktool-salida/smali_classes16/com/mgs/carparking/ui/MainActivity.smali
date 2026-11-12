@@ -5492,6 +5492,17 @@
 .method public loadAdFloatViewAd()V
     .locals 54
 
+    # TV: desactivar anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p0 .. p0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
     move-object/from16 v3, p0
 
     invoke-static {}, Lcom/mgs/carparking/ui/MainActivity;->ۤۤۥۣ()Lcom/mgs/carparking/netbean/AdInfoEntry;
@@ -5562,6 +5573,17 @@
 
 .method public loadFloatAdWX(Lcom/mgs/carparking/netbean/AdInfoDetailEntry;)V
     .locals 53
+
+    # TV: desactivar anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p0 .. p0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
 
     move-object/from16 v3, p1
 
@@ -6000,11 +6022,20 @@
 
     invoke-static {v1, v0, v2}, Lcom/mgs/carparking/ui/۟ۦۢۦۧ;->ۣۥۧۢ(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/content/Intent;
 
+    # TV: no inicializar el SDK chitu (com.yk.e) en el hilo principal
+    invoke-static {v1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/app/Activity;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_tv_init
+
     invoke-static {}, Lcom/mgs/carparking/ui/MainActivity;->۠ۧۨۢ()Lcom/yk/e/MainSDK;
 
     move-result-object v2
 
     invoke-static {v2, v1}, Lcom/mgs/carparking/ui/MainActivity;->ۨۢۨ۠(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_tv_init
 
     return-void
 .end method

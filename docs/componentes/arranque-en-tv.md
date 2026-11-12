@@ -67,6 +67,25 @@ Favorites" ocupa 1920x1080 (`sw540dp land`).
   **Se conservan** los 5 de almacenamiento (ver 2.7).
 - Anuncios: `AppApplication.loadAdConf` y `MainActivity` no inicializan WxSDK/MainSDK en TV.
 
+## 2.6.1 SDK `chitu` (`com.yk.e`) — apagado real en TV (v232)
+
+El guard antiguo solo cubría `WxSDK.initSdk` / `initAdCache`, pero el SDK seguía arrancando por
+otras rutas y **consumía el hilo principal** (1.211 líneas de trazas `chitu_sdk` en 2,5 s;
+`Choreographer: Skipped 42/67/30/41 frames`). En v232 se añadieron guards `TvUtils.isTv(...)`
+con `return-void` temprano en:
+
+| Fichero | Punto |
+|---|---|
+| `smali_classes16/.../ui/MainActivity.smali` | `loadAdFloatViewAd()`, `loadFloatAdWX(...)` y el `MainSDK.getInstance()` del final de `onCreate` |
+| `smali_classes3/j/k.smali` | `t()` — `BaseSliceLoader`, loader base de todos los adaptadores de red (`io/*` → `j/g` → `j/k`) |
+| `smali_classes3/com/yk/e/MainSDK.smali` | los 11 `req*` (banner, float, internal, interstitial, mrec, natural, pause intersticial, reward, splash, third banner, world native) |
+
+En no-TV no cambia nada (los guards solo actúan si `isTv()` es `true`).
+
+**No borrar el paquete:** `com.yk.e.provider.MainProvider` está declarado en el manifest
+(authorities `com.movievn.cinevi.MainProvider`, R4), así que el borrado completo exigiría quitar
+antes el provider. Detalle y mediciones: [sesión 44](../sesiones/sesion-44-chitu-jank-tv.md).
+
 ## 2.7 Permisos de almacenamiento y BlueStacks (v25)
 
 - **Síntoma:** en BlueStacks (Android 9, SDK 28) la app mostraba al arrancar el diálogo

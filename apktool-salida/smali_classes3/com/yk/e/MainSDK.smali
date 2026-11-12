@@ -474,6 +474,18 @@
 .method public reqBannerAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -504,6 +516,18 @@
 
 .method public reqFloatViewAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
+
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
 
     .line 1
     .line 2
@@ -536,6 +560,18 @@
 .method public reqInternalAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -566,6 +602,18 @@
 
 .method public reqInterstitialAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
+
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
 
     .line 1
     .line 2
@@ -598,6 +646,18 @@
 .method public reqMrec(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -628,6 +688,18 @@
 
 .method public reqNaturalAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
+
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
 
     .line 1
     .line 2
@@ -660,6 +732,18 @@
 .method public reqPauseInterstitialAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -690,6 +774,18 @@
 
 .method public reqRewardVideoAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;ILho/j$f;)V
     .locals 7
+
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
 
     .line 1
     .line 2
@@ -725,6 +821,18 @@
 .method public reqSplashAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;ILho/j$f;)V
     .locals 7
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -759,6 +867,18 @@
 .method public reqThirdBanner(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
 
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
+
     .line 1
     .line 2
     iget-object v0, p0, Lcom/yk/e/MainSDK;->IL1Iii:Lho/j;
@@ -789,6 +909,18 @@
 
 .method public reqWorldNativeAd(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lho/j$f;)V
     .locals 6
+
+    # TV: no pedir anuncios chitu (com.yk.e) -> jank del hilo principal
+    invoke-static/range {p1 .. p1}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
+
 
     .line 1
     .line 2
