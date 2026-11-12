@@ -257,8 +257,13 @@ El código usa clases estáticas internas para listeners:
 | 40003 | v202 | Fix crash Películas/Series (no publicado como tal) |
 | **40006** | **v203** | **Release publicado 2026-11-08 con digest SHA-256** |
 | 40007 | v204 | Siguiente release |
+| 40026 | v224 | Overlay flotante de subtitulos (sesion 43), publicado |
+| 40033 | v230 | Modal de subtitulos mas compacto, publicado |
+| 40034 | v231 | Guard de portapapeles en TV, publicado |
+| **40035** | **v232** | **SDK chitu (com.yk.e) desactivado en TV con guards `isTv` (sesion 44)** |
 
 > Nota: 40004 y 40005 se reservaron para los builds de prueba de la sesión 39
-> (`v100t` y el build final con el digest). Siguiente libre: **40007**.
+> (`v100t` y el build final con el digest). Los intermedios 40008–40025 y 40027–40032
+> corresponden a versiones de trabajo cuyo detalle está en `PROGRESS.md`.
 
 **Fuente:** `PROGRESS.md` y `apktool-salida/apktool.yml` actuales.
