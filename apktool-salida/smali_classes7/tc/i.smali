@@ -7,8 +7,19 @@
 .method public static a()V
     .locals 3
 
-    .line 1
-    .line 2
+    invoke-static {}, Lme/goldze/mvvmhabit/base/BaseApplication;->getInstance()Landroid/app/Application;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard
+
+    return-void
+
+    :cond_tv_guard
     const-string v0, ""
 
     .line 3
@@ -89,8 +100,17 @@
 .method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 1
-    .line 2
+    invoke-static {p0}, Lcom/movievn/tv/TvUtils;->isTv(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_tv_guard_b
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_tv_guard_b
     const-string v0, "clipboard"
 
     .line 3
