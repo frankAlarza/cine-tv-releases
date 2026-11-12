@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 391
+    .line 403
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 393
+    .line 405
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
@@ -67,7 +67,7 @@
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputshadowColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 394
+    .line 406
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetshadowColorVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
@@ -96,7 +96,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 395
+    .line 407
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -120,11 +120,11 @@
 
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mupdateDot(Lcom/movievn/tv/TvSubtitleStyleDialog;Landroid/view/View;I)V
 
-    .line 396
+    .line 408
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
 
-    .line 397
+    .line 409
     return-void
 .end method

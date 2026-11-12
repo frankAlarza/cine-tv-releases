@@ -190,15 +190,16 @@ public class TvSubtitleStyleDialog {
 
         TextView accept = new TextView(activity);
         accept.setText("Aceptar");
-        accept.setTextColor(0xFF000000);
+        accept.setTextColor(TEXT_PRIMARY);
         accept.setTextSize(15f);
         accept.setGravity(Gravity.CENTER);
         accept.setPadding(dp(20), dp(12), dp(20), dp(12));
         accept.setFocusable(true);
         accept.setClickable(true);
         GradientDrawable abg = new GradientDrawable();
-        abg.setColor(0xFFFFFFFF);
+        abg.setColor(0x00000000);
         abg.setCornerRadius(dp(12));
+        abg.setStroke(dp(1), OUTLINE_COLOR);
         accept.setBackground(abg);
         int ring = activity.getResources().getIdentifier("bg_focused", "drawable", activity.getPackageName());
         if (ring != 0) {
@@ -321,13 +322,19 @@ public class TvSubtitleStyleDialog {
             preview.setShadowLayer(0f, 0f, 0f, 0);
         }
         if (st.backgroundEnabled) {
-            GradientDrawable gd = new GradientDrawable();
-            gd.setColor(st.backgroundColor);
-            gd.setCornerRadius(dp(8));
-            preview.setBackground(gd);
+            android.graphics.drawable.Drawable d = preview.getBackground();
+            if (d instanceof GradientDrawable) {
+                GradientDrawable gd = (GradientDrawable) d;
+                gd.setColor(st.backgroundColor);
+            } else {
+                GradientDrawable gd = new GradientDrawable();
+                gd.setColor(st.backgroundColor);
+                gd.setCornerRadius(dp(8));
+                preview.setBackground(gd);
+            }
             preview.setPadding(dp(12), dp(6), dp(12), dp(6));
         } else {
-            preview.setBackground(null);
+            if (preview.getBackground() != null) preview.setBackground(null);
             preview.setPadding(0, 0, 0, 0);
         }
     }
@@ -346,11 +353,16 @@ public class TvSubtitleStyleDialog {
     private void updateDot(View dot, int color) {
         if (dot == null) return;
         try {
-            GradientDrawable gd = new GradientDrawable();
-            gd.setShape(GradientDrawable.OVAL);
-            gd.setColor(color);
-            gd.setStroke(dp(1), 0x44FFFFFF);
-            dot.setBackground(gd);
+            android.graphics.drawable.Drawable d = dot.getBackground();
+            if (d instanceof GradientDrawable) {
+                ((GradientDrawable) d).setColor(color);
+            } else {
+                GradientDrawable gd = new GradientDrawable();
+                gd.setShape(GradientDrawable.OVAL);
+                gd.setColor(color);
+                gd.setStroke(dp(1), 0x44FFFFFF);
+                dot.setBackground(gd);
+            }
         } catch (Throwable t) { }
     }
 
