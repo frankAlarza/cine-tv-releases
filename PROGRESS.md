@@ -511,3 +511,8 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   `sha256:298d0b7ce466b90acecc548addc93c0c5225cc2b930e40110f051cf7b861c919`,
   verificado contra el local).
 - Detalle: [sesion 43](docs/sesiones/sesion-43-overlay-flotante-subtitulos.md).
+
+## v231 — Evitar aviso 'pasted from clipboard' en TV
+- Causa: `ClipBoardUtil.a()` (tc/i) leia y sobrescribia el portapapeles sin guard de TV; llamado desde `MAINVIEWMODEL$a` al cargar el Home, disparando el aviso de Android 12+ 'Movie pasted from your clipboard'.
+- Fix: guard `TvUtils.isTv()` en `tc/i.a()` y `tc/i.b()` para que en TV no toquen el portapapeles.
+- Release: v231 (versionCode 40034) publicada en GitHub con digest verificado.
