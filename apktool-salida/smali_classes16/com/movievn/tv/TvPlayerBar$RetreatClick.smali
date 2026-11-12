@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Z)V
     .locals 0
 
-    .line 2438
+    .line 2477
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2439
+    .line 2478
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$RetreatClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2440
+    .line 2479
     iput-boolean p2, p0, Lcom/movievn/tv/TvPlayerBar$RetreatClick;->forward:Z
 
-    .line 2441
+    .line 2480
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 2445
+    .line 2484
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$RetreatClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     iget-boolean v0, p0, Lcom/movievn/tv/TvPlayerBar$RetreatClick;->forward:Z
@@ -62,6 +62,6 @@
     :goto_0
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mseekBy(Lcom/movievn/tv/TvPlayerBar;J)V
 
-    .line 2446
+    .line 2485
     return-void
 .end method

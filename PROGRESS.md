@@ -487,3 +487,24 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   `sha256:2219b890ff56042972569f1a8bcde8060881f44327aa388c0efdb580f327b4e5`,
   verificado contra el local).
 - Detalle: [sesion 42](docs/sesiones/sesion-42-restauracion-fix-orientacion-tablet.md).
+
+## Overlay flotante unico en el reproductor (v224)
+
+- Sintoma: con subtitulos cargados, los botones de sincronizacion (+/-0.5 s), el
+  offset y la etiqueta de idioma se quedaban en pantalla aunque la barra ya se
+  hubiera ocultado.
+- Causa: `showSubtitleSyncControls()` ponia esos controles VISIBLE por su cuenta
+  al terminar la descarga (normalmente con la barra ya oculta) y `hideBarNow()`
+  retornaba antes si `!barVisible`, asi que nadie los volvia a ocultar.
+- Fix: regla unica `applyOverlayVisibility(boolean)` + registros
+  `floatingControls` / `subtitleSyncControls` y flag `subtitleSyncAvailable`.
+  El texto de los subtitulos queda fuera del overlay.
+- Version v224 (versionCode 40027), build/firma/instalacion OK en emulator-5556.
+- E2E con "Campus Drivers - Temporada 1": subtitulos EN cargados (472 cues);
+  en pantalla completa el overlay completo (barra + CC + sync + offset + idioma)
+  desaparece a los 4 s, reaparece con DPAD_DOWN y vuelve a desaparecer 5 s
+  despues (`build/v224-full-sub.png`, `v224-full-show.png`, `v224-full-hide2.png`).
+- Trampa de entorno: el reloj del AVD iba 12 dias atrasado y TLS fallaba
+  (`Chain validation failed`); se corrigio con
+  `cmd network_time_update_service force_refresh`.
+- Detalle: [sesion 43](docs/sesiones/sesion-43-overlay-flotante-subtitulos.md).

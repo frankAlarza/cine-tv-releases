@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1724
+    .line 1763
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1725
+    .line 1764
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$ClockTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1726
+    .line 1765
     return-void
 .end method
 
@@ -40,12 +40,12 @@
 .method public run()V
     .locals 3
 
-    .line 1730
+    .line 1769
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$ClockTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mupdateClock(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 1731
+    .line 1770
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$ClockTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgethandler(Lcom/movievn/tv/TvPlayerBar;)Landroid/os/Handler;
@@ -56,6 +56,6 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1732
+    .line 1771
     return-void
 .end method

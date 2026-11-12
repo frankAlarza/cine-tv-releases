@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
     .locals 0
 
-    .line 2250
+    .line 2289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2251
+    .line 2290
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleUnavailableTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2252
+    .line 2291
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleUnavailableTask;->message:Ljava/lang/String;
 
-    .line 2253
+    .line 2292
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public run()V
     .locals 3
 
-    .line 2256
+    .line 2295
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleUnavailableTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const/4 v1, 0x0
@@ -54,6 +54,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$msetSubtitleAvailable(Lcom/movievn/tv/TvPlayerBar;ZLjava/lang/String;)V
 
-    .line 2257
+    .line 2296
     return-void
 .end method

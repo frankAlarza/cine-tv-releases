@@ -265,6 +265,31 @@ vídeo) y la barra es más compacta que en v29.
 `UnsupportedClassVersionError`); hay que lanzarlo con
 `JAVA_HOME=C:\Program Files\Android\Android Studio\jbr`.
 
+## 2.15 Overlay flotante unico: subtitulos e idioma (v224)
+
+Los controles de sincronizacion de subtitulos (`-0,5 s`, `+0,5 s`), el offset
+(`+0.0s`) y la etiqueta de idioma (`ES`/`EN`) se quedaban en pantalla para
+siempre. La causa era doble: `showSubtitleSyncControls()` los ponia `VISIBLE`
+por su cuenta al terminar la descarga (que suele llegar con la barra ya oculta)
+y `hideBarNow()` retornaba antes si `barVisible == false`, de modo que nadie los
+volvia a ocultar.
+
+Regla unica en `TvPlayerBar`:
+
+- `applyOverlayVisibility(boolean)` es el unico punto que muestra u oculta la
+  barra, el boton de pantalla completa, el boton CC y el grupo de subtitulos.
+- Todo control nuevo debe registrarse con `registerFloatingControl(v)` o
+  `registerSubtitleSyncControl(v)`; un `setVisibility(VISIBLE)` suelto rompe la
+  regla.
+- `subtitleSyncAvailable` gatea el grupo de sincronizacion: sin cues cargados no
+  aparece.
+- El **texto** de los subtitulos no es un control flotante: lo gobierna
+  `updateSubtitle()` y sigue visible con los controles ocultos.
+
+Al cargar subtitulos con la barra oculta, los controles no se muestran; aparecen
+la proxima vez que el usuario saque la barra. `hideBarNow()` oculta siempre el
+overlay completo, aunque `barVisible` ya fuera `false`.
+
 ---
 
 ## Archivos implicados

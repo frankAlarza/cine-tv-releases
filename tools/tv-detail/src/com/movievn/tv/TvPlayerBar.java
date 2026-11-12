@@ -56,6 +56,13 @@ import f4.n0;
  *      tambien en pantalla completa (4 s sin interaccion) y reaparece al
  *      entrar en la zona de video.
  *
+ * v224 anade:
+ *   REGLA UNICA DE OVERLAY. Todos los controles flotantes (barra, pantalla
+ *   completa, boton de subtitulos, +/- de sincronizacion, offset e idioma) se
+ *   muestran y ocultan desde applyOverlayVisibility(). Antes, los controles de
+ *   sincronizacion se ponian VISIBLE por su cuenta al cargar los subtitulos y,
+ *   si la barra ya estaba oculta, se quedaban en pantalla para siempre.
+ *
  * Para controlar el video se usa la interfaz `f4.n0` (ExoPlayer), cuyos metodos
  * importantes **no estan ofuscados** (`setPlayWhenReady`, `seekTo`,
  * `getCurrentPosition`, `getDuration`, `getCurrentWindowIndex`). Se compila
@@ -114,6 +121,21 @@ public class TvPlayerBar {
     private TextView subtitleOffsetText;
     private boolean subtitleAvailable = true;
     private String subtitleMessage = null;
+    /**
+     * REGLA DE OVERLAY (v224): TODOS los controles flotantes del reproductor
+     * (barra, boton de pantalla completa, boton de subtitulos, botones de
+     * sincronizacion +/- , offset y etiqueta de idioma) se gobiernan desde
+     * {@link #applyOverlayVisibility(boolean)}.
+     *
+     * Ningun control debe llamar a setVisibility(VISIBLE) por su cuenta: si se
+     * anade uno nuevo, hay que registrarlo con {@link #registerFloatingControl}
+     * o {@link #registerSubtitleSyncControl} para que aparezca y desaparezca
+     * con el resto.
+     */
+    private final List<View> floatingControls = new ArrayList<View>();
+    private final List<View> subtitleSyncControls = new ArrayList<View>();
+    /** Hay subtitulos cargados y se pueden mostrar los controles de sincronizacion. */
+    private boolean subtitleSyncAvailable;
     private SeekBar seek;
     private TextView clock;
 
@@ -553,36 +575,51 @@ public class TvPlayerBar {
 
     private void showBar() {
         if (bar == null) return;
-        if (!barVisible) {
-            bar.setVisibility(View.VISIBLE);
-            barVisible = true;
-            Log.i(TAG, "barra visible");
-        }
-        // El boton de pantalla completa es parte del mismo overlay: aparece y
-        // desaparece con la barra (v32).
-        View fs = findFullscreenButton(box);
-        if (fs != null && fs.getVisibility() != View.VISIBLE) {
-            fs.setVisibility(View.VISIBLE);
-        }
-        if (btnSubtitle != null && btnSubtitle.getVisibility() != View.VISIBLE) {
-        if (btnSubtitleBack != null && subtitleEnabled && btnSubtitleBack.getVisibility() != View.VISIBLE) {
-            btnSubtitleBack.setVisibility(View.VISIBLE);
-            if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.VISIBLE);
-            if (btnSubtitleFwd != null) btnSubtitleFwd.setVisibility(View.VISIBLE);
-            if (subtitleLangText != null) subtitleLangText.setVisibility(View.VISIBLE);
-        }
-            if (btnSubtitleBack != null && subtitleEnabled && btnSubtitleBack.getVisibility() != View.VISIBLE) {
-                btnSubtitleBack.setVisibility(View.VISIBLE);
-                subtitleOffsetText.setVisibility(View.VISIBLE);
-                btnSubtitleFwd.setVisibility(View.VISIBLE);
-            }
-            btnSubtitle.setVisibility(View.VISIBLE);
-        if (subtitleText != null && subtitleEnabled) {
-            subtitleText.setVisibility(View.VISIBLE);
-        }
-        }
+        if (!barVisible) Log.i(TAG, "barra visible");
+        // Unica via para mostrar los controles flotantes: barra, boton de
+        // pantalla completa y grupo de subtitulos (boton + sync +/- + offset
+        // + idioma) aparecen y desaparecen juntos.
+        applyOverlayVisibility(true);
         handler.removeCallbacks(hideTask);
         handler.postDelayed(hideTask, HIDE_DELAY_MS);
+    }
+
+    /**
+     * REGLA UNICA de visibilidad de los controles flotantes del reproductor.
+     * Cualquier boton/etiqueta que flote sobre el video debe pasar por aqui.
+     */
+    private void applyOverlayVisibility(boolean visible) {
+        if (bar != null) bar.setVisibility(visible ? View.VISIBLE : View.GONE);
+        // El boton de pantalla completa lo crea TvDetail: se localiza por su
+        // contentDescription y es parte del mismo overlay.
+        View fs = findFullscreenButton(box);
+        if (fs != null) fs.setVisibility(visible ? View.VISIBLE : View.GONE);
+        setViewsVisibility(floatingControls, visible);
+        // Los controles de sincronizacion solo existen si hay subtitulos
+        // cargados; en caso contrario se ocultan con el resto.
+        setViewsVisibility(subtitleSyncControls, visible && subtitleSyncAvailable);
+        barVisible = visible;
+        if (visible) {
+            updateOffsetDisplay();
+            updateLangDisplay();
+        }
+        Log.i(TAG, "overlay flotante " + (visible ? "visible" : "oculto"));
+    }
+
+    private void setViewsVisibility(List<View> views, boolean visible) {
+        if (views == null) return;
+        for (int i = 0; i < views.size(); i++) {
+            View v = views.get(i);
+            if (v != null) v.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    private void registerFloatingControl(View v) {
+        if (v != null && !floatingControls.contains(v)) floatingControls.add(v);
+    }
+
+    private void registerSubtitleSyncControl(View v) {
+        if (v != null && !subtitleSyncControls.contains(v)) subtitleSyncControls.add(v);
     }
 
     private void scheduleHide() {
@@ -600,17 +637,19 @@ public class TvPlayerBar {
      *   tras el retardo. Las flechas del D-pad la vuelven a mostrar.
      */
     private void hideBarNow() {
-        if (bar == null || !barVisible) return;
+        if (bar == null) return;
         View f = activity.getCurrentFocus();
-        boolean onBar = (f != null) && isInside(f, bar);
         boolean full = TvDetail.isFullscreen();
-        Log.i(TAG, "ocultar: full=" + full + " onBar=" + onBar
+        Log.i(TAG, "ocultar: full=" + full + " onBar=" + isInside(f, bar)
                 + " foco=" + describe(f) + " enCaja=" + (f != null && isInside(f, box)));
 
         if (!full) {
-            // Modo ventana: con el foco dentro de la zona de video la barra se
-            // queda: el usuario esta usando el control.
-            if (f != null && isInside(f, box)) {
+            // Modo ventana: con el foco dentro de la zona de video el usuario
+            // esta usando los controles, asi que se pospone el ocultado.
+            // Se exige barVisible para que un control hijo que se quedo visible
+            // por error no impida ocultarlo (era el bug de los botones de
+            // sincronizacion de subtitulos).
+            if (barVisible && f != null && isInside(f, box)) {
                 handler.postDelayed(hideTask, HIDE_DELAY_MS);
                 return;
             }
@@ -624,20 +663,10 @@ public class TvPlayerBar {
             handler.postDelayed(clearSuppressTask, SUPPRESS_MS);
         }
 
-        // La barra y el boton de pantalla completa son el mismo overlay:
-        // aparecen y desaparecen juntos.
-        bar.setVisibility(View.GONE);
-        barVisible = false;
-        View fs = findFullscreenButton(box);
-        if (fs != null) fs.setVisibility(View.GONE);
-        // El boton de subtitulos tambien es parte del overlay flotante.
-        if (btnSubtitle != null) btnSubtitle.setVisibility(View.GONE);
-        // El boton flotante de subtitulos debe permanecer visible siempre.
-        if (btnSubtitleBack != null) btnSubtitleBack.setVisibility(View.GONE);
-        if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.GONE);
-        if (btnSubtitleFwd != null) btnSubtitleFwd.setVisibility(View.GONE);
-        if (subtitleLangText != null) subtitleLangText.setVisibility(View.GONE);
-        if (subtitleText != null) subtitleText.setVisibility(View.GONE);
+        // Unica via para ocultar: barra + pantalla completa + boton y controles
+        // de subtitulos (sincronizacion, offset e idioma). El texto de los
+        // subtitulos NO es un control: lo gobierna updateSubtitle().
+        applyOverlayVisibility(false);
         Log.i(TAG, "barra oculta");
     }
 
@@ -856,6 +885,7 @@ public class TvPlayerBar {
         b.setLayoutParams(lp);
         box.addView(b);
         btnSubtitle = b;
+        registerFloatingControl(b);
         if (btnRetreat != null) {
             btnSubtitle.setNextFocusRightId(btnRetreat.getId());
             btnRetreat.setNextFocusLeftId(btnSubtitle.getId());
@@ -1301,6 +1331,7 @@ public class TvPlayerBar {
         btnSubtitleBack.setLayoutParams(lpBack);
         btnSubtitleBack.setVisibility(View.GONE);
         box.addView(btnSubtitleBack);
+        registerSubtitleSyncControl(btnSubtitleBack);
 
         // Texto de offset
         subtitleOffsetText = new TextView(activity);
@@ -1321,6 +1352,7 @@ public class TvPlayerBar {
         subtitleOffsetText.setLayoutParams(lpText);
         subtitleOffsetText.setVisibility(View.GONE);
         box.addView(subtitleOffsetText);
+        registerSubtitleSyncControl(subtitleOffsetText);
 
         // Boton adelante (retrasar subtitulos / mostrar despues)
         btnSubtitleFwd = new ImageView(activity);
@@ -1353,6 +1385,7 @@ public class TvPlayerBar {
         btnSubtitleFwd.setLayoutParams(lpFwd);
         btnSubtitleFwd.setVisibility(View.GONE);
         box.addView(btnSubtitleFwd);
+        registerSubtitleSyncControl(btnSubtitleFwd);
 
         // Texto con el idioma activo (ES / EN / OFF)
         subtitleLangText = new TextView(activity);
@@ -1373,6 +1406,7 @@ public class TvPlayerBar {
         subtitleLangText.setLayoutParams(lpLang);
         subtitleLangText.setVisibility(View.GONE);
         box.addView(subtitleLangText);
+        registerSubtitleSyncControl(subtitleLangText);
 
         // Encadenar foco
         if (btnSubtitle != null) {
@@ -1499,20 +1533,25 @@ public class TvPlayerBar {
         }
     }
 
+    /**
+     * Los subtitulos han cargado: los controles de sincronizacion pasan a
+     * formar parte del overlay. No se muestran aqui por su cuenta: si la barra
+     * esta visible se repinta el overlay completo; si esta oculta, apareceran
+     * la proxima vez que el usuario saque los controles.
+     */
     private void showSubtitleSyncControls() {
-        if (btnSubtitleBack != null) btnSubtitleBack.setVisibility(View.VISIBLE);
-        if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.VISIBLE);
-        if (btnSubtitleFwd != null) btnSubtitleFwd.setVisibility(View.VISIBLE);
-        if (subtitleLangText != null) subtitleLangText.setVisibility(View.VISIBLE);
+        subtitleSyncAvailable = (subtitleCues != null && !subtitleCues.isEmpty());
         updateOffsetDisplay();
         updateLangDisplay();
+        if (barVisible) {
+            applyOverlayVisibility(true);
+        }
     }
 
+    /** Subtitulos desactivados: se ocultan sus controles sin tocar el resto. */
     private void hideSubtitleSyncControls() {
-        if (btnSubtitleBack != null) btnSubtitleBack.setVisibility(View.GONE);
-        if (subtitleOffsetText != null) subtitleOffsetText.setVisibility(View.GONE);
-        if (btnSubtitleFwd != null) btnSubtitleFwd.setVisibility(View.GONE);
-        if (subtitleLangText != null) subtitleLangText.setVisibility(View.GONE);
+        subtitleSyncAvailable = false;
+        setViewsVisibility(subtitleSyncControls, false);
     }
 
     /** Actualiza el texto que indica el idioma de subtitulo activo. */
