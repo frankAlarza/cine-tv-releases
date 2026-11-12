@@ -601,3 +601,31 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   (installd/dexopt arruina la corrida) y reportar N, mediana y rango.
 - Detalle: [sesion 46](docs/sesiones/sesion-46-drawer-hero-jank.md).
 
+## v236 - Bloque "Streaming" del Home: filtro en el pipeline correcto
+- Sintoma: el bloque "Streaming" (titulo + fila de logos Netflix/Prime/HBO/Disney+/Apple TV+) reaparecio
+  tras v205/v233. El plan anterior apuntaba a `HomeContentMultipleListViewModel.t()` (ruta MOVIL) y no
+  aplicaba: ese metodo no se invoca en el Home de TV.
+- Diagnostico (log `TvFeedDiag` en ambas variantes): el Home de TV lo genera
+  `HomeRecommendMultipleListViewModel.t()` (smali_classes10). La entrada a quitar es
+  `i=1 type=10 module_id=4969 module_name="Streaming"`. Con `uiautomator dump` se confirmo que el
+  titulo y la fila de logos son UN SOLO item (`item_recommend_multiple_special_list.xml`), por eso
+  `TvStreamHide` (que solo ocultaba el `TextView`) dejaba los logos huerfanos.
+- Causa de la reaparicion: `TvStreamHide` **nunca se llamo** (no hay ninguna llamada a
+  `TvStreamHide.attach(...)` en todo el proyecto) y su unico barrido marcaba el decor como
+  "scaneado", de modo que el respaldo de 800 ms tampoco hacia nada.
+- Fix: filtro en los datos en las DOS rutas (TV `recommend` y movil), en la cabecera del bucle de
+  `t()`: `type == 10 AND (module_id == 4969 OR module_name.equalsIgnoreCase("Streaming"))` -> se salta
+  a `:goto_1`, de modo que no se crea el binding command (ni titulo ni logos) y el resto del feed
+  (incluida la logica de ads) queda intacto. En la ruta movil se restaura `v3 = 1` antes del salto
+  (si no, `if-ne v1, v3` compararia un int con una referencia -> VerifyError).
+  `TvStreamHide` se deja sin conectar a proposito: su criterio `contains("streaming")` ocultaria
+  tambien el modulo legitimo "El nuevo streaming de hoy".
+- Version: v236 / versionCode 40039.
+- Verificado en emulator-5556: el Home arranca sin bloque Streaming (`build/v236-home.png`), 0 titulos
+  "Streaming" en el dump de vistas, y el resto de secciones siguen visibles ("El nuevo streaming de
+  hoy", "Novedades de hoy", "Estreno en cine", "Telenovela Popular", "Scream Series"...). Regresion:
+  rail con foco, cajon de secciones abre (`build/v236-drawer2.png`), ENTER en tarjeta ->
+  `VideoPlayDetailActivity` y el video reproduce (00:34/57:15, `build/v236-detail2.png`).
+  0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, 0 logs `TvFeedDiag` residuales.
+- Detalle: [sesion 47](docs/sesiones/sesion-47-bloque-streaming-home.md).
+

@@ -733,6 +733,51 @@
     .line 18
     check-cast v2, Lcom/mgs/carparking/netbean/HomeMultipleEntry;
 
+    # --- TV: se descarta la entrada "Streaming" (type 10 / module_id 4969) ---
+    # El bloque a quitar es UN solo item del feed (titulo + fila de logos).
+    # Se salta a :goto_1 (final del item) para no alterar el resto del feed.
+    # Criterio: type==10 Y (module_id==4969 O module_name=="Streaming").
+    # NO se compara por "contiene streaming" porque existe otro modulo legitimo
+    # llamado "El nuevo streaming de hoy" que debe seguir visible.
+
+    invoke-virtual {v2}, Lcom/mgs/carparking/netbean/HomeMultipleEntry;->getType()I
+
+    move-result v4
+
+    const/16 v5, 0xa
+
+    if-ne v4, v5, :not_streaming
+
+    invoke-virtual {v2}, Lcom/mgs/carparking/netbean/HomeMultipleEntry;->getModule_id()I
+
+    move-result v4
+
+    const/16 v5, 0x1369
+
+    if-eq v4, v5, :skip_streaming
+
+    invoke-virtual {v2}, Lcom/mgs/carparking/netbean/HomeMultipleEntry;->getModule_name()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :not_streaming
+
+    const-string v5, "Streaming"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :not_streaming
+
+    :skip_streaming
+    # Se restaura v3 = 1: :goto_1 lo usa en "if-ne v1, v3" y el bloque de ads
+    # puede haberlo dejado con tipo objeto (VerifyError si se comparan tipos).
+    const/4 v3, 0x1
+
+    goto :goto_1
+
+    :not_streaming
     .line 19
     .line 20
     .line 21
