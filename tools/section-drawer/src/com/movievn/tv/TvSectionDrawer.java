@@ -69,6 +69,10 @@ public final class TvSectionDrawer {
     private static final long CLOSE_MS = 180L;
     private static final long FOCUS_DELAY_MS = 70L;
     private static final long RESTORE_DELAY_MS = 260L;
+    /** Debounce del trabajo de sincronizacion de la barra superior (v234). */
+    private static final long SYNC_DEBOUNCE_MS = 120L;
+    /** Frecuencia minima con la que se consulta el badge de actualizacion (v234). */
+    private static final long BADGE_REFRESH_MS = 4000L;
 
     /** Acento Apple TV: blanco para el item seleccionado (UI neutra). */
     private static final int COLOR_ACCENT = 0xFFFFFFFF;
@@ -119,6 +123,31 @@ public final class TvSectionDrawer {
     private boolean contentBlocked;
     private View lastItemFocus;
     private View updateTopBadge;
+
+    /**
+     * Estado cacheado de los recursos que antes se resolvian con {@code getIdentifier}
+     * en cada pasada de layout (v234). {@code getIdentifier} recorre la tabla de
+     * recursos: resolverlo una sola vez quita decenas de llamadas por Home.
+     */
+    private int lookId;
+    private int downloadId;
+    private int searchId;
+    private int refreshId;
+    private int moreIconId;
+    private int ringId;
+    private int topIconSize;
+
+    /** Barra superior vigente (la del Home) para detectar si hay que re-cablearla. */
+    private ViewGroup topBar;
+    /** Ultimo estado del badge de actualizacion: -1 desconocido, 0 oculto, 1 visible. */
+    private int badgeState = -1;
+    /** La barra inferior solo se oculta una vez. */
+    private boolean bottomBarHidden;
+    /** Hay una sincronizacion diferida pendiente (debounce del layout global). */
+    private boolean syncPending;
+    private final SyncTask syncTask = new SyncTask(this);
+    /** Ultima vez que se consulto el badge de actualizacion (ms). */
+    private long lastBadgeCheck;
 
     private static final class Item {
         final int index;
@@ -206,6 +235,7 @@ public final class TvSectionDrawer {
         itemHeight = dimen("tv_drawer_item_height", 64);
         iconSize = dimen("tv_drawer_icon", 32);
         labelSizePx = dimenFloat("tv_drawer_label_size", 18f);
+        resolveIds();
 
         hideBottomBar();
         createFallbackButton();
@@ -227,11 +257,14 @@ public final class TvSectionDrawer {
         } catch (Throwable ignored) { }
         Log.i(TAG, "cajon de secciones listo (" + items.size() + " items, seccion "
                 + selectedTab + ")");
+        scheduleSettle();
         return true;
     }
 
     /** La barra inferior deja de existir como UI y libera su alto. */
     private void hideBottomBar() {
+        if (bottomBarHidden) return;
+        bottomBarHidden = true;
         if (tabsView != null && tabsView.getVisibility() != View.GONE) {
             tabsView.setVisibility(View.GONE);
         }
@@ -245,6 +278,22 @@ public final class TvSectionDrawer {
                 }
             }
         }
+    }
+
+    /**
+     * Resuelve una sola vez los ids/dimensiones que usan el montaje y la
+     * sincronizacion de la barra superior (v234). Antes cada pasada de layout
+     * llamaba a {@code getIdentifier} ~10 veces.
+     */
+    private void resolveIds() {
+        lookId = resId("id", "iv_look");
+        downloadId = resId("id", "iv_download");
+        searchId = resId("id", "rl_home_top_search");
+        refreshId = resId("id", "btn_home_refresh");
+        ringId = resId("drawable", "bg_focused");
+        topIconSize = dimen("tv_top_icon", 38);
+        moreIconId = resId("drawable", "ic_more_dots");
+        if (moreIconId == 0) moreIconId = resId("drawable", "ic_more_dots_tv");
     }
 
     private void createScrim() {
@@ -304,13 +353,11 @@ public final class TvSectionDrawer {
     /** Boton flotante de tres puntos para las secciones que no tienen barra superior. */
     private void createFallbackButton() {
         ImageView b = new ImageView(activity);
-        int icon = resId("drawable", "ic_more_dots");
-        if (icon != 0) b.setImageResource(icon);
+        if (moreIconId != 0) b.setImageResource(moreIconId);
         int fab = resId("drawable", "tv_drawer_fab_bg");
         if (fab != 0) b.setBackgroundResource(fab);
-        int ring = resId("drawable", "bg_focused");
-        if (ring != 0) b.setForeground(activity.getResources().getDrawable(ring));
-        int size = dimen("tv_top_icon", 38);
+        if (ringId != 0) b.setForeground(activity.getResources().getDrawable(ringId));
+        int size = topIconSize;
         b.setPadding(dp(7), dp(7), dp(7), dp(7));
         b.setScaleType(ImageView.ScaleType.FIT_CENTER);
         b.setFocusable(true);
@@ -341,7 +388,6 @@ public final class TvSectionDrawer {
      */
     private void ensureButton() {
         View decor = activity.getWindow().getDecorView();
-        int lookId = resId("id", "iv_look");
         if (lookId == 0) return;
         View look = activity.findViewById(lookId);
         if (look == null) {
@@ -362,18 +408,15 @@ public final class TvSectionDrawer {
         } else {
             if (!(top instanceof RelativeLayout)) return;
             b = new ImageView(activity);
-            int icon = resId("drawable", "ic_more_dots");
-            if (icon != 0) b.setImageResource(icon);
-            int ring = resId("drawable", "bg_focused");
-            if (ring != 0) b.setForeground(activity.getResources().getDrawable(ring));
-            int size = dimen("tv_top_icon", 38);
+            if (moreIconId != 0) b.setImageResource(moreIconId);
+            if (ringId != 0) b.setForeground(activity.getResources().getDrawable(ringId));
+            int size = topIconSize;
             b.setPadding(dp(7), dp(7), dp(7), dp(7));
             b.setScaleType(ImageView.ScaleType.FIT_CENTER);
             b.setId(View.generateViewId());
             b.setTag(TAG_MORE);
             b.setContentDescription("Secciones");
 
-            int downloadId = resId("id", "iv_download");
             RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(size, size);
             lp.addRule(RelativeLayout.RIGHT_OF, downloadId);
             lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
@@ -401,9 +444,8 @@ public final class TvSectionDrawer {
                 int uicon = resId("drawable", "ic_update_flaticon");
                 if (uicon == 0) uicon = resId("drawable", "ic_update_tv");
                 if (uicon != 0) ub.setImageResource(uicon);
-                int ring = resId("drawable", "bg_focused");
-                if (ring != 0) ub.setForeground(activity.getResources().getDrawable(ring));
-                int size = dimen("tv_top_icon", 38);
+                if (ringId != 0) ub.setForeground(activity.getResources().getDrawable(ringId));
+                int size = topIconSize;
                 ub.setPadding(dp(4), dp(4), dp(4), dp(4));
                 ub.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ub.setFocusable(true);
@@ -413,7 +455,6 @@ public final class TvSectionDrawer {
                 ub.setId(uid != 0 ? uid : View.generateViewId());
                 ub.setTag("tv_update_button");
                 ub.setContentDescription("Actualizar");
-                int downloadId = resId("id", "iv_download");
                 RelativeLayout.LayoutParams ulp = new RelativeLayout.LayoutParams(size, size);
                 ulp.addRule(RelativeLayout.RIGHT_OF, downloadId);
                 ulp.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -444,6 +485,7 @@ public final class TvSectionDrawer {
             }
         }
         updateButton = ub;
+        topBar = top;
         wireTopFocus(top, look, moreButton);
         refreshUpdateBadge();
     }
@@ -453,10 +495,6 @@ public final class TvSectionDrawer {
      * buscador -> actualizar -> historial -> descarga -> menu lateral -> buscador.
      */
     private void wireTopFocus(ViewGroup top, View look, ImageView more) {
-        int searchId = resId("id", "rl_home_top_search");
-        int refreshId = resId("id", "btn_home_refresh");
-        int downloadId = resId("id", "iv_download");
-
         View search = searchId != 0 ? top.findViewById(searchId) : null;
         View refresh = refreshId != 0 ? top.findViewById(refreshId) : null;
         View download = downloadId != 0 ? top.findViewById(downloadId) : null;
@@ -535,8 +573,7 @@ public final class TvSectionDrawer {
             row.setDefaultFocusHighlightEnabled(false);
         }
         row.setBackground(buildRowBackground());
-        int ring = resId("drawable", "bg_focused");
-        if (ring != 0) row.setForeground(activity.getResources().getDrawable(ring));
+        if (ringId != 0) row.setForeground(activity.getResources().getDrawable(ringId));
         row.setContentDescription(title);
 
         View marker = new View(activity);
@@ -646,9 +683,14 @@ public final class TvSectionDrawer {
     }
 
     private void refreshUpdateBadge() {
-        if (updateTopBadge != null) {
-            updateTopBadge.setVisibility(TvGithubUpdate.hasUpdate(activity) ? View.VISIBLE : View.GONE);
-        }
+        if (updateTopBadge == null) return;
+        // v234: hasUpdate() abre SharedPreferences (y getPackageInfo si hay update);
+        // con el estado cacheado solo se paga cuando el valor cambia.
+        boolean show = TvGithubUpdate.hasUpdate(activity);
+        int state = show ? 1 : 0;
+        if (state == badgeState) return;
+        badgeState = state;
+        updateTopBadge.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
     private void select(Item item) {
@@ -672,6 +714,9 @@ public final class TvSectionDrawer {
         selectedTab = index;
         applySelection();
         close();
+        // v234: el Home puede estar vivo pero oculto (el contenedor conserva el fragment);
+        // al volver hay que reevaluar el boton flotante sin depender de un layout nuevo.
+        scheduleSettle();
     }
 
     private void move(Item from, int delta) {
@@ -790,6 +835,80 @@ public final class TvSectionDrawer {
             }
         }
         return v.isFocusable() && v.isShown() ? v : null;
+    }
+
+    // ------------------------------------------------------------ sync barra
+
+    /**
+     * Pide una sincronizacion diferida de la barra superior (v234).
+     *
+     * <p>Antes el {@code OnGlobalLayoutListener} ejecutaba en <b>cada</b> pasada de
+     * layout: {@code getIdentifier} x ~10, {@code findViewWithTag},
+     * {@code setOnClickListener} nuevos y {@code TvGithubUpdate.hasUpdate()}
+     * (SharedPreferences). Con el Home cargando imagenes hay decenas de pasadas.
+     * Ahora el listener solo marca la peticion y el trabajo se hace una vez por
+     * rafaga, y solo si hace falta.</p>
+     */
+    private void requestSync() {
+        if (syncPending || !ready) return;
+        syncPending = true;
+        handler.postDelayed(syncTask, SYNC_DEBOUNCE_MS);
+    }
+
+    /**
+     * Trabajo diferido del layout: comprobacion barata primero (la barra superior
+     * cacheada sigue viva) y recableado completo solo si la seccion cambio y el
+     * arbol se reinfló.
+     */
+    private void sync() {
+        syncPending = false;
+        if (!ready) return;
+        hideBottomBar();
+
+        View decor = activity.getWindow().getDecorView();
+        boolean topAlive = topBar != null && moreButton != null
+                && moreButton.getParent() == topBar
+                && topBar.getRootView() == decor
+                && topBar.isAttachedToWindow();
+
+        if (topAlive) {
+            ensureItems();
+            updateFallback();
+            maybeRefreshBadge();
+            return;
+        }
+
+        ensureItems();
+        ensureButton();
+        updateFallback();
+    }
+
+    /** Refresco del badge como maximo cada {@link #BADGE_REFRESH_MS}. */
+    private void maybeRefreshBadge() {
+        long now = System.currentTimeMillis();
+        if (now - lastBadgeCheck < BADGE_REFRESH_MS) return;
+        lastBadgeCheck = now;
+        refreshUpdateBadge();
+    }
+
+    /**
+     * Remates acotados tras montar o cambiar de seccion: dos pasadas (350 ms y 1,1 s)
+     * para reevaluar el boton flotante y el badge cuando la visibilidad del Home
+     * cambia sin que haya una nueva pasada de layout. No es un bucle: son dos.
+     */
+    private void scheduleSettle() {
+        handler.removeCallbacks(syncTask);
+        syncPending = false;
+        handler.postDelayed(syncTask, 350L);
+        handler.postDelayed(syncTask, 1100L);
+    }
+
+    private void ensureItems() {
+        if (items.isEmpty() && tabsView != null && tabsView.getChildCount() > 0) {
+            rebuildItems();
+            selectedTab = currentTab();
+            applySelection();
+        }
     }
 
     // ------------------------------------------------------------ listeners
@@ -951,6 +1070,10 @@ public final class TvSectionDrawer {
         }
     }
 
+    /**
+     * Listener de layout global: en v234 ya no hace trabajo, solo pide una
+     * sincronizacion diferida (debounce) que comprueba si la barra sigue viva.
+     */
     private static final class LayoutWatcher
             implements ViewTreeObserver.OnGlobalLayoutListener {
         private final TvSectionDrawer drawer;
@@ -961,16 +1084,20 @@ public final class TvSectionDrawer {
 
         @Override
         public void onGlobalLayout() {
-            drawer.hideBottomBar();
-            if (drawer.items.isEmpty() && drawer.tabsView != null
-                    && drawer.tabsView.getChildCount() > 0) {
-                drawer.rebuildItems();
-                drawer.selectedTab = drawer.currentTab();
-                drawer.applySelection();
-            }
-            drawer.ensureButton();
-            drawer.updateFallback();
-            drawer.refreshUpdateBadge();
+            drawer.requestSync();
+        }
+    }
+
+    private static final class SyncTask implements Runnable {
+        private final TvSectionDrawer drawer;
+
+        SyncTask(TvSectionDrawer drawer) {
+            this.drawer = drawer;
+        }
+
+        @Override
+        public void run() {
+            drawer.sync();
         }
     }
 

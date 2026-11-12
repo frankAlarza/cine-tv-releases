@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;Lcom/movievn/tv/TvSectionDrawer$Item;)V
     .locals 0
 
-    .line 860
+    .line 979
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 861
+    .line 980
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 862
+    .line 981
     iput-object p2, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->item:Lcom/movievn/tv/TvSectionDrawer$Item;
 
-    .line 863
+    .line 982
     return-void
 .end method
 
@@ -45,14 +45,14 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 867
+    .line 986
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->item:Lcom/movievn/tv/TvSectionDrawer$Item;
 
     iget p1, p1, Lcom/movievn/tv/TvSectionDrawer$Item;->index:I
 
     if-gez p1, :cond_0
 
-    .line 869
+    .line 988
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fgetactivity(Lcom/movievn/tv/TvSectionDrawer;)Landroid/app/Activity;
@@ -61,15 +61,15 @@
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->show(Landroid/app/Activity;)V
 
-    .line 870
+    .line 989
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mclose(Lcom/movievn/tv/TvSectionDrawer;)V
 
-    .line 871
+    .line 990
     return-void
 
-    .line 873
+    .line 992
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$ItemClick;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
@@ -77,6 +77,6 @@
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$mselect(Lcom/movievn/tv/TvSectionDrawer;Lcom/movievn/tv/TvSectionDrawer$Item;)V
 
-    .line 874
+    .line 993
     return-void
 .end method

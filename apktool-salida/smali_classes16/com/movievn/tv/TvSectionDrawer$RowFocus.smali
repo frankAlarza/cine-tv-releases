@@ -25,13 +25,13 @@
 .method constructor <init>(Lcom/movievn/tv/TvSectionDrawer;)V
     .locals 0
 
-    .line 913
+    .line 1032
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 914
+    .line 1033
     iput-object p1, p0, Lcom/movievn/tv/TvSectionDrawer$RowFocus;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
-    .line 915
+    .line 1034
     return-void
 .end method
 
@@ -40,15 +40,15 @@
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 0
 
-    .line 919
+    .line 1038
     if-eqz p2, :cond_0
 
-    .line 920
+    .line 1039
     iget-object p2, p0, Lcom/movievn/tv/TvSectionDrawer$RowFocus;->drawer:Lcom/movievn/tv/TvSectionDrawer;
 
     invoke-static {p2, p1}, Lcom/movievn/tv/TvSectionDrawer;->-$$Nest$fputlastItemFocus(Lcom/movievn/tv/TvSectionDrawer;Landroid/view/View;)V
 
-    .line 922
+    .line 1041
     :cond_0
     return-void
 .end method
