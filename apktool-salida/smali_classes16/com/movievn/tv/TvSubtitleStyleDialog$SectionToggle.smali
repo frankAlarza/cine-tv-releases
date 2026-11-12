@@ -37,7 +37,7 @@
         }
     .end annotation
 
-    .line 304
+    .line 308
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionToggle;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +52,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 306
+    .line 310
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionToggle;->block:Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;
 
     if-eqz p1, :cond_0
@@ -61,7 +61,7 @@
 
     invoke-virtual {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->toggle()V
 
-    .line 307
+    .line 311
     :cond_0
     return-void
 .end method

@@ -106,14 +106,14 @@ public class TvSubtitleStyleDialog {
         TextView title = new TextView(activity);
         title.setText("Estilo de subtitulos");
         title.setTextColor(TEXT_PRIMARY);
-        title.setTextSize(22f);
+        title.setTextSize(18f);
         title.setPadding(0, 0, 0, dp(6));
         root.addView(title);
 
         TextView subtitle = new TextView(activity);
         subtitle.setText("Personaliza la apariencia de los subtitulos");
         subtitle.setTextColor(TEXT_SECONDARY);
-        subtitle.setTextSize(13f);
+        subtitle.setTextSize(10.5f);
         subtitle.setPadding(0, 0, 0, dp(16));
         root.addView(subtitle);
 
@@ -128,7 +128,7 @@ public class TvSubtitleStyleDialog {
         previewBox.setBackground(pbg);
         previewBox.setPadding(dp(20), dp(40), dp(20), dp(40));
         preview = new TextView(activity);
-        preview.setText("Ejemplo de subtitulo\nSample subtitle text");
+        preview.setText("Ejemplo de subtitulo");
         preview.setGravity(Gravity.CENTER);
         previewBox.addView(preview);
         LinearLayout.LayoutParams pbLp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -168,7 +168,7 @@ public class TvSubtitleStyleDialog {
         TextView reset = new TextView(activity);
         reset.setText("Restablecer");
         reset.setTextColor(SECTION_COLOR);
-        reset.setTextSize(15f);
+        reset.setTextSize(12f);
         reset.setGravity(Gravity.CENTER);
         reset.setPadding(dp(20), dp(12), dp(20), dp(12));
         reset.setFocusable(true);
@@ -191,7 +191,7 @@ public class TvSubtitleStyleDialog {
         TextView accept = new TextView(activity);
         accept.setText("Aceptar");
         accept.setTextColor(TEXT_PRIMARY);
-        accept.setTextSize(15f);
+        accept.setTextSize(12f);
         accept.setGravity(Gravity.CENTER);
         accept.setPadding(dp(20), dp(12), dp(20), dp(12));
         accept.setFocusable(true);
@@ -221,6 +221,10 @@ public class TvSubtitleStyleDialog {
         dialog = builder.create();
         try {
             if (dialog.getWindow() != null) {
+                android.util.DisplayMetrics dm = activity.getResources().getDisplayMetrics();
+                android.view.WindowManager.LayoutParams lp = dialog.getWindow().getAttributes();
+                lp.width = (int) (dm.widthPixels * 0.72);
+                dialog.getWindow().setAttributes(lp);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0x00000000));
             }
         } catch (Throwable t) { }
@@ -249,7 +253,7 @@ public class TvSubtitleStyleDialog {
         TextView titleTv = new TextView(activity);
         titleTv.setText(text);
         titleTv.setTextColor(TEXT_PRIMARY);
-        titleTv.setTextSize(15f);
+        titleTv.setTextSize(12f);
         LinearLayout.LayoutParams tlp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
         titleTv.setLayoutParams(tlp);
         header.addView(titleTv);
@@ -257,7 +261,7 @@ public class TvSubtitleStyleDialog {
         TextView ind = new TextView(activity);
         ind.setText(initiallyExpanded ? "-" : "+");
         ind.setTextColor(SECTION_COLOR);
-        ind.setTextSize(14f);
+        ind.setTextSize(11f);
         ind.setPadding(dp(8), 0, 0, 0);
         header.addView(ind);
 
@@ -343,7 +347,7 @@ public class TvSubtitleStyleDialog {
         TextView lbl = new TextView(activity);
         lbl.setText(label);
         lbl.setTextColor(TEXT_SECONDARY);
-        lbl.setTextSize(15f);
+        lbl.setTextSize(12f);
         LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
         lbl.setLayoutParams(llp);
         row.addView(lbl);
@@ -351,7 +355,7 @@ public class TvSubtitleStyleDialog {
         TextView val = new TextView(activity);
         val.setText(value);
         val.setTextColor(VALUE_COLOR);
-        val.setTextSize(15f);
+        val.setTextSize(12f);
         val.setGravity(Gravity.END);
         row.addView(val);
 
@@ -407,7 +411,8 @@ public class TvSubtitleStyleDialog {
     }
 
     private int dp(int v) {
-        return Math.round(v * activity.getResources().getDisplayMetrics().density);
+        // Modal ~20% mas compacto para pantallas grandes.
+        return Math.round(v * 0.8f * activity.getResources().getDisplayMetrics().density);
     }
 
     private int indexOf(int[] arr, int val) {

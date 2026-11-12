@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 445
+    .line 450
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 447
+    .line 452
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
@@ -67,7 +67,7 @@
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputsize(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 448
+    .line 453
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetsizeVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
@@ -96,12 +96,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 449
+    .line 454
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
 
-    .line 450
+    .line 455
     return-void
 .end method

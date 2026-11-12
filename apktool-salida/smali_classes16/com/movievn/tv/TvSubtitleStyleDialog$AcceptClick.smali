@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 539
+    .line 544
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 541
+    .line 546
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -61,7 +61,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
 
-    .line 542
+    .line 547
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -76,7 +76,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
 
-    .line 543
+    .line 548
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -97,7 +97,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->textColor:I
 
-    .line 544
+    .line 549
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -112,7 +112,7 @@
 
     iput-boolean v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
 
-    .line 545
+    .line 550
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -133,7 +133,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->shadowColor:I
 
-    .line 546
+    .line 551
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -148,7 +148,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
 
-    .line 547
+    .line 552
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -163,7 +163,7 @@
 
     iput-boolean v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->backgroundEnabled:Z
 
-    .line 548
+    .line 553
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -184,7 +184,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->backgroundColor:I
 
-    .line 549
+    .line 554
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -199,7 +199,7 @@
 
     iput v0, p1, Lcom/movievn/tv/TvSubtitleStyle;->position:I
 
-    .line 550
+    .line 555
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
@@ -214,10 +214,10 @@
 
     invoke-virtual {p1, v0}, Lcom/movievn/tv/TvSubtitleStyle;->save(Landroid/content/Context;)V
 
-    .line 551
+    .line 556
     invoke-static {}, Lcom/movievn/tv/TvPlayerBar;->applySubtitleStyleToActive()V
 
-    .line 552
+    .line 557
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetdialog(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/app/AlertDialog;
@@ -234,7 +234,7 @@
 
     invoke-virtual {p1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 553
+    .line 558
     :cond_0
     return-void
 .end method

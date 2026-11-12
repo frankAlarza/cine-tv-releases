@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 504
+    .line 509
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 506
+    .line 511
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
@@ -67,7 +67,7 @@
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputposition(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 507
+    .line 512
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetpositionVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
@@ -96,12 +96,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 508
+    .line 513
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
 
-    .line 509
+    .line 514
     return-void
 .end method

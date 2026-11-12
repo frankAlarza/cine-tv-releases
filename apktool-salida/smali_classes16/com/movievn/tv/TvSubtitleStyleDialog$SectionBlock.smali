@@ -42,24 +42,24 @@
         }
     .end annotation
 
-    .line 286
+    .line 290
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 287
+    .line 291
     iput-object p2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->content:Landroid/widget/LinearLayout;
 
-    .line 288
+    .line 292
     iput-object p3, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->indicator:Landroid/widget/TextView;
 
-    .line 289
+    .line 293
     iput-boolean p4, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->expanded:Z
 
-    .line 290
+    .line 294
     invoke-virtual {p0}, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->apply()V
 
-    .line 291
+    .line 295
     return-void
 .end method
 
@@ -68,7 +68,7 @@
 .method apply()V
     .locals 2
 
-    .line 297
+    .line 301
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->content:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_1
@@ -89,7 +89,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 298
+    .line 302
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->indicator:Landroid/widget/TextView;
 
@@ -111,7 +111,7 @@
     :goto_1
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 299
+    .line 303
     :cond_3
     return-void
 .end method
@@ -119,16 +119,16 @@
 .method toggle()V
     .locals 1
 
-    .line 293
+    .line 297
     iget-boolean v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->expanded:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     iput-boolean v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->expanded:Z
 
-    .line 294
+    .line 298
     invoke-virtual {p0}, Lcom/movievn/tv/TvSubtitleStyleDialog$SectionBlock;->apply()V
 
-    .line 295
+    .line 299
     return-void
 .end method

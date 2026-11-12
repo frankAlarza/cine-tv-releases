@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 512
+    .line 517
     iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,56 +46,56 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .line 514
+    .line 519
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputfont(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 515
+    .line 520
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     const/4 v1, 0x1
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputsize(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 516
+    .line 521
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputtextColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 517
+    .line 522
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;Z)V
 
-    .line 518
+    .line 523
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputshadowColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 519
+    .line 524
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputoffset(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 520
+    .line 525
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputbg(Lcom/movievn/tv/TvSubtitleStyleDialog;Z)V
 
-    .line 521
+    .line 526
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputbgColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 522
+    .line 527
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputposition(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    .line 523
+    .line 528
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetfontVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
@@ -124,7 +124,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 524
+    .line 529
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -154,7 +154,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 525
+    .line 530
     :cond_1
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -184,7 +184,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 526
+    .line 531
     :cond_2
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -222,7 +222,7 @@
     :goto_0
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 527
+    .line 532
     :cond_4
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -252,7 +252,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 528
+    .line 533
     :cond_5
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -282,7 +282,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 529
+    .line 534
     :cond_6
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -314,7 +314,7 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 530
+    .line 535
     :cond_8
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -344,7 +344,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 531
+    .line 536
     :cond_9
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -374,7 +374,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 532
+    .line 537
     :cond_a
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
@@ -398,7 +398,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mupdateDot(Lcom/movievn/tv/TvSubtitleStyleDialog;Landroid/view/View;I)V
 
-    .line 533
+    .line 538
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
@@ -421,7 +421,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mupdateDot(Lcom/movievn/tv/TvSubtitleStyleDialog;Landroid/view/View;I)V
 
-    .line 534
+    .line 539
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
@@ -444,11 +444,11 @@
 
     invoke-static {p1, v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mupdateDot(Lcom/movievn/tv/TvSubtitleStyleDialog;Landroid/view/View;I)V
 
-    .line 535
+    .line 540
     iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
     invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
 
-    .line 536
+    .line 541
     return-void
 .end method
