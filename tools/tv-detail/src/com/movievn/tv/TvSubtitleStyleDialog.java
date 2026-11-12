@@ -135,29 +135,29 @@ public class TvSubtitleStyleDialog {
         pbLp.bottomMargin = dp(20);
         root.addView(previewBox, pbLp);
 
-        // Seccion Tipografia
-        addSection(root, "TIPOGRAFIA");
-        fontVal = addRow(activity, root, "Fuente", FONT_NAMES[font], -1, new FontClick());
-        sizeVal = addRow(activity, root, "Tamano", SIZE_NAMES[size], -1, new SizeClick());
-        textColorVal = addColorRow(activity, root, "Color texto", TEXT_COLOR_NAMES[textColorIdx], TEXT_COLOR_VALUES[textColorIdx], new TextColorClick());
+        // Seccion Tipografia (expandida por defecto)
+        LinearLayout secTypo = addSection(root, "TIPOGRAFIA", true);
+        fontVal = addRow(activity, secTypo, "Fuente", FONT_NAMES[font], -1, new FontClick());
+        sizeVal = addRow(activity, secTypo, "Tamano", SIZE_NAMES[size], -1, new SizeClick());
+        textColorVal = addColorRow(activity, secTypo, "Color texto", TEXT_COLOR_NAMES[textColorIdx], TEXT_COLOR_VALUES[textColorIdx], new TextColorClick());
         textColorDot = lastDot;
 
-        // Seccion Sombra
-        addSection(root, "SOMBRA");
-        shadowVal = addRow(activity, root, "Sombra", shadow ? "ON" : "OFF", -1, new ShadowClick());
-        shadowColorVal = addColorRow(activity, root, "Color sombra", SHADOW_COLOR_NAMES[shadowColorIdx], SHADOW_COLOR_VALUES[shadowColorIdx], new ShadowColorClick());
+        // Seccion Sombra (colapsada por defecto)
+        LinearLayout secShadow = addSection(root, "SOMBRA", false);
+        shadowVal = addRow(activity, secShadow, "Sombra", shadow ? "ON" : "OFF", -1, new ShadowClick());
+        shadowColorVal = addColorRow(activity, secShadow, "Color sombra", SHADOW_COLOR_NAMES[shadowColorIdx], SHADOW_COLOR_VALUES[shadowColorIdx], new ShadowColorClick());
         shadowColorDot = lastDot;
-        offsetVal = addRow(activity, root, "Offset sombra", OFFSET_NAMES[offset], -1, new OffsetClick());
+        offsetVal = addRow(activity, secShadow, "Offset sombra", OFFSET_NAMES[offset], -1, new OffsetClick());
 
-        // Seccion Fondo
-        addSection(root, "FONDO");
-        bgVal = addRow(activity, root, "Caja fondo", bg ? "ON" : "OFF", -1, new BgClick());
-        bgColorVal = addColorRow(activity, root, "Color caja", BG_COLOR_NAMES[bgColorIdx], BG_COLOR_VALUES[bgColorIdx], new BgColorClick());
+        // Seccion Fondo (colapsada por defecto)
+        LinearLayout secBg = addSection(root, "FONDO", false);
+        bgVal = addRow(activity, secBg, "Caja fondo", bg ? "ON" : "OFF", -1, new BgClick());
+        bgColorVal = addColorRow(activity, secBg, "Color caja", BG_COLOR_NAMES[bgColorIdx], BG_COLOR_VALUES[bgColorIdx], new BgColorClick());
         bgColorDot = lastDot;
 
-        // Seccion Posicion
-        addSection(root, "POSICION");
-        positionVal = addRow(activity, root, "Posicion", POSITION_NAMES[position], -1, new PositionClick());
+        // Seccion Posicion (colapsada por defecto)
+        LinearLayout secPos = addSection(root, "POSICION", false);
+        positionVal = addRow(activity, secPos, "Posicion", POSITION_NAMES[position], -1, new PositionClick());
 
         // Botones
         LinearLayout btnRow = new LinearLayout(activity);
@@ -229,15 +229,82 @@ public class TvSubtitleStyleDialog {
         refreshPreview();
     }
 
-    private void addSection(LinearLayout root, String text) {
-        TextView sec = new TextView(activity);
-        sec.setText(text);
-        sec.setTextColor(SECTION_COLOR);
-        sec.setTextSize(11f);
-        sec.setPadding(0, dp(14), 0, dp(6));
-        // letter spacing via paint
-        try { sec.setLetterSpacing(0.12f); } catch (Throwable t) { }
-        root.addView(sec);
+    private LinearLayout addSection(LinearLayout root, String text, boolean initiallyExpanded) {
+        LinearLayout header = new LinearLayout(activity);
+        header.setOrientation(LinearLayout.HORIZONTAL);
+        header.setGravity(Gravity.CENTER_VERTICAL);
+        header.setFocusable(true);
+        header.setClickable(true);
+        header.setPadding(dp(14), dp(12), dp(14), dp(12));
+        int ring = activity.getResources().getIdentifier("bg_focused", "drawable", activity.getPackageName());
+        if (ring != 0) {
+            try { header.setForeground(activity.getResources().getDrawable(ring, activity.getTheme())); } catch (Throwable t) { }
+        }
+        GradientDrawable hbg = new GradientDrawable();
+        hbg.setColor(ROW_BG);
+        hbg.setCornerRadius(dp(12));
+        hbg.setStroke(dp(1), ROW_BORDER);
+        header.setBackground(hbg);
+
+        TextView titleTv = new TextView(activity);
+        titleTv.setText(text);
+        titleTv.setTextColor(TEXT_PRIMARY);
+        titleTv.setTextSize(15f);
+        LinearLayout.LayoutParams tlp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
+        titleTv.setLayoutParams(tlp);
+        header.addView(titleTv);
+
+        TextView ind = new TextView(activity);
+        ind.setText(initiallyExpanded ? "-" : "+");
+        ind.setTextColor(SECTION_COLOR);
+        ind.setTextSize(14f);
+        ind.setPadding(dp(8), 0, 0, 0);
+        header.addView(ind);
+
+        LinearLayout content = new LinearLayout(activity);
+        content.setOrientation(LinearLayout.VERTICAL);
+        content.setVisibility(initiallyExpanded ? View.VISIBLE : View.GONE);
+
+        SectionBlock block = new SectionBlock(content, ind, initiallyExpanded);
+        header.setOnClickListener(new SectionToggle(block));
+
+        LinearLayout.LayoutParams hlp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        hlp.bottomMargin = dp(6);
+        root.addView(header, hlp);
+
+        LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        clp.bottomMargin = dp(8);
+        root.addView(content, clp);
+
+        return content;
+    }
+
+    private class SectionBlock {
+        LinearLayout content;
+        TextView indicator;
+        boolean expanded;
+        SectionBlock(LinearLayout content, TextView indicator, boolean expanded) {
+            this.content = content;
+            this.indicator = indicator;
+            this.expanded = expanded;
+            apply();
+        }
+        void toggle() {
+            expanded = !expanded;
+            apply();
+        }
+        void apply() {
+            if (content != null) content.setVisibility(expanded ? View.VISIBLE : View.GONE);
+            if (indicator != null) indicator.setText(expanded ? "-" : "+");
+        }
+    }
+
+    class SectionToggle implements View.OnClickListener {
+        private final SectionBlock block;
+        SectionToggle(SectionBlock block) { this.block = block; }
+        public void onClick(View v) {
+            if (block != null) block.toggle();
+        }
     }
 
     private TextView addRow(Activity activity, LinearLayout root, String label, String value, int swatchColor, View.OnClickListener onClick) {
