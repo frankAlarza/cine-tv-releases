@@ -540,3 +540,16 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   repetidos de la jerarquia con decenas de logs) y de la inicializacion de `TvSectionDrawer` /
   `TvHeroImage`, no de anuncios.
 - Detalle: [sesion 44](docs/sesiones/sesion-44-chitu-jank-tv.md).
+
+## v233 - Jank no-anuncios del Home: TvStreamHide (barridos repetidos + logs)
+- Sintoma: `TvStreamHide` hacía 4 barridos de jerarquía por carga del Home con decenas de logs cada
+  uno (`scan:` / `step*` / `STOP`), coincidiendo con `Skipped 38-50 frames` y un pico de 86-136
+  frames del overlay "Cargando..." (2,2 s).
+- Fix: reescritura completa de `TvStreamHide` (`tools/stream-hide/src/com/movievn/tv/TvStreamHide.java`):
+  - Eliminado el overlay de "Cargando..." (FrameLayout + ProgressBar + TextView inyectado en el decor de cada activity).
+  - Un único barrido diferido a 200 ms + un respaldo a 800 ms (sin barridos periodicos, sin `OnLayoutChangeListener` persistente).
+  - Resolución del id `tv_title` una sola vez por `getIdentifier`; los resultados se cachean por `View` en `WeakHashSet`s (no se re-procesa un item ya ocultado).
+  - `attach()` se invoca desde `TvSectionDrawer.attach()` (vía reflexión en `TvSectionDrawer.java:225`), no hace falta tocar `MainActivity.smali`.
+  - Nuevo script de puente `tools/build_stream_hide.ps1` (javac → d8 → baksmali → `smali_classes16`, igual que los demás `build_*.ps1`).
+- Version: v233 / versionCode 40036 (ver AGENTS.md §13, `AndroidManifest.xml`).
+- Verificado en emulator-5556: **0 lineas `TvStreamHide`** (antes 145), `chitu_sdk` = 0, `Skipped` en arranque 31 (antes 310), interaccion Home janky 9.51% p50=20ms p99=73ms (antes 38.41% p50=29ms p99=650ms), 0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, MD5 instalado == MD5 construido. Capturas `build/v233-home-final.png` y `build/v233-home-after-scroll.png`. Commit a97df7aa.
