@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;)V
     .locals 0
 
-    .line 1029
+    .line 1066
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$HideSubtitleMessage;->owner:Lcom/movievn/tv/TvPlayerBar;
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1032
+    .line 1069
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$HideSubtitleMessage;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1033
+    .line 1070
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$HideSubtitleMessage;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fgetsubtitleText(Lcom/movievn/tv/TvPlayerBar;)Landroid/widget/TextView;
@@ -58,7 +58,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1035
+    .line 1072
     :cond_0
     return-void
 .end method

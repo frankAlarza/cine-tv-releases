@@ -44,16 +44,16 @@
         }
     .end annotation
 
-    .line 2255
+    .line 2292
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2256
+    .line 2293
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitlePopupPopulateTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2257
+    .line 2294
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitlePopupPopulateTask;->langs:Ljava/util/List;
 
-    .line 2258
+    .line 2295
     return-void
 .end method
 
@@ -62,13 +62,13 @@
 .method public run()V
     .locals 2
 
-    .line 2261
+    .line 2298
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitlePopupPopulateTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     iget-object v1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitlePopupPopulateTask;->langs:Ljava/util/List;
 
     invoke-static {v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mpopulateSubtitlePopup(Lcom/movievn/tv/TvPlayerBar;Ljava/util/List;)V
 
-    .line 2262
+    .line 2299
     return-void
 .end method

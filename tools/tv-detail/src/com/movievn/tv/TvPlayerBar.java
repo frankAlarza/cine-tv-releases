@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -896,7 +897,7 @@ public class TvPlayerBar {
     private void createSubtitleText() {
         TextView tv = new TextView(activity);
         TvSubtitleStyle st = TvSubtitleStyle.load(activity);
-        tv.setTextColor(0xFFFFFFFF);
+        tv.setTextColor(st.textColor);
         tv.setTypeface(st.getTypeface());
         tv.setTextSize(st.getTextSizeSp());
         tv.setGravity(android.view.Gravity.CENTER);
@@ -905,16 +906,21 @@ public class TvPlayerBar {
         } else {
             tv.setShadowLayer(0f, 0f, 0f, 0);
         }
+        if (st.backgroundEnabled) {
+            GradientDrawable gd = new GradientDrawable();
+            gd.setColor(st.backgroundColor);
+            gd.setCornerRadius(dp(6));
+            tv.setBackground(gd);
+            tv.setPadding(dp(10), dp(4), dp(10), dp(4));
+        } else {
+            tv.setBackground(null);
+            tv.setPadding(0, 0, 0, 0);
+        }
         tv.setVisibility(View.GONE);
         tv.setFocusable(false);
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        if (video != null && video.getId() != View.NO_ID) {
-            lp.addRule(RelativeLayout.ALIGN_BOTTOM, video.getId());
-        } else {
-            lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        }
-        lp.bottomMargin = dp(60);
+        applySubtitlePosition(lp, st.position);
         lp.leftMargin = dp(16);
         lp.rightMargin = dp(16);
         tv.setLayoutParams(lp);
@@ -923,11 +929,26 @@ public class TvPlayerBar {
         Log.i(TAG, "TextView de subtitulos anadido");
     }
 
+    private void applySubtitlePosition(RelativeLayout.LayoutParams lp, int position) {
+        if (position == 1) {
+            lp.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            lp.topMargin = dp(60);
+        } else {
+            if (video != null && video.getId() != View.NO_ID) {
+                lp.addRule(RelativeLayout.ALIGN_BOTTOM, video.getId());
+            } else {
+                lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            }
+            lp.bottomMargin = dp(60);
+        }
+    }
+
     /** Re-aplica el estilo de subtitulos (llamado tras cambiarlo en el dialogo). */
     public void applySubtitleStyle() {
         if (subtitleText == null) return;
         try {
             TvSubtitleStyle st = TvSubtitleStyle.load(activity);
+            subtitleText.setTextColor(st.textColor);
             subtitleText.setTypeface(st.getTypeface());
             subtitleText.setTextSize(st.getTextSizeSp());
             if (st.shadowEnabled) {
@@ -935,6 +956,22 @@ public class TvPlayerBar {
             } else {
                 subtitleText.setShadowLayer(0f, 0f, 0f, 0);
             }
+            if (st.backgroundEnabled) {
+                GradientDrawable gd = new GradientDrawable();
+                gd.setColor(st.backgroundColor);
+                gd.setCornerRadius(dp(6));
+                subtitleText.setBackground(gd);
+                subtitleText.setPadding(dp(10), dp(4), dp(10), dp(4));
+            } else {
+                subtitleText.setBackground(null);
+                subtitleText.setPadding(0, 0, 0, 0);
+            }
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            applySubtitlePosition(lp, st.position);
+            lp.leftMargin = dp(16);
+            lp.rightMargin = dp(16);
+            subtitleText.setLayoutParams(lp);
         } catch (Throwable t) {
             Log.w(TAG, "applySubtitleStyle: " + t);
         }

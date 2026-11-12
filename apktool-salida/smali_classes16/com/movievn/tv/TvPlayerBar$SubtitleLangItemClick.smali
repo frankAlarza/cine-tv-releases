@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
     .locals 0
 
-    .line 2220
+    .line 2257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2221
+    .line 2258
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 2222
+    .line 2259
     iput-object p2, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->langCode:Ljava/lang/String;
 
-    .line 2223
+    .line 2260
     return-void
 .end method
 
@@ -45,7 +45,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .line 2227
+    .line 2264
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->langCode:Ljava/lang/String;
 
     const-string v0, "off"
@@ -62,7 +62,7 @@
 
     goto :goto_1
 
-    .line 2240
+    .line 2277
     :cond_0
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    .line 2241
+    .line 2278
     if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -81,7 +81,7 @@
 
     goto :goto_0
 
-    .line 2245
+    .line 2282
     :cond_1
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
@@ -93,7 +93,7 @@
 
     move-result v0
 
-    .line 2246
+    .line 2283
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/movievn/tv/TvPlayerBar$SubtitleDownloadTask;
@@ -106,75 +106,75 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2247
+    .line 2284
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 2248
+    .line 2285
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mcloseSubtitlePopup(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2249
+    .line 2286
     return-void
 
-    .line 2242
+    .line 2279
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mcloseSubtitlePopup(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2243
+    .line 2280
     return-void
 
-    .line 2229
+    .line 2266
     :cond_3
     :goto_1
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputcurrentSubtitleLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2230
+    .line 2267
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleEnabled(Lcom/movievn/tv/TvPlayerBar;Z)V
 
-    .line 2231
+    .line 2268
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$fputsubtitleLoadedLang(Lcom/movievn/tv/TvPlayerBar;Ljava/lang/String;)V
 
-    .line 2232
+    .line 2269
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mstopSubtitleSync(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2233
+    .line 2270
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mhideSubtitleSyncControls(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2234
+    .line 2271
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mupdateLangDisplay(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2235
+    .line 2272
     iget-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SubtitleLangItemClick;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {p1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mcloseSubtitlePopup(Lcom/movievn/tv/TvPlayerBar;)V
 
-    .line 2236
+    .line 2273
     const-string p1, "TvPlayerBar"
 
     const-string v0, "Subtitulos desactivados (popup)"
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2237
+    .line 2274
     return-void
 .end method

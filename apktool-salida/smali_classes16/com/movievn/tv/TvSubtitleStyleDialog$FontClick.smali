@@ -12,83 +12,96 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = "FontClick"
 .end annotation
 
 
 # instance fields
-.field private final font:[I
-
-.field private final names:[Ljava/lang/String;
-
-.field private final valH:[Landroid/widget/TextView;
+.field final synthetic this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
 
 # direct methods
-.method constructor <init>([I[Landroid/widget/TextView;[Ljava/lang/String;)V
+.method constructor <init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
 
-    .line 180
+    .line 358
+    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 181
-    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->font:[I
-
-    iput-object p2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->valH:[Landroid/widget/TextView;
-
-    iput-object p3, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->names:[Ljava/lang/String;
-
-    .line 182
     return-void
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
-    .line 185
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->font:[I
+    .line 360
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->font:[I
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetfont(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
 
-    aget v0, v0, v1
+    move-result v0
 
     add-int/lit8 v0, v0, 0x1
 
-    iget-object v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->names:[Ljava/lang/String;
+    invoke-static {}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$sfgetFONT_NAMES()[Ljava/lang/String;
 
-    array-length v2, v2
+    move-result-object v1
 
-    rem-int/2addr v0, v2
+    array-length v1, v1
 
-    aput v0, p1, v1
+    rem-int/2addr v0, v1
 
-    .line 186
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->valH:[Landroid/widget/TextView;
+    invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputfont(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
 
-    aget-object p1, p1, v1
+    .line 361
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetfontVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+
+    move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->valH:[Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    aget-object p1, p1, v1
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetfontVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->names:[Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->font:[I
+    invoke-static {}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$sfgetFONT_NAMES()[Ljava/lang/String;
 
-    aget v1, v2, v1
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-static {v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetfont(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+
+    move-result v1
 
     aget-object v0, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 187
+    .line 362
     :cond_0
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    .line 363
     return-void
 .end method

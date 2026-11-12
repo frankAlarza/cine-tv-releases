@@ -27,16 +27,16 @@
 .method constructor <init>(Lcom/movievn/tv/TvPlayerBar;I)V
     .locals 0
 
-    .line 1746
+    .line 1783
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1747
+    .line 1784
     iput-object p1, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
-    .line 1748
+    .line 1785
     iput p2, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->attempt:I
 
-    .line 1749
+    .line 1786
     return-void
 .end method
 
@@ -45,14 +45,14 @@
 .method public run()V
     .locals 2
 
-    .line 1753
+    .line 1790
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     invoke-static {v0}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$msetup(Lcom/movievn/tv/TvPlayerBar;)Z
 
     move-result v0
 
-    .line 1754
+    .line 1791
     if-nez v0, :cond_0
 
     iget v0, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->attempt:I
@@ -61,7 +61,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1755
+    .line 1792
     iget-object v0, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->owner:Lcom/movievn/tv/TvPlayerBar;
 
     iget v1, p0, Lcom/movievn/tv/TvPlayerBar$SetupTask;->attempt:I
@@ -70,7 +70,7 @@
 
     invoke-static {v0, v1}, Lcom/movievn/tv/TvPlayerBar;->-$$Nest$mschedule(Lcom/movievn/tv/TvPlayerBar;I)V
 
-    .line 1757
+    .line 1794
     :cond_0
     return-void
 .end method

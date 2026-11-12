@@ -8,31 +8,474 @@
     value = {
         Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;,
         Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$TextColorClick;,
         Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;,
-        Lcom/movievn/tv/TvSubtitleStyleDialog$ColorClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;,
         Lcom/movievn/tv/TvSubtitleStyleDialog$OffsetClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$BgClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$BgColorClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;,
+        Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;,
         Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;
     }
 .end annotation
 
 
 # static fields
-.field private static final COLOR_NAMES:[Ljava/lang/String;
+.field private static final BG_COLOR_NAMES:[Ljava/lang/String;
 
-.field private static final COLOR_VALUES:[I
+.field private static final BG_COLOR_VALUES:[I
 
 .field private static final FONT_NAMES:[Ljava/lang/String;
 
 .field private static final OFFSET_NAMES:[Ljava/lang/String;
 
+.field private static final OUTLINE_COLOR:I = 0x4dffffff
+
+.field private static final POSITION_NAMES:[Ljava/lang/String;
+
+.field private static final ROW_BG:I = 0x14ffffff
+
+.field private static final ROW_BORDER:I = 0x1fffffff
+
+.field private static final SECTION_COLOR:I = -0x676763
+
+.field private static final SHADOW_COLOR_NAMES:[Ljava/lang/String;
+
+.field private static final SHADOW_COLOR_VALUES:[I
+
 .field private static final SIZE_NAMES:[Ljava/lang/String;
+
+.field private static final TEXT_COLOR_NAMES:[Ljava/lang/String;
+
+.field private static final TEXT_COLOR_VALUES:[I
+
+.field private static final TEXT_PRIMARY:I = -0x1
+
+.field private static final TEXT_SECONDARY:I = -0x4c000001
+
+.field private static final VALUE_COLOR:I = -0x1
+
+
+# instance fields
+.field private final activity:Landroid/app/Activity;
+
+.field private bg:Z
+
+.field private bgColorDot:Landroid/view/View;
+
+.field private bgColorIdx:I
+
+.field private bgColorVal:Landroid/widget/TextView;
+
+.field private bgVal:Landroid/widget/TextView;
+
+.field private dialog:Landroid/app/AlertDialog;
+
+.field private font:I
+
+.field private fontVal:Landroid/widget/TextView;
+
+.field private lastDot:Landroid/view/View;
+
+.field private offset:I
+
+.field private offsetVal:Landroid/widget/TextView;
+
+.field private position:I
+
+.field private positionVal:Landroid/widget/TextView;
+
+.field private preview:Landroid/widget/TextView;
+
+.field private shadow:Z
+
+.field private shadowColorDot:Landroid/view/View;
+
+.field private shadowColorIdx:I
+
+.field private shadowColorVal:Landroid/widget/TextView;
+
+.field private shadowVal:Landroid/widget/TextView;
+
+.field private size:I
+
+.field private sizeVal:Landroid/widget/TextView;
+
+.field private final style:Lcom/movievn/tv/TvSubtitleStyle;
+
+.field private textColorDot:Landroid/view/View;
+
+.field private textColorIdx:I
+
+.field private textColorVal:Landroid/widget/TextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method static bridge synthetic -$$Nest$fgetactivity(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/app/Activity;
+    .locals 0
 
-    .line 28
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetbg(Lcom/movievn/tv/TvSubtitleStyleDialog;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bg:Z
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetbgColorDot(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorDot:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetbgColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetbgColorVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetbgVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetdialog(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/app/AlertDialog;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->dialog:Landroid/app/AlertDialog;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetfont(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->font:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetfontVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->fontVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetoffset(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->offset:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetoffsetVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->offsetVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetposition(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->position:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetpositionVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->positionVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadow:Z
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetshadowColorDot(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorDot:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetshadowColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetshadowColorVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetshadowVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetsize(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->size:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetsizeVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->sizeVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgetstyle(Lcom/movievn/tv/TvSubtitleStyleDialog;)Lcom/movievn/tv/TvSubtitleStyle;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgettextColorDot(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/view/View;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorDot:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgettextColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;)I
+    .locals 0
+
+    iget p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
+
+    return p0
+.end method
+
+.method static bridge synthetic -$$Nest$fgettextColorVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+    .locals 0
+
+    iget-object p0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorVal:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic -$$Nest$fputbg(Lcom/movievn/tv/TvSubtitleStyleDialog;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bg:Z
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputbgColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputfont(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->font:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputoffset(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->offset:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputposition(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->position:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadow:Z
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputshadowColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputsize(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->size:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$fputtextColorIdx(Lcom/movievn/tv/TvSubtitleStyleDialog;I)V
+    .locals 0
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->refreshPreview()V
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$mupdateDot(Lcom/movievn/tv/TvSubtitleStyleDialog;Landroid/view/View;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->updateDot(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetBG_COLOR_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetBG_COLOR_VALUES()[I
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_VALUES:[I
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetFONT_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->FONT_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetOFFSET_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetPOSITION_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->POSITION_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetSHADOW_COLOR_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetSHADOW_COLOR_VALUES()[I
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_VALUES:[I
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetSIZE_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetTEXT_COLOR_NAMES()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_NAMES:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic -$$Nest$sfgetTEXT_COLOR_VALUES()[I
+    .locals 1
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_VALUES:[I
+
+    return-object v0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 8
+
+    .line 36
     const-string v0, "Sans Serif"
 
     const-string v1, "Serif"
@@ -49,822 +492,1856 @@
 
     sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->FONT_NAMES:[Ljava/lang/String;
 
-    .line 29
-    const-string v0, "Pequeno"
+    .line 37
+    const-string v0, "Extra grande"
 
-    const-string v1, "Mediano"
+    const-string v1, "Gigante"
 
-    const-string v2, "Grande"
+    const-string v2, "Pequeno"
 
-    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
+    const-string v3, "Mediano"
 
-    move-result-object v3
-
-    sput-object v3, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
-
-    .line 30
-    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
-
-    .line 31
-    const-string v0, "Rojo"
-
-    const-string v1, "Amarillo"
-
-    const-string v2, "Negro"
-
-    const-string v3, "Gris"
-
-    const-string v4, "Azul"
+    const-string v4, "Grande"
 
     filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_NAMES:[Ljava/lang/String;
+    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
 
-    .line 32
-    const v0, -0x3300bac6
-
-    const v1, -0x330060f6
-
-    const/high16 v2, -0x34000000    # -3.3554432E7f
-
-    const v3, -0x337f7f80    # -6.7372032E7f
-
-    const v4, -0x33f57b01    # -3.631206E7f
-
-    filled-new-array {v2, v3, v4, v0, v1}, [I
+    .line 38
+    filled-new-array {v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_VALUES:[I
+    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
+
+    .line 39
+    const-string v0, "Negro"
+
+    const-string v1, "Gris"
+
+    const-string v2, "Azul"
+
+    const-string v3, "Rojo"
+
+    const-string v4, "Amarillo"
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_NAMES:[Ljava/lang/String;
+
+    .line 40
+    const v2, -0x3300bac6
+
+    const v3, -0x330060f6
+
+    const/high16 v5, -0x34000000    # -3.3554432E7f
+
+    const v6, -0x337f7f80    # -6.7372032E7f
+
+    const v7, -0x33f57b01    # -3.631206E7f
+
+    filled-new-array {v5, v6, v7, v2, v3}, [I
+
+    move-result-object v2
+
+    sput-object v2, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_VALUES:[I
+
+    .line 41
+    const-string v2, "Cian"
+
+    const-string v3, "Rosa"
+
+    const-string v5, "Blanco"
+
+    const-string v6, "Verde"
+
+    filled-new-array {v5, v4, v6, v2, v3}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_NAMES:[Ljava/lang/String;
+
+    .line 42
+    const v2, -0xff0001
+
+    const v3, -0x9139
+
+    const/4 v4, -0x1
+
+    const/16 v5, -0x100
+
+    const v6, -0xff0100
+
+    filled-new-array {v4, v5, v6, v2, v3}, [I
+
+    move-result-object v2
+
+    sput-object v2, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_VALUES:[I
+
+    .line 43
+    const-string v2, "Azul oscuro"
+
+    const-string v3, "Rojo oscuro"
+
+    filled-new-array {v0, v2, v1, v3}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_NAMES:[Ljava/lang/String;
+
+    .line 44
+    const v0, -0x66bfbfc0
+
+    const v1, -0x6680e2e3
+
+    const/high16 v2, -0x67000000
+
+    const v3, -0x66f5e0c1
+
+    filled-new-array {v2, v3, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_VALUES:[I
+
+    .line 45
+    const-string v0, "Abajo"
+
+    const-string v1, "Arriba"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->POSITION_NAMES:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/app/Activity;)V
+    .locals 1
 
-    .line 26
+    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 78
+    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    .line 79
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyle;->load(Landroid/content/Context;)Lcom/movievn/tv/TvSubtitleStyle;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    .line 80
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->font:I
+
+    .line 81
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->size:I
+
+    .line 82
+    sget-object p1, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_VALUES:[I
+
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget v0, v0, Lcom/movievn/tv/TvSubtitleStyle;->textColor:I
+
+    invoke-direct {p0, p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->indexOf([II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
+
+    .line 83
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget-boolean p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
+
+    iput-boolean p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadow:Z
+
+    .line 84
+    sget-object p1, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_VALUES:[I
+
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget v0, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowColor:I
+
+    invoke-direct {p0, p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->indexOf([II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
+
+    .line 85
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->offset:I
+
+    .line 86
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget-boolean p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->backgroundEnabled:Z
+
+    iput-boolean p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bg:Z
+
+    .line 87
+    sget-object p1, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_VALUES:[I
+
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget v0, v0, Lcom/movievn/tv/TvSubtitleStyle;->backgroundColor:I
+
+    invoke-direct {p0, p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->indexOf([II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
+
+    .line 88
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->style:Lcom/movievn/tv/TvSubtitleStyle;
+
+    iget p1, p1, Lcom/movievn/tv/TvSubtitleStyle;->position:I
+
+    iput p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->position:I
+
+    .line 89
     return-void
 .end method
 
-.method private static addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
-    .locals 7
+.method private addColorRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    .locals 0
 
-    .line 133
+    .line 299
+    invoke-direct/range {p0 .. p6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method private addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    .locals 9
+
+    .line 243
     new-instance v0, Landroid/widget/LinearLayout;
 
-    invoke-direct {v0, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 134
+    .line 244
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 135
+    .line 245
     const/16 v2, 0x10
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 136
-    const/4 v2, 0x1
+    .line 246
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setFocusable(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setFocusable(Z)V
 
-    .line 137
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setClickable(Z)V
+    .line 247
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
-    .line 138
-    const/16 v2, 0xc
+    .line 248
+    const/16 v4, 0xe
 
-    invoke-static {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
-
-    move-result v3
-
-    invoke-static {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
-
-    move-result v4
-
-    invoke-static {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    invoke-direct {p0, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
     move-result v5
 
-    invoke-static {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    const/16 v6, 0xc
 
-    move-result v2
+    invoke-direct {p0, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-virtual {v0, v3, v4, v5, v2}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+    move-result v7
 
-    .line 139
-    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-direct {p0, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    move-result-object v2
+    move-result v4
 
-    const-string v3, "drawable"
+    invoke-direct {p0, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    move-result v8
+
+    invoke-virtual {v0, v5, v7, v4, v8}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 249
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const-string v5, "bg_focused"
+    const-string v5, "drawable"
 
-    invoke-virtual {v2, v5, v3, v4}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p1}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v7
 
-    .line 140
-    if-eqz v2, :cond_0
+    const-string v8, "bg_focused"
 
-    .line 141
+    invoke-virtual {v4, v8, v5, v7}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
+
+    .line 250
+    if-eqz v4, :cond_0
+
+    .line 251
     :try_start_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+    invoke-virtual {p1}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v4, v7}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    invoke-virtual {v3, v2, v4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v2
+    move-exception v4
 
-    .line 143
+    .line 253
     :cond_0
     :goto_0
-    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
+    new-instance v4, Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-direct {v2}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+    invoke-direct {v4}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    .line 144
-    const v3, 0x1affffff
+    .line 254
+    const v5, 0x14ffffff
 
-    invoke-virtual {v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 145
-    const/16 v3, 0x8
+    .line 255
+    invoke-direct {p0, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-static {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    move-result v5
 
-    move-result v4
+    int-to-float v5, v5
 
-    int-to-float v4, v4
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
 
-    invoke-virtual {v2, v4}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+    .line 256
+    invoke-direct {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 146
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    move-result v5
 
-    .line 148
-    new-instance v2, Landroid/widget/TextView;
+    const v6, 0x1fffffff
 
-    invoke-direct {v2, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v4, v5, v6}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    .line 149
-    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 257
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 150
-    const p2, -0x4c000001
+    .line 259
+    if-ltz p5, :cond_1
 
-    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    .line 260
+    new-instance v4, Landroid/view/View;
 
-    .line 151
-    const/high16 p2, 0x41800000    # 16.0f
+    invoke-direct {v4, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextSize(F)V
+    .line 261
+    new-instance v5, Landroid/graphics/drawable/GradientDrawable;
 
-    .line 152
-    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
+    invoke-direct {v5}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    .line 262
+    invoke-virtual {v5, v3}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    const/4 v6, -0x2
+    .line 263
+    invoke-virtual {v5, p5}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    invoke-direct {v4, v1, v6, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+    .line 264
+    invoke-direct {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 153
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result p5
 
-    .line 154
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    const v3, 0x44ffffff    # 2047.9999f
 
-    .line 156
-    new-instance v1, Landroid/widget/TextView;
+    invoke-virtual {v5, p5, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    invoke-direct {v1, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    .line 265
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 157
-    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 266
+    new-instance p5, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 158
-    const/4 p3, -0x1
+    invoke-direct {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result v3
 
-    .line 159
-    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextSize(F)V
+    invoke-direct {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 160
-    const p2, 0x800005
+    move-result v2
 
-    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-direct {p5, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 161
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    .line 267
+    const/16 v2, 0xa
 
-    .line 163
-    invoke-virtual {v0, p4}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {p0, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 164
-    new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
+    move-result v2
 
-    invoke-direct {p2, p3, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    iput v2, p5, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    .line 165
-    invoke-static {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 268
+    invoke-virtual {v4, p5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    move-result p0
+    .line 269
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    iput p0, p2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+    .line 270
+    iput-object v4, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->lastDot:Landroid/view/View;
 
-    .line 166
-    invoke-virtual {p1, v0, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 168
-    return-object v1
-.end method
-
-.method private static dp(Landroid/app/Activity;I)I
-    .locals 0
-
-    .line 172
-    int-to-float p1, p1
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, p0
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static show(Landroid/app/Activity;)V
-    .locals 17
-
-    .line 35
-    move-object/from16 v1, p0
-
-    if-nez v1, :cond_0
-
-    return-void
-
-    .line 36
-    :cond_0
-    invoke-static {v1}, Lcom/movievn/tv/TvSubtitleStyle;->load(Landroid/content/Context;)Lcom/movievn/tv/TvSubtitleStyle;
-
-    move-result-object v2
-
-    .line 38
-    nop
-
-    .line 39
-    const/4 v10, 0x0
-
-    move v0, v10
-
-    :goto_0
-    sget-object v3, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_VALUES:[I
-
-    array-length v3, v3
-
-    if-ge v0, v3, :cond_2
-
-    .line 40
-    sget-object v3, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_VALUES:[I
-
-    aget v3, v3, v0
-
-    iget v4, v2, Lcom/movievn/tv/TvSubtitleStyle;->shadowColor:I
-
-    if-ne v3, v4, :cond_1
-
+    .line 271
     goto :goto_1
 
-    .line 39
+    .line 272
     :cond_1
-    add-int/lit8 v0, v0, 0x1
+    const/4 p5, 0x0
 
-    goto :goto_0
+    iput-object p5, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->lastDot:Landroid/view/View;
 
-    :cond_2
-    move v0, v10
-
-    .line 43
+    .line 275
     :goto_1
-    iget v3, v2, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
+    new-instance p5, Landroid/widget/TextView;
 
-    filled-new-array {v3}, [I
+    invoke-direct {p5, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    move-result-object v3
+    .line 276
+    invoke-virtual {p5, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 44
-    iget v4, v2, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
+    .line 277
+    const p3, -0x4c000001
 
-    filled-new-array {v4}, [I
+    invoke-virtual {p5, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    move-result-object v4
+    .line 278
+    const/high16 p3, 0x41700000    # 15.0f
 
-    .line 45
-    iget-boolean v5, v2, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
+    invoke-virtual {p5, p3}, Landroid/widget/TextView;->setTextSize(F)V
 
-    const/4 v11, 0x1
+    .line 279
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    move v6, v5
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    new-array v5, v11, [Z
+    const/4 v4, -0x2
 
-    aput-boolean v6, v5, v10
+    invoke-direct {v2, v1, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 46
-    filled-new-array {v0}, [I
+    .line 280
+    invoke-virtual {p5, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    move-result-object v6
+    .line 281
+    invoke-virtual {v0, p5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 47
-    iget v0, v2, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
+    .line 283
+    new-instance p5, Landroid/widget/TextView;
 
-    filled-new-array {v0}, [I
+    invoke-direct {p5, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    move-result-object v7
+    .line 284
+    invoke-virtual {p5, p4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 49
-    new-instance v12, Landroid/widget/LinearLayout;
+    .line 285
+    const/4 p1, -0x1
 
-    invoke-direct {v12, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p5, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 50
-    invoke-virtual {v12, v11}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    .line 286
+    invoke-virtual {p5, p3}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 51
-    const v13, -0xe3e3e2
+    .line 287
+    const p3, 0x800005
 
-    invoke-virtual {v12, v13}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
+    invoke-virtual {p5, p3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 52
-    const/16 v0, 0x18
+    .line 288
+    invoke-virtual {v0, p5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    invoke-static {v1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 290
+    invoke-virtual {v0, p6}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result v8
+    .line 291
+    new-instance p3, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/16 v9, 0x14
+    invoke-direct {p3, p1, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 292
+    const/16 p1, 0x8
 
-    move-result v14
+    invoke-direct {p0, p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-static {v1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    move-result p1
 
-    move-result v0
+    iput p1, p3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 293
+    invoke-virtual {p2, v0, p3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    move-result v9
+    .line 295
+    return-object p5
+.end method
 
-    invoke-virtual {v12, v8, v14, v0, v9}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+.method private addSection(Landroid/widget/LinearLayout;Ljava/lang/String;)V
+    .locals 3
 
-    .line 54
+    .line 232
     new-instance v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 55
-    const-string v8, "Estilo de subtitulos"
+    .line 233
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 234
+    const p2, -0x676763
 
-    .line 56
-    const/4 v8, -0x1
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v0, v8}, Landroid/widget/TextView;->setTextColor(I)V
+    .line 235
+    const/high16 p2, 0x41300000    # 11.0f
 
-    .line 57
-    const/high16 v9, 0x41a00000    # 20.0f
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTextSize(F)V
 
-    invoke-virtual {v0, v9}, Landroid/widget/TextView;->setTextSize(F)V
+    .line 236
+    const/16 p2, 0xe
 
-    .line 58
-    const/16 v9, 0xc
+    invoke-direct {p0, p2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    move-result p2
 
-    move-result v14
+    const/4 v1, 0x6
 
-    invoke-virtual {v0, v10, v10, v10, v14}, Landroid/widget/TextView;->setPadding(IIII)V
+    invoke-direct {p0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 59
-    invoke-virtual {v12, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    move-result v1
 
-    .line 61
-    new-array v0, v11, [Landroid/widget/TextView;
+    const/4 v2, 0x0
 
-    .line 62
-    new-instance v14, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;
+    invoke-virtual {v0, v2, p2, v2, v1}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    sget-object v15, Lcom/movievn/tv/TvSubtitleStyleDialog;->FONT_NAMES:[Ljava/lang/String;
+    .line 238
+    const p2, 0x3df5c28f    # 0.12f
 
-    invoke-direct {v14, v3, v0, v15}, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;-><init>([I[Landroid/widget/TextView;[Ljava/lang/String;)V
+    :try_start_0
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setLetterSpacing(F)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
-    sget-object v15, Lcom/movievn/tv/TvSubtitleStyleDialog;->FONT_NAMES:[Ljava/lang/String;
+    goto :goto_0
 
-    aget v16, v3, v10
+    :catchall_0
+    move-exception p2
 
-    aget-object v15, v15, v16
+    .line 239
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    move/from16 v16, v10
+    .line 240
+    return-void
+.end method
 
-    const-string v10, "Fuente"
+.method private dp(I)I
+    .locals 1
 
-    invoke-static {v1, v12, v10, v15, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    .line 336
+    int-to-float p1, p1
 
-    move-result-object v10
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    aput-object v10, v0, v16
+    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    .line 65
-    new-array v0, v11, [Landroid/widget/TextView;
+    move-result-object v0
 
-    .line 66
-    new-instance v10, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
+    move-result-object v0
 
-    invoke-direct {v10, v4, v0, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;-><init>([I[Landroid/widget/TextView;[Ljava/lang/String;)V
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 67
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
+    mul-float/2addr p1, v0
 
-    aget v15, v4, v16
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    aget-object v14, v14, v15
+    move-result p1
 
-    const-string v15, "Tamano"
+    return p1
+.end method
 
-    invoke-static {v1, v12, v15, v14, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
+.method private indexOf([II)I
+    .locals 3
 
-    move-result-object v10
+    .line 340
+    const/4 v0, 0x0
 
-    aput-object v10, v0, v16
+    move v1, v0
 
-    .line 69
-    new-array v0, v11, [Landroid/widget/TextView;
+    :goto_0
+    array-length v2, p1
 
-    .line 70
-    new-instance v10, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;
+    if-ge v1, v2, :cond_1
 
-    invoke-direct {v10, v5, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;-><init>([Z[Landroid/widget/TextView;)V
+    .line 341
+    aget v2, p1, v1
 
-    .line 71
-    aget-boolean v14, v5, v16
+    if-ne v2, p2, :cond_0
 
-    if-eqz v14, :cond_3
+    return v1
 
-    const-string v14, "ON"
+    .line 340
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_3
-    const-string v14, "OFF"
+    .line 343
+    :cond_1
+    return v0
+.end method
 
-    :goto_2
-    const-string v15, "Sombra"
+.method private refreshPreview()V
+    .locals 7
 
-    invoke-static {v1, v12, v15, v14, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    .line 303
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
 
-    move-result-object v10
+    if-nez v0, :cond_0
 
-    aput-object v10, v0, v16
+    return-void
 
-    .line 73
-    new-array v0, v11, [Landroid/widget/TextView;
+    .line 304
+    :cond_0
+    new-instance v0, Lcom/movievn/tv/TvSubtitleStyle;
 
-    .line 74
-    new-instance v10, Lcom/movievn/tv/TvSubtitleStyleDialog$ColorClick;
+    invoke-direct {v0}, Lcom/movievn/tv/TvSubtitleStyle;-><init>()V
 
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_NAMES:[Ljava/lang/String;
+    .line 305
+    iget v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->font:I
 
-    invoke-direct {v10, v6, v0, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog$ColorClick;-><init>([I[Landroid/widget/TextView;[Ljava/lang/String;)V
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontFamily:I
 
-    .line 75
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_NAMES:[Ljava/lang/String;
+    .line 306
+    iget v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->size:I
 
-    aget v15, v6, v16
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->fontSize:I
 
-    aget-object v14, v14, v15
+    .line 307
+    sget-object v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_VALUES:[I
 
-    const-string v15, "Color sombra"
+    iget v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
 
-    invoke-static {v1, v12, v15, v14, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    aget v1, v1, v2
 
-    move-result-object v10
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->textColor:I
 
-    aput-object v10, v0, v16
+    .line 308
+    iget-boolean v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadow:Z
 
-    .line 77
-    new-array v0, v11, [Landroid/widget/TextView;
+    iput-boolean v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
 
-    .line 78
-    new-instance v10, Lcom/movievn/tv/TvSubtitleStyleDialog$OffsetClick;
+    .line 309
+    sget-object v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_VALUES:[I
 
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
+    iget v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
 
-    invoke-direct {v10, v7, v0, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog$OffsetClick;-><init>([I[Landroid/widget/TextView;[Ljava/lang/String;)V
+    aget v1, v1, v2
 
-    .line 79
-    sget-object v14, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowColor:I
 
-    aget v15, v7, v16
+    .line 310
+    iget v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->offset:I
 
-    aget-object v14, v14, v15
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowOffset:I
 
-    const-string v15, "Offset sombra"
+    .line 311
+    iget-boolean v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bg:Z
 
-    invoke-static {v1, v12, v15, v14, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)Landroid/widget/TextView;
+    iput-boolean v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->backgroundEnabled:Z
 
-    move-result-object v10
+    .line 312
+    sget-object v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_VALUES:[I
 
-    aput-object v10, v0, v16
+    iget v2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
 
-    .line 82
-    new-instance v10, Landroid/widget/TextView;
+    aget v1, v1, v2
 
-    invoke-direct {v10, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->backgroundColor:I
 
-    .line 83
-    const-string v0, "Aceptar"
+    .line 313
+    iget v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->position:I
 
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iput v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->position:I
 
-    .line 84
-    invoke-virtual {v10, v8}, Landroid/widget/TextView;->setTextColor(I)V
+    .line 315
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
 
-    .line 85
-    const/high16 v0, 0x41800000    # 16.0f
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getTypeface()Landroid/graphics/Typeface;
 
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setTextSize(F)V
+    move-result-object v2
 
-    .line 86
-    const/16 v0, 0x11
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setGravity(I)V
+    .line 316
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
 
-    .line 87
-    const/16 v14, 0x10
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getTextSizeSp()F
 
-    invoke-static {v1, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 317
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    iget v2, v0, Lcom/movievn/tv/TvSubtitleStyle;->textColor:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 318
+    iget-boolean v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->shadowEnabled:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    .line 319
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getShadowRadius()F
+
+    move-result v3
+
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getShadowDx()F
+
+    move-result v4
+
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getShadowDy()F
+
+    move-result v5
+
+    invoke-virtual {v0}, Lcom/movievn/tv/TvSubtitleStyle;->getShadowColor()I
+
+    move-result v6
+
+    invoke-virtual {v1, v3, v4, v5, v6}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
+
+    goto :goto_0
+
+    .line 321
+    :cond_1
+    iget-object v1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v3, v3, v2}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
+
+    .line 323
+    :goto_0
+    iget-boolean v1, v0, Lcom/movievn/tv/TvSubtitleStyle;->backgroundEnabled:Z
+
+    if-eqz v1, :cond_2
+
+    .line 324
+    new-instance v1, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    .line 325
+    iget v0, v0, Lcom/movievn/tv/TvSubtitleStyle;->backgroundColor:I
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    .line 326
+    const/16 v0, 0x8
+
+    invoke-direct {p0, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
     move-result v0
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    int-to-float v0, v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    .line 327
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 328
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    const/16 v1, 0xc
+
+    invoke-direct {p0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    const/4 v3, 0x6
+
+    invoke-direct {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v4
+
+    invoke-direct {p0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v1
+
+    invoke-direct {p0, v3}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v3
+
+    invoke-virtual {v0, v2, v4, v1, v3}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 329
+    goto :goto_1
+
+    .line 330
+    :cond_2
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 331
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 333
+    :goto_1
+    return-void
+.end method
+
+.method public static show(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 92
+    if-nez p0, :cond_0
+
+    return-void
+
+    .line 93
+    :cond_0
+    new-instance v0, Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-direct {v0, p0}, Lcom/movievn/tv/TvSubtitleStyleDialog;-><init>(Landroid/app/Activity;)V
+
+    invoke-direct {v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->showDialog()V
+
+    .line 94
+    return-void
+.end method
+
+.method private showDialog()V
+    .locals 16
+
+    .line 97
+    move-object/from16 v1, p0
+
+    new-instance v3, Landroid/widget/LinearLayout;
+
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v3, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 98
+    const/4 v8, 0x1
+
+    invoke-virtual {v3, v8}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 99
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
+
+    const v4, -0xebebe1
+
+    const v5, -0xf5f5ee
+
+    filled-new-array {v4, v5}, [I
+
+    move-result-object v4
+
+    invoke-direct {v0, v2, v4}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+
+    .line 101
+    const/16 v9, 0x14
+
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    .line 102
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 103
+    const/16 v0, 0x1c
+
+    invoke-direct {v1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    const/16 v4, 0x18
+
+    invoke-direct {v1, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v5
+
+    invoke-direct {v1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v0
+
+    invoke-direct {v1, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v4
+
+    invoke-virtual {v3, v2, v5, v0, v4}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 106
+    new-instance v0, Landroid/widget/TextView;
+
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v0, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 107
+    const-string v2, "Estilo de subtitulos"
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 108
+    const/4 v10, -0x1
+
+    invoke-virtual {v0, v10}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 109
+    const/high16 v2, 0x41b00000    # 22.0f
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 110
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v0, v11, v11, v11, v2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 111
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 113
+    new-instance v0, Landroid/widget/TextView;
+
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v0, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 114
+    const-string v2, "Personaliza la apariencia de los subtitulos"
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 115
+    const v2, -0x4c000001
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 116
+    const/high16 v2, 0x41500000    # 13.0f
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 117
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v4
+
+    invoke-virtual {v0, v11, v11, v11, v4}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 118
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 121
+    new-instance v0, Landroid/widget/LinearLayout;
+
+    iget-object v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v0, v4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 122
+    invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 123
+    const/16 v12, 0x11
+
+    invoke-virtual {v0, v12}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    .line 124
+    new-instance v4, Landroid/graphics/drawable/GradientDrawable;
+
+    sget-object v5, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
+
+    const v6, -0xf1f1e8
+
+    const v7, -0xfafaf6
+
+    filled-new-array {v6, v7}, [I
+
+    move-result-object v6
+
+    invoke-direct {v4, v5, v6}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+
+    .line 126
+    invoke-direct {v1, v2}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v4, v2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    .line 127
+    invoke-direct {v1, v8}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    const v5, 0x22ffffff
+
+    invoke-virtual {v4, v2, v5}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    .line 128
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 129
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v2
+
+    const/16 v4, 0x28
+
+    invoke-direct {v1, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v5
+
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v6
+
+    invoke-direct {v1, v4}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v5, v6, v4}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 130
+    new-instance v2, Landroid/widget/TextView;
+
+    iget-object v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v2, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    iput-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    .line 131
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    const-string v4, "Ejemplo de subtitulo\nSample subtitle text"
+
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 132
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v12}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 133
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->preview:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 134
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v13, -0x2
+
+    invoke-direct {v2, v10, v13}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    .line 135
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v4
+
+    iput v4, v2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    .line 136
+    invoke-virtual {v3, v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 139
+    const-string v0, "TIPOGRAFIA"
+
+    invoke-direct {v1, v3, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addSection(Landroid/widget/LinearLayout;Ljava/lang/String;)V
+
+    .line 140
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->FONT_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->font:I
+
+    aget-object v5, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$FontClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Fuente"
+
+    const/4 v6, -0x1
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->fontVal:Landroid/widget/TextView;
+
+    .line 141
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SIZE_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->size:I
+
+    aget-object v5, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$SizeClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Tamano"
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->sizeVal:Landroid/widget/TextView;
+
+    .line 142
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
+
+    aget-object v5, v0, v4
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->TEXT_COLOR_VALUES:[I
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorIdx:I
+
+    aget v6, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$TextColorClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$TextColorClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Color texto"
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addColorRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorVal:Landroid/widget/TextView;
+
+    .line 143
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->lastDot:Landroid/view/View;
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->textColorDot:Landroid/view/View;
+
+    .line 146
+    const-string v0, "SOMBRA"
+
+    invoke-direct {v1, v3, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addSection(Landroid/widget/LinearLayout;Ljava/lang/String;)V
+
+    .line 147
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    iget-boolean v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadow:Z
+
+    const-string v14, "ON"
+
+    const-string v15, "OFF"
+
+    if-eqz v0, :cond_0
+
+    move-object v5, v14
+
+    goto :goto_0
+
+    :cond_0
+    move-object v5, v15
+
+    :goto_0
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Sombra"
+
+    const/4 v6, -0x1
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowVal:Landroid/widget/TextView;
+
+    .line 148
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
+
+    aget-object v5, v0, v4
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->SHADOW_COLOR_VALUES:[I
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorIdx:I
+
+    aget v6, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowColorClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Color sombra"
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addColorRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorVal:Landroid/widget/TextView;
+
+    .line 149
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->lastDot:Landroid/view/View;
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->shadowColorDot:Landroid/view/View;
+
+    .line 150
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->OFFSET_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->offset:I
+
+    aget-object v5, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$OffsetClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$OffsetClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Offset sombra"
+
+    const/4 v6, -0x1
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->offsetVal:Landroid/widget/TextView;
+
+    .line 153
+    const-string v0, "FONDO"
+
+    invoke-direct {v1, v3, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addSection(Landroid/widget/LinearLayout;Ljava/lang/String;)V
+
+    .line 154
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    iget-boolean v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bg:Z
+
+    if-eqz v0, :cond_1
+
+    move-object v5, v14
+
+    goto :goto_1
+
+    :cond_1
+    move-object v5, v15
+
+    :goto_1
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$BgClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$BgClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Caja fondo"
+
+    const/4 v6, -0x1
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgVal:Landroid/widget/TextView;
+
+    .line 155
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
+
+    aget-object v5, v0, v4
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->BG_COLOR_VALUES:[I
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorIdx:I
+
+    aget v6, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$BgColorClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$BgColorClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Color caja"
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addColorRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorVal:Landroid/widget/TextView;
+
+    .line 156
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->lastDot:Landroid/view/View;
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->bgColorDot:Landroid/view/View;
+
+    .line 159
+    const-string v0, "POSICION"
+
+    invoke-direct {v1, v3, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addSection(Landroid/widget/LinearLayout;Ljava/lang/String;)V
+
+    .line 160
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    sget-object v0, Lcom/movievn/tv/TvSubtitleStyleDialog;->POSITION_NAMES:[Ljava/lang/String;
+
+    iget v4, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->position:I
+
+    aget-object v5, v0, v4
+
+    new-instance v7, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;
+
+    invoke-direct {v7, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$PositionClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    const-string v4, "Posicion"
+
+    const/4 v6, -0x1
+
+    invoke-direct/range {v1 .. v7}, Lcom/movievn/tv/TvSubtitleStyleDialog;->addRow(Landroid/app/Activity;Landroid/widget/LinearLayout;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->positionVal:Landroid/widget/TextView;
+
+    .line 163
+    new-instance v2, Landroid/widget/LinearLayout;
+
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 164
+    invoke-virtual {v2, v11}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 165
+    invoke-virtual {v2, v12}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    .line 166
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v0
+
+    invoke-virtual {v2, v11, v0, v11, v11}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 168
+    new-instance v4, Landroid/widget/TextView;
+
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v4, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 169
+    const-string v0, "Restablecer"
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 170
+    const v0, -0x676763
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 171
+    const/high16 v5, 0x41700000    # 15.0f
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 172
+    invoke-virtual {v4, v12}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 173
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v0
+
+    const/16 v6, 0xc
+
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v7
+
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v14
+
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
     move-result v15
 
-    invoke-static {v1, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    invoke-virtual {v4, v0, v7, v14, v15}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    move-result v13
+    .line 174
+    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setFocusable(Z)V
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 175
+    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setClickable(Z)V
 
-    move-result v9
-
-    invoke-virtual {v10, v0, v15, v13, v9}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    .line 88
-    invoke-virtual {v10, v11}, Landroid/widget/TextView;->setFocusable(Z)V
-
-    .line 89
-    invoke-virtual {v10, v11}, Landroid/widget/TextView;->setClickable(Z)V
-
-    .line 90
+    .line 176
     new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    .line 91
-    const v9, 0x1affffff
+    .line 177
+    invoke-virtual {v0, v11}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    invoke-virtual {v0, v9}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    .line 178
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 92
-    const/16 v9, 0x8
+    move-result v7
 
-    invoke-static {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    int-to-float v7, v7
 
-    move-result v9
+    invoke-virtual {v0, v7}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
 
-    int-to-float v9, v9
+    .line 179
+    invoke-direct {v1, v8}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    invoke-virtual {v0, v9}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+    move-result v7
 
-    .line 93
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    const v14, 0x4dffffff    # 5.3687088E8f
 
-    .line 94
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v7, v14}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    .line 180
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 181
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v9, "drawable"
+    iget-object v7, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v7
 
-    const-string v15, "bg_focused"
+    const-string v14, "bg_focused"
 
-    invoke-virtual {v0, v15, v9, v13}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    const-string v15, "drawable"
+
+    invoke-virtual {v0, v14, v15, v7}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 95
-    if-eqz v0, :cond_4
+    .line 182
+    if-eqz v0, :cond_2
 
-    .line 96
+    .line 183
     :try_start_0
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    iget-object v7, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    move-result-object v9
+    invoke-virtual {v7}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+    move-result-object v7
 
-    move-result-object v13
+    iget-object v10, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    invoke-virtual {v9, v0, v13}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v10}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v10
+
+    invoke-virtual {v7, v0, v10}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setForeground(Landroid/graphics/drawable/Drawable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_3
+    goto :goto_2
 
     :catchall_0
     move-exception v0
 
-    .line 98
-    :cond_4
-    :goto_3
+    .line 185
+    :cond_2
+    :goto_2
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/4 v9, -0x2
+    const/high16 v7, 0x3f800000    # 1.0f
 
-    invoke-direct {v0, v8, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v0, v11, v13, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 99
-    invoke-static {v1, v14}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(Landroid/app/Activity;I)I
+    .line 186
+    const/16 v10, 0xa
 
-    move-result v8
+    invoke-direct {v1, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    iput v8, v0, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    move-result v7
 
-    .line 100
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iput v7, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    .line 102
-    new-array v9, v11, [Landroid/app/AlertDialog;
+    .line 187
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 103
-    nop
+    .line 188
+    new-instance v0, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;
 
-    .line 104
-    nop
+    invoke-direct {v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$ResetClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
 
-    .line 105
-    nop
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 106
-    nop
+    .line 189
+    invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 107
-    nop
+    .line 191
+    new-instance v4, Landroid/widget/TextView;
 
-    .line 108
-    nop
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    .line 109
-    new-instance v0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;
+    invoke-direct {v4, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget-object v8, Lcom/movievn/tv/TvSubtitleStyleDialog;->COLOR_VALUES:[I
+    .line 192
+    const-string v0, "Aceptar"
 
-    invoke-direct/range {v0 .. v9}, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;-><init>(Landroid/app/Activity;Lcom/movievn/tv/TvSubtitleStyle;[I[I[Z[I[I[I[Landroid/app/AlertDialog;)V
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v10, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 193
+    const/high16 v0, -0x1000000
 
-    .line 111
-    invoke-virtual {v12, v10}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 113
-    new-instance v0, Landroid/app/AlertDialog$Builder;
+    .line 194
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    .line 195
+    invoke-virtual {v4, v12}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 114
-    invoke-virtual {v0, v12}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
+    .line 196
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 115
-    invoke-virtual {v0, v11}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+    move-result v0
 
-    .line 116
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    move-result-object v1
+    move-result v5
 
-    .line 117
-    aput-object v1, v9, v16
+    invoke-direct {v1, v9}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
 
-    .line 119
-    :try_start_1
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    move-result v7
+
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v9
+
+    invoke-virtual {v4, v0, v5, v7, v9}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 197
+    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setFocusable(Z)V
+
+    .line 198
+    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 199
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    .line 200
+    const/4 v5, -0x1
+
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    .line 201
+    invoke-direct {v1, v6}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    .line 202
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 203
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    iget-object v5, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
 
-    .line 120
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v5}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v14, v15, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 204
+    if-eqz v0, :cond_3
+
+    .line 205
+    :try_start_1
+    iget-object v5, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-virtual {v5}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    iget-object v6, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-virtual {v6}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v0, v6}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v0
+
+    .line 207
+    :cond_3
+    :goto_3
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-direct {v0, v11, v13, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+
+    .line 208
+    invoke-direct {v1, v10}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result v5
+
+    iput v5, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
+
+    .line 209
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 210
+    new-instance v0, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;
+
+    invoke-direct {v0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog$AcceptClick;-><init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 211
+    invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 213
+    invoke-virtual {v3, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 215
+    new-instance v0, Landroid/widget/ScrollView;
+
+    iget-object v2, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v0, v2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
+
+    .line 216
+    invoke-virtual {v0, v3}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
+
+    .line 217
+    new-instance v2, Landroid/app/AlertDialog$Builder;
+
+    iget-object v3, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->activity:Landroid/app/Activity;
+
+    invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 218
+    invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
+
+    .line 219
+    invoke-virtual {v2, v8}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    .line 220
+    invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->dialog:Landroid/app/AlertDialog;
+
+    .line 222
+    :try_start_2
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->dialog:Landroid/app/AlertDialog;
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    .line 223
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->dialog:Landroid/app/AlertDialog;
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
 
-    const v3, -0xe3e3e2
-
-    invoke-direct {v2, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-direct {v2, v11}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {v0, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     goto :goto_4
 
-    .line 122
-    :catchall_1
+    .line 225
+    :catchall_2
     move-exception v0
 
-    :cond_5
+    :cond_4
     :goto_4
     nop
 
-    .line 123
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+    .line 226
+    iget-object v0, v1, Lcom/movievn/tv/TvSubtitleStyleDialog;->dialog:Landroid/app/AlertDialog;
 
-    .line 126
-    invoke-virtual {v12}, Landroid/widget/LinearLayout;->getChildCount()I
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    move-result v0
+    .line 228
+    invoke-direct {v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->refreshPreview()V
 
-    if-le v0, v11, :cond_6
+    .line 229
+    return-void
+.end method
 
-    .line 127
-    invoke-virtual {v12, v11}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+.method private updateDot(Landroid/view/View;I)V
+    .locals 2
 
-    move-result-object v0
+    .line 347
+    if-nez p1, :cond_0
 
-    .line 128
-    if-eqz v0, :cond_6
+    return-void
 
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
+    .line 349
+    :cond_0
+    :try_start_0
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
-    .line 130
-    :cond_6
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    .line 350
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+
+    .line 351
+    invoke-virtual {v0, p2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    .line 352
+    invoke-direct {p0, v1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->dp(I)I
+
+    move-result p2
+
+    const v1, 0x44ffffff    # 2047.9999f
+
+    invoke-virtual {v0, p2, v1}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    .line 353
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    .line 354
+    :catchall_0
+    move-exception p1
+
+    :goto_0
+    nop
+
+    .line 355
     return-void
 .end method

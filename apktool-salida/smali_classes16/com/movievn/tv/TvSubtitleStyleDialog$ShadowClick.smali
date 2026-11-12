@@ -12,65 +12,73 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = "ShadowClick"
 .end annotation
 
 
 # instance fields
-.field private final shadow:[Z
-
-.field private final valH:[Landroid/widget/TextView;
+.field final synthetic this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
 
 # direct methods
-.method constructor <init>([Z[Landroid/widget/TextView;)V
+.method constructor <init>(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
 
-    .line 207
+    .line 383
+    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 208
-    iput-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
-
-    iput-object p2, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->valH:[Landroid/widget/TextView;
-
-    .line 209
     return-void
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
-    .line 212
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
+    .line 385
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;)Z
 
-    aget-boolean v0, v0, v1
+    move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
-    aput-boolean v0, p1, v1
+    invoke-static {p1, v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fputshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;Z)V
 
-    .line 213
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->valH:[Landroid/widget/TextView;
+    .line 386
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    aget-object p1, p1, v1
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetshadowVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
+
+    move-result-object p1
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->valH:[Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
 
-    aget-object p1, p1, v1
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetshadowVal(Lcom/movievn/tv/TvSubtitleStyleDialog;)Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->shadow:[Z
+    move-result-object p1
 
-    aget-boolean v0, v0, v1
+    iget-object v0, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-static {v0}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$fgetshadow(Lcom/movievn/tv/TvSubtitleStyleDialog;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
@@ -84,7 +92,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 214
+    .line 387
     :cond_1
+    iget-object p1, p0, Lcom/movievn/tv/TvSubtitleStyleDialog$ShadowClick;->this$0:Lcom/movievn/tv/TvSubtitleStyleDialog;
+
+    invoke-static {p1}, Lcom/movievn/tv/TvSubtitleStyleDialog;->-$$Nest$mrefreshPreview(Lcom/movievn/tv/TvSubtitleStyleDialog;)V
+
+    .line 388
     return-void
 .end method
