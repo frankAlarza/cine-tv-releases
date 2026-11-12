@@ -627,5 +627,8 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   rail con foco, cajon de secciones abre (`build/v236-drawer2.png`), ENTER en tarjeta ->
   `VideoPlayDetailActivity` y el video reproduce (00:34/57:15, `build/v236-detail2.png`).
   0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, 0 logs `TvFeedDiag` residuales.
+- Release: publicado en `frankAlarza/cine-tv-releases` como **v236** (tag `v236` == versionName,
+  asset `cine-tv.apk`, digest `sha256:a644daeadcbf6049c23c6d785839e2caae9a78f31e27ed7ea6bcc1f1374ad61b`
+  verificado por la API de releases). Commit ee80b14f.
 - Detalle: [sesion 47](docs/sesiones/sesion-47-bloque-streaming-home.md).
 
