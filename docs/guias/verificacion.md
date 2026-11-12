@@ -52,6 +52,24 @@ También se verifica con uiautomator qué nodo tiene el foco y sus bounds:
 & $adb -s emulator-5556 pull /sdcard/ui.xml "$pr\build\ui.xml"
 ```
 
+### 6.3.b Medir jank (gfxinfo + líneas por TAG)
+
+Tres scripts, todos con `-Tag` para nombrar la evidencia en `build/`:
+
+```powershell
+powershell -NoProfile -File tools\measure-chitu-tabs.ps1 -Apk build\cine-tv-v235-signed.apk -Tag v235 -Presses 14
+powershell -NoProfile -File tools\measure-boot-tags.ps1 -Tag v235 -WaitSec 22
+powershell -NoProfile -File tools\measure-drawer-sections.ps1 -Apk build\cine-tv-v235-signed.apk -Tag v235 -Switches 3
+powershell -NoProfile -File tools\measure-hero.ps1 -Apk build\cine-tv-v235-signed.apk -Tag v235 -Presses 5
+```
+
+- **La varianza del emulador es alta**: instalar un APK dispara `installd`/dexopt. Antes de
+  medir, comprobar `adb shell top -b -n 1 -m 5`; si `installd` está alto, esperar 20-25 s y
+  repetir. Descartar la corrida y repetirla (dejar constancia).
+- Reportar siempre **N, mediana y rango**; una sola corrida no atribuye nada.
+- Las métricas deterministas (líneas de log por TAG, `getIdentifier` por pasada) valen más
+  que un porcentaje de jank movido por la red.
+
 ### 6.4 Resultado de la verificación v26 (build final)
 
 | Comprobación | Evidencia (`build/`) | Resultado |

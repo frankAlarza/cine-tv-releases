@@ -553,3 +553,51 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   - Nuevo script de puente `tools/build_stream_hide.ps1` (javac → d8 → baksmali → `smali_classes16`, igual que los demás `build_*.ps1`).
 - Version: v233 / versionCode 40036 (ver AGENTS.md §13, `AndroidManifest.xml`).
 - Verificado en emulator-5556: **0 lineas `TvStreamHide`** (antes 145), `chitu_sdk` = 0, `Skipped` en arranque 31 (antes 310), interaccion Home janky 9.51% p50=20ms p99=73ms (antes 38.41% p50=29ms p99=650ms), 0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, MD5 instalado == MD5 construido. Capturas `build/v233-home-final.png` y `build/v233-home-after-scroll.png`. Commit a97df7aa.
+
+## v234 - TvSectionDrawer: sin trabajo por pasada de layout (jank del Home, 2a parte)
+- Sintoma: `LayoutWatcher.onGlobalLayout()` se dispara en CADA pasada de layout (el RecyclerView del
+  feed pide layout por frame de scroll) y ejecutaba: `hideBottomBar()`, `ensureButton()` con
+  ~10 `getIdentifier` + `findViewWithTag` + `setOnClickListener`, `wireTopFocus()` con 3
+  `getIdentifier` mas y `refreshUpdateBadge()` -> `TvGithubUpdate.hasUpdate()` (SharedPreferences y,
+  si hay update, `getPackageInfo`).
+- Fix (`tools/section-drawer/src/com/movievn/tv/TvSectionDrawer.java`):
+  - `resolveIds()`: ids/dimensiones resueltos UNA vez (el smali resultante conserva 1 sola llamada a
+    `Resources.getIdentifier`, antes habia 11 puntos de llamada).
+  - El listener de layout ya no hace trabajo: solo `requestSync()` (debounce 120 ms) -> `sync()`.
+  - `sync()` comprueba primero la via barata (`topBar` cacheado sigue adjunto + `moreButton` sigue
+    siendo hijo suyo) y solo recablea si la seccion cambio y el arbol se reinflo.
+  - `hideBottomBar()` una sola vez (flag); badge cacheado por estado, refresco maximo cada 4 s.
+  - `scheduleSettle()`: dos remates (350 ms / 1,1 s) tras montar y tras cambiar de seccion, porque el
+    contenedor CONSERVA el fragment del Home y al volver la visibilidad cambia sin layout nuevo (sin
+    esto el boton flotante ••• se quedaba encima del de la barra superior).
+- Version: v234 / versionCode 40037.
+- Verificado en emulator-5556: cajon con 5 items, cambio de seccion y vuelta a Inicio sin ••• duplicado
+  (`build/v234-cajon.png`, `build/v234-seccion-lista.png`, `build/v234-home.png`,
+  `build/v234-home-back.png`), 0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, MD5 instalado == construido
+  (51480b4591b5621de3edcefa67bab55c). Commit e2047532.
+- Medicion (N=3 por escenario): cambio de seccion desde el cajon 15,29% -> 15,83% (sin diferencia
+  significativa: el trabajo por pasada NO era el cuello de botella). Interaccion 14 DOWN con N=4:
+  mediana 22,08% (v233) -> 16,60% (v234), rangos solapados.
+
+## v235 - TvHeroImage: sin logs por constructor ni reflexion por pulsacion
+- Sintoma: los 3 constructores hacian `Log.e` (19 lineas `ctor2` por arranque del Home);
+  `onKeyDown` llamaba a `findPager()` (ascenso de padres) para CUALQUIER tecla y resolvia 3-4
+  `getMethod` por pulsacion, con `Log.e` por evento (40 lineas por 10 pulsaciones en el hero).
+- Fix (`tools/hero-image/src/com/movievn/tv/TvHeroImage.java`): sin logs en el camino normal; pager
+  cacheado con `WeakReference` + `isAttachedToWindow()`; `Method` reflexivos cacheados por clase;
+  `findPager` solo para IZQUIERDA/DERECHA. Comportamiento identico (DERECHA se consume siempre,
+  IZQUIERDA en la primera portada escapa al rail, ENTER = performClick).
+- Version: v235 / versionCode 40038.
+- Verificado en emulator-5556: IZQUIERDA/DERECHA cambian de portada (`build/v235-hero-pag0.png` ->
+  `build/v235-hero-pag1.png`), ENTER abre la ficha y el video reproduce (15:28/46:03,
+  `build/v235-ficha.png`), BACK vuelve a MainActivity, Home intacto (`build/v235-home.png`),
+  0 `FATAL EXCEPTION`/`VerifyError`/`ANR`, MD5 instalado == construido
+  (582f497499cd5030725eea7c8761b0c7). Commit 021b3c0f.
+- Medicion: lineas `TvHeroImage` en arranque 19 -> 0 (determinista); navegacion del hero (5xDER + 5xIZQ)
+  40 -> 0 lineas, janky mediana 10,64% -> 9,66%, p99 46 -> 39 ms.
+- Herramientas nuevas: `tools/measure-boot-tags.ps1` (lineas por TAG + Skipped al arrancar),
+  `tools/measure-drawer-sections.ps1` (cambio de seccion con gfxinfo), `tools/measure-hero.ps1`
+  (navegacion del hero con gfxinfo). La varianza del emulador es alta: dejar 20-25 s de reposo
+  (installd/dexopt arruina la corrida) y reportar N, mediana y rango.
+- Detalle: [sesion 46](docs/sesiones/sesion-46-drawer-hero-jank.md).
+
