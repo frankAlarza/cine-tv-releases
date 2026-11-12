@@ -201,6 +201,28 @@ puede atribuir una caída de jank.
 
 ## 6. Pendiente / siguiente
 
+- **Descubierto al verificar v235 (no es regresión de esta sesión):** al abrir la ficha de un
+  vídeo aparecen **30 líneas `chitu_sdk`** de una excepción en el hilo principal:
+
+  ```
+  E chitu_sdk: Do you forget to initialize XLog?
+  E chitu_sdk: java.lang.IllegalStateException ...
+      at com.yk.e.util.AdLog.subAd(AdLog.java:13)
+      at j.f.loadAd(BaseLoader.java:28)
+      at com.yk.e.subad.MainFloatViewLoader.loadAd(...)
+      at uc.d.c(WxFloatViewAd.java:74)
+      at ...VideoPlayDetailActivity.loadFloatAdWX(VideoPlayDetailActivity.java:8)
+      at ...VideoPlayDetailActivity.loadAdFloatAdOnce(...)
+      at ...VideoPlayDetailActivity.loadAdFloatViewAd(...)
+      at ...VideoPlayDetailActivity.initData(...:726)
+  ```
+
+  Causa: los guards `isTv` de v232 evitaron `MainSDK.getInstance()` (que inicializa `XLog`), pero
+  **`VideoPlayDetailActivity.loadFloatAdWX` sigue llamando al cargador de anuncios**. Se pide el
+  anuncio, falla y deja el trace. Arreglo pendiente: guard `TvUtils.isTv(...)` + `return-void` en
+  `loadFloatAdWX` / `loadAdFloatAdOnce` / `loadAdFloatViewAd` de `VideoPlayDetailActivity`
+  (mismo patrón que `MainActivity` en v232). No afecta al jank del Home, pero es I/O + excepción
+  en el hilo principal al abrir la ficha.
 - El jank restante del Home **no** está en estas tres clases: al medir con el emulador
   en reposo, la interacción baja a 6-15 % pero las corridas siguen teniendo picos
   p99 de 150-400 ms. Candidatos a revisar en otra sesión:
