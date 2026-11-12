@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 46
+    .line 58
     iput-object p1, p0, Lcom/movievn/tv/TvStreamHide$1;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,53 +41,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 48
+    .line 60
     :try_start_0
     iget-object v0, p0, Lcom/movievn/tv/TvStreamHide$1;->val$activity:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/movievn/tv/TvStreamHide$1;->val$activity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 49
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lcom/movievn/tv/TvStreamHide$1;->val$activity:Landroid/app/Activity;
-
-    invoke-static {v1, v0}, Lcom/movievn/tv/TvStreamHide;->-$$Nest$smattachChildListeners(Landroid/app/Activity;Landroid/view/View;)V
+    invoke-static {v0}, Lcom/movievn/tv/TvStreamHide;->-$$Nest$smscan(Landroid/app/Activity;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 50
     :catchall_0
     move-exception v0
 
-    :cond_1
-    :goto_1
-    nop
-
-    .line 51
+    .line 61
+    :goto_0
     return-void
 .end method
