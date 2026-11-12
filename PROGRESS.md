@@ -507,4 +507,7 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
 - Trampa de entorno: el reloj del AVD iba 12 dias atrasado y TLS fallaba
   (`Chain validation failed`); se corrigio con
   `cmd network_time_update_service force_refresh`.
+- Release v224 publicado (tag `v224`, asset `cine-tv.apk`, digest
+  `sha256:298d0b7ce466b90acecc548addc93c0c5225cc2b930e40110f051cf7b861c919`,
+  verificado contra el local).
 - Detalle: [sesion 43](docs/sesiones/sesion-43-overlay-flotante-subtitulos.md).

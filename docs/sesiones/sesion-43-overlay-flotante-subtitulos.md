@@ -66,6 +66,14 @@ Regla única de overlay en `TvPlayerBar`:
   `cmd network_time_update_service force_refresh` + `auto_time=1`. Sin eso, la
   prueba funcional es imposible.
 
+## Release
+
+- Publicado con `tools\publish-release.ps1`: tag `v224`, asset `cine-tv.apk`,
+  40.443.727 bytes.
+- Digest SHA-256 publicado por GitHub y verificado contra el local:
+  `298d0b7ce466b90acecc548addc93c0c5225cc2b930e40110f051cf7b861c919`.
+- URL: https://github.com/frankAlarza/cine-tv-releases/releases/tag/v224
+
 ## Archivos
 
 - `tools/tv-detail/src/com/movievn/tv/TvPlayerBar.java` — regla única de overlay.
