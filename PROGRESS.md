@@ -533,6 +533,9 @@ After removing the Categories screen (tab 2), the app crashed with ClassNotFound
   en las trazas, Home completo, ENTER abre ficha y el video reproduce, logcat sin
   `FATAL EXCEPTION`/`VerifyError`/`ANR`. Capturas `build/v232-*.png`.
 - Backup pre-cambio: `docs/auditoria/backup/fase6/chitu-guards-v232-pre-change.zip`.
+- Release v232 publicado (tag `v232`, asset `cine-tv.apk`, digest
+  `sha256:1a839d72befb0382f57ee7c80555ccaefd6b63c4f7edc1b8a2a5405b61641fa7`,
+  verificado contra el local).
 - Pendiente detectado (otra sesion): el jank restante del Home viene de `TvStreamHide` (barridos
   repetidos de la jerarquia con decenas de logs) y de la inicializacion de `TvSectionDrawer` /
   `TvHeroImage`, no de anuncios.

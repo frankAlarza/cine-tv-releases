@@ -152,8 +152,24 @@ Con `chitu` ya silenciado, el jank que queda en el Home **no** viene de anuncios
 
 ---
 
-## 6. Restaurar
+## 6. Release publicado
 
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\publish-release.ps1 `
+  -Tag v232 -Apk build\cine-tv-v232-signed.apk -Notes "<notas>"
+```
+
+| Comprobación del canal | Valor |
+|---|---|
+| tag == `versionName` | `v232` == `v232` |
+| asset | `cine-tv.apk` |
+| tamaño | 40.443.727 bytes |
+| digest local | `sha256:1a839d72befb0382f57ee7c80555ccaefd6b63c4f7edc1b8a2a5405b61641fa7` |
+| digest en GitHub | idéntico (verificado por el script) |
+
+URL: <https://github.com/frankAlarza/cine-tv-releases/releases/tag/v232>
+
+## 7. Restaurar
 Copia de los tres smali originales (pre-cambio) en
 `docs/auditoria/backup/fase6/chitu-guards-v232-pre-change.zip`:
 
@@ -163,7 +179,7 @@ Expand-Archive 'docs\auditoria\backup\fase6\chitu-guards-v232-pre-change.zip' -D
 
 ---
 
-## 7. Ficheros tocados
+## 8. Ficheros tocados
 
 - `apktool-salida/smali_classes16/com/mgs/carparking/ui/MainActivity.smali` — guards 1, 2 y 3.
 - `apktool-salida/smali_classes3/j/k.smali` — guard del loader base (`t()`).
